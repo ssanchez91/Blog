@@ -31,6 +31,10 @@
                         <a class="nav-item nav-link" href="<?= $config->basePath; ?>/default"><i class="fa fa-home"></i> Home
                             <span class="sr-only">(current)</span></a>
                     </li>
+                    <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "registerUser") { ?> active <?php } ?> ">
+                        <a class="nav-item nav-link" href="<?= $config->basePath; ?>/registerUser"><i
+                                class="fa fa-user-plus"></i> Register</a>
+                    </li>
                 </ul>
             </div>
         </nav>

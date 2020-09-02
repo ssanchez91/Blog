@@ -1,0 +1,33 @@
+[
+  {
+    "name": "registerUser",
+    "controller": "User",
+    "url": "\/registerUser",
+    "method": "GET",
+    "action": "showFormCreateUser",
+    "params": [],
+    "manager": [
+      "UserManager",
+      "RoleManager"
+    ]
+  },
+  {
+    "name": "registerUser",
+    "controller": "User",
+    "url": "\/registerUser",
+    "method": "POST",
+    "action": "createUser",
+    "params": [
+      "salutation",
+      "firstname",
+      "lastname",
+      "login",
+      "password",
+      "confirmPassword"
+    ],
+    "manager": [
+      "UserManager",
+      "RoleManager"
+    ]
+  }
+]
