@@ -1,0 +1,32 @@
+{
+  "salt": "Jk56yT$L:Ikgt54Lm%;Hgt5-*PkiGG45oiuj",
+  "basePath": "/Blog",
+  "autoloadFolder": [
+    "/Framework",
+    "/Controller",
+    "/Model",
+    "/Model/Entity",
+    "/Model/Manager",
+    "/Framework/Exception"
+  ],
+  "dataBase": {
+    "host": "localhost",
+    "dbname": "blog_p5",
+    "user": "root",
+    "password": "test"
+  },
+  "routeFiles": [
+    "Config/Routes/routeDefault",
+    "Config/Routes/routeError"
+  ],
+  "listTypeAlert": [
+    "danger",
+    "success",
+    "warning",
+    "info",
+    "primary",
+    "secondary",
+    "light",
+    "dark"
+  ]
+}

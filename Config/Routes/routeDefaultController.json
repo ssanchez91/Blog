@@ -1,0 +1,24 @@
+[
+  {
+    "name": "default",
+    "controller": "Default",
+    "url": "\/default",
+    "method": "GET",
+    "action": "default",
+    "params": [],
+    "manager": []
+  },
+  {
+    "name": "sendEmail",
+    "controller": "Default",
+    "url": "\/sendEmail",
+    "method": "POST",
+    "action": "sendEmail",
+    "params": [
+      "fullname",
+      "contactEmail",
+      "message"
+    ],
+    "manager": []
+  }
+]

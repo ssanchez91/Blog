@@ -1,0 +1,11 @@
+[
+  {
+    "name": "showError",
+    "controller": "Error",
+    "url": "\/showError",
+    "method": "GET",
+    "action": "showError",
+    "params": [],
+    "manager": []
+  }
+]
