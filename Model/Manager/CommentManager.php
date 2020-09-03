@@ -96,4 +96,11 @@ class CommentManager extends BaseManager
         return $query->execute(array('publish' => $publish, 'id' => $id));
     }
 
+    public function countCommentPublished($state)
+    {
+        $query = $this->bdd->prepare("SELECT count(*) nb_comment FROM comment WHERE publish = ?;");
+        $query->execute(array($state));
+        return $query->fetchColumn();
+    }
+
 }
