@@ -27,5 +27,17 @@
       "CommentManager"
     ],
     "role": "admin"
+  },
+  {
+    "name": "publishComment",
+    "controller": "Comment",
+    "url": "\/publishComment\/([1-9]|[1-9][0-9]+)\/(ban|publish$)",
+    "method": "GET",
+    "action": "publishComment",
+    "params": [],
+    "manager": [
+      "CommentManager"
+    ],
+    "role": "admin"
   }
 ]

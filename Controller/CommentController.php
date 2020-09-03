@@ -60,4 +60,20 @@ class CommentController extends BaseController
             $this->view('listComment');
         }
     }
+
+    /**
+     * @param $id
+     * @param $state
+     * @throws \Exception
+     */
+    public function publishCommentAction($id, $state)
+    {
+        try {
+            $publishPost = $this->CommentManager->publishCommentById($id, $state);
+            $this->alertManager->addAlert('The comment with Id ' . $id . ' has just been ' . $state, 'warning');
+            header('location: ' . $this->getConfig()->basePath . '/listComment/1');
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
 }
