@@ -1,0 +1,30 @@
+[
+  {
+    "name": "addPost",
+    "controller": "Post",
+    "url": "\/addPost",
+    "method": "GET",
+    "action": "showFormAddPost",
+    "params": [],
+    "manager": [
+      "PostManager"
+    ],
+    "role": "author"
+  },
+  {
+    "name": "addPost",
+    "controller": "Post",
+    "url": "\/addPost",
+    "method": "POST",
+    "action": "addPost",
+    "params": [
+      "title",
+      "hat",
+      "content"
+    ],
+    "manager": [
+      "PostManager"
+    ],
+    "role": "author"
+  }
+]
