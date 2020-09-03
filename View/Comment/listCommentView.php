@@ -6,7 +6,7 @@
  * Time: 15:04
  */
 ?>
-<?php $controller->sharedView('admin', 'Shared'); ?>
+<?php $controller->sharedView('navbarAdmin', 'Shared'); ?>
 <div class="content">
     <div class="row">
         <div class="col-md-10 offset-md-1">
