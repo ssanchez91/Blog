@@ -42,9 +42,7 @@ class BaseController
 
         if (!empty($_SESSION['alert'])) {
             $this->alertManager = new AlertManager($_SESSION['alert']);
-        }
-        else
-        {
+        } else {
             $this->alertManager = new AlertManager();
         }
 
@@ -57,11 +55,10 @@ class BaseController
 
     protected function view($filename, $partial = false, $shared = false)
     {
-        $listExt =['css', 'js'];
-        foreach($listExt as $ext)
-        {
-            if (file_exists("./View/" . $this->httpRequest->getRoute()->getController() . "/".$ext."/" . $filename . ".".$ext."")) {
-                $this->addCss($this->config->basePath . "../View/" . $this->httpRequest->getRoute()->getController() . "/".$ext."/" . $filename . ".".$ext."");
+        $listExt = ['css', 'js'];
+        foreach ($listExt as $ext) {
+            if (file_exists("./View/" . $this->httpRequest->getRoute()->getController() . "/" . $ext . "/" . $filename . "." . $ext . "")) {
+                $this->addCss($this->config->basePath . "../View/" . $this->httpRequest->getRoute()->getController() . "/" . $ext . "/" . $filename . "." . $ext . "");
             }
         }
         if (file_exists("./View/" . $this->httpRequest->getRoute()->getController() . "/" . $filename . 'View.php') || file_exists("./View/" . $filename . 'View.php')) {
@@ -74,10 +71,7 @@ class BaseController
             }
             $content = ob_get_clean();
             if (!$partial) {
-                $this->fileManager->addJsFile($this->config->basePath . '../View/base.js');
-                $this->fileManager->addCssFile($this->config->basePath . '../View/base.css');
-                extract(array('config' => $this->config, 'fileManager' => $this->fileManager, 'alertManager' => $this->alertManager, 'mailManager' => $this->mailManager, 'user' => $this->user));
-                include("./View/base.php");
+                $this->showNoPartialView();
             } else {
                 echo $content;
             }
@@ -94,6 +88,14 @@ class BaseController
     public function sharedView($filename, $directory)
     {
         $this->view($directory . '/' . $filename, true, true);
+    }
+
+    private function showNoPartialView()
+    {
+        $this->fileManager->addJsFile($this->config->basePath . '../View/base.js');
+        $this->fileManager->addCssFile($this->config->basePath . '../View/base.css');
+        extract(array('config' => $this->config, 'fileManager' => $this->fileManager, 'alertManager' => $this->alertManager, 'mailManager' => $this->mailManager, 'user' => $this->user));
+        include("./View/base.php");
     }
 
     public function bindManager()
