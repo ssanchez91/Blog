@@ -1,0 +1,16 @@
+[
+  {
+    "name": "admin",
+    "controller": "Admin",
+    "url": "\/admin",
+    "method": "GET",
+    "action": "showAdminSettings",
+    "params": [],
+    "manager": [
+      "UserManager",
+      "RoleManager",
+      "AdminManager"
+    ],
+    "role": "author"
+  }
+]

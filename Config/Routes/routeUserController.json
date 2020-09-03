@@ -78,5 +78,17 @@
       "RoleManager"
     ],
     "role": "member"
+  },
+  {
+    "name": "listUser",
+    "controller": "User",
+    "url": "\/listUser\/([1-9]|[1-9][0-9]+$)",
+    "method": "GET",
+    "action": "listUser",
+    "params": [],
+    "manager": [
+      "UserManager"
+    ],
+    "role": "admin"
   }
 ]

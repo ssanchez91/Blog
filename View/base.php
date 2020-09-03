@@ -95,7 +95,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <span class="text-muted">Framework - <i class="fa fa-copyright"></i> ssanchez - 2020 </span>
+                        <span class="text-muted">Blog - Projet 5 - OCR - <i class="fa fa-copyright"></i> ssanchez - 2020 </span>
+                    </div>
+                    <div class="col-md-6">
+                        <?php if ($user != null && ($user->hasRole("admin") || $user->hasRole("author"))) { ?>
+                            <span class="text-muted float-right"><a href="<?= $config->basePath; ?>/admin"><i
+                                        class="fa fa-cogs"></i> Admin Settings</a></span>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

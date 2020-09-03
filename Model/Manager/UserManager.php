@@ -65,4 +65,36 @@ class UserManager extends BaseManager
         $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'App\\Model\\Entity\\Role');
         return $query->fetchAll();
     }
+
+    public function getListUserOrderByName($page, $nbUsersByPage)
+    {
+        $nbUsers = $this->countUser();
+        $limit = ($page * $nbUsersByPage) - $nbUsersByPage;
+
+        $query = $this->bdd->prepare("SELECT user.id, user.lastname, user.firstname, user.mail, user.enabled
+            FROM user
+            ORDER BY user.lastname DESC LIMIT $limit, $nbUsersByPage");
+
+        $query->execute();
+        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'App\\Model\\Entity\\User');
+        $listUser = $query->fetchAll();
+
+        foreach ($listUser as $user) {
+            $user->setListRoles($this->listRolesByUserId($user->getId()));
+        }
+
+        $result = new \stdClass();
+        $result->listUser = $listUser;
+        $result->nbPage = ceil($nbUsers / $nbUsersByPage);
+
+        return $result;
+
+    }
+
+    public function countUser()
+    {
+        $query = $this->bdd->query("SELECT count(*) nb_user FROM user;");
+        $query->execute();
+        return $query->fetchColumn();
+    }
 }
