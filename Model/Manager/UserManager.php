@@ -105,4 +105,18 @@ class UserManager extends BaseManager
 
         return $user;
     }
+
+    public function listUserByRole($role)
+    {
+        $query = $this->bdd->prepare("SELECT user.id, user.firstname, user.lastname
+        FROM user
+        INNER JOIN role_user
+          ON role_user.user_id = user.id
+        INNER JOIN role
+          ON role_user.role_id = role.id
+        WHERE role.slug = :role");
+        $query->execute(array('role' => $role));
+        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'App\\Model\\Entity\\User');
+        return $query->fetchAll();
+    }
 }
