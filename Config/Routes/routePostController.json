@@ -26,5 +26,17 @@
       "PostManager"
     ],
     "role": "author"
+  },
+  {
+    "name": "deletePost",
+    "controller": "Post",
+    "url": "\/deletePost\/([1-9]|[1-9][0-9]+$)",
+    "method": "GET",
+    "action": "deletePost",
+    "params": [],
+    "manager": [
+      "PostManager"
+    ],
+    "role": "author"
   }
 ]

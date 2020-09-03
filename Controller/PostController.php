@@ -51,4 +51,24 @@ class PostController extends BaseController
             throw $e;
         }
     }
+
+    /**
+     * @param $id
+     * @throws \Exception
+     */
+    public function deletePostAction($id)
+    {
+        try {
+            $post = $this->PostManager->getById($id);
+            if ($this->user->hasRole('admin') || ($this->user->hasRole('author') && $post->user_id == $this->user->getId())) {
+                $deletePost = $this->PostManager->delete($post);
+                $this->alertManager->addAlert('The post with Id ' . $id . ' has just been deleted.', 'danger');
+                header('location: ' . $this->getConfig()->basePath . '/listPost/1');
+            } else {
+                throw new ForbiddenAccessActionException();
+            }
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
 }
