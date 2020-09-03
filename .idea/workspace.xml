@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="621b8258-0f3f-4530-b949-bcce348fbbb5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Manager/AdminManager.php" afterPath="$PROJECT_DIR$/Model/Manager/AdminManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/PostController.php" afterPath="$PROJECT_DIR$/Controller/PostController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Manager/PostManager.php" afterPath="$PROJECT_DIR$/Model/Manager/PostManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Admin/adminView.php" afterPath="$PROJECT_DIR$/View/Admin/adminView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Shared/adminView.php" afterPath="$PROJECT_DIR$/View/Shared/adminView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/base.php" afterPath="$PROJECT_DIR$/View/base.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Config/config.json" afterPath="$PROJECT_DIR$/Config/config.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Config/Routes/routePostController.json" afterPath="$PROJECT_DIR$/Config/Routes/routePostController.json" />
     </list>
@@ -26,38 +31,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routeCommentController.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Config/Routes/routeCommentController.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Config/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.884615">
-              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            <state vertical-scroll-proportion="-20.26923">
+              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/CommentController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/Entity/Comment.php">
+      <file leaf-file-name="listPostPublicView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Post/listPostPublicView.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -66,11 +51,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentManager.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/Manager/AdminManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Admin/adminView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="21" column="117" selection-start-line="21" selection-start-column="117" selection-end-line="21" selection-end-column="117" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Shared/adminView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/base.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.653846">
+              <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Manager/CommentManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3708381">
-              <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="45" column="40" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="40" />
               <folding>
                 <element signature="e#341#1445#0#PHP" expanded="false" />
                 <element signature="e#1451#1703#0#PHP" expanded="false" />
@@ -81,21 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addCommentView.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Post/addCommentView.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="routePostController.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Config/Routes/routePostController.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.03846">
-              <caret line="85" column="3" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
+            <state vertical-scroll-proportion="-32.192307">
+              <caret line="109" column="3" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -104,29 +119,27 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.807692">
-              <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+            <state vertical-scroll-proportion="-36.76923">
+              <caret line="172" column="60" selection-start-line="172" selection-start-column="60" selection-end-line="172" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showPostView.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Post/showPostView.php">
+      <file leaf-file-name="PostManager.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Model/Manager/PostManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showPost.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Post/js/showPost.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.3708381">
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+              <folding>
+                <element signature="e#332#997#0#PHP" expanded="false" />
+                <element signature="e#1003#1718#0#PHP" expanded="false" />
+                <element signature="e#1724#2097#0#PHP" expanded="false" />
+                <marker date="1599127950184" expanded="true" signature="529:677" placeholder="SELECT id, t..post..." />
+                <marker date="1599127950184" expanded="true" signature="1227:1384" placeholder="SELECT id, t..post..." />
+                <marker date="1599127950184" expanded="true" signature="1843:1877" placeholder="SELECT count..post..." />
+                <marker date="1599127950184" expanded="true" signature="1941:1993" placeholder="SELECT count..post..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,22 +161,22 @@
         <option value="$PROJECT_DIR$/View/Error/ExecuteQueryExceptionView.php" />
         <option value="$PROJECT_DIR$/Framework/BaseController.php" />
         <option value="$PROJECT_DIR$/Framework/BaseManager.php" />
-        <option value="$PROJECT_DIR$/View/base.php" />
         <option value="$PROJECT_DIR$/Config/Routes/routeAdminController.json" />
-        <option value="$PROJECT_DIR$/Model/Manager/AdminManager.php" />
-        <option value="$PROJECT_DIR$/View/Admin/adminView.php" />
         <option value="$PROJECT_DIR$/Controller/AdminController.php" />
-        <option value="$PROJECT_DIR$/View/Shared/adminView.php" />
         <option value="$PROJECT_DIR$/Config/Routes/routeUserController.json" />
         <option value="$PROJECT_DIR$/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/Model/Manager/PostManager.php" />
         <option value="$PROJECT_DIR$/Model/Manager/UserManager.php" />
         <option value="$PROJECT_DIR$/Config/Routes/routeCommentController.json" />
         <option value="$PROJECT_DIR$/Controller/CommentController.php" />
+        <option value="$PROJECT_DIR$/Model/Manager/CommentManager.php" />
         <option value="$PROJECT_DIR$/Config/Routes/routePostController.json" />
         <option value="$PROJECT_DIR$/Controller/PostController.php" />
         <option value="$PROJECT_DIR$/Config/config.json" />
-        <option value="$PROJECT_DIR$/Model/Manager/CommentManager.php" />
+        <option value="$PROJECT_DIR$/Model/Manager/AdminManager.php" />
+        <option value="$PROJECT_DIR$/View/Admin/adminView.php" />
+        <option value="$PROJECT_DIR$/View/Shared/adminView.php" />
+        <option value="$PROJECT_DIR$/View/base.php" />
+        <option value="$PROJECT_DIR$/Model/Manager/PostManager.php" />
       </list>
     </option>
   </component>
@@ -253,6 +266,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="User" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,8 +489,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\Blog\View\Post\js" />
       <recent name="C:\wamp64\www\Blog\View\Post" />
+      <recent name="C:\wamp64\www\Blog\View\Post\js" />
       <recent name="C:\wamp64\www\Blog\View\Comment" />
       <recent name="C:\wamp64\www\Blog\View" />
       <recent name="C:\wamp64\www\Blog\Model\Manager" />
@@ -507,7 +538,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17643923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -745,14 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.038462">
-          <caret line="93" column="50" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Config/Routes/routeAdminController.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154">
@@ -761,34 +784,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Admin/adminView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Manager/AdminManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Shared/adminView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -844,14 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Manager/PostManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -930,14 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config/Routes/routePostController.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.03846">
-          <caret line="85" column="3" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/Post/showPostView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -954,31 +937,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Manager/CommentManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="40" />
+          <folding>
+            <element signature="e#341#1445#0#PHP" expanded="false" />
+            <element signature="e#1451#1703#0#PHP" expanded="false" />
+            <marker date="1599126449640" expanded="true" signature="567:1057" placeholder="SELECT comme..comment..." />
+            <marker date="1599126449640" expanded="true" signature="1541:1614" placeholder="SELECT count..comment..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/Routes/routePostController.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.192307">
+          <caret line="109" column="3" selection-start-line="109" selection-start-column="3" selection-end-line="109" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.807692">
-          <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+        <state vertical-scroll-proportion="-36.76923">
+          <caret line="172" column="60" selection-start-line="172" selection-start-column="60" selection-end-line="172" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Config/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.884615">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        <state vertical-scroll-proportion="-20.26923">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Manager/CommentManager.php">
+    <entry file="file://$PROJECT_DIR$/View/Post/listPostPublicView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Manager/AdminManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Admin/adminView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="21" column="117" selection-start-line="21" selection-start-column="117" selection-end-line="21" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Shared/adminView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.653846">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Manager/PostManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3708381">
-          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
-            <element signature="e#341#1445#0#PHP" expanded="false" />
-            <element signature="e#1451#1703#0#PHP" expanded="false" />
-            <marker date="1599126449640" expanded="true" signature="567:1057" placeholder="SELECT comme..comment..." />
-            <marker date="1599126449640" expanded="true" signature="1541:1614" placeholder="SELECT count..comment..." />
+            <element signature="e#332#997#0#PHP" expanded="false" />
+            <element signature="e#1003#1718#0#PHP" expanded="false" />
+            <element signature="e#1724#2097#0#PHP" expanded="false" />
+            <marker date="1599127950184" expanded="true" signature="529:677" placeholder="SELECT id, t..post..." />
+            <marker date="1599127950184" expanded="true" signature="1227:1384" placeholder="SELECT id, t..post..." />
+            <marker date="1599127950184" expanded="true" signature="1843:1877" placeholder="SELECT count..post..." />
+            <marker date="1599127950184" expanded="true" signature="1941:1993" placeholder="SELECT count..post..." />
           </folding>
         </state>
       </provider>

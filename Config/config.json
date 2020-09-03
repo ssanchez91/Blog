@@ -34,5 +34,6 @@
     "dark"
   ],
   "nbUserByPage": 5,
-  "nbCommentByPage": 5
+  "nbCommentByPage": 5,
+  "nbPostByPage": 5
 }
