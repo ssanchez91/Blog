@@ -102,5 +102,64 @@
       "UserManager"
     ],
     "role": "admin"
+  },
+  {
+    "name": "editUserProfile",
+    "controller": "User",
+    "url": "\/editUserProfile",
+    "method": "GET",
+    "action": "editUserProfile",
+    "params": [],
+    "manager": [],
+    "role": "member"
+  },
+  {
+    "name": "editUser",
+    "controller": "User",
+    "url": "\/editUser\/([1-9]|[1-9][0-9]+$)",
+    "method": "GET",
+    "action": "editUser",
+    "params": [],
+    "manager": [
+      "UserManager"
+    ],
+    "role": "admin"
+  },
+  {
+    "name": "editUserProfile",
+    "controller": "User",
+    "url": "\/editUserProfile",
+    "method": "POST",
+    "action": "updateUserProfile",
+    "params": [
+      "salutation",
+      "firstname",
+      "lastname",
+      "login"
+    ],
+    "manager": [
+      "UserManager"
+    ],
+    "role": "member"
+  },
+  {
+    "name": "editUser",
+    "controller": "User",
+    "url": "\/editUser",
+    "method": "POST",
+    "action": "updateUser",
+    "params": [
+      "id",
+      "salutation",
+      "firstname",
+      "lastname",
+      "login",
+      "enabled",
+      "enabledOrigin"
+    ],
+    "manager": [
+      "UserManager"
+    ],
+    "role": "admin"
   }
 ]
