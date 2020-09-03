@@ -84,4 +84,16 @@ class CommentManager extends BaseManager
         return $query->fetchColumn();
     }
 
+    public function publishCommentById($id, $state)
+    {
+        if ($state == 'publish') {
+            $publish = true;
+        } else {
+            $publish = 0;
+        }
+
+        $query = $this->bdd->prepare("UPDATE comment SET publish = :publish WHERE id = :id");
+        return $query->execute(array('publish' => $publish, 'id' => $id));
+    }
+
 }
