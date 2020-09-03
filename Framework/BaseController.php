@@ -25,6 +25,7 @@ class BaseController
     protected $mailManager;
     protected $alertManager;
     protected $manager;
+    protected $user;
 
 
     public function __construct(HttpRequest $httpRequest, $config)
@@ -47,6 +48,11 @@ class BaseController
             $this->alertManager = new AlertManager();
         }
 
+        $this->user = null;
+        if (!empty($_SESSION['user'])) {
+            $this->user = $_SESSION['user'];
+            $this->addParam('user', $this->user);
+        }
     }
 
     protected function view($filename, $partial = false, $shared = false)
@@ -70,7 +76,7 @@ class BaseController
             if (!$partial) {
                 $this->fileManager->addJsFile($this->config->basePath . '../View/base.js');
                 $this->fileManager->addCssFile($this->config->basePath . '../View/base.css');
-                extract(array('config' => $this->config, 'fileManager' => $this->fileManager, 'alertManager' => $this->alertManager, 'mailManager' => $this->mailManager));
+                extract(array('config' => $this->config, 'fileManager' => $this->fileManager, 'alertManager' => $this->alertManager, 'mailManager' => $this->mailManager, 'user' => $this->user));
                 include("./View/base.php");
             } else {
                 echo $content;
