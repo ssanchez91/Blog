@@ -83,5 +83,29 @@
       "UserManager"
     ],
     "role": ""
+  },
+  {
+    "name": "listPost",
+    "controller": "Post",
+    "url": "\/listPost\/([1-9]|[1-9][0-9]+$)",
+    "method": "GET",
+    "action": "listPost",
+    "params": [],
+    "manager": [
+      "PostManager"
+    ],
+    "role": "author"
+  },
+  {
+    "name": "listPostPublic",
+    "controller": "Post",
+    "url": "\/listPostPublic\/([1-9]|[1-9][0-9]+$)",
+    "method": "GET",
+    "action": "listPostPublic",
+    "params": [],
+    "manager": [
+      "PostManager"
+    ],
+    "role": ""
   }
 ]

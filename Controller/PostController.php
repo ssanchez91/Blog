@@ -142,4 +142,48 @@ class PostController extends BaseController
             $this->view('showPost');
         }
     }
+
+    /**
+     * @param int $page
+     * @throws PageNotFoundException
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
+    public function listPostAction($page = 1)
+    {
+        if ($this->user->hasRole('admin')) {
+            $result = $this->PostManager->listPostByPage($page, $this->getConfig()->nbPostByPage);
+        } else if ($this->user->hasRole('author')) {
+            $result = $this->PostManager->listPostByPageByAuthor($page, $this->getConfig()->nbPostByPage, $this->user->getId());
+        }
+
+        if ($result->nbPage != 0 && $page > $result->nbPage) {
+            throw new PageNotFoundException($page, $result->nbPage);
+        } else {
+            $this->addParam('listPost', $result->listPost);
+            $this->addParam('nbPage', $result->nbPage);
+            $this->addParam('pageSelected', $page);
+            $this->addParam('url', $this->getConfig()->basePath.'/listPost/');
+            $this->view('listPost');
+        }
+    }
+
+    /**
+     * @param int $page
+     * @throws PageNotFoundException
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
+    public function listPostPublicAction($page = 1)
+    {
+        $result = $this->PostManager->listPostByPage($page, $this->getConfig()->nbPostByPage);
+
+        if ($result->nbPage != 0 && $page > $result->nbPage) {
+            throw new PageNotFoundException($page, $result->nbPage);
+        } else {
+            $this->addParam('listPost', $result->listPost);
+            $this->addParam('nbPage', $result->nbPage);
+            $this->addParam('pageSelected', $page);
+            $this->addParam('url', $this->getConfig()->basePath.'/listPostPublic/');
+            $this->view('listPostPublic');
+        }
+    }
 }

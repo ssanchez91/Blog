@@ -16,6 +16,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContentAdmin">
         <ul class="navbar-nav mr-auto">
             <?php if ($user != null) { ?>
+                <?php if ($user->hasRole("admin") || $user->hasRole("author")) { ?>
+                    <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "listPost") { ?> active <?php } ?> ">
+                        <a class="nav-item nav-link" href="<?= htmlspecialchars($config->basePath); ?>/listPost/1"><i
+                                class="fa fa-tag"></i> Post Settings</a>
+                    </li>
+                <?php } ?>
                 <?php if ($user->hasRole("admin")) { ?>
 
                     <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "listUser") { ?> active <?php } ?> ">

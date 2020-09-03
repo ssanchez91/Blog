@@ -20,5 +20,7 @@ class AdminManager
         $config = file_get_contents('Config/config.json');
         $this->userManager = new UserManager($config);
         $this->roleManager = new RoleManager($config);
+        $this->commentManager = new CommentManager($config);
+        $this->postManager = new PostManager($config);
     }
 }

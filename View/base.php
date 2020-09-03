@@ -45,6 +45,10 @@
                             </li>
                         <?php } ?>
                     <?php } ?>
+                    <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "listPostPublic") { ?> active <?php } ?> ">
+                        <a class="nav-item nav-link" href="<?= $config->basePath; ?>/listPostPublic/1"><i
+                                class="fa fa-list"></i> List Post</a>
+                    </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
