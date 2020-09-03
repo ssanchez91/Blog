@@ -55,12 +55,7 @@ class BaseController
 
     protected function view($filename, $partial = false, $shared = false)
     {
-        $listExt = ['css', 'js'];
-        foreach ($listExt as $ext) {
-            if (file_exists("./View/" . $this->httpRequest->getRoute()->getController() . "/" . $ext . "/" . $filename . "." . $ext . "")) {
-                $this->addCss($this->config->basePath . "../View/" . $this->httpRequest->getRoute()->getController() . "/" . $ext . "/" . $filename . "." . $ext . "");
-            }
-        }
+        $this->loadCssAndJsFile($filename);
         if (file_exists("./View/" . $this->httpRequest->getRoute()->getController() . "/" . $filename . 'View.php') || file_exists("./View/" . $filename . 'View.php')) {
             ob_start();
             extract($this->param);
@@ -71,7 +66,10 @@ class BaseController
             }
             $content = ob_get_clean();
             if (!$partial) {
-                $this->showNoPartialView();
+                $this->fileManager->addJsFile($this->config->basePath . '../View/base.js');
+                $this->fileManager->addCssFile($this->config->basePath . '../View/base.css');
+                extract(array('config' => $this->config, 'fileManager' => $this->fileManager, 'alertManager' => $this->alertManager, 'mailManager' => $this->mailManager, 'user' => $this->user));
+                include("./View/base.php");
             } else {
                 echo $content;
             }
@@ -90,12 +88,14 @@ class BaseController
         $this->view($directory . '/' . $filename, true, true);
     }
 
-    private function showNoPartialView()
+    public function loadCssAndJsFile($filename)
     {
-        $this->fileManager->addJsFile($this->config->basePath . '../View/base.js');
-        $this->fileManager->addCssFile($this->config->basePath . '../View/base.css');
-        extract(array('config' => $this->config, 'fileManager' => $this->fileManager, 'alertManager' => $this->alertManager, 'mailManager' => $this->mailManager, 'user' => $this->user));
-        include("./View/base.php");
+        $listExt = ['css', 'js'];
+        foreach ($listExt as $ext) {
+            if (file_exists("./View/" . $this->httpRequest->getRoute()->getController() . "/" . $ext . "/" . $filename . "." . $ext . "")) {
+                $this->addCss($this->config->basePath . "../View/" . $this->httpRequest->getRoute()->getController() . "/" . $ext . "/" . $filename . "." . $ext . "");
+            }
+        }
     }
 
     public function bindManager()
