@@ -39,5 +39,17 @@
       "CommentManager"
     ],
     "role": "admin"
+  },
+  {
+    "name": "deleteComment",
+    "controller": "Comment",
+    "url": "\/deleteComment\/([1-9]|[1-9][0-9]+)$",
+    "method": "GET",
+    "action": "deleteComment",
+    "params": [],
+    "manager": [
+      "CommentManager"
+    ],
+    "role": "admin"
   }
 ]
