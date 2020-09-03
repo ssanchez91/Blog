@@ -52,7 +52,7 @@ class CommentManager extends BaseManager
 
     public function getListCommentOrderByDate($page, $nbCommentsByPage)
     {
-        $nbComments = $this->countComment();
+        $nbComments = $this->countCommentWithUserAndPostExist();
         $limit = ($page * $nbCommentsByPage) - $nbCommentsByPage;
 
         $query = $this->bdd->prepare("SELECT comment.id, comment.description, comment.user_id, comment.post_id, DATE_FORMAT(comment.last_update, '%d/%m/%Y à %Hh%imin%ss') AS last_update, CONCAT(user.firstname, ' ', user.lastname) as author, comment.publish
@@ -80,6 +80,20 @@ class CommentManager extends BaseManager
             $query = $this->bdd->prepare("SELECT count(*) nb_comment FROM comment WHERE user_id = ?;");
             $query->execute(array($idUser));
         }
+
+        return $query->fetchColumn();
+    }
+
+    public function countCommentWithUserAndPostExist()
+    {
+        $query = $this->bdd->prepare("SELECT count(*) nb_comment
+        FROM comment
+        INNER JOIN user
+          ON user.id = comment.user_id
+        INNER JOIN post
+          ON post.id = comment.post_id
+        ;");
+        $query->execute();
 
         return $query->fetchColumn();
     }
