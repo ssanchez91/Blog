@@ -1,0 +1,58 @@
+.team-member {
+  margin-bottom: 3rem;
+}
+
+.team-member img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.5rem solid rgba(0, 123, 255, 0.4);
+}
+
+.team-member h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+section#contact {
+  background: #343a40 url('../../../Public/img/bg-default.jpeg');
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+section#contact .section-heading {
+  color: #fff;
+}
+
+section#contact form#contactForm .form-group {
+  margin-bottom: 1rem;
+}
+
+section#contact form#contactForm .form-group input,
+section#contact form#contactForm .form-group textarea {
+  padding: 1.25rem;
+}
+
+section#contact form#contactForm .form-group input.form-control {
+  height: auto;
+}
+
+section#contact form#contactForm .form-group-textarea {
+  height: 92%;
+}
+
+section#contact form#contactForm .form-group-textarea textarea {
+  height: 100%;
+}
+
+section#contact form#contactForm p.help-block {
+  margin: 0;
+}
+
+section#contact form#contactForm .form-control:focus {
+  border-color: #fed136;
+  box-shadow: none;
+}
