@@ -90,5 +90,17 @@
       "UserManager"
     ],
     "role": "admin"
+  },
+  {
+    "name": "deleteUser",
+    "controller": "User",
+    "url": "\/deleteUser\/([1-9]|[1-9][0-9]+)$",
+    "method": "GET",
+    "action": "deleteUser",
+    "params": [],
+    "manager": [
+      "UserManager"
+    ],
+    "role": "admin"
   }
 ]
