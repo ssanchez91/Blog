@@ -139,4 +139,20 @@ class UserController extends BaseController
             $this->view('listUser');
         }
     }
+
+    /**
+     * @param $id
+     * @throws \Exception
+     */
+    public function deleteUserAction($id)
+    {
+        try {
+            $user = $this->UserManager->getById($id);
+            $deleteUser = $this->UserManager->delete($user);
+            $this->alertManager->addAlert('The user with Id ' . $id . ' has just been deleted.', 'danger');
+            header('location: ' . $this->getConfig()->basePath . '/listUser/1');
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
 }
