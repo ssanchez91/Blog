@@ -21,6 +21,9 @@
             <div class="alert alert-info"><b>Message :</b> <?= htmlspecialchars($exception->getMessage()); ?></div>
             <?php if (method_exists($exception, 'getDetails')) { ?>
                 <div class="alert alert-danger"><b>Détails :</b> <?= htmlspecialchars($exception->getDetails()); ?></div>
+            <?php } ?>
+            <?php if (isset($_SESSION['user']) && $_SESSION['user']->hasRole('admin')) {
+                ?>
                 <div class="alert alert-info"><b>Trace :</b> <?= htmlspecialchars($exception->getTraceAsString()); ?></div>
             <?php } ?>
         </div>
