@@ -40,4 +40,24 @@ class CommentController extends BaseController
             throw $e;
         }
     }
+
+    /**
+     * @param int $page
+     * @throws PageNotFoundException
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
+    public function listCommentAction($page = 1)
+    {
+        $result = $this->CommentManager->getListCommentOrderByDate($page, $this->getConfig()->nbCommentByPage);
+
+        if ($result->nbPage != 0 && $page > $result->nbPage) {
+            throw new PageNotFoundException($page, $result->nbPage);
+        } else {
+            $this->addParam('listComment', $result->listComment);
+            $this->addParam('nbPage', $result->nbPage);
+            $this->addParam('pageSelected', $page);
+            $this->addParam('url', $this->getConfig()->basePath.'/listComment/');
+            $this->view('listComment');
+        }
+    }
 }

@@ -18,13 +18,17 @@
         <ul class="navbar-nav mr-auto">
             <?php if ($user != null) { ?>
                 <?php if ($user->hasRole("admin") || $user->hasRole("author")) { ?>
-                    <li class="nav-item">
+                    <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "listPost") { ?> active <?php } ?> ">
                         <a class="nav-item nav-link" href="<?= htmlspecialchars($config->basePath); ?>/listPost/1"><i
                                 class="fa fa-tag"></i> Post Settings</a>
                     </li>
                 <?php } ?>
                 <?php if ($user->hasRole("admin")) { ?>
-                    <li class="nav-item">
+                    <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "listComment") { ?> active <?php } ?> ">
+                        <a class="nav-item nav-link" href="<?= htmlspecialchars($config->basePath); ?>/listComment/1"><i
+                                class="fa fa-comment"></i> Comment Settings</a>
+                    </li>
+                    <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "listUser") { ?> active <?php } ?> ">
                         <a class="nav-item nav-link" href="<?= htmlspecialchars($config->basePath); ?>/listUser/1"><i
                                 class="fa fa-user"></i> User Settings</a>
                     </li>
