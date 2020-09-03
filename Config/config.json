@@ -18,7 +18,8 @@
   "routeFiles": [
     "Config/Routes/routeDefault",
     "Config/Routes/routeError",
-    "Config/Routes/routeUser"
+    "Config/Routes/routeUser",
+    "Config/Routes/routeAdmin"
   ],
   "listTypeAlert": [
     "danger",
@@ -29,5 +30,6 @@
     "secondary",
     "light",
     "dark"
-  ]
+  ],
+  "nbUserByPage": 5
 }

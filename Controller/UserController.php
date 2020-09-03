@@ -119,4 +119,24 @@ class UserController extends BaseController
     {
         $this->view('showUserProfile');
     }
+
+    /**
+     * @param int $page
+     * @throws PageNotFoundException
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
+    public function listUserAction($page = 1)
+    {
+        $result = $this->UserManager->getListUserOrderByName($page, $this->getConfig()->nbUserByPage);
+
+        if ($result->nbPage != 0 && $page > $result->nbPage) {
+            throw new PageNotFoundException($page, $result->nbPage);
+        } else {
+            $this->addParam('listUser', $result->listUser);
+            $this->addParam('nbPage', $result->nbPage);
+            $this->addParam('pageSelected', $page);
+            $this->addParam('url', $this->getConfig()->basePath.'/listUser/');
+            $this->view('listUser');
+        }
+    }
 }
