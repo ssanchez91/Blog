@@ -15,5 +15,17 @@
       "PostManager"
     ],
     "role": "member"
+  },
+  {
+    "name": "listComment",
+    "controller": "Comment",
+    "url": "\/listComment\/([1-9]|[1-9][0-9]+)",
+    "method": "GET",
+    "action": "listComment",
+    "params": [],
+    "manager": [
+      "CommentManager"
+    ],
+    "role": "admin"
   }
 ]
