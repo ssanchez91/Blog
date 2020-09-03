@@ -118,4 +118,28 @@ class PostController extends BaseController
             throw $e;
         }
     }
+
+    /**
+     * @param $id
+     * @param int $page
+     * @throws PageNotFoundException
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
+    public function showPostAction($id, $page = 1)
+    {
+        $result = $this->CommentManager->getByPostId($id, $page, $this->getConfig()->nbCommentByPage);
+
+        if ($result->nbPage != 0 && $page > $result->nbPage) {
+            throw new PageNotFoundException($page, $result->nbPage);
+        } else {
+            $post = $this->PostManager->getById($id);
+            $post->setAuthor($this->UserManager->getById($post->user_id));
+            $this->addParam('listComment', $result->listComment);
+            $this->addParam('nbPage', $result->nbPage);
+            $this->addParam('pageSelected', $page);
+            $this->addParam('post', $post);
+            $this->addParam('nbComments', $result->nbComments);
+            $this->view('showPost');
+        }
+    }
 }
