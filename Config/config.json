@@ -1,5 +1,4 @@
 {
-  "salt": "Jk56yT$L:Ikgt54Lm%;Hgt5-*PkiGG45oiuj",
   "basePath": "/Blog",
   "autoloadFolder": [
     "/Framework",
@@ -35,5 +34,9 @@
   ],
   "nbUserByPage": 5,
   "nbCommentByPage": 5,
-  "nbPostByPage": 5
+  "nbPostByPage": 5,
+  "mailManager":{
+    "mailTo" : "sanchez.steeve@gmail.com",
+    "mailFrom" : "steeve.sanchez@orange.fr"
+  }
 }

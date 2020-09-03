@@ -15,13 +15,12 @@ class MailManager
     private $from;
     private $subject;
 
-    public function __construct()
+    public function __construct($config)
     {
-        $this->to = "sanchez.steeve@gmail.com";
+        $this->to = $config->mailTo;
         $this->subject = "Website Contact : Blog Projet 5";
-        $this->from = "steeve.sanchez@orange.fr";
+        $this->from = $config->mailFrom;
     }
-
 
     public function sendEmail($to = null, $subject = null, $body)
     {
@@ -31,8 +30,6 @@ class MailManager
         if (empty($to)) {
             $to = $this->to;
         }
-
-
         $headers = "From: $this->from\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
         $headers .= "Reply-To: $this->from";
         try {
