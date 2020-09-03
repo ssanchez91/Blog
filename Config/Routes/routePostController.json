@@ -38,5 +38,36 @@
       "PostManager"
     ],
     "role": "author"
+  },
+  {
+    "name": "editPost",
+    "controller": "Post",
+    "url": "\/editPost\/([1-9]|[1-9][0-9]+$)",
+    "method": "GET",
+    "action": "editPost",
+    "params": [],
+    "manager": [
+      "PostManager",
+      "UserManager"
+    ],
+    "role": "author"
+  },
+  {
+    "name": "editPost",
+    "controller": "Post",
+    "url": "\/editPost",
+    "method": "POST",
+    "action": "updatePost",
+    "params": [
+      "id",
+      "title",
+      "hat",
+      "content",
+      "author"
+    ],
+    "manager": [
+      "PostManager"
+    ],
+    "role": "author"
   }
 ]

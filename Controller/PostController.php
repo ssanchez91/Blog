@@ -71,4 +71,51 @@ class PostController extends BaseController
             throw $e;
         }
     }
+
+    /**
+     * @param $id
+     * @throws ForbiddenAccessActionException
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
+    public function editPostAction($id)
+    {
+        $post = $this->PostManager->getById($id);
+        if (($this->user->hasRole('admin')) || ($this->user->hasRole('author') && $post->user_id == $this->user->getId())) {
+            $this->addParam('post', $this->PostManager->getById($id));
+            $this->addParam('listAuthor', $this->UserManager->listUserByRole('author'));
+            $this->view('editPost');
+        } else {
+            throw new ForbiddenAccessActionException();
+        }
+    }
+
+    /**
+     * @param $id
+     * @param $title
+     * @param $hat
+     * @param $content
+     * @param $author
+     * @throws \Exception
+     */
+    public function updatePostAction($id, $title, $hat, $content, $author)
+    {
+        $lastUpdate = new \DateTime();
+
+        $post = new Post();
+        $post->setId($id);
+        $post->setTitle($title);
+        $post->setContent($content);
+        $post->setHat($hat);
+        $post->setUserId($author);
+        $post->setLastUpdate($lastUpdate->format('Y-m-d H:i:s'));
+
+        try {
+            $updatePost = $this->PostManager->update($post, array('title', 'hat', 'content', 'user_id', 'last_update'));
+            $this->alertManager->addAlert('Your post has been update with success!', 'success');
+            $this->addParam('post', $post);
+            header('location: ' . $this->getConfig()->basePath . '/showPost/' . $post->getId() . '/1');
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
 }
