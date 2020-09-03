@@ -31,11 +31,28 @@
                         <a class="nav-item nav-link" href="<?= $config->basePath; ?>/default"><i class="fa fa-home"></i> Home
                             <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "registerUser") { ?> active <?php } ?> ">
-                        <a class="nav-item nav-link" href="<?= $config->basePath; ?>/registerUser"><i
-                                class="fa fa-user-plus"></i> Register</a>
-                    </li>
+                    <?php if ($user == null) { ?>
+                        <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "registerUser") { ?> active <?php } ?> ">
+                            <a class="nav-item nav-link" href="<?= $config->basePath; ?>/registerUser"><i
+                                    class="fa fa-user-plus"></i> Register</a>
+                        </li>
+                    <?php } ?>
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <?php if ($user != null) { ?>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link float-right" href="<?= $config->basePath; ?>/logout"><i
+                                        class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                            </li>
+                        <?php } else { ?>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link text-right" href="<?= $config->basePath; ?>/login"><i
+                                        class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </form>
             </div>
         </nav>
         <div class="container-fluid">

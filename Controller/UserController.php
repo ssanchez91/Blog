@@ -61,7 +61,7 @@ class UserController extends BaseController
                 try {
                     $insertUser = $this->UserManager->insert($user, array('salutation', 'firstname', 'lastname', 'mail', 'password', 'enabled'));
                     $this->alertManager->addAlert('Your account has just been created ! Now Login.', 'success');
-                    header('location: ' . $this->getConfig()->basePath . '/default');
+                    header('location: ' . $this->getConfig()->basePath . '/login');
                 } catch (\Exception $e) {
                     throw $e;
                 }
@@ -69,5 +69,54 @@ class UserController extends BaseController
                 throw new WrongSecondPasswordException();
             }
         }
+    }
+
+    /**
+     * @throws \App\Framework\Exception\NoViewFoundException
+     *
+     */
+    public function loginAction()
+    {
+        $this->view('login');
+    }
+
+    /**
+     * @param $login user mail
+     * @param $password user password
+     * @throws DisabledUserException
+     */
+    public function authenticateAction($login, $password)
+    {
+        $user = $this->UserManager->checkLogin($login, $password);
+
+        if (!empty ($user)) {
+            if ($user->getEnabled()) {
+                $_SESSION['user'] = $user;
+                $this->setUser($user);
+                $this->alertManager->addAlert('Welcome ' . $user->getFirstname() . ' ' . $user->getLastname() . ' you are connected.', 'info');
+                header('location: ' . $this->getConfig()->basePath . '/default');
+            } else {
+                throw new DisabledUserException();
+            }
+        }
+
+    }
+
+    /**
+     * @return null redirect to default page
+     */
+    public function logoutAction()
+    {
+        unset($_SESSION['user']);
+        $this->setUser(null);
+        header('location: ' . $this->getConfig()->basePath . '/default');
+    }
+
+    /**
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
+    public function showUserProfileAction()
+    {
+        $this->view('showUserProfile');
     }
 }

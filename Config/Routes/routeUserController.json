@@ -29,5 +29,54 @@
       "UserManager",
       "RoleManager"
     ]
+  },
+  {
+    "name": "login",
+    "controller": "User",
+    "url": "\/login",
+    "method": "GET",
+    "action": "login",
+    "params": [],
+    "manager": [
+      "UserManager"
+    ]
+  },
+  {
+    "name": "login",
+    "controller": "User",
+    "url": "\/login",
+    "method": "POST",
+    "action": "authenticate",
+    "params": [
+      "login",
+      "password"
+    ],
+    "manager": [
+      "UserManager",
+      "RoleManager"
+    ]
+  },
+  {
+    "name": "logout",
+    "controller": "User",
+    "url": "\/logout",
+    "method": "GET",
+    "action": "logout",
+    "params": [],
+    "manager": [],
+    "role": "member"
+  },
+  {
+    "name": "showUserProfile",
+    "controller": "User",
+    "url": "\/showUserProfile",
+    "method": "GET",
+    "action": "showUserProfile",
+    "params": [],
+    "manager": [
+      "UserManager",
+      "RoleManager"
+    ],
+    "role": "member"
   }
 ]

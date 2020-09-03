@@ -20,7 +20,6 @@ class BaseManager
 
     public function __construct($table, $object, $datasource)
     {
-
         $this->table = $table;
         $this->object = $object;
         $this->bdd = BDD::getInstance($datasource);
@@ -70,22 +69,7 @@ class BaseManager
         $sql .= " WHERE id = ? ";
         $req = $this->bdd->prepare($sql);
         $param[] = 'id';
-
         $boundParam = $this->boundParam($param, $obj);
-
-//        $boundParam = array();
-//        foreach ($param as $paramName) {
-//            while (strstr($paramName, '_')) {
-//                $positionUpperCase = strpos($paramName, '_');
-//                $paramName = str_replace(substr($paramName, $positionUpperCase, 2), strtoupper(substr($paramName, $positionUpperCase + 1, 1)), $paramName);
-//                $paramName = substr($paramName, 0, $positionUpperCase) . strtoupper(substr($paramName, $positionUpperCase, 1)) . substr($paramName, $positionUpperCase + 1);
-//            }
-//            if (property_exists($obj, $paramName)) {
-//                $boundParam[] = $obj->{'get' . ucfirst($paramName)}();
-//            } else {
-//                throw new PropertyNotFoundException($this->object, $paramName);
-//            }
-//        }
 
         if ($req->execute($boundParam)) {
             return $this->getById($obj->getId());
@@ -114,7 +98,6 @@ class BaseManager
                 $paramName = str_replace(substr($paramName, $positionUpperCase, 2), strtoupper(substr($paramName, $positionUpperCase + 1, 1)), $paramName);
                 $paramName = substr($paramName, 0, $positionUpperCase) . strtoupper(substr($paramName, $positionUpperCase, 1)) . substr($paramName, $positionUpperCase + 1);
             }
-
             if (property_exists($obj, $paramName))
             {
                 $boundParam[] = $obj->{'get' . ucfirst($paramName)}();
@@ -124,7 +107,6 @@ class BaseManager
                 throw new PropertyNotFoundException($this->object, $paramName);
             }
         }
-
         return $boundParam;
     }
 }

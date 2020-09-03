@@ -38,4 +38,31 @@ class UserManager extends BaseManager
         $query = $this->bdd->prepare('INSERT INTO role_user (user_id, role_id) VALUES (:userId, 2)');
         return $query->execute(array('userId' => $userId));
     }
+
+    public function checkLogin($mail, $password)
+    {
+        $query = $this->bdd->prepare('SELECT * FROM user WHERE mail = :mail');
+        $query->execute(array('mail' => $mail));
+        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'App\\Model\\Entity\\User');
+        $user = $query->fetch();
+
+        if (!empty($user)) {
+            if (password_verify($password, $user->getPassword())) {
+                $user->setListRoles($this->listRolesByUserId($user->getId()));
+                return $user;
+            } else {
+                throw new WrongPasswordException();
+            }
+        } else {
+            throw new NoUserFoundException();
+        }
+    }
+
+    public function listRolesByUserId($userId)
+    {
+        $query = $this->bdd->prepare('SELECT role.id, role.description, role.slug FROM user INNER JOIN role_user ON role_user.user_id = user.id INNER JOIN role ON role.id = role_user.role_id WHERE user.id = :userId');
+        $query->execute(array('userId' => $userId));
+        $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'App\\Model\\Entity\\Role');
+        return $query->fetchAll();
+    }
 }
