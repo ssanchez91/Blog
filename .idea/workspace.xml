@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="621b8258-0f3f-4530-b949-bcce348fbbb5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/BaseController.php" afterPath="$PROJECT_DIR$/Framework/BaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/BaseManager.php" afterPath="$PROJECT_DIR$/Framework/BaseManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/UserController.php" afterPath="$PROJECT_DIR$/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Manager/UserManager.php" afterPath="$PROJECT_DIR$/Model/Manager/UserManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/base.php" afterPath="$PROJECT_DIR$/View/base.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Config/Routes/routeUserController.json" afterPath="$PROJECT_DIR$/Config/Routes/routeUserController.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +57,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserManager.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Manager/UserManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4293915">
+            <state vertical-scroll-proportion="-14.384615">
               <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
               <folding>
                 <element signature="e#433#739#0#PHP" expanded="false" />
@@ -94,8 +90,8 @@
       <file leaf-file-name="base.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1153846">
-              <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+            <state vertical-scroll-proportion="-9.653846">
+              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -123,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routeUserController.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routeUserController.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Config/Routes/routeUserController.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-34.807693">
-              <caret line="80" column="3" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.5901263">
+              <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -145,17 +141,16 @@
                 <element signature="e#2403#2474#0#PHP" expanded="false" />
                 <element signature="e#2602#3209#0#PHP" expanded="false" />
                 <element signature="e#3276#3456#0#PHP" expanded="false" />
-                <element signature="e#3539#3630#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/DefaultController.php">
+      <file leaf-file-name="showUserProfileView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/User/showUserProfileView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,12 +172,12 @@
         <option value="$PROJECT_DIR$/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/View/Error/showErrorView.php" />
         <option value="$PROJECT_DIR$/View/Error/ExecuteQueryExceptionView.php" />
-        <option value="$PROJECT_DIR$/Config/Routes/routeUserController.json" />
         <option value="$PROJECT_DIR$/Framework/BaseController.php" />
         <option value="$PROJECT_DIR$/Framework/BaseManager.php" />
         <option value="$PROJECT_DIR$/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/View/base.php" />
         <option value="$PROJECT_DIR$/Model/Manager/UserManager.php" />
+        <option value="$PROJECT_DIR$/View/base.php" />
+        <option value="$PROJECT_DIR$/Config/Routes/routeUserController.json" />
       </list>
     </option>
   </component>
@@ -439,7 +434,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -633,14 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config/Routes/routeUserController.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-34.807693">
-          <caret line="80" column="3" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Framework/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.4615386">
@@ -669,22 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="44" column="109" selection-start-line="44" selection-start-column="109" selection-end-line="44" selection-end-column="109" />
-          <folding>
-            <element signature="e#696#793#0#PHP" expanded="false" />
-            <element signature="e#799#1072#0#PHP" expanded="false" />
-            <element signature="e#1077#2313#0#PHP" expanded="false" />
-            <element signature="e#2403#2474#0#PHP" expanded="false" />
-            <element signature="e#2602#3209#0#PHP" expanded="false" />
-            <element signature="e#3276#3456#0#PHP" expanded="false" />
-            <element signature="e#3539#3630#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/User/loginView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -693,17 +664,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/base.php">
+    <entry file="file://$PROJECT_DIR$/View/User/showUserProfileView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1153846">
-          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/Manager/UserManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4293915">
+        <state vertical-scroll-proportion="-14.384615">
           <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
           <folding>
             <element signature="e#433#739#0#PHP" expanded="false" />
@@ -716,6 +687,37 @@
             <marker date="1599120463410" expanded="true" signature="1195:1232" placeholder="SELECT * FRO..user..." />
             <marker date="1599120463410" expanded="true" signature="1885:2061" placeholder="SELECT role...user..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="44" column="109" selection-start-line="44" selection-start-column="109" selection-end-line="44" selection-end-column="109" />
+          <folding>
+            <element signature="e#696#793#0#PHP" expanded="false" />
+            <element signature="e#799#1072#0#PHP" expanded="false" />
+            <element signature="e#1077#2313#0#PHP" expanded="false" />
+            <element signature="e#2403#2474#0#PHP" expanded="false" />
+            <element signature="e#2602#3209#0#PHP" expanded="false" />
+            <element signature="e#3276#3456#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.653846">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/Routes/routeUserController.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5901263">
+          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

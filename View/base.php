@@ -37,6 +37,14 @@
                                     class="fa fa-user-plus"></i> Register</a>
                         </li>
                     <?php } ?>
+                    <?php if ($user != null) { ?>
+                        <?php if ($user->hasRole("member")) { ?>
+                            <li class="nav-item <?php if ($httpRequest->getRoute()->getName() == "showUserProfile") { ?> active <?php } ?> ">
+                                <a class="nav-item nav-link" href="<?= $config->basePath; ?>/showUserProfile"><i
+                                        class="fa fa-user"></i> Profile</a>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
