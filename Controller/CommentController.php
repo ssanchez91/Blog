@@ -76,4 +76,16 @@ class CommentController extends BaseController
             throw $e;
         }
     }
+
+    public function deleteCommentAction($id)
+    {
+        try {
+            $comment = $this->CommentManager->getById($id);
+            $deleteComment = $this->CommentManager->delete($comment);
+            $this->alertManager->addAlert('The comment with Id ' . $id . ' has just been deleted.', 'danger');
+            header('location: ' . $this->getConfig()->basePath . '/listComment/1');
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
 }
