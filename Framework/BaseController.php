@@ -33,7 +33,7 @@ class BaseController
         $this->httpRequest = $httpRequest;
         $this->config = json_decode($config);
         $this->fileManager = new FileManager();
-        $this->mailManager = new MailManager();
+        $this->mailManager = new MailManager(json_decode($config)->mailManager);
         $this->param = array();
         $this->addParam('httpRequest', $this->httpRequest);
         $this->addParam('config', $this->config);
