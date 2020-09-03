@@ -155,4 +155,90 @@ class UserController extends BaseController
             throw $e;
         }
     }
+
+    /**
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
+    public function editUserProfileAction()
+    {
+        $this->view('editUserProfile');
+    }
+
+    /**
+     * @param $salutation
+     * @param $firstName
+     * @param $lastName
+     * @param $login
+     * @throws \Exception
+     */
+    public function updateUserProfileAction($salutation, $firstName, $lastName, $login)
+    {
+        $user = new User();
+        $user->setId($this->user->getId());
+        $user->setSalutation($salutation);
+        $user->setFirstname($firstName);
+        $user->setLastname($lastName);
+        $user->setMail($login);
+
+        try {
+            $updateUser = $this->UserManager->update($user, array('mail', 'salutation', 'firstname', 'lastname'));
+            $this->addParam('user', $updateUser);
+            $_SESSION['user'] = $updateUser;
+            $this->alertManager->addAlert("Your profile has just been updated successfully!", "success");
+            header('location: ' . $this->getConfig()->basePath . '/showUserProfile');
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    /**
+     * @param $id
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
+    public function editUserAction($id)
+    {
+        $user = $this->UserManager->getById($id);
+        $this->addParam('user', $user);
+        $this->view('editUser');
+    }
+
+    /**
+     * @param $id
+     * @param $salutation
+     * @param $firstName
+     * @param $lastName
+     * @param $login
+     * @param $enabled
+     * @param $enabledOrigin
+     * @throws \Exception
+     */
+    public function updateUserAction($id, $salutation, $firstName, $lastName, $login, $enabled, $enabledOrigin)
+    {
+        $user = new User();
+        $user->setId($id);
+        $user->setSalutation($salutation);
+        $user->setFirstname($firstName);
+        $user->setLastname($lastName);
+        $user->setMail($login);
+        if ($enabled == 'false') {
+            $user->setEnabled(0);
+        } else {
+            $user->setEnabled($enabled);
+        }
+
+        try {
+            $updateUser = $this->UserManager->update($user, array('mail', 'salutation', 'firstname', 'lastname', 'enabled'));
+            $this->alertManager->addAlert('The user with Id ' . $id . ' has just been updated.', 'success');
+            if ($enabled != $enabledOrigin) {
+                if ($enabled == 'false') {
+                    $this->alertManager->addAlert('The user with Id ' . $id . ' has just been disabled.', 'warning');
+                } else {
+                    $this->alertManager->addAlert('The user with Id ' . $id . ' has just been enabled.', 'warning');
+                }
+            }
+            header('location: ' . $this->getConfig()->basePath . '/listUser/1');
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
 }

@@ -97,4 +97,12 @@ class UserManager extends BaseManager
         $query->execute();
         return $query->fetchColumn();
     }
+
+    public function update($obj, $param)
+    {
+        $user = parent::update($obj, $param);
+        $user->setListRoles($this->listRolesByUserId($user->getId()));
+
+        return $user;
+    }
 }
