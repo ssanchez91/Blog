@@ -1,0 +1,19 @@
+[
+  {
+    "name": "addComment",
+    "controller": "Comment",
+    "url": "\/addComment",
+    "method": "POST",
+    "action": "addComment",
+    "params": [
+      "description",
+      "userId",
+      "postId"
+    ],
+    "manager": [
+      "CommentManager",
+      "PostManager"
+    ],
+    "role": "member"
+  }
+]

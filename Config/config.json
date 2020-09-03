@@ -20,7 +20,8 @@
     "Config/Routes/routeError",
     "Config/Routes/routeUser",
     "Config/Routes/routeAdmin",
-    "Config/Routes/routePost"
+    "Config/Routes/routePost",
+    "Config/Routes/routeComment"
   ],
   "listTypeAlert": [
     "danger",
@@ -32,5 +33,6 @@
     "light",
     "dark"
   ],
-  "nbUserByPage": 5
+  "nbUserByPage": 5,
+  "nbCommentByPage": 5
 }

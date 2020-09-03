@@ -69,5 +69,19 @@
       "PostManager"
     ],
     "role": "author"
+  },
+  {
+    "name": "showPost",
+    "controller": "Post",
+    "url": "\/showPost\/([1-9]|[1-9][0-9]+)\/([1-9]|[1-9][0-9]+$)",
+    "method": "GET",
+    "action": "showPost",
+    "params": [],
+    "manager": [
+      "PostManager",
+      "CommentManager",
+      "UserManager"
+    ],
+    "role": ""
   }
 ]
