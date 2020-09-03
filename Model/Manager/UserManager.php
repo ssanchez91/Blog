@@ -119,4 +119,18 @@ class UserManager extends BaseManager
         $query->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, 'App\\Model\\Entity\\User');
         return $query->fetchAll();
     }
+
+    public function countUserEnabled()
+    {
+        $query = $this->bdd->query("SELECT count(*) nb_user FROM user WHERE enabled = TRUE ;");
+        $query->execute();
+        return $query->fetchColumn();
+    }
+
+    public function countUserDisabled()
+    {
+        $query = $this->bdd->query("SELECT count(*) nb_user FROM user WHERE enabled = 0 ;");
+        $query->execute();
+        return $query->fetchColumn();
+    }
 }

@@ -23,4 +23,24 @@ class AdminManager
         $this->commentManager = new CommentManager($config);
         $this->postManager = new PostManager($config);
     }
+
+    public function getStats($user)
+    {
+        $stats = new \stdClass();
+
+        if ($user->hasRole('admin')) {
+            $stats->nbUserTot = $this->userManager->countUser();
+            $stats->nbUserEnabled = $this->userManager->countUserEnabled();
+            $stats->nbUserDisabled = $this->userManager->countUserDisabled();
+            $stats->nbPost = $this->postManager->countPosts();
+            $stats->nbCommentTot = $this->commentManager->countComment();
+            $stats->nbCommentPublished = $this->commentManager->countCommentPublished(1);
+            $stats->nbCommentBanned = $this->commentManager->countCommentPublished(0);;
+        }
+
+        $stats->nbPostWritten = $this->postManager->countPosts($user->getId());
+        $stats->nbCommentWritten = $this->commentManager->countComment($user->getId());
+
+        return $stats;
+    }
 }

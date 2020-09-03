@@ -14,8 +14,13 @@ use App\Model\Manager\AdminManager;
 
 class AdminController extends BaseController
 {
+    /**
+     * @throws \App\Framework\Exception\NoViewFoundException
+     */
     public function showAdminSettingsAction()
     {
+        $stats = $this->AdminManager->getStats($this->user);
+        $this->addParam('stats', $stats);
         return $this->view('admin');
     }
 }
