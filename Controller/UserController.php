@@ -197,7 +197,7 @@ class UserController extends BaseController
      */
     public function editUserAction($id)
     {
-        $user = $this->UserManager->getById($id);
+        $user = $this->UserManager->getUserByIdWithRoles($id);
         $this->addParam('user', $user);
         $this->view('editUser');
     }
@@ -210,9 +210,10 @@ class UserController extends BaseController
      * @param $login
      * @param $enabled
      * @param $enabledOrigin
+     * @param $role
      * @throws \Exception
      */
-    public function updateUserAction($id, $salutation, $firstName, $lastName, $login, $enabled, $enabledOrigin)
+    public function updateUserAction($id, $salutation, $firstName, $lastName, $login, $enabled, $enabledOrigin, $role)
     {
         $user = new User();
         $user->setId($id);
@@ -225,7 +226,7 @@ class UserController extends BaseController
         } else {
             $user->setEnabled($enabled);
         }
-
+        $user->setListRoles($this->RoleManager->createListRoles($role));
         try {
             $updateUser = $this->UserManager->update($user, array('mail', 'salutation', 'firstname', 'lastname', 'enabled'));
             $this->alertManager->addAlert('The user with Id ' . $id . ' has just been updated.', 'success');

@@ -155,10 +155,12 @@
       "lastname",
       "login",
       "enabled",
-      "enabledOrigin"
+      "enabledOrigin",
+      "role"
     ],
     "manager": [
-      "UserManager"
+      "UserManager",
+      "RoleManager"
     ],
     "role": "admin"
   }

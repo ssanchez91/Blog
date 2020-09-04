@@ -101,6 +101,7 @@ class UserManager extends BaseManager
     public function update($obj, $param)
     {
         $user = parent::update($obj, $param);
+        $this->updateRoles($obj->getId(), $obj->getListRoles());
         $user->setListRoles($this->listRolesByUserId($user->getId()));
 
         return $user;
@@ -132,5 +133,54 @@ class UserManager extends BaseManager
         $query = $this->bdd->query("SELECT count(*) nb_user FROM user WHERE enabled = 0 ;");
         $query->execute();
         return $query->fetchColumn();
+    }
+
+    public function getUserByIdWithRoles($idUser)
+    {
+        $user = parent::getById($idUser);
+        $user->setListRoles($this->listRolesByUserId($idUser));
+        return $user;
+    }
+
+    public function updateRoles($userId, $listRoles)
+    {
+        $listRoleSlug = [];
+        foreach($listRoles as $role)
+        {
+            array_push($listRoleSlug, $role->getSlug());
+        }
+
+        $userOrigine = $this->getUserByIdWithRoles($userId);
+        $listRolesOrigine = $userOrigine->getListRoles();
+        $listRoleSlugOrigin = [];
+
+        foreach($listRolesOrigine as $roleOrigine)
+        {
+            if(!in_array($roleOrigine->getSlug(), $listRoleSlug))
+            {
+                $this->deleteRoleByUserIdAndRoleId($userId, $roleOrigine->getId());
+            }
+            array_push($listRoleSlugOrigin, $roleOrigine->getSlug());
+        }
+
+        foreach($listRoles as $role)
+        {
+            if(!in_array($role->getSlug(), $listRoleSlugOrigin))
+            {
+                $this->addRoleByUserIdAndRoleId($userId, $role->getId());
+            }
+        }
+    }
+
+    public function deleteRoleByUserIdAndRoleId($userId, $roleId)
+    {
+        $query = $this->bdd->prepare('DELETE FROM role_user WHERE user_id = :userId AND role_id = :roleId');
+        return $query->execute(array('userId' => $userId, 'roleId' => $roleId));
+    }
+
+    public function addRoleByUserIdAndRoleId($userId, $roleId)
+    {
+        $query = $this->bdd->prepare('INSERT INTO role_user SET user_id = :userId, role_id = :roleId');
+        return $query->execute(array('userId' => $userId, 'roleId' => $roleId));
     }
 }
