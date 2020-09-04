@@ -44,6 +44,23 @@
                                 </option>
                             </select>
                         </div>
+                        <div class="form-group col-md-6">
+                            <label for="role">Role(s) : </label>
+                            <select id="role" name="role" class="form-control">
+                                <option value="admin" <?php if (htmlspecialchars($user->hasRole('admin'))) {
+                                    echo 'selected="selected"';
+                                } ?>>Administrator
+                                </option>
+                                <option value="author" <?php if (htmlspecialchars($user->hasRole('author')) && htmlspecialchars($user->hasRole('admin')) == false) {
+                                    echo 'selected="selected"';
+                                } ?>>Author
+                                </option>
+                                <option value="member" <?php if (htmlspecialchars($user->hasRole('member')) && htmlspecialchars($user->hasRole('author')) == false && htmlspecialchars($user->hasRole('admin')) == false) {
+                                    echo 'selected="selected"';
+                                } ?>>Member
+                                </option>
+                            </select>
+                        </div>
                         <input type="hidden" value=<?php if (htmlspecialchars($user->getEnabled()) == true) {
                             echo '1';
                         } else {
