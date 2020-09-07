@@ -8,7 +8,7 @@
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger col-md-10 offset-md-1">
     <a class="navbar-brand" href="<?= htmlspecialchars($config->basePath); ?>/admin"><i class="fa fa-cogs"></i> ADMIN SETTINGS</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentAdmin"
             aria-controls="navbarSupportedContentAdmin" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
