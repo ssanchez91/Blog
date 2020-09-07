@@ -12,7 +12,7 @@
 ![backend](https://github.com/ssanchez91/Blog/blob/master/Public/img/readme/Admin.PNG)
 
 <h3>Diagrammes UML</h3>
-Les diagrammes UML se situent dans le dossier UML à la racine du projet:
+Les schémas UML se situent dans le dossier diagrammes à la racine du projet:
 <ul>
   <li>Diagramme de classe</li>
   <li>Diagramme de cas d'utilsation</li>
