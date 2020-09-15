@@ -11,6 +11,10 @@
 
 ![backend](https://github.com/ssanchez91/Blog/blob/master/Public/img/readme/Admin.PNG)
 
+<h3>Documentation</h3>
+<p>L'ensemble du code source a été commenté. L'utilsation de PhpDocumentor a permis de générer une documentation sous forme de site web.</p>
+<p>Le site de documentation est accessible à l'url suivante : <em>http://yourAdress.fr/basePath/Docs/index.html</em></p>
+
 <h3>Diagrammes UML</h3>
 Les schémas UML se situent dans le dossier diagrammes à la racine du projet:
 <ul>
