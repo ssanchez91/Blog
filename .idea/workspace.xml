@@ -2,52 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="621b8258-0f3f-4530-b949-bcce348fbbb5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/ActionNotFoundException.php" afterPath="$PROJECT_DIR$/Framework/Exception/ActionNotFoundException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/AdminController.php" afterPath="$PROJECT_DIR$/Controller/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Manager/AdminManager.php" afterPath="$PROJECT_DIR$/Model/Manager/AdminManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Entity/Alert.php" afterPath="$PROJECT_DIR$/Model/Entity/Alert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/AlertManager.php" afterPath="$PROJECT_DIR$/Framework/AlertManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/AuthenticationRequiredException.php" afterPath="$PROJECT_DIR$/Framework/Exception/AuthenticationRequiredException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Autoloader.php" afterPath="$PROJECT_DIR$/Model/Autoloader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/BDD.php" afterPath="$PROJECT_DIR$/Framework/BDD.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/BaseController.php" afterPath="$PROJECT_DIR$/Framework/BaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/BaseManager.php" afterPath="$PROJECT_DIR$/Framework/BaseManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Blog.iml" afterPath="$PROJECT_DIR$/.idea/Blog.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Entity/Comment.php" afterPath="$PROJECT_DIR$/Model/Entity/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/CommentController.php" afterPath="$PROJECT_DIR$/Controller/CommentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Manager/CommentManager.php" afterPath="$PROJECT_DIR$/Model/Manager/CommentManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/ControllerNotFoundException.php" afterPath="$PROJECT_DIR$/Framework/Exception/ControllerNotFoundException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/DisabledUserException.php" afterPath="$PROJECT_DIR$/Framework/Exception/DisabledUserException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/ErrorController.php" afterPath="$PROJECT_DIR$/Controller/ErrorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/ExecuteQueryException.php" afterPath="$PROJECT_DIR$/Framework/Exception/ExecuteQueryException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Error/ExecuteQueryExceptionView.php" afterPath="$PROJECT_DIR$/View/Error/ExecuteQueryExceptionView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/FileManager.php" afterPath="$PROJECT_DIR$/Framework/FileManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/ForbiddenAccessActionException.php" afterPath="$PROJECT_DIR$/Framework/Exception/ForbiddenAccessActionException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/ForbiddenAccessException.php" afterPath="$PROJECT_DIR$/Framework/Exception/ForbiddenAccessException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/HttpRequest.php" afterPath="$PROJECT_DIR$/Framework/HttpRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/MailManager.php" afterPath="$PROJECT_DIR$/Framework/MailManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/MultipleRouteFoundException.php" afterPath="$PROJECT_DIR$/Framework/Exception/MultipleRouteFoundException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/NoRouteFileFoundException.php" afterPath="$PROJECT_DIR$/Framework/Exception/NoRouteFileFoundException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/NoRouteFoundException.php" afterPath="$PROJECT_DIR$/Framework/Exception/NoRouteFoundException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/NoUserFoundException.php" afterPath="$PROJECT_DIR$/Framework/Exception/NoUserFoundException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/NoViewFoundException.php" afterPath="$PROJECT_DIR$/Framework/Exception/NoViewFoundException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/PageNotFoundException.php" afterPath="$PROJECT_DIR$/Framework/Exception/PageNotFoundException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Entity/Post.php" afterPath="$PROJECT_DIR$/Model/Entity/Post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/PostController.php" afterPath="$PROJECT_DIR$/Controller/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Manager/PostManager.php" afterPath="$PROJECT_DIR$/Model/Manager/PostManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/PropertyNotFoundException.php" afterPath="$PROJECT_DIR$/Framework/Exception/PropertyNotFoundException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Entity/Role.php" afterPath="$PROJECT_DIR$/Model/Entity/Role.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Manager/RoleManager.php" afterPath="$PROJECT_DIR$/Model/Manager/RoleManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Route.php" afterPath="$PROJECT_DIR$/Framework/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Router.php" afterPath="$PROJECT_DIR$/Framework/Router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Entity/User.php" afterPath="$PROJECT_DIR$/Model/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/UserAlreadyExistException.php" afterPath="$PROJECT_DIR$/Framework/Exception/UserAlreadyExistException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/UserController.php" afterPath="$PROJECT_DIR$/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Manager/UserManager.php" afterPath="$PROJECT_DIR$/Model/Manager/UserManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/WrongPasswordException.php" afterPath="$PROJECT_DIR$/Framework/Exception/WrongPasswordException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Framework/Exception/WrongSecondPasswordException.php" afterPath="$PROJECT_DIR$/Framework/Exception/WrongSecondPasswordException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Error/showErrorView.php" afterPath="$PROJECT_DIR$/View/Error/showErrorView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Blog.iws" />
@@ -70,11 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".codeclimate.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.codeclimate.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.04493392">
+              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -108,7 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/View/base.php" />
         <option value="$PROJECT_DIR$/View/base.js" />
         <option value="$PROJECT_DIR$/View/Shared/navbarAdminView.php" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -159,6 +122,7 @@
         <option value="$PROJECT_DIR$/Model/Autoloader.php" />
         <option value="$PROJECT_DIR$/Model/Entity/Post.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.codeclimate.yml" />
       </list>
     </option>
   </component>
@@ -283,14 +247,22 @@
       <option name="number" value="Default" />
       <updated>1599052223891</updated>
     </task>
+    <task id="LOCAL-00001" summary="add codeclimateignore to exclude Docs folder">
+      <created>1600163761105</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600163761105</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="4791" y="-9" width="2418" height="1318" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1387234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1387234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -324,6 +296,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add codeclimateignore to exclude Docs folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="add codeclimateignore to exclude Docs folder" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -331,13 +307,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/View/Admin/adminView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.078071184">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/Shared/navbarAdminView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19517796">
@@ -735,6 +704,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.codeclimate.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04493392">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
           <folding />
         </state>
       </provider>
