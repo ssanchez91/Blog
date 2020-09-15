@@ -11,13 +11,28 @@ namespace App\Model\Manager;
 
 use App\Framework\BaseManager;
 
+/**
+ * Class PostManager
+ * @package App\Model\Manager
+ */
 class PostManager extends BaseManager
 {
+    /**
+     * Constructor
+     * @param string $datasource string connexion
+     */
     public function __construct($datasource)
     {
         parent::__construct('post', 'App\\Model\\Entity\\Post', $datasource);
     }
 
+    /**
+     * Method listPostByPage
+     *
+     * @param int $page page number asked
+     * @param int $nbPostsByPage number of post displayed by page
+     * @return \stdClass
+     */
     public function listPostByPage($page, $nbPostsByPage)
     {
         $nbPosts = $this->countPosts();
@@ -34,6 +49,14 @@ class PostManager extends BaseManager
         return $result;
     }
 
+    /**
+     * Method listPostByPageByAuthor
+     *
+     * @param int $page page number asked
+     * @param int $nbPostsByPage number of post displayed by page
+     * @param  int $idUser User Id
+     * @return \stdClass
+     */
     public function listPostByPageByAuthor($page, $nbPostsByPage, $idUser)
     {
         $nbPosts = $this->countPosts($idUser);
@@ -51,6 +74,12 @@ class PostManager extends BaseManager
         return $result;
     }
 
+    /**
+     * Method countPosts
+     *
+     * @param int $idUser User Id
+     * @return string
+     */
     public function countPosts($idUser = null)
     {
         if (empty($idUser)) {

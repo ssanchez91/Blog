@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \Document\Tests
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Packages
+                </li>
+                <a href="../packages/Document.Tests.html" title="Tests">
+                    <i class="icon-th"></i> Tests
+                </a>
+                <ul class="nav nav-list nav-packages">
+                        
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 package-contents">
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Document.html">Document</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Document.Tests.html">Tests</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="ezcConverterDocbookEzXmlOptionsTests" class="element ajax clickable class">
+        <h1>ezcConverterDocbookEzXmlOptionsTests<a href="../classes/ezcConverterDocbookEzXmlOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcConverterDocbookEzXmlOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcConverterEzXmlDocbookOptionsTests" class="element ajax clickable class">
+        <h1>ezcConverterEzXmlDocbookOptionsTests<a href="../classes/ezcConverterEzXmlDocbookOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcConverterEzXmlDocbookOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcConverterOdtOptionsTests" class="element ajax clickable class">
+        <h1>ezcConverterOdtOptionsTests<a href="../classes/ezcConverterOdtOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcConverterOdtOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcConverterOptionsTests" class="element ajax clickable class">
+        <h1>ezcConverterOptionsTests<a href="../classes/ezcConverterOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcConverterOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcConverterRstOptionsTests" class="element ajax clickable class">
+        <h1>ezcConverterRstOptionsTests<a href="../classes/ezcConverterRstOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcConverterRstOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcConverterWikiOptionsTests" class="element ajax clickable class">
+        <h1>ezcConverterWikiOptionsTests<a href="../classes/ezcConverterWikiOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcConverterWikiOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcConverterXsltOptionsTests" class="element ajax clickable class">
+        <h1>ezcConverterXsltOptionsTests<a href="../classes/ezcConverterXsltOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcConverterXsltOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentBBCodeDocbookVisitorTests" class="element ajax clickable class">
+        <h1>ezcDocumentBBCodeDocbookVisitorTests<a href="../classes/ezcDocumentBBCodeDocbookVisitorTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentBBCodeDocbookVisitorTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentBBCodeParserTests" class="element ajax clickable class">
+        <h1>ezcDocumentBBCodeParserTests<a href="../classes/ezcDocumentBBCodeParserTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentBBCodeParserTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentBBCodeTokenizerTests" class="element ajax clickable class">
+        <h1>ezcDocumentBBCodeTokenizerTests<a href="../classes/ezcDocumentBBCodeTokenizerTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentBBCodeTokenizerTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentConverterDocbookToEzXmlTests" class="element ajax clickable class">
+        <h1>ezcDocumentConverterDocbookToEzXmlTests<a href="../classes/ezcDocumentConverterDocbookToEzXmlTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentConverterDocbookToEzXmlTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentConverterDocbookToHtmlTests" class="element ajax clickable class">
+        <h1>ezcDocumentConverterDocbookToHtmlTests<a href="../classes/ezcDocumentConverterDocbookToHtmlTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentConverterDocbookToHtmlTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentConverterDocbookToHtmlXsltTests" class="element ajax clickable class">
+        <h1>ezcDocumentConverterDocbookToHtmlXsltTests<a href="../classes/ezcDocumentConverterDocbookToHtmlXsltTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentConverterDocbookToHtmlXsltTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentConverterDocbookToOdtTests" class="element ajax clickable class">
+        <h1>ezcDocumentConverterDocbookToOdtTests<a href="../classes/ezcDocumentConverterDocbookToOdtTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentConverterDocbookToOdtTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentConverterDocbookToRstTests" class="element ajax clickable class">
+        <h1>ezcDocumentConverterDocbookToRstTests<a href="../classes/ezcDocumentConverterDocbookToRstTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentConverterDocbookToRstTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentConverterDocbookToWikiTests" class="element ajax clickable class">
+        <h1>ezcDocumentConverterDocbookToWikiTests<a href="../classes/ezcDocumentConverterDocbookToWikiTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentConverterDocbookToWikiTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentConverterTests" class="element ajax clickable class">
+        <h1>ezcDocumentConverterTests<a href="../classes/ezcDocumentConverterTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentConverterTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentDocbookOptionsTests" class="element ajax clickable class">
+        <h1>ezcDocumentDocbookOptionsTests<a href="../classes/ezcDocumentDocbookOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentDocbookOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentDocbookTests" class="element ajax clickable class">
+        <h1>ezcDocumentDocbookTests<a href="../classes/ezcDocumentDocbookTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentDocbookTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentDocumentTests" class="element ajax clickable class">
+        <h1>ezcDocumentDocumentTests<a href="../classes/ezcDocumentDocumentTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentDocumentTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentEzXmlOptionsTests" class="element ajax clickable class">
+        <h1>ezcDocumentEzXmlOptionsTests<a href="../classes/ezcDocumentEzXmlOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentEzXmlOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentEzXmlTests" class="element ajax clickable class">
+        <h1>ezcDocumentEzXmlTests<a href="../classes/ezcDocumentEzXmlTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentEzXmlTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtDocbookTests" class="element ajax clickable class">
+        <h1>ezcDocumentOdtDocbookTests<a href="../classes/ezcDocumentOdtDocbookTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtDocbookTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtFormattingPropertiesTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtFormattingPropertiesTest<a href="../classes/ezcDocumentOdtFormattingPropertiesTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtFormattingPropertiesTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtFormattingPropertyCollectionTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtFormattingPropertyCollectionTest<a href="../classes/ezcDocumentOdtFormattingPropertyCollectionTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtFormattingPropertyCollectionTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtListLevelStyleTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtListLevelStyleTest<a href="../classes/ezcDocumentOdtListLevelStyleTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtListLevelStyleTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtMetaGeneratorTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtMetaGeneratorTest<a href="../classes/ezcDocumentOdtMetaGeneratorTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtMetaGeneratorTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtPcssConvertersTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtPcssConvertersTest<a href="../classes/ezcDocumentOdtPcssConvertersTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtPcssConvertersTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtStyleExtractorTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtStyleExtractorTest<a href="../classes/ezcDocumentOdtStyleExtractorTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtStyleExtractorTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtStyleParagraphPropertyGeneratorTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtStyleParagraphPropertyGeneratorTest<a href="../classes/ezcDocumentOdtStyleParagraphPropertyGeneratorTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtStyleParagraphPropertyGeneratorTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtStyleParserTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtStyleParserTest<a href="../classes/ezcDocumentOdtStyleParserTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtStyleParserTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtStylePropertyGeneratorTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtStylePropertyGeneratorTest<a href="../classes/ezcDocumentOdtStylePropertyGeneratorTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtStylePropertyGeneratorTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtStyleTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtStyleTest<a href="../classes/ezcDocumentOdtStyleTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtStyleTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtStyleTextPropertyGeneratorTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtStyleTextPropertyGeneratorTest<a href="../classes/ezcDocumentOdtStyleTextPropertyGeneratorTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtStyleTextPropertyGeneratorTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOdtTextProcessorTest" class="element ajax clickable class">
+        <h1>ezcDocumentOdtTextProcessorTest<a href="../classes/ezcDocumentOdtTextProcessorTest.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOdtTextProcessorTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOptionsOdtTests" class="element ajax clickable class">
+        <h1>ezcDocumentOptionsOdtTests<a href="../classes/ezcDocumentOptionsOdtTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOptionsOdtTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOptionsTestCase" class="element ajax clickable class">
+        <h1>ezcDocumentOptionsTestCase<a href="../classes/ezcDocumentOptionsTestCase.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOptionsTestCase.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOptionsTests" class="element ajax clickable class">
+        <h1>ezcDocumentOptionsTests<a href="../classes/ezcDocumentOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentOptionsXmlBaseTests" class="element ajax clickable class">
+        <h1>ezcDocumentOptionsXmlBaseTests<a href="../classes/ezcDocumentOptionsXmlBaseTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentOptionsXmlBaseTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentParserTests" class="element ajax clickable class">
+        <h1>ezcDocumentParserTests<a href="../classes/ezcDocumentParserTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentParserTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPcssLocationIdTests" class="element ajax clickable class">
+        <h1>ezcDocumentPcssLocationIdTests<a href="../classes/ezcDocumentPcssLocationIdTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPcssLocationIdTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPcssMatchLocationIdTests" class="element ajax clickable class">
+        <h1>ezcDocumentPcssMatchLocationIdTests<a href="../classes/ezcDocumentPcssMatchLocationIdTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPcssMatchLocationIdTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPcssMeasureTests" class="element ajax clickable class">
+        <h1>ezcDocumentPcssMeasureTests<a href="../classes/ezcDocumentPcssMeasureTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPcssMeasureTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPcssParserTests" class="element ajax clickable class">
+        <h1>ezcDocumentPcssParserTests<a href="../classes/ezcDocumentPcssParserTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPcssParserTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPcssStyleInferenceTests" class="element ajax clickable class">
+        <h1>ezcDocumentPcssStyleInferenceTests<a href="../classes/ezcDocumentPcssStyleInferenceTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPcssStyleInferenceTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPcssValueParserTests" class="element ajax clickable class">
+        <h1>ezcDocumentPcssValueParserTests<a href="../classes/ezcDocumentPcssValueParserTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPcssValueParserTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfBlockquoteRendererTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfBlockquoteRendererTests<a href="../classes/ezcDocumentPdfBlockquoteRendererTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfBlockquoteRendererTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfDriverHaruTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfDriverHaruTests<a href="../classes/ezcDocumentPdfDriverHaruTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfDriverHaruTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfDriverSvgTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfDriverSvgTests<a href="../classes/ezcDocumentPdfDriverSvgTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfDriverSvgTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfDriverTcpdfTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfDriverTcpdfTests<a href="../classes/ezcDocumentPdfDriverTcpdfTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfDriverTcpdfTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfDriverTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfDriverTests<a href="../classes/ezcDocumentPdfDriverTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfDriverTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfFooterOptionsTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfFooterOptionsTests<a href="../classes/ezcDocumentPdfFooterOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfFooterOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfHyphenatorTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfHyphenatorTests<a href="../classes/ezcDocumentPdfHyphenatorTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfHyphenatorTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfImageHandlerTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfImageHandlerTests<a href="../classes/ezcDocumentPdfImageHandlerTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfImageHandlerTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfListItemGeneratorTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfListItemGeneratorTests<a href="../classes/ezcDocumentPdfListItemGeneratorTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfListItemGeneratorTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfListRendererTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfListRendererTests<a href="../classes/ezcDocumentPdfListRendererTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfListRendererTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfLiterallayoutRendererTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfLiterallayoutRendererTests<a href="../classes/ezcDocumentPdfLiterallayoutRendererTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfLiterallayoutRendererTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfLiteralTokenizerTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfLiteralTokenizerTests<a href="../classes/ezcDocumentPdfLiteralTokenizerTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfLiteralTokenizerTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfMainRendererTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfMainRendererTests<a href="../classes/ezcDocumentPdfMainRendererTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfMainRendererTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfMediaObjectRendererTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfMediaObjectRendererTests<a href="../classes/ezcDocumentPdfMediaObjectRendererTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfMediaObjectRendererTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfOptionsTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfOptionsTests<a href="../classes/ezcDocumentPdfOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfPageTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfPageTests<a href="../classes/ezcDocumentPdfPageTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfPageTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfParagraphRendererTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfParagraphRendererTests<a href="../classes/ezcDocumentPdfParagraphRendererTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfParagraphRendererTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfRendererFooterPartTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfRendererFooterPartTests<a href="../classes/ezcDocumentPdfRendererFooterPartTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfRendererFooterPartTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfRendererTextDecorationsTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfRendererTextDecorationsTests<a href="../classes/ezcDocumentPdfRendererTextDecorationsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfRendererTextDecorationsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfRenderRtlTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfRenderRtlTests<a href="../classes/ezcDocumentPdfRenderRtlTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfRenderRtlTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfTableColumnWidthCalculatorTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfTableColumnWidthCalculatorTests<a href="../classes/ezcDocumentPdfTableColumnWidthCalculatorTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfTableColumnWidthCalculatorTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfTableRendererTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfTableRendererTests<a href="../classes/ezcDocumentPdfTableRendererTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfTableRendererTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfTestCase" class="element ajax clickable class">
+        <h1>ezcDocumentPdfTestCase<a href="../classes/ezcDocumentPdfTestCase.html">¶</a></h1>
+        <p class="short_description">Base test suite for PDF tests, implementing an assertion on PDF
+equality.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfTestCase.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfTests<a href="../classes/ezcDocumentPdfTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfTextBoxRendererBaseTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfTextBoxRendererBaseTests<a href="../classes/ezcDocumentPdfTextBoxRendererBaseTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfTextBoxRendererBaseTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfTextBoxRendererTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfTextBoxRendererTests<a href="../classes/ezcDocumentPdfTextBoxRendererTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfTextBoxRendererTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfTokenizerTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfTokenizerTests<a href="../classes/ezcDocumentPdfTokenizerTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfTokenizerTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfTransactionalDriverWrapperTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfTransactionalDriverWrapperTests<a href="../classes/ezcDocumentPdfTransactionalDriverWrapperTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfTransactionalDriverWrapperTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentPdfVariableListRendererTests" class="element ajax clickable class">
+        <h1>ezcDocumentPdfVariableListRendererTests<a href="../classes/ezcDocumentPdfVariableListRendererTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentPdfVariableListRendererTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentRstDocbookVisitorTests" class="element ajax clickable class">
+        <h1>ezcDocumentRstDocbookVisitorTests<a href="../classes/ezcDocumentRstDocbookVisitorTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentRstDocbookVisitorTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentRstOptionsTests" class="element ajax clickable class">
+        <h1>ezcDocumentRstOptionsTests<a href="../classes/ezcDocumentRstOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentRstOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentRstParserTests" class="element ajax clickable class">
+        <h1>ezcDocumentRstParserTests<a href="../classes/ezcDocumentRstParserTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentRstParserTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentRstStackTests" class="element ajax clickable class">
+        <h1>ezcDocumentRstStackTests<a href="../classes/ezcDocumentRstStackTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentRstStackTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentRstTokenizerTests" class="element ajax clickable class">
+        <h1>ezcDocumentRstTokenizerTests<a href="../classes/ezcDocumentRstTokenizerTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentRstTokenizerTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentRstValidationTests" class="element ajax clickable class">
+        <h1>ezcDocumentRstValidationTests<a href="../classes/ezcDocumentRstValidationTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentRstValidationTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentRstXhtmlBodyVisitorTests" class="element ajax clickable class">
+        <h1>ezcDocumentRstXhtmlBodyVisitorTests<a href="../classes/ezcDocumentRstXhtmlBodyVisitorTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentRstXhtmlBodyVisitorTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentRstXhtmlVisitorTests" class="element ajax clickable class">
+        <h1>ezcDocumentRstXhtmlVisitorTests<a href="../classes/ezcDocumentRstXhtmlVisitorTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentRstXhtmlVisitorTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentWikiConfluenceTokenizerTests" class="element ajax clickable class">
+        <h1>ezcDocumentWikiConfluenceTokenizerTests<a href="../classes/ezcDocumentWikiConfluenceTokenizerTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentWikiConfluenceTokenizerTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentWikiCreoleTokenizerTests" class="element ajax clickable class">
+        <h1>ezcDocumentWikiCreoleTokenizerTests<a href="../classes/ezcDocumentWikiCreoleTokenizerTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentWikiCreoleTokenizerTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentWikiDocbookVisitorTests" class="element ajax clickable class">
+        <h1>ezcDocumentWikiDocbookVisitorTests<a href="../classes/ezcDocumentWikiDocbookVisitorTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentWikiDocbookVisitorTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentWikiDokuwikiTokenizerTests" class="element ajax clickable class">
+        <h1>ezcDocumentWikiDokuwikiTokenizerTests<a href="../classes/ezcDocumentWikiDokuwikiTokenizerTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentWikiDokuwikiTokenizerTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentWikiMediawikiTokenizerTests" class="element ajax clickable class">
+        <h1>ezcDocumentWikiMediawikiTokenizerTests<a href="../classes/ezcDocumentWikiMediawikiTokenizerTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentWikiMediawikiTokenizerTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentWikiOptionsTests" class="element ajax clickable class">
+        <h1>ezcDocumentWikiOptionsTests<a href="../classes/ezcDocumentWikiOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentWikiOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentWikiParserTests" class="element ajax clickable class">
+        <h1>ezcDocumentWikiParserTests<a href="../classes/ezcDocumentWikiParserTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentWikiParserTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentWikiTests" class="element ajax clickable class">
+        <h1>ezcDocumentWikiTests<a href="../classes/ezcDocumentWikiTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentWikiTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentXhtmlDocbookTests" class="element ajax clickable class">
+        <h1>ezcDocumentXhtmlDocbookTests<a href="../classes/ezcDocumentXhtmlDocbookTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentXhtmlDocbookTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentXhtmlOptionsTests" class="element ajax clickable class">
+        <h1>ezcDocumentXhtmlOptionsTests<a href="../classes/ezcDocumentXhtmlOptionsTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentXhtmlOptionsTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentXhtmlValidationTests" class="element ajax clickable class">
+        <h1>ezcDocumentXhtmlValidationTests<a href="../classes/ezcDocumentXhtmlValidationTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentXhtmlValidationTests.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcDocumentXmlBaseTests" class="element ajax clickable class">
+        <h1>ezcDocumentXmlBaseTests<a href="../classes/ezcDocumentXmlBaseTests.html">¶</a></h1>
+        <p class="short_description">Test suite for class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcDocumentXmlBaseTests.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:32 +0000.<br/>
+    </footer>
+    </body>
+</html>

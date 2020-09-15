@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \Base
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Packages
+                </li>
+                <a href="../packages/Base.html" title="Base">
+                    <i class="icon-th"></i> Base
+                </a>
+                <ul class="nav nav-list nav-packages">
+                        
+        <li>
+        <a href="../packages/Base.Tests.html" title="Tests">
+            <i class="icon-th"></i> Tests
+        </a>
+        <ul class="nav nav-list nav-packages">
+                
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 package-contents">
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Base.html">Base</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="ezcBaseConfigurationInitializer" class="element ajax clickable interface">
+        <h1>ezcBaseConfigurationInitializer<a href="../classes/ezcBaseConfigurationInitializer.html">¶</a></h1>
+        <p class="short_description">This class provides the interface that classes need to implement to act as
+an callback initializer class to work with the delayed initialization
+mechanism.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseConfigurationInitializer.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseExportable" class="element ajax clickable interface">
+        <h1>ezcBaseExportable<a href="../classes/ezcBaseExportable.html">¶</a></h1>
+        <p class="short_description">Interface for class of which instances can be exported using var_export().</p>
+        <div class="details collapse">In some components, objects can be stored (e.g. to disc) using the var_export()
+function. To ensure that an object supports proper importing again, this
+interface should be implemented.</div>
+        <a href="../classes/ezcBaseExportable.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBasePersistable" class="element ajax clickable interface">
+        <h1>ezcBasePersistable<a href="../classes/ezcBasePersistable.html">¶</a></h1>
+        <p class="short_description">This class provides the interface that classes need to implement to be able
+to be used by the PersistentObject and Search components.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBasePersistable.html" class="more">« More »</a>
+    </div>
+
+                
+                                        <div id="ezcBase" class="element ajax clickable class">
+        <h1>ezcBase<a href="../classes/ezcBase.html">¶</a></h1>
+        <p class="short_description">Base class implements the methods needed to use the eZ components.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBase.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseAutoloadException" class="element ajax clickable class">
+        <h1>ezcBaseAutoloadException<a href="../classes/ezcBaseAutoloadException.html">¶</a></h1>
+        <p class="short_description">ezcBaseAutoloadException is thrown whenever a class can not be found with
+the autoload mechanism.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseAutoloadException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseAutoloadOptions" class="element ajax clickable class">
+        <h1>ezcBaseAutoloadOptions<a href="../classes/ezcBaseAutoloadOptions.html">¶</a></h1>
+        <p class="short_description">Class containing the basic options for ezcBase&#039; autoload.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseAutoloadOptions.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseDoubleClassRepositoryPrefixException" class="element ajax clickable class">
+        <h1>ezcBaseDoubleClassRepositoryPrefixException<a href="../classes/ezcBaseDoubleClassRepositoryPrefixException.html">¶</a></h1>
+        <p class="short_description">ezcBaseDoubleClassRepositoryPrefixException is thrown whenever you try to
+register a class repository with a prefix that has already been added
+before.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseDoubleClassRepositoryPrefixException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseException" class="element ajax clickable class">
+        <h1>ezcBaseException<a href="../classes/ezcBaseException.html">¶</a></h1>
+        <p class="short_description">ezcBaseException is a container from which all other exceptions in the
+components library descent.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseExtensionNotFoundException" class="element ajax clickable class">
+        <h1>ezcBaseExtensionNotFoundException<a href="../classes/ezcBaseExtensionNotFoundException.html">¶</a></h1>
+        <p class="short_description">ezcBaseExtensionNotFoundException is thrown when a requested PHP extension was not found.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseExtensionNotFoundException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFeatures" class="element ajax clickable class">
+        <h1>ezcBaseFeatures<a href="../classes/ezcBaseFeatures.html">¶</a></h1>
+        <p class="short_description">Provides methods needed to check for features.</p>
+        <div class="details collapse">Example:
+&lt;code&gt;
+&lt;?php
+echo &quot;supports uid: &quot; . ezcBaseFeatures::supportsUserId() . &quot;\n&quot;;
+echo &quot;supports symlink: &quot; . ezcBaseFeatures::supportsSymLink() . &quot;\n&quot;;
+echo &quot;supports hardlink: &quot; . ezcBaseFeatures::supportsLink() . &quot;\n&quot;;
+echo &quot;has imagemagick identify: &quot; . ezcBaseFeatures::hasImageIdentify() . &quot;\n&quot;;
+echo &quot; identify path: &quot; . ezcBaseFeatures::getImageIdentifyExecutable() . &quot;\n&quot;;
+echo &quot;has imagemagick convert: &quot; . ezcBaseFeatures::hasImageConvert() . &quot;\n&quot;;
+echo &quot; convert path: &quot; . ezcBaseFeatures::getImageConvertExecutable() . &quot;\n&quot;;
+echo &quot;has gzip extension: &quot; . ezcBaseFeatures::hasExtensionSupport( &#039;zlib&#039; ) . &quot;\n&quot;;
+echo &quot;has pdo_mysql 1.0.2: &quot; . ezcBaseFeatures::hasExtensionSupport( &#039;pdo_mysql&#039;, &#039;1.0.2&#039; ) . &quot;\n&quot;
+?&gt;
+&lt;/code&gt;</div>
+        <a href="../classes/ezcBaseFeatures.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFile" class="element ajax clickable class">
+        <h1>ezcBaseFile<a href="../classes/ezcBaseFile.html">¶</a></h1>
+        <p class="short_description">Provides a selection of static independent methods to provide functionality
+for file and file system handling.</p>
+        <div class="details collapse">This example shows how to use the findRecursive method:
+&lt;code&gt;
+&lt;?php
+// lists all the files under /etc (including subdirectories) that end in
+// .conf
+$confFiles = ezcBaseFile::findRecursive( &quot;/etc&quot;, array( &#039;@\.conf$@&#039; ) );
+
+// lists all autoload files in the components source tree and excludes the
+// ones in the autoload subdirectory. Statistics are returned in the $stats
+// variable which is passed by reference.
+$files = ezcBaseFile::findRecursive(
+    &quot;/dat/dev/ezcomponents&quot;,
+    array( &#039;@src/.*_autoload.php$@&#039; ),
+    array( &#039;@/autoload/@&#039; ),
+    $stats
+);
+
+// lists all binaries in /bin except the ones starting with a &quot;g&quot;
+$data = ezcBaseFile::findRecursive( &quot;/bin&quot;, array(), array( &#039;@^/bin/g@&#039; ) );
+?&gt;
+&lt;/code&gt;</div>
+        <a href="../classes/ezcBaseFile.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFileException" class="element ajax clickable class">
+        <h1>ezcBaseFileException<a href="../classes/ezcBaseFileException.html">¶</a></h1>
+        <p class="short_description">ezcBaseFileException is the exception from which all file related exceptions
+inherit.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFileException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFileFindContext" class="element ajax clickable class">
+        <h1>ezcBaseFileFindContext<a href="../classes/ezcBaseFileFindContext.html">¶</a></h1>
+        <p class="short_description">Struct which defines the information collected by the file walker for locating files.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFileFindContext.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFileIoException" class="element ajax clickable class">
+        <h1>ezcBaseFileIoException<a href="../classes/ezcBaseFileIoException.html">¶</a></h1>
+        <p class="short_description">ezcBaseFileIoException is thrown when a problem occurs while writing
+and reading to/from an open file.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFileIoException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFileNotFoundException" class="element ajax clickable class">
+        <h1>ezcBaseFileNotFoundException<a href="../classes/ezcBaseFileNotFoundException.html">¶</a></h1>
+        <p class="short_description">ezcBaseFileNotFoundException is thrown when a file or directory was tried to
+be opened, but did not exist.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFileNotFoundException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFilePermissionException" class="element ajax clickable class">
+        <h1>ezcBaseFilePermissionException<a href="../classes/ezcBaseFilePermissionException.html">¶</a></h1>
+        <p class="short_description">ezcBaseFilePermissionException is thrown whenever a permission problem with
+a file, directory or stream occurred.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFilePermissionException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFunctionalityNotSupportedException" class="element ajax clickable class">
+        <h1>ezcBaseFunctionalityNotSupportedException<a href="../classes/ezcBaseFunctionalityNotSupportedException.html">¶</a></h1>
+        <p class="short_description">The ezcBaseFunctionalityNotSupportedException is thrown when a requested
+PHP function was not found.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFunctionalityNotSupportedException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseInit" class="element ajax clickable class">
+        <h1>ezcBaseInit<a href="../classes/ezcBaseInit.html">¶</a></h1>
+        <p class="short_description">Provides a method to implement delayed initialization of objects.</p>
+        <div class="details collapse">With the methods in this class you can implement callbacks to configure
+singleton classes. In order to do so you will have to change the
+getInstance() method of your singleton class to include a call to
+ezcBaseInit::fetchConfig() as in the following example:
+
+&lt;code&gt;
+&lt;?php
+public static function getInstance()
+{
+    if ( is_null( self::$instance ) )
+    {
+        self::$instance = new ezcConfigurationmanager();
+        ezcBaseInit::fetchConfig( &#039;ezcInitConfigurationManager&#039;, self::$instance );
+    }
+    return self::$instance;
+}
+?&gt;
+&lt;/code&gt;
+
+You will also need to configure which callback class to call. This you do
+with the ezcBaseInit::setCallback() method. The following examples sets the
+callback classname for the configuration identifier
+&#039;ezcInitConfigurationManager&#039; to &#039;cfgConfigurationManager&#039;:
+
+&lt;code&gt;
+&lt;?php
+ezcBaseInit::setCallback( &#039;ezcInitConfigurationManager&#039;, &#039;cfgConfigurationManager&#039; );
+?&gt;
+&lt;/code&gt;
+
+The class &#039;cfgConfigurationManager&#039; is required to implement the
+ezcBaseConfigurationInitializer interface, which defines only one method:
+configureObject(). An example on how to implement such a class could be:
+
+&lt;code&gt;
+&lt;?php
+class cfgConfigurationManager implements ezcBaseConfigurationInitializer
+{
+    static public function configureObject( ezcConfigurationManager $cfgManagerObject )
+    {
+        $cfgManagerObject-&gt;init( &#039;ezcConfigurationIniReader&#039;, &#039;settings&#039;, array( &#039;useComments&#039; =&gt; true ) );
+    }
+}
+?&gt;
+&lt;/code&gt;
+
+Of course the implementation of this callback class is up to the application
+developer that uses the component (in this example the Configuration
+component&#039;s class ezcConfigurationManager).</div>
+        <a href="../classes/ezcBaseInit.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseInitCallbackConfiguredException" class="element ajax clickable class">
+        <h1>ezcBaseInitCallbackConfiguredException<a href="../classes/ezcBaseInitCallbackConfiguredException.html">¶</a></h1>
+        <p class="short_description">ezcBaseInitCallbackConfiguredException is thrown when you try to assign a
+callback clasname to an identifier, while there is already a callback class
+configured for this identifier.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseInitCallbackConfiguredException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseInitInvalidCallbackClassException" class="element ajax clickable class">
+        <h1>ezcBaseInitInvalidCallbackClassException<a href="../classes/ezcBaseInitInvalidCallbackClassException.html">¶</a></h1>
+        <p class="short_description">Exception that is thrown if an invalid class is passed as callback class for
+delayed object configuration.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseInitInvalidCallbackClassException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseInvalidParentClassException" class="element ajax clickable class">
+        <h1>ezcBaseInvalidParentClassException<a href="../classes/ezcBaseInvalidParentClassException.html">¶</a></h1>
+        <p class="short_description">Exception that is thrown if an invalid class is passed as custom class.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseInvalidParentClassException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseMetaData" class="element ajax clickable class">
+        <h1>ezcBaseMetaData<a href="../classes/ezcBaseMetaData.html">¶</a></h1>
+        <p class="short_description">Base class implements ways of fetching information about the installed
+eZ Components. It knows whether to use the PEAR registry or the bundled XML
+file, depending on how eZ Components is installed.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseMetaData.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseMetaDataPearReader" class="element ajax clickable class">
+        <h1>ezcBaseMetaDataPearReader<a href="../classes/ezcBaseMetaDataPearReader.html">¶</a></h1>
+        <p class="short_description">Base class implements ways of fetching information about the installed
+eZ Components when installed as tarball.</p>
+        <div class="details collapse">Note: there are lots of @ used here, because PEAR still lives in the stone
+age with their PHP 3 code and general liberal use of throwing warnings and
+notices.</div>
+        <a href="../classes/ezcBaseMetaDataPearReader.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseMetaDataTarballReader" class="element ajax clickable class">
+        <h1>ezcBaseMetaDataTarballReader<a href="../classes/ezcBaseMetaDataTarballReader.html">¶</a></h1>
+        <p class="short_description">Base class implements ways of fetching information about the installed
+eZ Components when installed as tarball.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseMetaDataTarballReader.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseOptions" class="element ajax clickable class">
+        <h1>ezcBaseOptions<a href="../classes/ezcBaseOptions.html">¶</a></h1>
+        <p class="short_description">Base options class for all eZ components.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseOptions.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBasePropertyNotFoundException" class="element ajax clickable class">
+        <h1>ezcBasePropertyNotFoundException<a href="../classes/ezcBasePropertyNotFoundException.html">¶</a></h1>
+        <p class="short_description">ezcBasePropertyNotFoundException is thrown whenever a non existent property
+is accessed in the Components library.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBasePropertyNotFoundException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBasePropertyPermissionException" class="element ajax clickable class">
+        <h1>ezcBasePropertyPermissionException<a href="../classes/ezcBasePropertyPermissionException.html">¶</a></h1>
+        <p class="short_description">ezcBasePropertyPermissionException is thrown whenever a read-only property
+is tried to be changed, or when a write-only property was accessed for reading.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBasePropertyPermissionException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseRepositoryDirectory" class="element ajax clickable class">
+        <h1>ezcBaseRepositoryDirectory<a href="../classes/ezcBaseRepositoryDirectory.html">¶</a></h1>
+        <p class="short_description">Struct which defines a repository directory.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseRepositoryDirectory.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseSettingNotFoundException" class="element ajax clickable class">
+        <h1>ezcBaseSettingNotFoundException<a href="../classes/ezcBaseSettingNotFoundException.html">¶</a></h1>
+        <p class="short_description">ezcBaseSettingNotFoundException is thrown whenever there is a name passed as
+part as the options array to setOptions() for an option that doesn&#039;t exist.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseSettingNotFoundException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseSettingValueException" class="element ajax clickable class">
+        <h1>ezcBaseSettingValueException<a href="../classes/ezcBaseSettingValueException.html">¶</a></h1>
+        <p class="short_description">ezcBaseSettingValueExeception is thrown whenever a value to a class&#039;
+configuration option is either of the wrong type, or has a wrong value.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseSettingValueException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseStruct" class="element ajax clickable class">
+        <h1>ezcBaseStruct<a href="../classes/ezcBaseStruct.html">¶</a></h1>
+        <p class="short_description">Base class for all struct classes.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseStruct.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseValueException" class="element ajax clickable class">
+        <h1>ezcBaseValueException<a href="../classes/ezcBaseValueException.html">¶</a></h1>
+        <p class="short_description">ezcBaseValueException is thrown whenever the type or value of the given
+variable is not as expected.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseValueException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseWhateverException" class="element ajax clickable class">
+        <h1>ezcBaseWhateverException<a href="../classes/ezcBaseWhateverException.html">¶</a></h1>
+        <p class="short_description">ezcBaseWhateverException is thrown whenever something is so seriously wrong.</p>
+        <div class="details collapse">If this happens it is not possible to repair anything gracefully. An
+example for this could be, that your eZ components installation has thrown
+far to many exceptions. Whenever you receive an ezcBaseWhateverException, do
+not even try to catch it, but forget your project completely and immediately
+stop coding! ;)</div>
+        <a href="../classes/ezcBaseWhateverException.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Base.html">Base</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Base.Tests.html">Tests</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="ezcBaseFeaturesUnixTest" class="element ajax clickable class">
+        <h1>ezcBaseFeaturesUnixTest<a href="../classes/ezcBaseFeaturesUnixTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFeaturesUnixTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFeaturesWindowsTest" class="element ajax clickable class">
+        <h1>ezcBaseFeaturesWindowsTest<a href="../classes/ezcBaseFeaturesWindowsTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFeaturesWindowsTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFileCalculateRelativePathTest" class="element ajax clickable class">
+        <h1>ezcBaseFileCalculateRelativePathTest<a href="../classes/ezcBaseFileCalculateRelativePathTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFileCalculateRelativePathTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFileCopyRecursiveTest" class="element ajax clickable class">
+        <h1>ezcBaseFileCopyRecursiveTest<a href="../classes/ezcBaseFileCopyRecursiveTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFileCopyRecursiveTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFileFindRecursiveTest" class="element ajax clickable class">
+        <h1>ezcBaseFileFindRecursiveTest<a href="../classes/ezcBaseFileFindRecursiveTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFileFindRecursiveTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFileIsAbsoluteTest" class="element ajax clickable class">
+        <h1>ezcBaseFileIsAbsoluteTest<a href="../classes/ezcBaseFileIsAbsoluteTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFileIsAbsoluteTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseFileRemoveRecursiveTest" class="element ajax clickable class">
+        <h1>ezcBaseFileRemoveRecursiveTest<a href="../classes/ezcBaseFileRemoveRecursiveTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseFileRemoveRecursiveTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseInitTest" class="element ajax clickable class">
+        <h1>ezcBaseInitTest<a href="../classes/ezcBaseInitTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseInitTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseMetaDataPearTest" class="element ajax clickable class">
+        <h1>ezcBaseMetaDataPearTest<a href="../classes/ezcBaseMetaDataPearTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseMetaDataPearTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseOptionsTest" class="element ajax clickable class">
+        <h1>ezcBaseOptionsTest<a href="../classes/ezcBaseOptionsTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseOptionsTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseStructTest" class="element ajax clickable class">
+        <h1>ezcBaseStructTest<a href="../classes/ezcBaseStructTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseStructTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ezcBaseTest" class="element ajax clickable class">
+        <h1>ezcBaseTest<a href="../classes/ezcBaseTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse"></div>
+        <a href="../classes/ezcBaseTest.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="testBaseInitCallback" class="element ajax clickable class">
+        <h1>testBaseInitCallback<a href="../classes/testBaseInitCallback.html">¶</a></h1>
+        <p class="short_description">Test class for ezcBaseInitTest.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/testBaseInitCallback.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="testBaseInitClass" class="element ajax clickable class">
+        <h1>testBaseInitClass<a href="../classes/testBaseInitClass.html">¶</a></h1>
+        <p class="short_description">Test class for ezcBaseInitTest.</p>
+        <div class="details collapse"></div>
+        <a href="../classes/testBaseInitClass.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:32 +0000.<br/>
+    </footer>
+    </body>
+</html>

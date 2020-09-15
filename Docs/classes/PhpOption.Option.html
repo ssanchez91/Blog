@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \PhpOption\Option
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_ensure" title="ensure :: Option factory, which creates new option based on passed value.">
+            <span class="description">Option factory, which creates new option based on passed value.</span><pre>ensure</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_filter" title="filter :: If the option is empty, it is returned immediately without applying the callable.">
+            <span class="description">If the option is empty, it is returned immediately without applying the callable.</span><pre>filter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_filterNot" title="filterNot :: If the option is empty, it is returned immediately without applying the callable.">
+            <span class="description">If the option is empty, it is returned immediately without applying the callable.</span><pre>filterNot</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_flatMap" title="flatMap :: Applies the callable to the value of the option if it is non-empty, and
+returns the return value of the callable directly.">
+            <span class="description">Applies the callable to the value of the option if it is non-empty, and
+returns the return value of the callable directly.</span><pre>flatMap</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_foldLeft" title="foldLeft :: Binary operator for the initial value and the option&#039;s value.">
+            <span class="description">Binary operator for the initial value and the option&#039;s value.</span><pre>foldLeft</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_foldRight" title="foldRight :: foldLeft() but with reversed arguments for the callable.">
+            <span class="description">foldLeft() but with reversed arguments for the callable.</span><pre>foldRight</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_forAll" title="forAll :: This is similar to map() except that the return value of the callable has no meaning.">
+            <span class="description">This is similar to map() except that the return value of the callable has no meaning.</span><pre>forAll</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_fromArraysValue" title="fromArraysValue :: Creates an option from an array&#039;s value.">
+            <span class="description">Creates an option from an array&#039;s value.</span><pre>fromArraysValue</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_fromReturn" title="fromReturn :: Creates a lazy-option with the given callback.">
+            <span class="description">Creates a lazy-option with the given callback.</span><pre>fromReturn</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_fromValue" title="fromValue :: Creates an option given a return value.">
+            <span class="description">Creates an option given a return value.</span><pre>fromValue</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_get" title="get :: Returns the value if available, or throws an exception otherwise.">
+            <span class="description">Returns the value if available, or throws an exception otherwise.</span><pre>get</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getOrCall" title="getOrCall :: Returns the value if available, or the results of the callable.">
+            <span class="description">Returns the value if available, or the results of the callable.</span><pre>getOrCall</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getOrElse" title="getOrElse :: Returns the value if available, or the default value if not.">
+            <span class="description">Returns the value if available, or the default value if not.</span><pre>getOrElse</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getOrThrow" title="getOrThrow :: Returns the value if available, or throws the passed exception.">
+            <span class="description">Returns the value if available, or throws the passed exception.</span><pre>getOrThrow</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_ifDefined" title="ifDefined :: This is similar to map() below except that the return value has no meaning;
+the passed callable is simply executed if the option is non-empty, and
+ignored if the option is empty.">
+            <span class="description">This is similar to map() below except that the return value has no meaning;
+the passed callable is simply executed if the option is non-empty, and
+ignored if the option is empty.</span><pre>ifDefined</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isDefined" title="isDefined :: Returns true if a value is available, false otherwise.">
+            <span class="description">Returns true if a value is available, false otherwise.</span><pre>isDefined</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isEmpty" title="isEmpty :: Returns true if no value is available, false otherwise.">
+            <span class="description">Returns true if no value is available, false otherwise.</span><pre>isEmpty</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_lift" title="lift :: Lift a function so that it accepts Option as parameters.">
+            <span class="description">Lift a function so that it accepts Option as parameters.</span><pre>lift</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_map" title="map :: Applies the callable to the value of the option if it is non-empty,
+and returns the return value of the callable wrapped in Some().">
+            <span class="description">Applies the callable to the value of the option if it is non-empty,
+and returns the return value of the callable wrapped in Some().</span><pre>map</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_orElse" title="orElse :: Returns this option if non-empty, or the passed option otherwise.">
+            <span class="description">Returns this option if non-empty, or the passed option otherwise.</span><pre>orElse</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_reject" title="reject :: If the option is empty, it is returned immediately.">
+            <span class="description">If the option is empty, it is returned immediately.</span><pre>reject</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_select" title="select :: If the option is empty, it is returned immediately.">
+            <span class="description">If the option is empty, it is returned immediately.</span><pre>select</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>Option</h1>
+                <small style="display: block; text-align: right">
+                                                                Implements \IteratorAggregate
+                                    </small>
+                <p class="short_description"></p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        template
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>T</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        implements
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>IteratorAggregate<T></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                            </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_ensure"></a>
+                        <div class="element clickable method public  method_ensure" data-toggle="collapse" data-target=".method_ensure .collapse">
+                            <h2>Option factory, which creates new option based on passed value.</h2>
+                            <pre>ensure(\PhpOption\Option&lt;S&gt;|callable|\PhpOption\S $value, \PhpOption\S $noneValue = null) : \PhpOption\Option&lt;S&gt;|\PhpOption\LazyOption&lt;S&gt;</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If value is already an option, it simply returns. If value is callable,
+LazyOption with passed callback created and returned. If Option
+returned from callback, it returns directly. On other case value passed
+to Option::fromValue() method.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>\PhpOption\Option<S>|callable|\PhpOption\S</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$noneValue</h4>
+                                                <code>\PhpOption\S</code><p><p>Used when $value is mixed or
+callable, for None-check.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<S>|\PhpOption\LazyOption<S></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_filter"></a>
+                        <div class="element clickable method public  method_filter" data-toggle="collapse" data-target=".method_filter .collapse">
+                            <h2>If the option is empty, it is returned immediately without applying the callable.</h2>
+                            <pre>filter(\PhpOption\callable(T):bool $callable) : \PhpOption\Option&lt;T&gt;</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the option is non-empty, the callable is applied, and if it returns true,
+the option itself is returned; otherwise, None is returned.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>\PhpOption\callable(T):bool</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<T></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_filterNot"></a>
+                        <div class="element clickable method public  method_filterNot" data-toggle="collapse" data-target=".method_filterNot .collapse">
+                            <h2>If the option is empty, it is returned immediately without applying the callable.</h2>
+                            <pre>filterNot(\PhpOption\callable(T):bool $callable) : \PhpOption\Option&lt;T&gt;</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the option is non-empty, the callable is applied, and if it returns false,
+the option itself is returned; otherwise, None is returned.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>\PhpOption\callable(T):bool</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<T></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_flatMap"></a>
+                        <div class="element clickable method public  method_flatMap" data-toggle="collapse" data-target=".method_flatMap .collapse">
+                            <h2>Applies the callable to the value of the option if it is non-empty, and
+returns the return value of the callable directly.</h2>
+                            <pre>flatMap(\PhpOption\callable(T):Option&lt;S&gt; $callable) : \PhpOption\Option&lt;S&gt;</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>In contrast to <code>map</code>, the return value of the callable is expected to
+be an Option itself; it is not automatically wrapped in Some().</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>\PhpOption\callable(T):Option<S></code><p><p>must return an Option</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<S></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_foldLeft"></a>
+                        <div class="element clickable method public  method_foldLeft" data-toggle="collapse" data-target=".method_foldLeft .collapse">
+                            <h2>Binary operator for the initial value and the option&#039;s value.</h2>
+                            <pre>foldLeft(\PhpOption\S $initialValue,  $callable) : \PhpOption\S</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If empty, the initial value is returned. If non-empty, the callable
+receives the initial value and the option's value as arguments.</p>
+<pre><code class="language-php">
+    $some = new Some(5);
+    $none = None::create();
+    $result = $some-&gt;foldLeft(1, function($a, $b) { return $a + $b; }); // int(6)
+    $result = $none-&gt;foldLeft(1, function($a, $b) { return $a + $b; }); // int(1)
+
+    // This can be used instead of something like the following:
+    $option = Option::fromValue($integerOrNull);
+    $result = 1;
+    if ( ! $option-&gt;isEmpty()) {
+        $result += $option-&gt;get();
+    }</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$initialValue</h4>
+                                                <code>\PhpOption\S</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\S</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_foldRight"></a>
+                        <div class="element clickable method public  method_foldRight" data-toggle="collapse" data-target=".method_foldRight .collapse">
+                            <h2>foldLeft() but with reversed arguments for the callable.</h2>
+                            <pre>foldRight(\PhpOption\S $initialValue,  $callable) : \PhpOption\S</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$initialValue</h4>
+                                                <code>\PhpOption\S</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\S</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_forAll"></a>
+                        <div class="element clickable method public  method_forAll" data-toggle="collapse" data-target=".method_forAll .collapse">
+                            <h2>This is similar to map() except that the return value of the callable has no meaning.</h2>
+                            <pre>forAll(\PhpOption\callable(T):mixed $callable) : \PhpOption\Option&lt;T&gt;</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The passed callable is simply executed if the option is non-empty, and ignored if the
+option is empty. This method is preferred for callables with side-effects, while map()
+is intended for callables without side-effects.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>\PhpOption\callable(T):mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<T></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_fromArraysValue"></a>
+                        <div class="element clickable method public  method_fromArraysValue" data-toggle="collapse" data-target=".method_fromArraysValue .collapse">
+                            <h2>Creates an option from an array&#039;s value.</h2>
+                            <pre>fromArraysValue(\PhpOption\array&lt;string|\PhpOption\int,S&gt;|\PhpOption\ArrayAccess&lt;string|\PhpOption\int,S&gt;|null $array, string $key) : \PhpOption\Option&lt;S&gt;</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the key does not exist in the array, the array is not actually an
+array, or the array's value at the given key is null, None is returned.
+Otherwise, Some is returned wrapping the value at the given key.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$array</h4>
+                                                <code>\PhpOption\array<string|\PhpOption\int,S>|\PhpOption\ArrayAccess<string|\PhpOption\int,S>|null</code><p><p>A potential array or \ArrayAccess value.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$key</h4>
+                                                <code>string</code><p><p>The key to check.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<S></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_fromReturn"></a>
+                        <div class="element clickable method public  method_fromReturn" data-toggle="collapse" data-target=".method_fromReturn .collapse">
+                            <h2>Creates a lazy-option with the given callback.</h2>
+                            <pre>fromReturn(callable $callback, array $arguments = array(), \PhpOption\S $noneValue = null) : \PhpOption\LazyOption&lt;S&gt;</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This is also a helper constructor for lazy-consuming existing APIs where
+the return value is not yet an option. By default, we treat <code>null</code> as
+None case, and everything else as Some.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callback</h4>
+                                                <code>callable</code><p><p>The callback to evaluate.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$arguments</h4>
+                                                <code>array</code><p><p>The arguments for the callback.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$noneValue</h4>
+                                                <code>\PhpOption\S</code><p><p>The value which should be considered &quot;None&quot;;
+null by default.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\LazyOption<S></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_fromValue"></a>
+                        <div class="element clickable method public  method_fromValue" data-toggle="collapse" data-target=".method_fromValue .collapse">
+                            <h2>Creates an option given a return value.</h2>
+                            <pre>fromValue(\PhpOption\S $value, \PhpOption\S $noneValue = null) : \PhpOption\Option&lt;S&gt;</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This is intended for consuming existing APIs and allows you to easily
+convert them to an option. By default, we treat <code>null</code> as the None
+case, and everything else as Some.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>\PhpOption\S</code><p><p>The actual return value.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$noneValue</h4>
+                                                <code>\PhpOption\S</code><p><p>The value which should be considered &quot;None&quot;; null by
+default.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<S></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_get"></a>
+                        <div class="element clickable method public  method_get" data-toggle="collapse" data-target=".method_get .collapse">
+                            <h2>Returns the value if available, or throws an exception otherwise.</h2>
+                            <pre>get() : \PhpOption\T</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\RuntimeException</dt>
+                                                        <dd><p>If value is not available.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\T</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getOrCall"></a>
+                        <div class="element clickable method public  method_getOrCall" data-toggle="collapse" data-target=".method_getOrCall .collapse">
+                            <h2>Returns the value if available, or the results of the callable.</h2>
+                            <pre>getOrCall(\PhpOption\callable():S $callable) : \PhpOption\T|\PhpOption\S</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This is preferable over <code>getOrElse</code> if the computation of the default
+value is expensive.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>\PhpOption\callable():S</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\T|\PhpOption\S</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getOrElse"></a>
+                        <div class="element clickable method public  method_getOrElse" data-toggle="collapse" data-target=".method_getOrElse .collapse">
+                            <h2>Returns the value if available, or the default value if not.</h2>
+                            <pre>getOrElse(\PhpOption\S $default) : \PhpOption\T|\PhpOption\S</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$default</h4>
+                                                <code>\PhpOption\S</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\T|\PhpOption\S</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getOrThrow"></a>
+                        <div class="element clickable method public  method_getOrThrow" data-toggle="collapse" data-target=".method_getOrThrow .collapse">
+                            <h2>Returns the value if available, or throws the passed exception.</h2>
+                            <pre>getOrThrow(\Exception $ex) : \PhpOption\T</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$ex</h4>
+                                                <code>\Exception</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\T</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_ifDefined"></a>
+                        <div class="element clickable method public deprecated method_ifDefined" data-toggle="collapse" data-target=".method_ifDefined .collapse">
+                            <h2>This is similar to map() below except that the return value has no meaning;
+the passed callable is simply executed if the option is non-empty, and
+ignored if the option is empty.</h2>
+                            <pre>ifDefined(\PhpOption\callable(T):mixed $callable) : void</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>In all cases, the return value of the callable is discarded.</p>
+<pre><code class="language-php">    $comment-&gt;getMaybeFile()-&gt;ifDefined(function($file) {
+        // Do something with $file here.
+    });</code></pre>
+<p>If you're looking for something like <code>ifEmpty</code>, you can use <code>getOrCall</code>
+and <code>getOrElse</code> in these cases.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Use forAll() instead.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>\PhpOption\callable(T):mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isDefined"></a>
+                        <div class="element clickable method public  method_isDefined" data-toggle="collapse" data-target=".method_isDefined .collapse">
+                            <h2>Returns true if a value is available, false otherwise.</h2>
+                            <pre>isDefined() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isEmpty"></a>
+                        <div class="element clickable method public  method_isEmpty" data-toggle="collapse" data-target=".method_isEmpty .collapse">
+                            <h2>Returns true if no value is available, false otherwise.</h2>
+                            <pre>isEmpty() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_lift"></a>
+                        <div class="element clickable method public  method_lift" data-toggle="collapse" data-target=".method_lift .collapse">
+                            <h2>Lift a function so that it accepts Option as parameters.</h2>
+                            <pre>lift(callable $callback, mixed $noneValue = null) : callable</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>We return a new closure that wraps the original callback. If any of the
+parameters passed to the lifted function is empty, the function will
+return a value of None. Otherwise, we will pass all parameters to the
+original callback and return the value inside a new Option, unless an
+Option is returned from the function, in which case, we use that.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callback</h4>
+                                                <code>callable</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$noneValue</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>callable</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_map"></a>
+                        <div class="element clickable method public  method_map" data-toggle="collapse" data-target=".method_map .collapse">
+                            <h2>Applies the callable to the value of the option if it is non-empty,
+and returns the return value of the callable wrapped in Some().</h2>
+                            <pre>map(\PhpOption\callable(T):S $callable) : \PhpOption\Option&lt;S&gt;</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the option is empty, then the callable is not applied.</p>
+<pre><code class="language-php">    (new Some("foo"))-&gt;map('strtoupper')-&gt;get(); // "FOO"</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    template
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>S</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>\PhpOption\callable(T):S</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<S></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_orElse"></a>
+                        <div class="element clickable method public  method_orElse" data-toggle="collapse" data-target=".method_orElse .collapse">
+                            <h2>Returns this option if non-empty, or the passed option otherwise.</h2>
+                            <pre>orElse(\PhpOption\Option&lt;T&gt; $else) : \PhpOption\Option&lt;T&gt;</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This can be used to try multiple alternatives, and is especially useful
+with lazy evaluating options:</p>
+<pre><code class="language-php">    $repo-&gt;findSomething()
+        -&gt;orElse(new LazyOption(array($repo, 'findSomethingElse')))
+        -&gt;orElse(new LazyOption(array($repo, 'createSomething')));</code></pre></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$else</h4>
+                                                <code>\PhpOption\Option<T></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<T></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_reject"></a>
+                        <div class="element clickable method public  method_reject" data-toggle="collapse" data-target=".method_reject .collapse">
+                            <h2>If the option is empty, it is returned immediately.</h2>
+                            <pre>reject(\PhpOption\T $value) : \PhpOption\Option&lt;T&gt;</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the option is non-empty, and its value does equal the passed value (via
+a shallow comparison ===), then None is returned; otherwise, the Option is
+returned.</p>
+<p>In other words, this will let all values through except the passed value.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>\PhpOption\T</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<T></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_select"></a>
+                        <div class="element clickable method public  method_select" data-toggle="collapse" data-target=".method_select .collapse">
+                            <h2>If the option is empty, it is returned immediately.</h2>
+                            <pre>select(\PhpOption\T $value) : \PhpOption\Option&lt;T&gt;</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the option is non-empty, and its value does not equal the passed value
+(via a shallow comparison ===), then None is returned. Otherwise, the
+Option is returned.</p>
+<p>In other words, this will filter all but the passed value.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>\PhpOption\T</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\PhpOption\Option<T></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                        </div>
+            </div>
+            <a id="\PhpOption\Option"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/PhpOption.Option.html">Option</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:58 +0000.<br/>
+    </footer>
+    </body>
+</html>

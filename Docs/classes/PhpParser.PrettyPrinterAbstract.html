@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \PhpParser\PrettyPrinterAbstract
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: ">
+            <span class="description"></span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method public">
+        <a href="#method_prettyPrint" title="prettyPrint :: Pretty prints an array of statements.">
+            <span class="description">Pretty prints an array of statements.</span><pre>prettyPrint</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_prettyPrintExpr" title="prettyPrintExpr :: Pretty prints an expression.">
+            <span class="description">Pretty prints an expression.</span><pre>prettyPrintExpr</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_prettyPrintFile" title="prettyPrintFile :: Pretty prints a file of statements (includes the opening &lt;?php tag if it is required).">
+            <span class="description">Pretty prints a file of statements (includes the opening &lt;?php tag if it is required).</span><pre>prettyPrintFile</pre>
+        </a>
+    </li>
+
+                                                                                                        </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                <li class="method protected">
+                            <a href="#method_p" title="p :: Pretty prints a node.">
+                                <span class="description">Pretty prints a node.</span><pre>p</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_pCommaSeparated" title="pCommaSeparated :: Pretty prints an array of nodes and implodes the printed values with commas.">
+                                <span class="description">Pretty prints an array of nodes and implodes the printed values with commas.</span><pre>pCommaSeparated</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_pComments" title="pComments :: ">
+                                <span class="description"></span><pre>pComments</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_pImplode" title="pImplode :: Pretty prints an array of nodes and implodes the printed values.">
+                                <span class="description">Pretty prints an array of nodes and implodes the printed values.</span><pre>pImplode</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_pInfixOp" title="pInfixOp :: ">
+                                <span class="description"></span><pre>pInfixOp</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_pNoIndent" title="pNoIndent :: Signals the pretty printer that a string shall not be indented.">
+                                <span class="description">Signals the pretty printer that a string shall not be indented.</span><pre>pNoIndent</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_pPostfixOp" title="pPostfixOp :: ">
+                                <span class="description"></span><pre>pPostfixOp</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_pPrec" title="pPrec :: Prints an expression node with the least amount of parentheses necessary to preserve the meaning.">
+                                <span class="description">Prints an expression node with the least amount of parentheses necessary to preserve the meaning.</span><pre>pPrec</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_pPrefixOp" title="pPrefixOp :: ">
+                                <span class="description"></span><pre>pPrefixOp</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_preprocessNodes" title="preprocessNodes :: Preprocesses the top-level nodes to initialize pretty printer state.">
+                                <span class="description">Preprocesses the top-level nodes to initialize pretty printer state.</span><pre>preprocessNodes</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                            <li class="method protected">
+                            <a href="#method_pStmts" title="pStmts :: Pretty prints an array of nodes (statements) and indents them optionally.">
+                                <span class="description">Pretty prints an array of nodes (statements) and indents them optionally.</span><pre>pStmts</pre>
+                            </a>
+                        </li>
+                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>PrettyPrinterAbstract</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description"></p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                            </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>__construct</h2>
+                            <pre>__construct() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_p"></a>
+                        <div class="element clickable method protected  method_p" data-toggle="collapse" data-target=".method_p .collapse">
+                            <h2>Pretty prints a node.</h2>
+                            <pre>p(\PhpParser\Node $node) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/PhpParser.Node.html">\PhpParser\Node</a></code><p><p>Node to be pretty printed</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Pretty printed node</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_pCommaSeparated"></a>
+                        <div class="element clickable method protected  method_pCommaSeparated" data-toggle="collapse" data-target=".method_pCommaSeparated .collapse">
+                            <h2>Pretty prints an array of nodes and implodes the printed values with commas.</h2>
+                            <pre>pCommaSeparated(array&lt;mixed,\PhpParser\Node&gt; $nodes) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$nodes</h4>
+                                                <code>array&lt;mixed,<a href="../classes/PhpParser.Node.html">\PhpParser\Node</a>&gt;</code><p><p>Array of Nodes to be printed</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Comma separated pretty printed nodes</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_pComments"></a>
+                        <div class="element clickable method protected  method_pComments" data-toggle="collapse" data-target=".method_pComments .collapse">
+                            <h2>pComments</h2>
+                            <pre>pComments(array $comments) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$comments</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_pImplode"></a>
+                        <div class="element clickable method protected  method_pImplode" data-toggle="collapse" data-target=".method_pImplode .collapse">
+                            <h2>Pretty prints an array of nodes and implodes the printed values.</h2>
+                            <pre>pImplode(array&lt;mixed,\PhpParser\Node&gt; $nodes, string $glue = &#039;&#039;) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$nodes</h4>
+                                                <code>array&lt;mixed,<a href="../classes/PhpParser.Node.html">\PhpParser\Node</a>&gt;</code><p><p>Array of Nodes to be printed</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$glue</h4>
+                                                <code>string</code><p><p>Character to implode with</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Imploded pretty printed nodes</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_pInfixOp"></a>
+                        <div class="element clickable method protected  method_pInfixOp" data-toggle="collapse" data-target=".method_pInfixOp .collapse">
+                            <h2>pInfixOp</h2>
+                            <pre>pInfixOp( $type, \PhpParser\Node $leftNode,  $operatorString, \PhpParser\Node $rightNode) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$leftNode</h4>
+                                                <code><a href="../classes/PhpParser.Node.html">\PhpParser\Node</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$operatorString</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$rightNode</h4>
+                                                <code><a href="../classes/PhpParser.Node.html">\PhpParser\Node</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_pNoIndent"></a>
+                        <div class="element clickable method protected  method_pNoIndent" data-toggle="collapse" data-target=".method_pNoIndent .collapse">
+                            <h2>Signals the pretty printer that a string shall not be indented.</h2>
+                            <pre>pNoIndent(string $string) : mixed</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code>string</code><p><p>Not to be indented string</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p><p>String marked with $this-&gt;noIndentToken's.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_pPostfixOp"></a>
+                        <div class="element clickable method protected  method_pPostfixOp" data-toggle="collapse" data-target=".method_pPostfixOp .collapse">
+                            <h2>pPostfixOp</h2>
+                            <pre>pPostfixOp( $type, \PhpParser\Node $node,  $operatorString) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/PhpParser.Node.html">\PhpParser\Node</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$operatorString</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_pPrec"></a>
+                        <div class="element clickable method protected  method_pPrec" data-toggle="collapse" data-target=".method_pPrec .collapse">
+                            <h2>Prints an expression node with the least amount of parentheses necessary to preserve the meaning.</h2>
+                            <pre>pPrec(\PhpParser\Node $node, integer $parentPrecedence, integer $parentAssociativity, integer $childPosition) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/PhpParser.Node.html">\PhpParser\Node</a></code><p><p>Node to pretty print</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$parentPrecedence</h4>
+                                                <code>integer</code><p><p>Precedence of the parent operator</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$parentAssociativity</h4>
+                                                <code>integer</code><p><p>Associativity of parent operator
+(-1 is left, 0 is nonassoc, 1 is right)</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$childPosition</h4>
+                                                <code>integer</code><p><p>Position of the node relative to the operator
+(-1 is left, 1 is right)</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>The pretty printed node</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_pPrefixOp"></a>
+                        <div class="element clickable method protected  method_pPrefixOp" data-toggle="collapse" data-target=".method_pPrefixOp .collapse">
+                            <h2>pPrefixOp</h2>
+                            <pre>pPrefixOp( $type,  $operatorString, \PhpParser\Node $node) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$operatorString</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/PhpParser.Node.html">\PhpParser\Node</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_preprocessNodes"></a>
+                        <div class="element clickable method protected  method_preprocessNodes" data-toggle="collapse" data-target=".method_preprocessNodes .collapse">
+                            <h2>Preprocesses the top-level nodes to initialize pretty printer state.</h2>
+                            <pre>preprocessNodes(array&lt;mixed,\PhpParser\Node&gt; $nodes) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$nodes</h4>
+                                                <code>array&lt;mixed,<a href="../classes/PhpParser.Node.html">\PhpParser\Node</a>&gt;</code><p><p>Array of nodes</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_prettyPrint"></a>
+                        <div class="element clickable method public  method_prettyPrint" data-toggle="collapse" data-target=".method_prettyPrint .collapse">
+                            <h2>Pretty prints an array of statements.</h2>
+                            <pre>prettyPrint(array&lt;mixed,\PhpParser\Node&gt; $stmts) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$stmts</h4>
+                                                <code>array&lt;mixed,<a href="../classes/PhpParser.Node.html">\PhpParser\Node</a>&gt;</code><p><p>Array of statements</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Pretty printed statements</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_prettyPrintExpr"></a>
+                        <div class="element clickable method public  method_prettyPrintExpr" data-toggle="collapse" data-target=".method_prettyPrintExpr .collapse">
+                            <h2>Pretty prints an expression.</h2>
+                            <pre>prettyPrintExpr(\PhpParser\Node\Expr $node) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/PhpParser.Node.Expr.html">\PhpParser\Node\Expr</a></code><p><p>Expression node</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Pretty printed node</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_prettyPrintFile"></a>
+                        <div class="element clickable method public  method_prettyPrintFile" data-toggle="collapse" data-target=".method_prettyPrintFile .collapse">
+                            <h2>Pretty prints a file of statements (includes the opening &lt;?php tag if it is required).</h2>
+                            <pre>prettyPrintFile(array&lt;mixed,\PhpParser\Node&gt; $stmts) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$stmts</h4>
+                                                <code>array&lt;mixed,<a href="../classes/PhpParser.Node.html">\PhpParser\Node</a>&gt;</code><p><p>Array of statements</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Pretty printed statements</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_pStmts"></a>
+                        <div class="element clickable method protected  method_pStmts" data-toggle="collapse" data-target=".method_pStmts .collapse">
+                            <h2>Pretty prints an array of nodes (statements) and indents them optionally.</h2>
+                            <pre>pStmts(array&lt;mixed,\PhpParser\Node&gt; $nodes, boolean $indent = true) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$nodes</h4>
+                                                <code>array&lt;mixed,<a href="../classes/PhpParser.Node.html">\PhpParser\Node</a>&gt;</code><p><p>Array of nodes</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$indent</h4>
+                                                <code>boolean</code><p><p>Whether to indent the printed nodes</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Pretty printed statements</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_precedenceMap"> </a>
+                            <div class="element clickable property  protected property_precedenceMap" data-toggle="collapse" data-target=".property_precedenceMap .collapse">
+                                <h2>precedenceMap</h2>
+                                <pre>precedenceMap : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_noIndentToken"> </a>
+                            <div class="element clickable property  protected property_noIndentToken" data-toggle="collapse" data-target=".property_noIndentToken .collapse">
+                                <h2>noIndentToken</h2>
+                                <pre>noIndentToken : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_canUseSemicolonNamespaces"> </a>
+                            <div class="element clickable property  protected property_canUseSemicolonNamespaces" data-toggle="collapse" data-target=".property_canUseSemicolonNamespaces .collapse">
+                                <h2>canUseSemicolonNamespaces</h2>
+                                <pre>canUseSemicolonNamespaces : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\PhpParser\PrettyPrinterAbstract"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/PhpParser.PrettyPrinterAbstract.html">PrettyPrinterAbstract</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:53 +0000.<br/>
+    </footer>
+    </body>
+</html>

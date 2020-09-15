@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \PhpCollection\MapInterface
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_addMap" title="addMap :: Adds all another map to this map, and returns itself.">
+            <span class="description">Adds all another map to this map, and returns itself.</span><pre>addMap</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_all" title="all :: Returns all elements in this collection.">
+            <span class="description">Returns all elements in this collection.</span><pre>all</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_contains" title="contains :: Returns whether this collection contains the passed element.">
+            <span class="description">Returns whether this collection contains the passed element.</span><pre>contains</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_containsKey" title="containsKey :: Returns whether this map contains a given key.">
+            <span class="description">Returns whether this map contains a given key.</span><pre>containsKey</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_drop" title="drop :: Returns a new sequence by omitting the given number of elements from the beginning.">
+            <span class="description">Returns a new sequence by omitting the given number of elements from the beginning.</span><pre>drop</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_dropRight" title="dropRight :: Returns a new sequence by omitting the given number of elements from the end.">
+            <span class="description">Returns a new sequence by omitting the given number of elements from the end.</span><pre>dropRight</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_dropWhile" title="dropWhile :: Returns a new sequence by omitting elements from the beginning for as long as the callable returns true.">
+            <span class="description">Returns a new sequence by omitting elements from the beginning for as long as the callable returns true.</span><pre>dropWhile</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_filter" title="filter :: Returns a filtered collection of the same type.">
+            <span class="description">Returns a filtered collection of the same type.</span><pre>filter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_filterNot" title="filterNot :: Returns a filtered collection of the same type.">
+            <span class="description">Returns a filtered collection of the same type.</span><pre>filterNot</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_find" title="find :: Searches the collection for an element.">
+            <span class="description">Searches the collection for an element.</span><pre>find</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_first" title="first :: Returns the first element in the collection if available.">
+            <span class="description">Returns the first element in the collection if available.</span><pre>first</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_foldLeft" title="foldLeft :: Applies the callable to an initial value and each element, going left to right.">
+            <span class="description">Applies the callable to an initial value and each element, going left to right.</span><pre>foldLeft</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_foldRight" title="foldRight :: Applies the callable to each element, and an initial value, going right to left.">
+            <span class="description">Applies the callable to each element, and an initial value, going right to left.</span><pre>foldRight</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_get" title="get :: Returns the value associated with the given key.">
+            <span class="description">Returns the value associated with the given key.</span><pre>get</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_isEmpty" title="isEmpty :: Returns whether the collection is empty.">
+            <span class="description">Returns whether the collection is empty.</span><pre>isEmpty</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_keys" title="keys :: Returns an array with the keys.">
+            <span class="description">Returns an array with the keys.</span><pre>keys</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_last" title="last :: Returns the last element in the collection if available.">
+            <span class="description">Returns the last element in the collection if available.</span><pre>last</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_remove" title="remove :: Removes an element from the map.">
+            <span class="description">Removes an element from the map.</span><pre>remove</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_set" title="set :: Puts a new element in the map.">
+            <span class="description">Puts a new element in the map.</span><pre>set</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_take" title="take :: Creates a new collection by taking the given number of elements from the beginning
+of the current collection.">
+            <span class="description">Creates a new collection by taking the given number of elements from the beginning
+of the current collection.</span><pre>take</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_takeWhile" title="takeWhile :: Creates a new collection by taking elements from the current collection
+for as long as the callable returns true.">
+            <span class="description">Creates a new collection by taking elements from the current collection
+for as long as the callable returns true.</span><pre>takeWhile</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_values" title="values :: Returns an array with the values.">
+            <span class="description">Returns an array with the values.</span><pre>values</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>MapInterface</h1>
+                <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/PhpCollection.CollectionInterface.html">\PhpCollection\CollectionInterface</a>
+                                                        </small>
+                <p class="short_description">Basic map interface.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Johannes M. Schmitt <a href="mailto:schmittjoh@gmail.com">schmittjoh@gmail.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                            </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_addMap"></a>
+                        <div class="element clickable method public  method_addMap" data-toggle="collapse" data-target=".method_addMap .collapse">
+                            <h2>Adds all another map to this map, and returns itself.</h2>
+                            <pre>addMap(\PhpCollection\MapInterface $map) : \PhpCollection\MapInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$map</h4>
+                                                <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_all"></a>
+                        <div class="element clickable method public  method_all" data-toggle="collapse" data-target=".method_all .collapse">
+                            <h2>Returns all elements in this collection.</h2>
+                            <pre>all() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_contains"></a>
+                        <div class="element clickable method public  method_contains inherited" data-toggle="collapse" data-target=".method_contains .collapse">
+                            <h2>Returns whether this collection contains the passed element.</h2>
+                            <pre>contains(mixed $elem) : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elem</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_containsKey"></a>
+                        <div class="element clickable method public  method_containsKey" data-toggle="collapse" data-target=".method_containsKey .collapse">
+                            <h2>Returns whether this map contains a given key.</h2>
+                            <pre>containsKey(mixed $key) : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$key</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_drop"></a>
+                        <div class="element clickable method public  method_drop" data-toggle="collapse" data-target=".method_drop .collapse">
+                            <h2>Returns a new sequence by omitting the given number of elements from the beginning.</h2>
+                            <pre>drop(integer $number) : \PhpCollection\MapInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the passed number is greater than the available number of elements, all will be removed.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$number</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_dropRight"></a>
+                        <div class="element clickable method public  method_dropRight" data-toggle="collapse" data-target=".method_dropRight .collapse">
+                            <h2>Returns a new sequence by omitting the given number of elements from the end.</h2>
+                            <pre>dropRight(integer $number) : \PhpCollection\MapInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the passed number is greater than the available number of elements, all will be removed.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$number</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_dropWhile"></a>
+                        <div class="element clickable method public  method_dropWhile" data-toggle="collapse" data-target=".method_dropWhile .collapse">
+                            <h2>Returns a new sequence by omitting elements from the beginning for as long as the callable returns true.</h2>
+                            <pre>dropWhile(callable $callable) : \PhpCollection\MapInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p><p>Receives the element to drop as first argument, and returns true (drop), or false (stop).</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_filter"></a>
+                        <div class="element clickable method public  method_filter inherited" data-toggle="collapse" data-target=".method_filter .collapse">
+                            <h2>Returns a filtered collection of the same type.</h2>
+                            <pre>filter(callable $callable) : \PhpCollection\CollectionInterface</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Removes all elements for which the provided callable returns false.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p><p>receives an element of the collection and must return true (= keep) or false (= remove).</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.CollectionInterface.html">\PhpCollection\CollectionInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_filterNot"></a>
+                        <div class="element clickable method public  method_filterNot inherited" data-toggle="collapse" data-target=".method_filterNot .collapse">
+                            <h2>Returns a filtered collection of the same type.</h2>
+                            <pre>filterNot(callable $callable) : \PhpCollection\CollectionInterface</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Removes all elements for which the provided callable returns true.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p><p>receives an element of the collection and must return true (= remove) or false (= keep).</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.CollectionInterface.html">\PhpCollection\CollectionInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_find"></a>
+                        <div class="element clickable method public  method_find" data-toggle="collapse" data-target=".method_find .collapse">
+                            <h2>Searches the collection for an element.</h2>
+                            <pre>find(callable $callable) : \PhpOption\Option</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p><p>receives the element as first argument, and returns true, or false</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpOption.Option.html">\PhpOption\Option</a></code><p><p>on array&lt;K,V&gt;</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_first"></a>
+                        <div class="element clickable method public  method_first" data-toggle="collapse" data-target=".method_first .collapse">
+                            <h2>Returns the first element in the collection if available.</h2>
+                            <pre>first() : \PhpOption\Option</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpOption.Option.html">\PhpOption\Option</a></code><p><p>on array&lt;K,V&gt;</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_foldLeft"></a>
+                        <div class="element clickable method public  method_foldLeft inherited" data-toggle="collapse" data-target=".method_foldLeft .collapse">
+                            <h2>Applies the callable to an initial value and each element, going left to right.</h2>
+                            <pre>foldLeft(mixed $initialValue, callable $callable) : mixed</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$initialValue</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p><p>receives the current value (the first time this equals $initialValue) and the element</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p><p>the last value returned by $callable, or $initialValue if collection is empty.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_foldRight"></a>
+                        <div class="element clickable method public  method_foldRight inherited" data-toggle="collapse" data-target=".method_foldRight .collapse">
+                            <h2>Applies the callable to each element, and an initial value, going right to left.</h2>
+                            <pre>foldRight(mixed $initialValue, callable $callable) : mixed</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$initialValue</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p><p>receives the element, and the current value (the first time this equals $initialValue).</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p><p>the last value returned by $callable, or $initialValue if collection is empty.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_get"></a>
+                        <div class="element clickable method public  method_get" data-toggle="collapse" data-target=".method_get .collapse">
+                            <h2>Returns the value associated with the given key.</h2>
+                            <pre>get(mixed $key) : \PhpOption\Option</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$key</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpOption.Option.html">\PhpOption\Option</a></code><p><p>on V</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isEmpty"></a>
+                        <div class="element clickable method public  method_isEmpty inherited" data-toggle="collapse" data-target=".method_isEmpty .collapse">
+                            <h2>Returns whether the collection is empty.</h2>
+                            <pre>isEmpty() : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_keys"></a>
+                        <div class="element clickable method public  method_keys" data-toggle="collapse" data-target=".method_keys .collapse">
+                            <h2>Returns an array with the keys.</h2>
+                            <pre>keys() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_last"></a>
+                        <div class="element clickable method public  method_last" data-toggle="collapse" data-target=".method_last .collapse">
+                            <h2>Returns the last element in the collection if available.</h2>
+                            <pre>last() : \PhpOption\Option</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpOption.Option.html">\PhpOption\Option</a></code><p><p>on array&lt;K,V&gt;</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_remove"></a>
+                        <div class="element clickable method public  method_remove" data-toggle="collapse" data-target=".method_remove .collapse">
+                            <h2>Removes an element from the map.</h2>
+                            <pre>remove(mixed $key) : mixed</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$key</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_set"></a>
+                        <div class="element clickable method public  method_set" data-toggle="collapse" data-target=".method_set .collapse">
+                            <h2>Puts a new element in the map.</h2>
+                            <pre>set(mixed $key, mixed $value) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$key</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_take"></a>
+                        <div class="element clickable method public  method_take" data-toggle="collapse" data-target=".method_take .collapse">
+                            <h2>Creates a new collection by taking the given number of elements from the beginning
+of the current collection.</h2>
+                            <pre>take(integer $number) : \PhpCollection\MapInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the passed number is greater than the available number of elements, then all elements
+will be returned as a new collection.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$number</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_takeWhile"></a>
+                        <div class="element clickable method public  method_takeWhile" data-toggle="collapse" data-target=".method_takeWhile .collapse">
+                            <h2>Creates a new collection by taking elements from the current collection
+for as long as the callable returns true.</h2>
+                            <pre>takeWhile(callable $callable) : \PhpCollection\MapInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_values"></a>
+                        <div class="element clickable method public  method_values" data-toggle="collapse" data-target=".method_values .collapse">
+                            <h2>Returns an array with the values.</h2>
+                            <pre>values() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                        </div>
+            </div>
+            <a id="\PhpCollection\MapInterface"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/PhpCollection.MapInterface.html">MapInterface</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:17:01 +0000.<br/>
+    </footer>
+    </body>
+</html>

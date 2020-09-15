@@ -12,12 +12,27 @@ use App\Framework\Exception\MultipleRouteFoundException;
 use App\Framework\Exception\NoRouteFoundException;
 use App\Framework\HttpRequest;
 
-
+/**
+ * Class Router
+ * @package App\Framework
+ */
 class Router
 {
+    /**
+     * Variable routeFiles
+     * @var
+     */
     private $routeFiles;
+    /**
+     * Variable listRoutes
+     * @var array
+     */
     private $listRoutes = [];
 
+    /**
+     * Constructor
+     * @param array $routeFiles list of routes
+     */
     public function __construct($routeFiles)
     {
         foreach ($routeFiles as $route) {
@@ -32,6 +47,16 @@ class Router
         }
     }
 
+    /**
+     * Method findRoute
+     *
+     * @param object $httpRequest httpRequest Object
+     * @param string $basepath basepath of site
+     * @param bool|true $fullRoute option to route url
+     * @return Route
+     * @throws MultipleRouteFoundException
+     * @throws NoRouteFoundException
+     */
     public function findRoute($httpRequest, $basepath, $fullRoute = true)
     {
         $url = str_replace($basepath, "", $httpRequest->getUrl());

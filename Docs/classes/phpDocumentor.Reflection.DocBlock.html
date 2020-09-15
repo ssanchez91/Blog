@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \phpDocumentor\Reflection\DocBlock
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: Parses the given docblock and populates the member fields.">
+            <span class="description">Parses the given docblock and populates the member fields.</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method___toString" title="__toString :: Returns the exported information (we should use the export static method
+BUT this throws an exception at this point).">
+            <span class="description">Returns the exported information (we should use the export static method
+BUT this throws an exception at this point).</span><pre>__toString</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_appendTag" title="appendTag :: Appends a tag at the end of the list of tags.">
+            <span class="description">Appends a tag at the end of the list of tags.</span><pre>appendTag</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_export" title="export :: Builds a string representation of this object.">
+            <span class="description">Builds a string representation of this object.</span><pre>export</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getContext" title="getContext :: Returns the current context.">
+            <span class="description">Returns the current context.</span><pre>getContext</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getLocation" title="getLocation :: Returns the current location.">
+            <span class="description">Returns the current location.</span><pre>getLocation</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getLongDescription" title="getLongDescription :: Returns the full description or also known as long description.">
+            <span class="description">Returns the full description or also known as long description.</span><pre>getLongDescription</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getShortDescription" title="getShortDescription :: Returns the opening line or also known as short description.">
+            <span class="description">Returns the opening line or also known as short description.</span><pre>getShortDescription</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getTags" title="getTags :: Returns the tags for this DocBlock.">
+            <span class="description">Returns the tags for this DocBlock.</span><pre>getTags</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getTagsByName" title="getTagsByName :: Returns an array of tags matching the given name. If no tags are found
+an empty array is returned.">
+            <span class="description">Returns an array of tags matching the given name. If no tags are found
+an empty array is returned.</span><pre>getTagsByName</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getText" title="getText :: Gets the text portion of the doc block.">
+            <span class="description">Gets the text portion of the doc block.</span><pre>getText</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_hasTag" title="hasTag :: Checks if a tag of a certain type is present in this DocBlock.">
+            <span class="description">Checks if a tag of a certain type is present in this DocBlock.</span><pre>hasTag</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isTemplateEnd" title="isTemplateEnd :: Returns whether this DocBlock is the end of a Template section.">
+            <span class="description">Returns whether this DocBlock is the end of a Template section.</span><pre>isTemplateEnd</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isTemplateStart" title="isTemplateStart :: Returns whether this DocBlock is the start of a Template section.">
+            <span class="description">Returns whether this DocBlock is the start of a Template section.</span><pre>isTemplateStart</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_setText" title="setText :: Set the text portion of the doc block.">
+            <span class="description">Set the text portion of the doc block.</span><pre>setText</pre>
+        </a>
+    </li>
+
+                                                                                                        </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                        <li class="method protected">
+                            <a href="#method_cleanInput" title="cleanInput :: Strips the asterisks from the DocBlock comment.">
+                                <span class="description">Strips the asterisks from the DocBlock comment.</span><pre>cleanInput</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="method protected">
+                            <a href="#method_parseTags" title="parseTags :: Creates the tag objects.">
+                                <span class="description">Creates the tag objects.</span><pre>parseTags</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method protected">
+                            <a href="#method_splitDocBlock" title="splitDocBlock :: Splits the DocBlock into a template marker, summary, description and block of tags.">
+                                <span class="description">Splits the DocBlock into a template marker, summary, description and block of tags.</span><pre>splitDocBlock</pre>
+                            </a>
+                        </li>
+                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>DocBlock</h1>
+                <small style="display: block; text-align: right">
+                                                                Implements \Reflector
+                                    </small>
+                <p class="short_description">Parses the DocBlock for any structure.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Mike van Riel <a href="mailto:mike.vanriel@naenius.com">mike.vanriel@naenius.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        license
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p><a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a> MIT</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        link
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p><a href="http://phpdoc.org">http://phpdoc.org</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Parses the given docblock and populates the member fields.</h2>
+                            <pre>__construct(\Reflector|string $docblock, \phpDocumentor\Reflection\DocBlock\Context $context = null, \phpDocumentor\Reflection\DocBlock\Location $location = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The constructor may also receive namespace information such as the
+current namespace and aliases. This information is used by some tags
+(e.g. @return, @param, etc.) to turn a relative Type into a FQCN.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\InvalidArgumentException</dt>
+                                                        <dd><p>if the given argument does not have the
+getDocComment method.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$docblock</h4>
+                                                <code>\Reflector|string</code><p><p>A docblock comment (including
+asterisks) or reflector supporting the getDocComment method.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$context</h4>
+                                                <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Context.html">\phpDocumentor\Reflection\DocBlock\Context</a></code><p><p>The context in which the DocBlock
+occurs.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$location</h4>
+                                                <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Location.html">\phpDocumentor\Reflection\DocBlock\Location</a></code><p><p>The location within the file that this
+DocBlock occurs in.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method___toString"></a>
+                        <div class="element clickable method public  method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
+                            <h2>Returns the exported information (we should use the export static method
+BUT this throws an exception at this point).</h2>
+                            <pre>__toString() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    codeCoverageIgnore
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Not yet implemented</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_appendTag"></a>
+                        <div class="element clickable method public  method_appendTag" data-toggle="collapse" data-target=".method_appendTag .collapse">
+                            <h2>Appends a tag at the end of the list of tags.</h2>
+                            <pre>appendTag(\phpDocumentor\Reflection\DocBlock\Tag $tag) : \phpDocumentor\Reflection\DocBlock\Tag</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\LogicException</dt>
+                                                        <dd><p>When the tag belongs to a different DocBlock.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$tag</h4>
+                                                <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.html">\phpDocumentor\Reflection\DocBlock\Tag</a></code><p><p>The tag to add.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.html">\phpDocumentor\Reflection\DocBlock\Tag</a></code><p><p>The newly added tag.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_cleanInput"></a>
+                        <div class="element clickable method protected  method_cleanInput" data-toggle="collapse" data-target=".method_cleanInput .collapse">
+                            <h2>Strips the asterisks from the DocBlock comment.</h2>
+                            <pre>cleanInput(string $comment) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$comment</h4>
+                                                <code>string</code><p><p>String containing the comment text.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_export"></a>
+                        <div class="element clickable method public  method_export" data-toggle="collapse" data-target=".method_export .collapse">
+                            <h2>Builds a string representation of this object.</h2>
+                            <pre>export() : string</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    todo
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>determine the exact format as used by PHP Reflection and
+implement it.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    codeCoverageIgnore
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Not yet implemented</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getContext"></a>
+                        <div class="element clickable method public  method_getContext" data-toggle="collapse" data-target=".method_getContext .collapse">
+                            <h2>Returns the current context.</h2>
+                            <pre>getContext() : \phpDocumentor\Reflection\DocBlock\Context</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Context.html">\phpDocumentor\Reflection\DocBlock\Context</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getLocation"></a>
+                        <div class="element clickable method public  method_getLocation" data-toggle="collapse" data-target=".method_getLocation .collapse">
+                            <h2>Returns the current location.</h2>
+                            <pre>getLocation() : \phpDocumentor\Reflection\DocBlock\Location</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Location.html">\phpDocumentor\Reflection\DocBlock\Location</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getLongDescription"></a>
+                        <div class="element clickable method public  method_getLongDescription" data-toggle="collapse" data-target=".method_getLongDescription .collapse">
+                            <h2>Returns the full description or also known as long description.</h2>
+                            <pre>getLongDescription() : \phpDocumentor\Reflection\DocBlock\Description</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Description.html">\phpDocumentor\Reflection\DocBlock\Description</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getShortDescription"></a>
+                        <div class="element clickable method public  method_getShortDescription" data-toggle="collapse" data-target=".method_getShortDescription .collapse">
+                            <h2>Returns the opening line or also known as short description.</h2>
+                            <pre>getShortDescription() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getTags"></a>
+                        <div class="element clickable method public  method_getTags" data-toggle="collapse" data-target=".method_getTags .collapse">
+                            <h2>Returns the tags for this DocBlock.</h2>
+                            <pre>getTags() : array&lt;mixed,\phpDocumentor\Reflection\DocBlock\Tag&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.html">\phpDocumentor\Reflection\DocBlock\Tag</a>&gt;</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getTagsByName"></a>
+                        <div class="element clickable method public  method_getTagsByName" data-toggle="collapse" data-target=".method_getTagsByName .collapse">
+                            <h2>Returns an array of tags matching the given name. If no tags are found
+an empty array is returned.</h2>
+                            <pre>getTagsByName(string $name) : array&lt;mixed,\phpDocumentor\Reflection\DocBlock\Tag&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>String to search by.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.html">\phpDocumentor\Reflection\DocBlock\Tag</a>&gt;</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getText"></a>
+                        <div class="element clickable method public  method_getText" data-toggle="collapse" data-target=".method_getText .collapse">
+                            <h2>Gets the text portion of the doc block.</h2>
+                            <pre>getText() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Gets the text portion (short and long description combined) of the doc
+block.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>The text portion of the doc block.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasTag"></a>
+                        <div class="element clickable method public  method_hasTag" data-toggle="collapse" data-target=".method_hasTag .collapse">
+                            <h2>Checks if a tag of a certain type is present in this DocBlock.</h2>
+                            <pre>hasTag(string $name) : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>Tag name to check for.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isTemplateEnd"></a>
+                        <div class="element clickable method public  method_isTemplateEnd" data-toggle="collapse" data-target=".method_isTemplateEnd .collapse">
+                            <h2>Returns whether this DocBlock is the end of a Template section.</h2>
+                            <pre>isTemplateEnd() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            self::isTemplateStart()
+                                                                                                                <p>for a more complete description of the Docblock Template functionality.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isTemplateStart"></a>
+                        <div class="element clickable method public  method_isTemplateStart" data-toggle="collapse" data-target=".method_isTemplateStart .collapse">
+                            <h2>Returns whether this DocBlock is the start of a Template section.</h2>
+                            <pre>isTemplateStart() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>A Docblock may serve as template for a series of subsequent DocBlocks. This is indicated by a special marker
+(<code>#@+</code>) that is appended directly after the opening <code>/**</code> of a DocBlock.</p>
+<p>An example of such an opening is:</p>
+<pre><code>/**#@+
+ * My DocBlock
+ * /</code></pre>
+<p>The description and tags (not the summary!) are copied onto all subsequent DocBlocks and also applied to all
+elements that follow until another DocBlock is found that contains the closing marker (<code>#@-</code>).</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            self::isTemplateEnd()
+                                                                                                                <p>for the check whether a closing marker was provided.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_parseTags"></a>
+                        <div class="element clickable method protected  method_parseTags" data-toggle="collapse" data-target=".method_parseTags .collapse">
+                            <h2>Creates the tag objects.</h2>
+                            <pre>parseTags(string $tags) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$tags</h4>
+                                                <code>string</code><p><p>Tag block to parse.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setText"></a>
+                        <div class="element clickable method public  method_setText" data-toggle="collapse" data-target=".method_setText .collapse">
+                            <h2>Set the text portion of the doc block.</h2>
+                            <pre>setText( $comment) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Sets the text portion (short and long description combined) of the doc
+block.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$comment</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p><p>This doc block.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_splitDocBlock"></a>
+                        <div class="element clickable method protected  method_splitDocBlock" data-toggle="collapse" data-target=".method_splitDocBlock .collapse">
+                            <h2>Splits the DocBlock into a template marker, summary, description and block of tags.</h2>
+                            <pre>splitDocBlock(string $comment) : array&lt;mixed,string&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    author
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Richard van Velzen (@_richardJ) Special thanks to Richard for the regex responsible for the split.</p>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Mike van Riel <a href="mailto:me@mikevanriel.com">me@mikevanriel.com</a> for extending the regex with template marker support.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$comment</h4>
+                                                <code>string</code><p><p>Comment to split into the sub-parts.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,string&gt;</code><p><p>containing the template marker (if any), summary, description and a string containing the tags.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_short_description"> </a>
+                            <div class="element clickable property  protected property_short_description" data-toggle="collapse" data-target=".property_short_description .collapse">
+                                <h2>The opening line for this docblock.</h2>
+                                <pre>short_description : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>The opening line for this docblock.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_long_description"> </a>
+                            <div class="element clickable property  protected property_long_description" data-toggle="collapse" data-target=".property_long_description .collapse">
+                                <h2>The actual
+    description for this docblock.</h2>
+                                <pre>long_description : \phpDocumentor\Reflection\DocBlock\Description</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>The actual
+description for this docblock.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Description.html">\phpDocumentor\Reflection\DocBlock\Description</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_tags"> </a>
+                            <div class="element clickable property  protected property_tags" data-toggle="collapse" data-target=".property_tags .collapse">
+                                <h2>An array containing all
+    the tags in this docblock; except inline.</h2>
+                                <pre>tags : array&lt;mixed,\phpDocumentor\Reflection\DocBlock\Tag&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>An array containing all
+the tags in this docblock; except inline.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.html">\phpDocumentor\Reflection\DocBlock\Tag</a>&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_context"> </a>
+                            <div class="element clickable property  protected property_context" data-toggle="collapse" data-target=".property_context .collapse">
+                                <h2>Information about the context of this DocBlock.</h2>
+                                <pre>context : \phpDocumentor\Reflection\DocBlock\Context</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Information about the context of this DocBlock.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Context.html">\phpDocumentor\Reflection\DocBlock\Context</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_location"> </a>
+                            <div class="element clickable property  protected property_location" data-toggle="collapse" data-target=".property_location .collapse">
+                                <h2>Information about the location of this DocBlock.</h2>
+                                <pre>location : \phpDocumentor\Reflection\DocBlock\Location</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Information about the location of this DocBlock.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/phpDocumentor.Reflection.DocBlock.Location.html">\phpDocumentor\Reflection\DocBlock\Location</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_isTemplateStart"> </a>
+                            <div class="element clickable property  protected property_isTemplateStart" data-toggle="collapse" data-target=".property_isTemplateStart .collapse">
+                                <h2>Is this DocBlock (the start of) a template?</h2>
+                                <pre>isTemplateStart : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Is this DocBlock (the start of) a template?</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_isTemplateEnd"> </a>
+                            <div class="element clickable property  protected property_isTemplateEnd" data-toggle="collapse" data-target=".property_isTemplateEnd .collapse">
+                                <h2>Does this DocBlock signify the end of a DocBlock template?</h2>
+                                <pre>isTemplateEnd : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Does this DocBlock signify the end of a DocBlock template?</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\phpDocumentor\Reflection\DocBlock"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/phpDocumentor.Reflection.html">Reflection</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/phpDocumentor.Reflection.DocBlock.html">DocBlock</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:38 +0000.<br/>
+    </footer>
+    </body>
+</html>

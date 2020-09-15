@@ -21,10 +21,20 @@ use App\Model\Entity\User;
 use App\Model\Manager\RoleManager;
 use App\Model\Manager\UserManager;
 
+
+/**
+ * Class UserController
+ *
+ * @package App\Controller
+ */
 class UserController extends BaseController
 {
     /**
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method showFormCreateUser
+     *
+     * Display form to register a new user
+     *
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function showFormCreateUserAction()
     {
@@ -32,14 +42,18 @@ class UserController extends BaseController
     }
 
     /**
-     * @param $salutation
-     * @param $firstName
-     * @param $lastName
-     * @param $login
-     * @param $password
-     * @param $confirmPassword
-     * @throws UserAlreadyExistException
-     * @throws WrongSecondPasswordException
+     * Method createUser
+     *
+     * Insert the new user in database
+     *
+     * @param string $salutation User salutation
+     * @param string $firstName User firstname
+     * @param string $lastName User lastname
+     * @param string $login User mail
+     * @param string $password User password
+     * @param string $confirmPassword User confirm password
+     * @throws UserAlreadyExistException This account already exist !
+     * @throws WrongSecondPasswordException The confirm password is wrong !
      * @throws \Exception
      */
     public function createUserAction($salutation, $firstName, $lastName, $login, $password, $confirmPassword)
@@ -72,8 +86,11 @@ class UserController extends BaseController
     }
 
     /**
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method login
      *
+     * display form to login
+     *
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function loginAction()
     {
@@ -81,9 +98,13 @@ class UserController extends BaseController
     }
 
     /**
-     * @param $login user mail
-     * @param $password user password
-     * @throws DisabledUserException
+     * Method authentication
+     *
+     * check authentication and stock user in session
+     *
+     * @param string $login User mail
+     * @param string $password User password
+     * @throws DisabledUserException Sorry, this account is disabled
      */
     public function authenticateAction($login, $password)
     {
@@ -103,6 +124,8 @@ class UserController extends BaseController
     }
 
     /**
+     * Method logout
+     *
      * @return null redirect to default page
      */
     public function logoutAction()
@@ -113,7 +136,11 @@ class UserController extends BaseController
     }
 
     /**
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method showUserProfile
+     *
+     * Display logged user profile
+     *
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function showUserProfileAction()
     {
@@ -121,9 +148,13 @@ class UserController extends BaseController
     }
 
     /**
-     * @param int $page
-     * @throws PageNotFoundException
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method listUser
+     *
+     * Only for the admin from back-office
+     *
+     * @param int $page Page number asked
+     * @throws PageNotFoundException The page number X is not found ! The number of pages is Y.
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function listUserAction($page = 1)
     {
@@ -141,7 +172,11 @@ class UserController extends BaseController
     }
 
     /**
-     * @param $id
+     * Method deleteUser
+     *
+     * Only for the admin from back-office
+     *
+     * @param int $id User Id to delete
      * @throws \Exception
      */
     public function deleteUserAction($id)
@@ -157,7 +192,11 @@ class UserController extends BaseController
     }
 
     /**
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method editUserProfile
+     *
+     * View the currently logged in user profile form
+     *
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function editUserProfileAction()
     {
@@ -165,10 +204,14 @@ class UserController extends BaseController
     }
 
     /**
-     * @param $salutation
-     * @param $firstName
-     * @param $lastName
-     * @param $login
+     * Method updateUserProfile
+     *
+     * Update user profile logged in database
+     *
+     * @param string $salutation User salutation
+     * @param string $firstName User firstname
+     * @param string $lastName User lastname
+     * @param string $login User mail
      * @throws \Exception
      */
     public function updateUserProfileAction($salutation, $firstName, $lastName, $login)
@@ -192,8 +235,12 @@ class UserController extends BaseController
     }
 
     /**
-     * @param $id
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method editUser
+     *
+     * Display form user from back-office. Only for the admin
+     *
+     * @param int $id User Id to update
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function editUserAction($id)
     {
@@ -203,14 +250,18 @@ class UserController extends BaseController
     }
 
     /**
-     * @param $id
-     * @param $salutation
-     * @param $firstName
-     * @param $lastName
-     * @param $login
-     * @param $enabled
-     * @param $enabledOrigin
-     * @param $role
+     * Method updateUser
+     *
+     * Update user in database from back-office only for the admin
+     *
+     * @param int $id User Id
+     * @param string $salutation User salutation
+     * @param string $firstName User firstname
+     * @param string $lastName User lastname
+     * @param string $login User mail
+     * @param boolean $enabled User state (enable or disable) from edit form user
+     * @param boolean $enabledOrigin User State before edit
+     * @param string $role Role Slug from edit form user
      * @throws \Exception
      */
     public function updateUserAction($id, $salutation, $firstName, $lastName, $login, $enabled, $enabledOrigin, $role)

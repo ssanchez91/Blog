@@ -8,17 +8,46 @@
 
 namespace App\Model\Entity;
 
-
+/**
+ * Class Comment
+ * @package App\Model\Entity
+ */
 class Comment
 {
+    /**
+     * Variable id
+     * @var
+     */
     private $id;
+    /**
+     * Variable description
+     * @var
+     */
     private $description;
+    /**
+     * Variable userId
+     * @var
+     */
     private $userId;
+    /**
+     * Variable lastUpdate
+     * @var
+     */
     private $lastUpdate;
+    /**
+     * Variable postId
+     * @var
+     */
     private $postId;
+    /**
+     * Variable publish
+     * @var
+     */
     private $publish;
 
+
     /**
+     * Accessor getId
      * @return mixed
      */
     public function getId()
@@ -27,6 +56,7 @@ class Comment
     }
 
     /**
+     * Accessor setId
      * @param mixed $id
      */
     public function setId($id)
@@ -35,6 +65,7 @@ class Comment
     }
 
     /**
+     * Accessor  getDescription
      * @return mixed
      */
     public function getDescription()
@@ -43,6 +74,7 @@ class Comment
     }
 
     /**
+     * Accessor setDescription
      * @param mixed $description
      */
     public function setDescription($description)
@@ -51,6 +83,7 @@ class Comment
     }
 
     /**
+     * Accessor getUserId
      * @return mixed
      */
     public function getUserId()
@@ -59,6 +92,7 @@ class Comment
     }
 
     /**
+     * Accessor setUserId
      * @param mixed $userId
      */
     public function setUserId($userId)
@@ -67,6 +101,7 @@ class Comment
     }
 
     /**
+     * Accessor getPostId
      * @return mixed
      */
     public function getPostId()
@@ -75,6 +110,7 @@ class Comment
     }
 
     /**
+     * Accessor setPostId
      * @param mixed $postId
      */
     public function setPostId($postId)
@@ -84,6 +120,7 @@ class Comment
 
 
     /**
+     * Accessor getLastUpdate
      * @return mixed
      */
     public function getLastUpdate()
@@ -92,6 +129,7 @@ class Comment
     }
 
     /**
+     * Accessor setLastUpdate
      * @param mixed $lastUpdate
      */
     public function setLastUpdate($lastUpdate)
@@ -100,6 +138,7 @@ class Comment
     }
 
     /**
+     * Accessor getPublish
      * @return mixed
      */
     public function getPublish()
@@ -108,6 +147,7 @@ class Comment
     }
 
     /**
+     * Accessor setPublish
      * @param mixed $publish
      */
     public function setPublish($publish)

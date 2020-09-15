@@ -1,0 +1,2841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \phpDocumentor\Plugin
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/phpDocumentor.Plugin.html" title="Plugin">
+                    <i class="icon-th"></i> Plugin
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.html" title="Core">
+            <i class="icon-th"></i> Core
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html" title="Descriptor">
+            <i class="icon-th"></i> Descriptor
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html" title="Validator">
+            <i class="icon-th"></i> Validator
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.html" title="Constraints">
+            <i class="icon-th"></i> Constraints
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.html" title="Classes">
+            <i class="icon-th"></i> Classes
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.html" title="Functions">
+            <i class="icon-th"></i> Functions
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.html" title="Property">
+            <i class="icon-th"></i> Property
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Functions.html" title="Functions">
+            <i class="icon-th"></i> Functions
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.html" title="Transformer">
+            <i class="icon-th"></i> Transformer
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Behaviour.html" title="Behaviour">
+            <i class="icon-th"></i> Behaviour
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.html" title="Tag">
+            <i class="icon-th"></i> Tag
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Writer.html" title="Writer">
+            <i class="icon-th"></i> Writer
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.html" title="Xml">
+            <i class="icon-th"></i> Xml
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Xslt.html" title="Xslt">
+            <i class="icon-th"></i> Xslt
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Graphs.html" title="Graphs">
+            <i class="icon-th"></i> Graphs
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Graphs.Writer.html" title="Writer">
+            <i class="icon-th"></i> Writer
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.LegacyNamespaceConverter.html" title="LegacyNamespaceConverter">
+            <i class="icon-th"></i> LegacyNamespaceConverter
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.LegacyNamespaceConverter.Tests.html" title="Tests">
+            <i class="icon-th"></i> Tests
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.html" title="Scrybe">
+            <i class="icon-th"></i> Scrybe
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Command.html" title="Command">
+            <i class="icon-th"></i> Command
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Command.Manual.html" title="Manual">
+            <i class="icon-th"></i> Manual
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html" title="Converter">
+            <i class="icon-th"></i> Converter
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Definition.html" title="Definition">
+            <i class="icon-th"></i> Definition
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Exception.html" title="Exception">
+            <i class="icon-th"></i> Exception
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Format.html" title="Format">
+            <i class="icon-th"></i> Format
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Format.Exception.html" title="Exception">
+            <i class="icon-th"></i> Exception
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Metadata.html" title="Metadata">
+            <i class="icon-th"></i> Metadata
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.html" title="TableOfContents">
+            <i class="icon-th"></i> TableOfContents
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.html" title="RestructuredText">
+            <i class="icon-th"></i> RestructuredText
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.html" title="Directives">
+            <i class="icon-th"></i> Directives
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Roles.html" title="Roles">
+            <i class="icon-th"></i> Roles
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.html" title="Visitors">
+            <i class="icon-th"></i> Visitors
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Template.html" title="Template">
+            <i class="icon-th"></i> Template
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Twig.html" title="Twig">
+            <i class="icon-th"></i> Twig
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Twig.Writer.html" title="Writer">
+            <i class="icon-th"></i> Writer
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Parameter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Parameter .collapse">
+        <h1>Parameter<a href="../classes/phpDocumentor.Plugin.Parameter.html">¶</a></h1>
+        <p class="short_description">Model representing a plugin parameter</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Parameter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Plugin" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Plugin .collapse">
+        <h1>Plugin<a href="../classes/phpDocumentor.Plugin.Plugin.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Plugin.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceProvider" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceProvider .collapse">
+        <h1>ServiceProvider<a href="../classes/phpDocumentor.Plugin.ServiceProvider.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.ServiceProvider.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Exception" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Exception .collapse">
+        <h1>Exception<a href="../classes/phpDocumentor.Plugin.Core.Exception.html">¶</a></h1>
+        <p class="short_description">Exception object for the Core Plugin.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Exception.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceProvider" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceProvider .collapse">
+        <h1>ServiceProvider<a href="../classes/phpDocumentor.Plugin.Core.ServiceProvider.html">¶</a></h1>
+        <p class="short_description">Register all services and subservices necessary to get phpDocumentor up and running.</p>
+        <div class="details collapse">
+                            <p>This provider exposes no services of its own but populates the Writer Collection with the basic writers for
+phpDocumentor and, for backwards compatibility, registers the service providers for Graphs, Twig and PDF to
+the container.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.ServiceProvider.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ValidationValueObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ValidationValueObject .collapse">
+        <h1>ValidationValueObject<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.ValidationValueObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.ValidationValueObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ValidatorAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ValidatorAbstract .collapse">
+        <h1>ValidatorAbstract<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.ValidatorAbstract.html">¶</a></h1>
+        <p class="short_description">Base class for DocBlock Validations.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.ValidatorAbstract.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.html">Constraints</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.html">Classes</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_HasPackageWithSubpackage" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasPackageWithSubpackage .collapse">
+        <h1>HasPackageWithSubpackage<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasPackageWithSubpackage.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait always has a package if there is a subpackage present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasPackageWithSubpackage.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasPackageWithSubpackageValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasPackageWithSubpackageValidator .collapse">
+        <h1>HasPackageWithSubpackageValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasPackageWithSubpackageValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait always has a package if there is a subpackage present.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasPackageWithSubpackageValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSinglePackage" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSinglePackage .collapse">
+        <h1>HasSinglePackage<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSinglePackage.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait has not more than ! package tags.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSinglePackage.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSinglePackageValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSinglePackageValidator .collapse">
+        <h1>HasSinglePackageValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSinglePackageValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait has not more than 1 package tags.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSinglePackageValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSingleSubpackage" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSingleSubpackage .collapse">
+        <h1>HasSingleSubpackage<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSingleSubpackage.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait has not more than 1 subpackage tags.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSingleSubpackage.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSingleSubpackageValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSingleSubpackageValidator .collapse">
+        <h1>HasSingleSubpackageValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSingleSubpackageValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait has not more than 1 subpackage tags.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSingleSubpackageValidator.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.html">Constraints</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.html">Property</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_HasSummary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSummary .collapse">
+        <h1>HasSummary<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.HasSummary.html">¶</a></h1>
+        <p class="short_description">Detects whether a property has a summary, or an `@var` tag with a description.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.HasSummary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSummaryValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSummaryValidator .collapse">
+        <h1>HasSummaryValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.HasSummaryValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a property has a summary, or an `@var` tag with a description.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.HasSummaryValidator.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.html">Constraints</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.html">Functions</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AreAllArgumentsValid" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AreAllArgumentsValid .collapse">
+        <h1>AreAllArgumentsValid<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.AreAllArgumentsValid.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default return type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.AreAllArgumentsValid.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AreAllArgumentsValidValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AreAllArgumentsValidValidator .collapse">
+        <h1>AreAllArgumentsValidValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.AreAllArgumentsValidValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.AreAllArgumentsValidValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesArgumentNameMatchParam" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesArgumentNameMatchParam .collapse">
+        <h1>DoesArgumentNameMatchParam<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentNameMatchParam.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default return type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentNameMatchParam.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesArgumentNameMatchParamValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesArgumentNameMatchParamValidator .collapse">
+        <h1>DoesArgumentNameMatchParamValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentNameMatchParamValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentNameMatchParamValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesArgumentTypehintMatchParam" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesArgumentTypehintMatchParam .collapse">
+        <h1>DoesArgumentTypehintMatchParam<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentTypehintMatchParam.html">¶</a></h1>
+        <p class="short_description">Checks the typehint of the argument versus the @param tag.</p>
+        <div class="details collapse">
+                            <p>If the argument has no typehint we do not check anything. When multiple
+type are given then the typehint needs to be one of them.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentTypehintMatchParam.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesArgumentTypehintMatchParamValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesArgumentTypehintMatchParamValidator .collapse">
+        <h1>DoesArgumentTypehintMatchParamValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentTypehintMatchParamValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentTypehintMatchParamValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesParamsExists" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesParamsExists .collapse">
+        <h1>DoesParamsExists<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesParamsExists.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default return type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesParamsExists.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesParamsExistsValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesParamsExistsValidator .collapse">
+        <h1>DoesParamsExistsValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesParamsExistsValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesParamsExistsValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsArgumentInDocBlock" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsArgumentInDocBlock .collapse">
+        <h1>IsArgumentInDocBlock<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsArgumentInDocBlock.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a missing argument in the docblock.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsArgumentInDocBlock.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsArgumentInDocBlockValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsArgumentInDocBlockValidator .collapse">
+        <h1>IsArgumentInDocBlockValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsArgumentInDocBlockValidator.html">¶</a></h1>
+        <p class="short_description">Validates if a Method or Function&#039;s arguments all have an accompanying param tag in the DocBlock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsArgumentInDocBlockValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsParamTypeNotAnIdeDefault" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsParamTypeNotAnIdeDefault .collapse">
+        <h1>IsParamTypeNotAnIdeDefault<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsParamTypeNotAnIdeDefault.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default param type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsParamTypeNotAnIdeDefault.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsParamTypeNotAnIdeDefaultValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsParamTypeNotAnIdeDefaultValidator .collapse">
+        <h1>IsParamTypeNotAnIdeDefaultValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsParamTypeNotAnIdeDefaultValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether the type for a param tag with a Method or Function is not a known default.</p>
+        <div class="details collapse">
+                            <p>Whenever this validator triggers then it means that someone forgot to replace the pseudo type generated by the IDE
+with the real type for the given parameter.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsParamTypeNotAnIdeDefaultValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsReturnTypeNotAnIdeDefault" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsReturnTypeNotAnIdeDefault .collapse">
+        <h1>IsReturnTypeNotAnIdeDefault<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsReturnTypeNotAnIdeDefault.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default return type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsReturnTypeNotAnIdeDefault.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsReturnTypeNotAnIdeDefaultValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsReturnTypeNotAnIdeDefaultValidator .collapse">
+        <h1>IsReturnTypeNotAnIdeDefaultValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsReturnTypeNotAnIdeDefaultValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsReturnTypeNotAnIdeDefaultValidator.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Functions.html">Functions</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AreAllArgumentsValid" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AreAllArgumentsValid .collapse">
+        <h1>AreAllArgumentsValid<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Functions.AreAllArgumentsValid.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Functions.AreAllArgumentsValid.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+    
+                
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Writer.html">Writer</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Checkstyle" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Checkstyle .collapse">
+        <h1>Checkstyle<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Checkstyle.html">¶</a></h1>
+        <p class="short_description">Checkstyle transformation writer; generates checkstyle report</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Checkstyle.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FileIo" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FileIo .collapse">
+        <h1>FileIo<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.FileIo.html">¶</a></h1>
+        <p class="short_description">Writer containing file system operations.</p>
+        <div class="details collapse">
+                            <p>The Query part of the transformation determines the action, currently
+supported is:</p>
+<ul>
+<li>copy, copies a file or directory to the destination given in $artifact</li>
+</ul>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.FileIo.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Pathfinder" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Pathfinder .collapse">
+        <h1>Pathfinder<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Pathfinder.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Pathfinder.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Sourcecode" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Sourcecode .collapse">
+        <h1>Sourcecode<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Sourcecode.html">¶</a></h1>
+        <p class="short_description">Sourcecode transformation writer; generates syntax highlighted source files in a destination&#039;s subfolder.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Sourcecode.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Statistics" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Statistics .collapse">
+        <h1>Statistics<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Statistics.html">¶</a></h1>
+        <p class="short_description">Statistics transformation writer; generates statistic report as XML.</p>
+        <div class="details collapse">
+                            <p>Generated XML structure:</p>
+<pre><code> &lt;?xml version="1.0"?&gt;
+ &lt;phpdoc-stats version="2.4.0"&gt;
+   &lt;stat date="2014-06-02T19:26:15+02:00"&gt;
+     &lt;counters&gt;
+       &lt;deprecated&gt;100&lt;/deprecated&gt;
+       &lt;errors&gt;377&lt;/errors&gt;
+       &lt;markers&gt;2&lt;/markers&gt;
+     &lt;/counters&gt;
+   &lt;/stat&gt;
+ &lt;/phpdoc-stats&gt;</code></pre>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Statistics.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Xml" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Xml .collapse">
+        <h1>Xml<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.html">¶</a></h1>
+        <p class="short_description">Converts the structural information of phpDocumentor into an XML file.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Xsl" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Xsl .collapse">
+        <h1>Xsl<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xsl.html">¶</a></h1>
+        <p class="short_description">XSL transformation writer; generates static HTML out of the structure and XSL templates.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xsl.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Writer.html">Writer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.html">Xml</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ArgumentConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ArgumentConverter .collapse">
+        <h1>ArgumentConverter<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ArgumentConverter.html">¶</a></h1>
+        <p class="short_description">Converter used to create an XML Element representing a method or function argument.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ArgumentConverter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstantConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstantConverter .collapse">
+        <h1>ConstantConverter<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ConstantConverter.html">¶</a></h1>
+        <p class="short_description">Converter used to create an XML Element representing the constant and its DocBlock.</p>
+        <div class="details collapse">
+                            <p>In order to convert the DocBlock to its XML representation this class requires the respective converter.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ConstantConverter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DocBlockConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DocBlockConverter .collapse">
+        <h1>DocBlockConverter<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.DocBlockConverter.html">¶</a></h1>
+        <p class="short_description">Converter used to create an XML Element representing a DocBlock and its tags.</p>
+        <div class="details collapse">
+                            <p>In order to convert the tags to their XML representation this class requires the respective converter.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.DocBlockConverter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InterfaceConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InterfaceConverter .collapse">
+        <h1>InterfaceConverter<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.InterfaceConverter.html">¶</a></h1>
+        <p class="short_description">Converter used to create an XML Element representing the interface and its Constants, Methods and DocBlock.</p>
+        <div class="details collapse">
+                            <p>In order to convert the DocBlock to its XML representation this class requires the respective converter.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.InterfaceConverter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodConverter .collapse">
+        <h1>MethodConverter<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.MethodConverter.html">¶</a></h1>
+        <p class="short_description">Converter used to create an XML Element representing the method, its arguments and its DocBlock.</p>
+        <div class="details collapse">
+                            <p>In order to convert the arguments and DocBlock to their XML representation this class requires their respective
+converters.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.MethodConverter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyConverter .collapse">
+        <h1>PropertyConverter<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.PropertyConverter.html">¶</a></h1>
+        <p class="short_description">Converter used to create an XML Element representing the property and its DocBlock.</p>
+        <div class="details collapse">
+                            <p>In order to convert the DocBlock to its XML representation this class requires the respective converter.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.PropertyConverter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TagConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TagConverter .collapse">
+        <h1>TagConverter<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TagConverter.html">¶</a></h1>
+        <p class="short_description">Creates an XML Element &#039;tag&#039; and appends it to the provided parent element.</p>
+        <div class="details collapse">
+                            <p>With this class we convert a TagDescriptor, or any child thereof, into an XML element that is subsequently appended
+onto a provided parent element (usually an XML Element that represents a DocBlock).</p>
+<p>During the conversion process the generated XML Element is enriched with additional elements and attributes based on
+which tags are provided (or more specifically which methods that support).</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TagConverter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TraitConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TraitConverter .collapse">
+        <h1>TraitConverter<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TraitConverter.html">¶</a></h1>
+        <p class="short_description">Converter used to create an XML Element representing the Trait and its Methods, Properties and DocBlock.</p>
+        <div class="details collapse">
+                            <p>In order to convert the DocBlock to its XML representation this class requires the respective converter.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TraitConverter.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Behaviour.html">Behaviour</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.html">Tag</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AuthorTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AuthorTag .collapse">
+        <h1>AuthorTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.AuthorTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that links to email addresses in the @author tag.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.AuthorTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CoversTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CoversTag .collapse">
+        <h1>CoversTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.CoversTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that adds support for the @covers tag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.CoversTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IgnoreTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IgnoreTag .collapse">
+        <h1>IgnoreTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.IgnoreTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that adds support for @ignore tag.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.IgnoreTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InternalTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InternalTag .collapse">
+        <h1>InternalTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.InternalTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that adds support for @internal inline tag.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.InternalTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LicenseTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LicenseTag .collapse">
+        <h1>LicenseTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.LicenseTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that enables links to URLs in the @license tag.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.LicenseTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodTag .collapse">
+        <h1>MethodTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.MethodTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that adds support for the @method tag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.MethodTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ParamTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ParamTag .collapse">
+        <h1>ParamTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ParamTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that adds support for the @param tags.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ParamTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyTag .collapse">
+        <h1>PropertyTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.PropertyTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that adds support for the property tag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.PropertyTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ReturnTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ReturnTag .collapse">
+        <h1>ReturnTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ReturnTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that adds support for the return tag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ReturnTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_UsesTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_UsesTag .collapse">
+        <h1>UsesTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.UsesTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that adds support for the uses tag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.UsesTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VarTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VarTag .collapse">
+        <h1>VarTag<a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.VarTag.html">¶</a></h1>
+        <p class="short_description">Behaviour that adds support for the @method tag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.VarTag.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Xslt.html">Xslt</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Extension" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Extension .collapse">
+        <h1>Extension<a href="../classes/phpDocumentor.Plugin.Core.Xslt.Extension.html">¶</a></h1>
+        <p class="short_description">XSLT filters that can be used inside a template.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Xslt.Extension.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ServiceProvider" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceProvider .collapse">
+        <h1>ServiceProvider<a href="../classes/phpDocumentor.Plugin.Scrybe.ServiceProvider.html">¶</a></h1>
+        <p class="short_description">Creates and binds the components for the generation of manuals.</p>
+        <div class="details collapse">
+                            <p>Scrybe is a plugin that allows authors to write documentation in a markup format of their choosing and generate
+human-readable documentation from it.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.ServiceProvider.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_ConverterInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ConverterInterface .collapse">
+        <h1>ConverterInterface<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ConverterInterface.html">¶</a></h1>
+        <p class="short_description">This interface provides a basic contract between the Converters and all classes that want to use them.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ConverterInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ToHtmlInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ToHtmlInterface .collapse">
+        <h1>ToHtmlInterface<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ToHtmlInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ToHtmlInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ToLatexInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ToLatexInterface .collapse">
+        <h1>ToLatexInterface<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ToLatexInterface.html">¶</a></h1>
+        <p class="short_description">Interface that dictates the custom options that all converters that convert to Latex should have.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ToLatexInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ToPdfInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ToPdfInterface .collapse">
+        <h1>ToPdfInterface<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ToPdfInterface.html">¶</a></h1>
+        <p class="short_description">Interface that dictates the custom options that all converters that convert to Latex should have.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ToPdfInterface.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_BaseConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BaseConverter .collapse">
+        <h1>BaseConverter<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.BaseConverter.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.BaseConverter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Factory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Factory .collapse">
+        <h1>Factory<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Factory.html">¶</a></h1>
+        <p class="short_description">This factory attempts to create a converter given an input and output format and return that.</p>
+        <div class="details collapse">
+                            <p><code>
+use phpDocumentor\Plugin\Scrybe\Converter\ConverterFactory;
+use phpDocumentor\Plugin\Scrybe\Converter\Format\Format;</p>
+<pre><code>$converter_factory = new ConverterFactory();
+$converter = $converter_factory-&gt;get(
+    Format::MARKDOWN, Format::HTML
+);</code></pre>
+<p><code></p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Factory.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.html">RestructuredText</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Document" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Document .collapse">
+        <h1>Document<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Document.html">¶</a></h1>
+        <p class="short_description">This is a customized RestructuredText document to register Scrybe-specific directives, roles and options.</p>
+        <div class="details collapse">
+                            <p>The following directives are introduced using this class:</p>
+<ul>
+<li>toctree, a directive used to insert table of contents into documents.</li>
+<li>image, an overridden version of <code>image</code> that collects the assets.</li>
+<li>figure, an overridden version of the <code>figure</code> that collects the assets.</li>
+</ul>
+<p>The following roles are introduced in this class:</p>
+<ul>
+<li>doc, a reference to an external piece of documentation.</li>
+</ul>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Document.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ToHtml" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ToHtml .collapse">
+        <h1>ToHtml<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.ToHtml.html">¶</a></h1>
+        <p class="short_description">Class used to convert one or more RestructuredText documents to their HTML representation.</p>
+        <div class="details collapse">
+                            <p>This class uses a two-phase process to interpret and parse the RestructuredText documents, namely Discovery
+and Creation.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.ToHtml.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.html">RestructuredText</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.html">Visitors</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Creator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Creator .collapse">
+        <h1>Creator<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Creator.html">¶</a></h1>
+        <p class="short_description">A specialized RestructuredText Parser/Visitor to provide assistance methods for the creation phase.</p>
+        <div class="details collapse">
+                            <p>.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Creator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Discover" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Discover .collapse">
+        <h1>Discover<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Discover.html">¶</a></h1>
+        <p class="short_description">A specialized RestructuredText Parser/Visitor to aid in the discovery phase.</p>
+        <div class="details collapse">
+                            <p>This class collects all headings and their titles and populates the TableOfContents collection.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Discover.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.html">RestructuredText</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.html">Directives</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_CodeBlock" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CodeBlock .collapse">
+        <h1>CodeBlock<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.CodeBlock.html">¶</a></h1>
+        <p class="short_description">Directive used to process `.</p>
+        <div class="details collapse">
+                            <p>. toctree::` and insert entries from the table of contents.</p>
+<p>This directive tries to match the file with an entry in the table of contents during the creation phase. If a
+document is found it will generate a mini-table of contents at that location with the depth given using the
+<code>:maxdepth:</code> parameter.</p>
+<p>This directive is inspired by <a href="http://sphinx.pocoo.org/concepts.html#the-toc-tree">Sphinx' toctree</a> directive.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.CodeBlock.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Figure" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Figure .collapse">
+        <h1>Figure<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Figure.html">¶</a></h1>
+        <p class="short_description">Directive used to process `.</p>
+        <div class="details collapse">
+                            <p>. figure::` and collect images as assets to be copied.</p>
+<p>The filenames of the images are taken from the directive and added onto the assets collection during the
+discovery phase. These assets may then be copied to the destination location by the invoker.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Figure.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Image" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Image .collapse">
+        <h1>Image<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Image.html">¶</a></h1>
+        <p class="short_description">Directive used to process `.</p>
+        <div class="details collapse">
+                            <p>. image::` and collect images as assets to be copied.</p>
+<p>The filenames of the images are taken from the directive and added onto the assets collection during the discovery
+phase. These assets may then be copied to the destination location by the invoker.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Image.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Toctree" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Toctree .collapse">
+        <h1>Toctree<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Toctree.html">¶</a></h1>
+        <p class="short_description">Directive used to process `.</p>
+        <div class="details collapse">
+                            <p>. toctree::` and insert entries from the table of contents.</p>
+<p>This directive tries to match the file with an entry in the table of contents during the creation phase. If a
+document is found it will generate a mini-table of contents at that location with the depth given using the
+<code>:maxdepth:</code> parameter.</p>
+<p>Another option is :hidden: that will hide the toc from view while still making connections.</p>
+<p>This directive is inspired by <a href="http://sphinx.pocoo.org/concepts.html#the-toc-tree">Sphinx' toctree</a> directive.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Toctree.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.html">RestructuredText</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Roles.html">Roles</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Doc" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Doc .collapse">
+        <h1>Doc<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Roles.Doc.html">¶</a></h1>
+        <p class="short_description">The :doc: role creates a link to an external document.</p>
+        <div class="details collapse">
+                            <p>For this link you can either use relative locations or an absolute notation.
+The absolute notation uses the documentation root as starting directory.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Roles.Doc.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Metadata.html">Metadata</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Assets" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Assets .collapse">
+        <h1>Assets<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.Assets.html">¶</a></h1>
+        <p class="short_description">This collection manages which assets were found during the discovery phase.</p>
+        <div class="details collapse">
+                            <p>Each asset is represented by an entry containing the path to that asset relative to the project root.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.Assets.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Glossary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Glossary .collapse">
+        <h1>Glossary<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.Glossary.html">¶</a></h1>
+        <p class="short_description">The glossary is a collection containing a collection of terms and uses that were discovered during the discovery
+phase.</p>
+        <div class="details collapse">
+                            <p>The key of this collection is the term that was discovered and the value is an array of locations where the term
+was used.</p>
+<p>The array of locations consists of a filename as key and an array with the linenumbers where the term occurred.</p>
+<p>Example:</p>
+<p>array(1) {
+[&quot;term&quot;]=&gt;
+array(1) {
+[&quot;filename&quot;]=&gt;
+array(3) {
+[0]=&gt; int(10)
+[1]=&gt; int(14)
+[2]=&gt; int(20)
+}
+}
+}</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.Glossary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TableOfContents" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TableOfContents .collapse">
+        <h1>TableOfContents<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.html">¶</a></h1>
+        <p class="short_description">This collection manages which headings were discovered during the discovery phase and stores them as entries.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Metadata.html">Metadata</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.html">TableOfContents</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_BaseEntry" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BaseEntry .collapse">
+        <h1>BaseEntry<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.BaseEntry.html">¶</a></h1>
+        <p class="short_description">The Table of Contents entry provides essential information on the current entry, it&#039;s place in the structure and
+where it points to.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.BaseEntry.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_File" class="element ajax clickable class" data-toggle="collapse" data-target="#class_File .collapse">
+        <h1>File<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.File.html">¶</a></h1>
+        <p class="short_description">The Table of Contents File describes a file and the headings it contains.</p>
+        <div class="details collapse">
+                            <p>A File may also contain other files, those will serve as containers for more headings or other files. This way it is
+possible to 'include' another File as part of a hierarchy and have a integrated table of contents.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.File.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Heading" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Heading .collapse">
+        <h1>Heading<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Heading.html">¶</a></h1>
+        <p class="short_description">The Table of Contents File describes a headings and the Files and subentries it may contain.</p>
+        <div class="details collapse">
+                            <p>A Heading may also contain files, those will serve as containers for more headings or other files. This way it is
+possible to 'include' another File as part of a hierarchy and have a integrated table of contents.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Heading.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Module" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Module .collapse">
+        <h1>Module<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Module.html">¶</a></h1>
+        <p class="short_description">The Table of Contents module represents an independent section of the documentation.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Module.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Format.html">Format</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Collection" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Collection .collapse">
+        <h1>Collection<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Collection.html">¶</a></h1>
+        <p class="short_description">A Collection containing all different text-bases file formats that are supported by Scrybe, their mmime-types and
+available extensions.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Collection.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Format" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Format .collapse">
+        <h1>Format<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Format.html">¶</a></h1>
+        <p class="short_description">Defines a conversion format in Scrybe.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Format.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Format.html">Format</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Format.Exception.html">Exception</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_FormatNotFoundException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FormatNotFoundException .collapse">
+        <h1>FormatNotFoundException<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Exception.FormatNotFoundException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Exception.FormatNotFoundException.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Definition.html">Definition</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Definition" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Definition .collapse">
+        <h1>Definition<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Definition.Definition.html">¶</a></h1>
+        <p class="short_description">Defines the basic properties for a single conversion process.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Definition.Definition.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Factory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Factory .collapse">
+        <h1>Factory<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Definition.Factory.html">¶</a></h1>
+        <p class="short_description">Factory class that is able to return a contract between an input and output format (Definition).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Definition.Factory.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html">Converter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Exception.html">Exception</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ConverterNotFoundException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConverterNotFoundException .collapse">
+        <h1>ConverterNotFoundException<a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Exception.ConverterNotFoundException.html">¶</a></h1>
+        <p class="short_description">Exception indicating that a requested Converter could not be found.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Exception.ConverterNotFoundException.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Command.html">Command</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Command.Manual.html">Manual</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_BaseConvertCommand" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BaseConvertCommand .collapse">
+        <h1>BaseConvertCommand<a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.BaseConvertCommand.html">¶</a></h1>
+        <p class="short_description">Abstract Command class containing the scaffolding for the subsequent converting commands.</p>
+        <div class="details collapse">
+                            <p>Includes additional methods to forward the output to the logging events
+of phpDocumentor.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.BaseConvertCommand.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ToHtmlCommand" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ToHtmlCommand .collapse">
+        <h1>ToHtmlCommand<a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToHtmlCommand.html">¶</a></h1>
+        <p class="short_description">Command used to tell the application to convert from a format to HTML.</p>
+        <div class="details collapse">
+                            <p>Includes additional methods to forward the output to the logging events
+of phpDocumentor.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToHtmlCommand.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ToLatexCommand" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ToLatexCommand .collapse">
+        <h1>ToLatexCommand<a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToLatexCommand.html">¶</a></h1>
+        <p class="short_description">Command used to tell the application to convert from a format to Latex.</p>
+        <div class="details collapse">
+                            <p>Includes additional methods to forward the output to the logging events
+of phpDocumentor.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToLatexCommand.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ToPdfCommand" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ToPdfCommand .collapse">
+        <h1>ToPdfCommand<a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToPdfCommand.html">¶</a></h1>
+        <p class="short_description">Command used to tell the application to convert from a format to PDF.</p>
+        <div class="details collapse">
+                            <p>Includes additional methods to forward the output to the logging events
+of phpDocumentor.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToPdfCommand.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.html">Scrybe</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Scrybe.Template.html">Template</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_TemplateInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_TemplateInterface .collapse">
+        <h1>TemplateInterface<a href="../classes/phpDocumentor.Plugin.Scrybe.Template.TemplateInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Template.TemplateInterface.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_Factory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Factory .collapse">
+        <h1>Factory<a href="../classes/phpDocumentor.Plugin.Scrybe.Template.Factory.html">¶</a></h1>
+        <p class="short_description">A factory used to retrieve a template engine given a simplified name.</p>
+        <div class="details collapse">
+                            <p>With this factory it is possible to abstract away the actual class names and provide a faux name that is suitable
+for configuration purposes. An additional benefit is that any plugin is able to register their own template engines
+if desired.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Template.Factory.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Twig" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Twig .collapse">
+        <h1>Twig<a href="../classes/phpDocumentor.Plugin.Scrybe.Template.Twig.html">¶</a></h1>
+        <p class="short_description">Template class to use Twig to generate templates.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Scrybe.Template.Twig.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Graphs.html">Graphs</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ServiceProvider" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceProvider .collapse">
+        <h1>ServiceProvider<a href="../classes/phpDocumentor.Plugin.Graphs.ServiceProvider.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Graphs.ServiceProvider.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Graphs.html">Graphs</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Graphs.Writer.html">Writer</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Graph" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Graph .collapse">
+        <h1>Graph<a href="../classes/phpDocumentor.Plugin.Graphs.Writer.Graph.html">¶</a></h1>
+        <p class="short_description">Writer responsible for generating various graphs.</p>
+        <div class="details collapse">
+                            <p>The Graph writer is capable of generating a Graph (as provided using the 'source' parameter) at the location provided
+using the artifact parameter.</p>
+<p>Currently supported:</p>
+<ul>
+<li>'class', a Class Diagram Generated using GraphViz</li>
+</ul>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Graphs.Writer.Graph.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Twig.html">Twig</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_ExtensionInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ExtensionInterface .collapse">
+        <h1>ExtensionInterface<a href="../classes/phpDocumentor.Plugin.Twig.ExtensionInterface.html">¶</a></h1>
+        <p class="short_description">An interface shared by all Twig interfaces intended for phpDocumentor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Twig.ExtensionInterface.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_Extension" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Extension .collapse">
+        <h1>Extension<a href="../classes/phpDocumentor.Plugin.Twig.Extension.html">¶</a></h1>
+        <p class="short_description">Basic extension adding phpDocumentor specific functionality for Twig
+templates.</p>
+        <div class="details collapse">
+                            <p>Global variables:</p>
+<ul>
+<li><em>ast_node</em>, the current $data element</li>
+</ul>
+<p>Functions:</p>
+<ul>
+<li><em>path(string) </em>, converts the given relative path to be based of the projects
+root instead of the current directory</li>
+</ul>
+<p>Filters:</p>
+<ul>
+<li><em>markdown</em>, converts the associated text from Markdown formatting to HTML.</li>
+<li><em>trans</em>, translates the given string</li>
+<li><em>route</em>, attempts to generate a URL for a given Descriptor</li>
+<li><em>sort_desc</em>, sorts the given objects by their Name property/getter in a descending fashion</li>
+<li><em>sort_asc</em>, sorts the given objects by their Name property/getter in a ascending fashion</li>
+</ul>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Twig.Extension.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceProvider" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceProvider .collapse">
+        <h1>ServiceProvider<a href="../classes/phpDocumentor.Plugin.Twig.ServiceProvider.html">¶</a></h1>
+        <p class="short_description">Provides a series of services that are necessary for Twig to work with phpDocumentor.</p>
+        <div class="details collapse">
+                            <p>This provider uses the translator component to fuel the twig writer and ands the to the twig writer to the writer
+collection. This enables transformations to mention 'twig' as their writer attribute.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Twig.ServiceProvider.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Twig.html">Twig</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Twig.Writer.html">Writer</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Twig" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Twig .collapse">
+        <h1>Twig<a href="../classes/phpDocumentor.Plugin.Twig.Writer.Twig.html">¶</a></h1>
+        <p class="short_description">A specialized writer which uses the Twig templating engine to convert
+templates to HTML output.</p>
+        <div class="details collapse">
+                            <p>This writer support the Query attribute of a Transformation to generate
+multiple templates in one transformation.</p>
+<p>The Query attribute supports a simplified version of Twig queries and will
+use each individual result as the 'node' global variable in the Twig template.</p>
+<p>Example:</p>
+<p>Suppose a Query <code>indexes.classes</code> is given then this writer will be
+invoked as many times as there are classes in the project and the
+'node' global variable in twig will be filled with each individual
+class entry.</p>
+<p>When using the Query attribute in the transformation it is important to
+use a variable in the Artifact attribute as well (otherwise the same file
+would be overwritten several times).</p>
+<p>A simple example transformation line could be:</p>
+<pre><code>```
+&lt;transformation
+    writer="twig"
+    source="templates/twig/index.twig"
+    artifact="index.html"/&gt;
+```
+
+This example transformation would use this writer to transform the
+index.twig template file in the twig template folder into index.html at
+the destination location.
+Since no Query is provided the 'node' global variable will contain
+the Project Descriptor of the Object Graph.</code></pre>
+<p>A complex example transformation line could be:</p>
+<pre><code>```
+&lt;transformation
+    query="indexes.classes"
+    writer="twig"
+    source="templates/twig/class.twig"
+    artifact="{{name}}.html"/&gt;
+```
+
+This example transformation would use this writer to transform the
+class.twig template file in the twig template folder into a file with
+the 'name' property for an individual class inside the Object Graph.
+Since a Query *is* provided will the 'node' global variable contain a
+specific instance of a class applicable to the current iteration.</code></pre>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Twig.Writer.Twig.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.LegacyNamespaceConverter.html">LegacyNamespaceConverter</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_LegacyNamespaceFilter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LegacyNamespaceFilter .collapse">
+        <h1>LegacyNamespaceFilter<a href="../classes/phpDocumentor.Plugin.LegacyNamespaceConverter.LegacyNamespaceFilter.html">¶</a></h1>
+        <p class="short_description">Converts elements with underscores into a namespaced version.</p>
+        <div class="details collapse">
+                            <p>This filter will examine the Name of an element and extract namespaces based on underscores in the
+name. Every underscore is treated as a namespace separator.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.LegacyNamespaceConverter.LegacyNamespaceFilter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceProvider" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceProvider .collapse">
+        <h1>ServiceProvider<a href="../classes/phpDocumentor.Plugin.LegacyNamespaceConverter.ServiceProvider.html">¶</a></h1>
+        <p class="short_description">Converts all underscored class names into namespaces.</p>
+        <div class="details collapse">
+                            <p>This plugin will enable a non-namespaced application to be interpreted as being namespaced for documentation
+purposes by separating the Classes by underscore and converting the prefix to a series of namespaces.</p>
+<p>For example:</p>
+<pre><code>`My_Special_ClassName` will be transformed into the class `ClassName` with namespace `My\Special`.</code></pre>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.LegacyNamespaceConverter.ServiceProvider.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.LegacyNamespaceConverter.html">LegacyNamespaceConverter</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.LegacyNamespaceConverter.Tests.html">Tests</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_LegacyNamespaceFilterTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LegacyNamespaceFilterTest .collapse">
+        <h1>LegacyNamespaceFilterTest<a href="../classes/phpDocumentor.Plugin.LegacyNamespaceConverter.Tests.LegacyNamespaceFilterTest.html">¶</a></h1>
+        <p class="short_description">Tests the phpDocumentor\Plugin\LegacyNamespaceConverter\LegacyNamespaceFilter class.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.LegacyNamespaceConverter.Tests.LegacyNamespaceFilterTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:31 +0000.<br/>
+    </footer>
+    </body>
+</html>

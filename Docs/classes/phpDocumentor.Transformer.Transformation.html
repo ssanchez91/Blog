@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \phpDocumentor\Transformer\Transformation
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: Constructs a new Transformation object and populates the required parameters.">
+            <span class="description">Constructs a new Transformation object and populates the required parameters.</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getArtifact" title="getArtifact :: Returns the name of the artifact.">
+            <span class="description">Returns the name of the artifact.</span><pre>getArtifact</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getParameter" title="getParameter :: Returns a specific parameter, or $default if none exists.">
+            <span class="description">Returns a specific parameter, or $default if none exists.</span><pre>getParameter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getParameters" title="getParameters :: Returns all parameters for this transformation.">
+            <span class="description">Returns all parameters for this transformation.</span><pre>getParameters</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getParametersWithKey" title="getParametersWithKey :: Returns a specific parameter, or $default if none exists.">
+            <span class="description">Returns a specific parameter, or $default if none exists.</span><pre>getParametersWithKey</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getQuery" title="getQuery :: Returns the set query.">
+            <span class="description">Returns the set query.</span><pre>getQuery</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getSource" title="getSource :: Returns the name of the source / type used in the transformation process.">
+            <span class="description">Returns the name of the source / type used in the transformation process.</span><pre>getSource</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getSourceAsPath" title="getSourceAsPath :: Returns the source as a path instead of a regular value.">
+            <span class="description">Returns the source as a path instead of a regular value.</span><pre>getSourceAsPath</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getTransformer" title="getTransformer :: Returns the transformer for this transformation.">
+            <span class="description">Returns the transformer for this transformation.</span><pre>getTransformer</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getWriter" title="getWriter :: Returns an instantiated writer object.">
+            <span class="description">Returns an instantiated writer object.</span><pre>getWriter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setArtifact" title="setArtifact :: Filename of the resulting artifact relative to the root.">
+            <span class="description">Filename of the resulting artifact relative to the root.</span><pre>setArtifact</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setParameters" title="setParameters :: Sets an array of parameters (key =&gt; value).">
+            <span class="description">Sets an array of parameters (key =&gt; value).</span><pre>setParameters</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setQuery" title="setQuery :: Sets the query.">
+            <span class="description">Sets the query.</span><pre>setQuery</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setSource" title="setSource :: Sets the source / type which the writer will use to generate artifacts from.">
+            <span class="description">Sets the source / type which the writer will use to generate artifacts from.</span><pre>setSource</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setTransformer" title="setTransformer :: Sets the transformer on this transformation.">
+            <span class="description">Sets the transformer on this transformation.</span><pre>setTransformer</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setWriter" title="setWriter :: Sets the writer type and instantiates a writer.">
+            <span class="description">Sets the writer type and instantiates a writer.</span><pre>setWriter</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>Transformation</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description">Class representing a single Transformation.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Constructs a new Transformation object and populates the required parameters.</h2>
+                            <pre>__construct(string $query, string $writer, string $source, string $artifact) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$query</h4>
+                                                <code>string</code><p><p>What information to use as datasource for the writer's source.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$writer</h4>
+                                                <code>string</code><p><p>What type of transformation to apply (XSLT, PDF, Checkstyle etc).</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$source</h4>
+                                                <code>string</code><p><p>Which template or type of source to use.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$artifact</h4>
+                                                <code>string</code><p><p>What is the filename of the result (relative to the generated root)</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getArtifact"></a>
+                        <div class="element clickable method public  method_getArtifact" data-toggle="collapse" data-target=".method_getArtifact .collapse">
+                            <h2>Returns the name of the artifact.</h2>
+                            <pre>getArtifact() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getParameter"></a>
+                        <div class="element clickable method public  method_getParameter" data-toggle="collapse" data-target=".method_getParameter .collapse">
+                            <h2>Returns a specific parameter, or $default if none exists.</h2>
+                            <pre>getParameter(string $name) : \phpDocumentor\Transformer\Template\Parameter</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>Name of the parameter to return.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.Transformer.Template.Parameter.html">\phpDocumentor\Transformer\Template\Parameter</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getParameters"></a>
+                        <div class="element clickable method public  method_getParameters" data-toggle="collapse" data-target=".method_getParameters .collapse">
+                            <h2>Returns all parameters for this transformation.</h2>
+                            <pre>getParameters() : array&lt;mixed,\phpDocumentor\Transformer\Template\Parameter&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,<a href="../classes/phpDocumentor.Transformer.Template.Parameter.html">\phpDocumentor\Transformer\Template\Parameter</a>&gt;</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getParametersWithKey"></a>
+                        <div class="element clickable method public  method_getParametersWithKey" data-toggle="collapse" data-target=".method_getParametersWithKey .collapse">
+                            <h2>Returns a specific parameter, or $default if none exists.</h2>
+                            <pre>getParametersWithKey(string $name) : \phpDocumentor\Transformer\Template\Parameter</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>Name of the parameter to return.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.Transformer.Template.Parameter.html">\phpDocumentor\Transformer\Template\Parameter</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getQuery"></a>
+                        <div class="element clickable method public  method_getQuery" data-toggle="collapse" data-target=".method_getQuery .collapse">
+                            <h2>Returns the set query.</h2>
+                            <pre>getQuery() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getSource"></a>
+                        <div class="element clickable method public  method_getSource" data-toggle="collapse" data-target=".method_getSource .collapse">
+                            <h2>Returns the name of the source / type used in the transformation process.</h2>
+                            <pre>getSource() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getSourceAsPath"></a>
+                        <div class="element clickable method public  method_getSourceAsPath" data-toggle="collapse" data-target=".method_getSourceAsPath .collapse">
+                            <h2>Returns the source as a path instead of a regular value.</h2>
+                            <pre>getSourceAsPath() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This method applies the following rules to the value of $source:</p>
+<ol>
+<li>if the template_path parameter is set and that combined with the
+source gives an existing file; return that.</li>
+<li>if the value exists as a file (either relative to the current working
+directory or absolute), do a realpath and return it.</li>
+<li>Otherwise prepend it with the phpDocumentor data folder, if that does
+not exist: throw an exception</li>
+</ol></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\phpDocumentor\Transformer\Exception</dt>
+                                                        <dd><p>if no valid file could be found.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getTransformer"></a>
+                        <div class="element clickable method public  method_getTransformer" data-toggle="collapse" data-target=".method_getTransformer .collapse">
+                            <h2>Returns the transformer for this transformation.</h2>
+                            <pre>getTransformer() : \phpDocumentor\Transformer\Transformer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.Transformer.Transformer.html">\phpDocumentor\Transformer\Transformer</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getWriter"></a>
+                        <div class="element clickable method public  method_getWriter" data-toggle="collapse" data-target=".method_getWriter .collapse">
+                            <h2>Returns an instantiated writer object.</h2>
+                            <pre>getWriter() : \phpDocumentor\Transformer\Writer\WriterAbstract|null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.Transformer.Writer.WriterAbstract.html">\phpDocumentor\Transformer\Writer\WriterAbstract</a>|null</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setArtifact"></a>
+                        <div class="element clickable method public  method_setArtifact" data-toggle="collapse" data-target=".method_setArtifact .collapse">
+                            <h2>Filename of the resulting artifact relative to the root.</h2>
+                            <pre>setArtifact(string $artifact) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the query results in a set of artifacts (multiple nodes / array);
+then this string must contain an identifying variable as returned by the
+writer.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$artifact</h4>
+                                                <code>string</code><p><p>Name of artifact to generate; usually a filepath.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setParameters"></a>
+                        <div class="element clickable method public  method_setParameters" data-toggle="collapse" data-target=".method_setParameters .collapse">
+                            <h2>Sets an array of parameters (key =&gt; value).</h2>
+                            <pre>setParameters(array&lt;mixed,\phpDocumentor\Transformer\Template\Parameter&gt; $parameters) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$parameters</h4>
+                                                <code>array&lt;mixed,<a href="../classes/phpDocumentor.Transformer.Template.Parameter.html">\phpDocumentor\Transformer\Template\Parameter</a>&gt;</code><p><p>Associative multidimensional array containing
+parameters for the Writer.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setQuery"></a>
+                        <div class="element clickable method public  method_setQuery" data-toggle="collapse" data-target=".method_setQuery .collapse">
+                            <h2>Sets the query.</h2>
+                            <pre>setQuery(string $query) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$query</h4>
+                                                <code>string</code><p><p>Free-form string with writer-specific values.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setSource"></a>
+                        <div class="element clickable method public  method_setSource" data-toggle="collapse" data-target=".method_setSource .collapse">
+                            <h2>Sets the source / type which the writer will use to generate artifacts from.</h2>
+                            <pre>setSource(string $source) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$source</h4>
+                                                <code>string</code><p><p>Free-form string with writer-specific meaning.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setTransformer"></a>
+                        <div class="element clickable method public  method_setTransformer" data-toggle="collapse" data-target=".method_setTransformer .collapse">
+                            <h2>Sets the transformer on this transformation.</h2>
+                            <pre>setTransformer(\phpDocumentor\Transformer\Transformer $transformer) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$transformer</h4>
+                                                <code><a href="../classes/phpDocumentor.Transformer.Transformer.html">\phpDocumentor\Transformer\Transformer</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setWriter"></a>
+                        <div class="element clickable method public  method_setWriter" data-toggle="collapse" data-target=".method_setWriter .collapse">
+                            <h2>Sets the writer type and instantiates a writer.</h2>
+                            <pre>setWriter(string $writer) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$writer</h4>
+                                                <code>string</code><p><p>Name of writer to instantiate.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_writer"> </a>
+                            <div class="element clickable property  protected property_writer" data-toggle="collapse" data-target=".property_writer .collapse">
+                                <h2>Reference to an object containing the business logic used to execute this transformation.</h2>
+                                <pre>writer : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\XmlAttribute
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\Type
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>(&quot;string&quot;)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Reference to an object containing the business logic used to execute this transformation.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_artifact"> </a>
+                            <div class="element clickable property  protected property_artifact" data-toggle="collapse" data-target=".property_artifact .collapse">
+                                <h2>the location where the output should be sent to; the exact function differs per writer.</h2>
+                                <pre>artifact : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\XmlAttribute
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\Type
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>(&quot;string&quot;)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>the location where the output should be sent to; the exact function differs per writer.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_source"> </a>
+                            <div class="element clickable property  protected property_source" data-toggle="collapse" data-target=".property_source .collapse">
+                                <h2>the location where input for a writer should come from; the exact function differs per writer.</h2>
+                                <pre>source : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\XmlAttribute
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\Type
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>(&quot;string&quot;)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>the location where input for a writer should come from; the exact function differs per writer.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_query"> </a>
+                            <div class="element clickable property  protected property_query" data-toggle="collapse" data-target=".property_query .collapse">
+                                <h2>a filter or other form of limitation on what information of the AST is used; the exact function
+    differs per writer.</h2>
+                                <pre>query : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\XmlAttribute
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\Type
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>(&quot;string&quot;)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>a filter or other form of limitation on what information of the AST is used; the exact function
+differs per writer.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_transformer"> </a>
+                            <div class="element clickable property  protected property_transformer" data-toggle="collapse" data-target=".property_transformer .collapse">
+                                <h2>The object guiding the transformation process and having meta-data of it.</h2>
+                                <pre>transformer : \phpDocumentor\Transformer\Transformer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\Exclude
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>The object guiding the transformation process and having meta-data of it.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/phpDocumentor.Transformer.Transformer.html">\phpDocumentor\Transformer\Transformer</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_parameters"> </a>
+                            <div class="element clickable property  protected property_parameters" data-toggle="collapse" data-target=".property_parameters .collapse">
+                                <h2>A series of parameters that can influence what the writer does; the exact function differs
+    per writer.</h2>
+                                <pre>parameters : array&lt;mixed,\phpDocumentor\Transformer\Template\Parameter&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\XmlList
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>(entry = &quot;parameter&quot;)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        Serializer\Type
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>(&quot;array&lt;phpDocumentor\Transformer\Template\Parameter&gt;&quot;)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>A series of parameters that can influence what the writer does; the exact function differs
+per writer.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,<a href="../classes/phpDocumentor.Transformer.Template.Parameter.html">\phpDocumentor\Transformer\Template\Parameter</a>&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\phpDocumentor\Transformer\Transformation"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/phpDocumentor.Transformer.Transformation.html">Transformation</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:52 +0000.<br/>
+    </footer>
+    </body>
+</html>

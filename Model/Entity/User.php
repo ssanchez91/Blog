@@ -11,150 +11,237 @@ namespace App\Model\Entity;
 
 use App\Model\Manager\RoleManager;
 
+/**
+ * Class User
+ *
+ * @package App\Model\Entity
+ */
 class User
 {
+    /**
+     * Property Id
+     * @var
+     */
     private $id;
+
+    /**
+     * Property salutation
+     * @var
+     */
     private $salutation;
+
+    /**
+     * Property firstname
+     * @var
+     */
     private $firstname;
+
+    /**
+     * Property lastname
+     * @var
+     */
     private $lastname;
+
+    /**
+     * Property mail
+     * @var
+     */
     private $mail;
+
+    /**
+     * Property password
+     * @var
+     */
     private $password;
+
+    /**
+     * Property enabled
+     * @var
+     */
     private $enabled;
+
+    /**
+     * Property listRoles
+     * @var
+     */
     private $listRoles;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
 
     }
 
     /**
-     * @return mixed
+     * Accessor getId
+     *
+     * @return int
      */
-    public function getId()
+    public function getId():int
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $id
+     * Accessor setId
+     *
+     * @param int $id User Id
      */
-    public function setId($id)
+    public function setId(int $id)
     {
         $this->id = $id;
     }
 
     /**
-     * @return mixed
+     * Accessor getSalutation
+     *     *
+     * @return string
      */
-    public function getSalutation()
+    public function getSalutation():string
     {
         return $this->salutation;
     }
 
     /**
-     * @param mixed $salutation
+     *  Accessor setSalutation
+     *
+     * @param string $salutation User salutation
      */
-    public function setSalutation($salutation)
+    public function setSalutation(string $salutation)
     {
         $this->salutation = $salutation;
     }
 
     /**
-     * @return mixed
+     * Accessor getFirstname
+     *
+     * @return string
      */
-    public function getFirstname()
+    public function getFirstname():string
     {
         return $this->firstname;
     }
 
     /**
-     * @param mixed $firstname
+     * Accessor setFirstname
+     *
+     * @param string $firstname User firstname
      */
-    public function setFirstname($firstname)
+    public function setFirstname(string $firstname)
     {
         $this->firstname = $firstname;
     }
 
     /**
-     * @return mixed
+     * Accessor getLastname
+     *
+     * @return string
      */
-    public function getLastname()
+    public function getLastname():string
     {
         return $this->lastname;
     }
 
     /**
-     * @param mixed $lastname
+     * Accessor setLastname
+     *
+     * @param string $lastname User lastname
      */
-    public function setLastname($lastname)
+    public function setLastname(string $lastname)
     {
         $this->lastname = $lastname;
     }
 
     /**
-     * @return mixed
+     * Accessor getMail
+     *
+     * @return string
      */
-    public function getMail()
+    public function getMail():string
     {
         return $this->mail;
     }
 
     /**
-     * @param mixed $mail
+     * Accessor setMail
+     *
+     * @param string $mail User mail
      */
-    public function setMail($mail)
+    public function setMail(string $mail)
     {
         $this->mail = $mail;
     }
 
     /**
-     * @return mixed
+     * Accessor getPassword
+     *
+     * @return string
      */
-    public function getPassword()
+    public function getPassword():string
     {
         return $this->password;
     }
 
     /**
-     * @param mixed $password
+     * Accessor setPassword
+     *
+     * @param string $password
      */
-    public function setPassword($password)
+    public function setPassword(string $password)
     {
         $this->password = $password;
     }
 
     /**
-     * @return mixed
+     * Accessor getEnabled
+     *
+     * @return string
      */
-    public function getEnabled()
+    public function getEnabled():string
     {
         return $this->enabled;
     }
 
     /**
-     * @param mixed $enabled
+     * Accessor setEnabled
+     *
+     * @param string $enabled User State
      */
-    public function setEnabled($enabled)
+    public function setEnabled(string $enabled)
     {
         $this->enabled = $enabled;
     }
 
     /**
-     * @return mixed
+     * Method getListRoles
+     *
+     * @return array
      */
-    public function getListRoles()
+    public function getListRoles():array
     {
         return $this->listRoles;
     }
 
     /**
-     * @param mixed $listRoles
+     * Method setListRoles
+     *
+     * @param array $listRoles List roles of user
      */
-    public function setListRoles($listRoles)
+    public function setListRoles(array $listRoles)
     {
         $this->listRoles = $listRoles;
     }
 
+    /**
+     * Method hasRole
+     *
+     * Check if user has role
+     *
+     * @param string $role Role User
+     * @return bool
+     */
     public function hasRole($role)
     {
         $result = array_filter($this->getListRoles(), function ($myRole) use ($role) {

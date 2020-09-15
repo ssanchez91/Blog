@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \ezcDocumentWikiDocbookVisitor
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public inherited">
+        <a href="#method___construct" title="__construct :: Create visitor from Wiki document handler.">
+            <span class="description">Create visitor from Wiki document handler.</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_getErrors" title="getErrors :: Return list of errors occured during visiting the document.">
+            <span class="description">Return list of errors occured during visiting the document.</span><pre>getErrors</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_hasFootnoteTarget" title="hasFootnoteTarget :: Check for internal footnote reference target">
+            <span class="description">Check for internal footnote reference target</span><pre>hasFootnoteTarget</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                                                                        <li class="method public inherited">
+        <a href="#method_triggerError" title="triggerError :: Trigger visitor error">
+            <span class="description">Trigger visitor error</span><pre>triggerError</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_visit" title="visit :: Docarate Wiki AST">
+            <span class="description">Docarate Wiki AST</span><pre>visit</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                <li class="method protected inherited">
+                            <a href="#method_addFootnote" title="addFootnote :: Add footnote">
+                                <span class="description">Add footnote</span><pre>addFootnote</pre>
+                            </a>
+                        </li>
+                                                                                                                                                        <li class="method protected">
+                            <a href="#method_isInlineNode" title="isInlineNode :: Is inline node?">
+                                <span class="description">Is inline node?</span><pre>isInlineNode</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_nodeListToString" title="nodeListToString :: Node list to string">
+                                <span class="description">Node list to string</span><pre>nodeListToString</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_nodeToString" title="nodeToString :: Transform a node tree into a string">
+                                <span class="description">Transform a node tree into a string</span><pre>nodeToString</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_preProcessAst" title="preProcessAst :: Pre process AST">
+                                <span class="description">Pre process AST</span><pre>preProcessAst</pre>
+                            </a>
+                        </li>
+                                                                                                                                                        <li class="method protected">
+                            <a href="#method_visitBlockquote" title="visitBlockquote :: Visit blockquote">
+                                <span class="description">Visit blockquote</span><pre>visitBlockquote</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitChildren" title="visitChildren :: Visit children">
+                                <span class="description">Visit children</span><pre>visitChildren</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitEmphasisMarkup" title="visitEmphasisMarkup :: Visit emphasis markup">
+                                <span class="description">Visit emphasis markup</span><pre>visitEmphasisMarkup</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitExternalLink" title="visitExternalLink :: Visit external link node">
+                                <span class="description">Visit external link node</span><pre>visitExternalLink</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitFootnote" title="visitFootnote :: Visit footnote">
+                                <span class="description">Visit footnote</span><pre>visitFootnote</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitImages" title="visitImages :: Visit images">
+                                <span class="description">Visit images</span><pre>visitImages</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitLineBreak" title="visitLineBreak :: Visit line break">
+                                <span class="description">Visit line break</span><pre>visitLineBreak</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitLink" title="visitLink :: Visit link node">
+                                <span class="description">Visit link node</span><pre>visitLink</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitList" title="visitList :: Visit list">
+                                <span class="description">Visit list</span><pre>visitList</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitLiteral" title="visitLiteral :: Visit literal">
+                                <span class="description">Visit literal</span><pre>visitLiteral</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitLiteralBlock" title="visitLiteralBlock :: Visit literal block">
+                                <span class="description">Visit literal block</span><pre>visitLiteralBlock</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitNode" title="visitNode :: Visit single AST node">
+                                <span class="description">Visit single AST node</span><pre>visitNode</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitParagraph" title="visitParagraph :: Visit paragraph">
+                                <span class="description">Visit paragraph</span><pre>visitParagraph</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitPlugin" title="visitPlugin :: Visit plugin">
+                                <span class="description">Visit plugin</span><pre>visitPlugin</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitTableCell" title="visitTableCell :: Visit table cell">
+                                <span class="description">Visit table cell</span><pre>visitTableCell</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitTableRow" title="visitTableRow :: Visit table row">
+                                <span class="description">Visit table row</span><pre>visitTableRow</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitText" title="visitText :: Visit text node">
+                                <span class="description">Visit text node</span><pre>visitText</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_visitTitle" title="visitTitle :: Visit section titles">
+                                <span class="description">Visit section titles</span><pre>visitTitle</pre>
+                            </a>
+                        </li>
+                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ezcDocumentWikiDocbookVisitor</h1>
+                <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/ezcDocumentWikiVisitor.html">\ezcDocumentWikiVisitor</a>
+                                                        </small>
+                <p class="short_description">Docbook visitor for the Wiki AST.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Document</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        version
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>//autogen//</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Create visitor from Wiki document handler.</h2>
+                            <pre>__construct(\ezcDocumentWiki $document, string $path) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$document</h4>
+                                                <code><a href="../classes/ezcDocumentWiki.html">\ezcDocumentWiki</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addFootnote"></a>
+                        <div class="element clickable method protected  method_addFootnote inherited" data-toggle="collapse" data-target=".method_addFootnote .collapse">
+                            <h2>Add footnote</h2>
+                            <pre>addFootnote(\ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getErrors"></a>
+                        <div class="element clickable method public  method_getErrors inherited" data-toggle="collapse" data-target=".method_getErrors .collapse">
+                            <h2>Return list of errors occured during visiting the document.</h2>
+                            <pre>getErrors() : array</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>May be an empty array, if on errors occured, or a list of
+ezcDocumentVisitException objects.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasFootnoteTarget"></a>
+                        <div class="element clickable method public  method_hasFootnoteTarget inherited" data-toggle="collapse" data-target=".method_hasFootnoteTarget .collapse">
+                            <h2>Check for internal footnote reference target</h2>
+                            <pre>hasFootnoteTarget(integer $number, \ezcDocumentWikiNode $node) : \ezcDocumentWikiFootnoteNode</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Returns the target name, when an internal reference target exists and
+sets it to used, and false otherwise.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$number</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ezcDocumentWikiFootnoteNode.html">\ezcDocumentWikiFootnoteNode</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isInlineNode"></a>
+                        <div class="element clickable method protected  method_isInlineNode" data-toggle="collapse" data-target=".method_isInlineNode .collapse">
+                            <h2>Is inline node?</h2>
+                            <pre>isInlineNode(\DOMNode $node) : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Check if contents of the current node are a inline node</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_nodeListToString"></a>
+                        <div class="element clickable method protected  method_nodeListToString inherited" data-toggle="collapse" data-target=".method_nodeListToString .collapse">
+                            <h2>Node list to string</h2>
+                            <pre>nodeListToString(array $nodes) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Extract the contents of a node list and return a single string for the
+array of nodes.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$nodes</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_nodeToString"></a>
+                        <div class="element clickable method protected  method_nodeToString inherited" data-toggle="collapse" data-target=".method_nodeToString .collapse">
+                            <h2>Transform a node tree into a string</h2>
+                            <pre>nodeToString(\ezcDocumentWikiNode $node) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Transform a node tree, with all its subnodes into a string by only
+getting the textuual contents from ezcDocumentWikiTextLineNode objects.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_preProcessAst"></a>
+                        <div class="element clickable method protected  method_preProcessAst inherited" data-toggle="collapse" data-target=".method_preProcessAst .collapse">
+                            <h2>Pre process AST</h2>
+                            <pre>preProcessAst(\ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Performs multiple preprocessing steps on the AST:</p>
+<p>Collect all possible reference targets in the AST to know the actual
+destianation for references while decorating. The references are stored
+in an internal structure and you may request the actual link by using
+the getReferenceTarget() method.</p>
+<p>Aggregate list items into lists. In Wiki there are only list items, which
+are aggregated to lists depending on their bullet type. The related list
+items are aggregated into one list.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_triggerError"></a>
+                        <div class="element clickable method public  method_triggerError inherited" data-toggle="collapse" data-target=".method_triggerError .collapse">
+                            <h2>Trigger visitor error</h2>
+                            <pre>triggerError(integer $level, string $message, string $file = null, integer $line = null, integer $position = null) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Emit a vistitor error, and convert it to an exception depending on the
+error reporting settings.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$level</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$file</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$line</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$position</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visit"></a>
+                        <div class="element clickable method public  method_visit inherited" data-toggle="collapse" data-target=".method_visit .collapse">
+                            <h2>Docarate Wiki AST</h2>
+                            <pre>visit(\ezcDocumentWikiDocumentNode $ast) : mixed</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Visit the Wiki abstract syntax tree.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$ast</h4>
+                                                <code><a href="../classes/ezcDocumentWikiDocumentNode.html">\ezcDocumentWikiDocumentNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitBlockquote"></a>
+                        <div class="element clickable method protected  method_visitBlockquote" data-toggle="collapse" data-target=".method_visitBlockquote .collapse">
+                            <h2>Visit blockquote</h2>
+                            <pre>visitBlockquote(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitChildren"></a>
+                        <div class="element clickable method protected  method_visitChildren inherited" data-toggle="collapse" data-target=".method_visitChildren .collapse">
+                            <h2>Visit children</h2>
+                            <pre>visitChildren(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Just recurse into node and visit its children, ignoring the actual
+node.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitEmphasisMarkup"></a>
+                        <div class="element clickable method protected  method_visitEmphasisMarkup" data-toggle="collapse" data-target=".method_visitEmphasisMarkup .collapse">
+                            <h2>Visit emphasis markup</h2>
+                            <pre>visitEmphasisMarkup(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitExternalLink"></a>
+                        <div class="element clickable method protected  method_visitExternalLink" data-toggle="collapse" data-target=".method_visitExternalLink .collapse">
+                            <h2>Visit external link node</h2>
+                            <pre>visitExternalLink(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitFootnote"></a>
+                        <div class="element clickable method protected  method_visitFootnote" data-toggle="collapse" data-target=".method_visitFootnote .collapse">
+                            <h2>Visit footnote</h2>
+                            <pre>visitFootnote(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitImages"></a>
+                        <div class="element clickable method protected  method_visitImages" data-toggle="collapse" data-target=".method_visitImages .collapse">
+                            <h2>Visit images</h2>
+                            <pre>visitImages(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitLineBreak"></a>
+                        <div class="element clickable method protected  method_visitLineBreak" data-toggle="collapse" data-target=".method_visitLineBreak .collapse">
+                            <h2>Visit line break</h2>
+                            <pre>visitLineBreak(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitLink"></a>
+                        <div class="element clickable method protected  method_visitLink" data-toggle="collapse" data-target=".method_visitLink .collapse">
+                            <h2>Visit link node</h2>
+                            <pre>visitLink(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Docbook has no support for description of links, so that the description
+elements in the AST are omitted.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitList"></a>
+                        <div class="element clickable method protected  method_visitList" data-toggle="collapse" data-target=".method_visitList .collapse">
+                            <h2>Visit list</h2>
+                            <pre>visitList(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Ensure stacked lists are created inside another list item.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitLiteral"></a>
+                        <div class="element clickable method protected  method_visitLiteral" data-toggle="collapse" data-target=".method_visitLiteral .collapse">
+                            <h2>Visit literal</h2>
+                            <pre>visitLiteral(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitLiteralBlock"></a>
+                        <div class="element clickable method protected  method_visitLiteralBlock" data-toggle="collapse" data-target=".method_visitLiteralBlock .collapse">
+                            <h2>Visit literal block</h2>
+                            <pre>visitLiteralBlock(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitNode"></a>
+                        <div class="element clickable method protected  method_visitNode" data-toggle="collapse" data-target=".method_visitNode .collapse">
+                            <h2>Visit single AST node</h2>
+                            <pre>visitNode(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Visit a single AST node, may be called for each node found anywhere
+as child. The current position in the DOMDocument is passed by a
+reference to the current DOMNode, which is operated on.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitParagraph"></a>
+                        <div class="element clickable method protected  method_visitParagraph" data-toggle="collapse" data-target=".method_visitParagraph .collapse">
+                            <h2>Visit paragraph</h2>
+                            <pre>visitParagraph(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitPlugin"></a>
+                        <div class="element clickable method protected  method_visitPlugin" data-toggle="collapse" data-target=".method_visitPlugin .collapse">
+                            <h2>Visit plugin</h2>
+                            <pre>visitPlugin(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitTableCell"></a>
+                        <div class="element clickable method protected  method_visitTableCell" data-toggle="collapse" data-target=".method_visitTableCell .collapse">
+                            <h2>Visit table cell</h2>
+                            <pre>visitTableCell(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Visit a table cell and additionally always create an inner paragraph.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitTableRow"></a>
+                        <div class="element clickable method protected  method_visitTableRow" data-toggle="collapse" data-target=".method_visitTableRow .collapse">
+                            <h2>Visit table row</h2>
+                            <pre>visitTableRow(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Visit a table row and decide if it belongs into a tbody or a thead
+section.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitText"></a>
+                        <div class="element clickable method protected  method_visitText inherited" data-toggle="collapse" data-target=".method_visitText .collapse">
+                            <h2>Visit text node</h2>
+                            <pre>visitText(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitTitle"></a>
+                        <div class="element clickable method protected  method_visitTitle" data-toggle="collapse" data-target=".method_visitTitle .collapse">
+                            <h2>Visit section titles</h2>
+                            <pre>visitTitle(\DOMNode $root, \ezcDocumentWikiNode $node) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentWikiNode.html">\ezcDocumentWikiNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_complexVisitMapping"> </a>
+                            <div class="element clickable property  protected property_complexVisitMapping" data-toggle="collapse" data-target=".property_complexVisitMapping .collapse">
+                                <h2>Mapping of class names to internal visitors for the respective nodes.</h2>
+                                <pre>complexVisitMapping : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_simpleVisitMapping"> </a>
+                            <div class="element clickable property  protected property_simpleVisitMapping" data-toggle="collapse" data-target=".property_simpleVisitMapping .collapse">
+                                <h2>Direct mapping of AST node class names to docbook element names.</h2>
+                                <pre>simpleVisitMapping : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_skipNodes"> </a>
+                            <div class="element clickable property  protected property_skipNodes" data-toggle="collapse" data-target=".property_skipNodes .collapse">
+                                <h2>Array with nodes, which can be ignored during the transformation
+process, they only provide additional information during preprocessing.</h2>
+                                <pre>skipNodes : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_document"> </a>
+                            <div class="element clickable property  protected property_document" data-toggle="collapse" data-target=".property_document .collapse">
+                                <h2>DOM document</h2>
+                                <pre>document : \DOMDocument</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\DOMDocument</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_wiki"> </a>
+                            <div class="element clickable property  protected property_wiki inherited" data-toggle="collapse" data-target=".property_wiki .collapse">
+                                <h2>Wiki document handler</h2>
+                                <pre>wiki : \ezcDocumentWiki</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/ezcDocumentWiki.html">\ezcDocumentWiki</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_ast"> </a>
+                            <div class="element clickable property  protected property_ast inherited" data-toggle="collapse" data-target=".property_ast .collapse">
+                                <h2>Reference to the AST root node.</h2>
+                                <pre>ast : \ezcDocumentWikiDocumentNode</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/ezcDocumentWikiDocumentNode.html">\ezcDocumentWikiDocumentNode</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_footnotes"> </a>
+                            <div class="element clickable property  protected property_footnotes inherited" data-toggle="collapse" data-target=".property_footnotes .collapse">
+                                <h2>List with footnotes for later rendering.</h2>
+                                <pre>footnotes : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_footnoteCounter"> </a>
+                            <div class="element clickable property  protected property_footnoteCounter inherited" data-toggle="collapse" data-target=".property_footnoteCounter .collapse">
+                                <h2>Label dependant foot note counters for footnote auto enumeration.</h2>
+                                <pre>footnoteCounter : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_errors"> </a>
+                            <div class="element clickable property  protected property_errors inherited" data-toggle="collapse" data-target=".property_errors .collapse">
+                                <h2>Aggregated minor errors during document processing.</h2>
+                                <pre>errors : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\ezcDocumentWikiDocbookVisitor"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/default.html">\</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/ezcDocumentWikiDocbookVisitor.html">ezcDocumentWikiDocbookVisitor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:37 +0000.<br/>
+    </footer>
+    </body>
+</html>

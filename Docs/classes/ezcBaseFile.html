@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \ezcBaseFile
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_calculateRelativePath" title="calculateRelativePath :: Calculates the relative path of the file/directory &#039;$path&#039; to a given
+$base path.">
+            <span class="description">Calculates the relative path of the file/directory &#039;$path&#039; to a given
+$base path.</span><pre>calculateRelativePath</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_copyRecursive" title="copyRecursive :: Recursively copy a file or directory.">
+            <span class="description">Recursively copy a file or directory.</span><pre>copyRecursive</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_findRecursive" title="findRecursive :: Finds files recursively on a file system">
+            <span class="description">Finds files recursively on a file system</span><pre>findRecursive</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_isAbsolutePath" title="isAbsolutePath :: Returns whether the passed $path is an absolute path, giving the current $os.">
+            <span class="description">Returns whether the passed $path is an absolute path, giving the current $os.</span><pre>isAbsolutePath</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_removeRecursive" title="removeRecursive :: Removes files and directories recursively from a file system">
+            <span class="description">Removes files and directories recursively from a file system</span><pre>removeRecursive</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_walkRecursive" title="walkRecursive :: Walks files and directories recursively on a file system">
+            <span class="description">Walks files and directories recursively on a file system</span><pre>walkRecursive</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                        <li class="method protected">
+                            <a href="#method_findRecursiveCallback" title="findRecursiveCallback :: This is the callback used by findRecursive to collect data.">
+                                <span class="description">This is the callback used by findRecursive to collect data.</span><pre>findRecursiveCallback</pre>
+                            </a>
+                        </li>
+                                                                                                                                                            </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ezcBaseFile</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description">Provides a selection of static independent methods to provide functionality
+for file and file system handling.</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>This example shows how to use the findRecursive method:
+<code>
+&lt;?php
+// lists all the files under /etc (including subdirectories) that end in
+// .conf
+$confFiles = ezcBaseFile::findRecursive( &quot;/etc&quot;, array( '@.conf$@' ) );</p>
+<p>// lists all autoload files in the components source tree and excludes the
+// ones in the autoload subdirectory. Statistics are returned in the $stats
+// variable which is passed by reference.
+$files = ezcBaseFile::findRecursive(
+&quot;/dat/dev/ezcomponents&quot;,
+array( '@src/.*_autoload.php$@' ),
+array( '@/autoload/@' ),
+$stats
+);</p>
+<p>// lists all binaries in /bin except the ones starting with a &quot;g&quot;
+$data = ezcBaseFile::findRecursive( &quot;/bin&quot;, array(), array( '@^/bin/g@' ) );
+?&gt;
+</code></p>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Base</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        version
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>//autogentag//</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        mainclass
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_calculateRelativePath"></a>
+                        <div class="element clickable method public  method_calculateRelativePath" data-toggle="collapse" data-target=".method_calculateRelativePath .collapse">
+                            <h2>Calculates the relative path of the file/directory &#039;$path&#039; to a given
+$base path.</h2>
+                            <pre>calculateRelativePath(string $path, string $base) : string</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>$path and $base should be fully absolute paths. This function returns the
+answer of &quot;How do I go from $base to $path&quot;. If the $path and $base are
+the same path, the function returns '.'. This method does not touch the
+filesystem.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$base</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_copyRecursive"></a>
+                        <div class="element clickable method public  method_copyRecursive" data-toggle="collapse" data-target=".method_copyRecursive .collapse">
+                            <h2>Recursively copy a file or directory.</h2>
+                            <pre>copyRecursive(string $source, string $destination, integer $depth = -1, integer $dirMode = 509, integer $fileMode = 436) : void</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Recursively copy a file or directory in $source to the given
+destination. If a depth is given, the operation will stop, if the given
+recursion depth is reached. A depth of -1 means no limit, while a depth
+of 0 means, that only the current file or directory will be copied,
+without any recursion.</p>
+<p>You may optionally define modes used to create files and directories.</p></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ezcBaseFileNotFoundException</dt>
+                                                        <dd><p>If the $sourceDir directory is not a directory or does not exist.</p></dd>
+                                                                                                            <dt>\ezcBaseFilePermissionException</dt>
+                                                        <dd><p>If the $sourceDir directory could not be opened for reading, or the
+destination is not writeable.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$source</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$destination</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$depth</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dirMode</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fileMode</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_findRecursive"></a>
+                        <div class="element clickable method public  method_findRecursive" data-toggle="collapse" data-target=".method_findRecursive .collapse">
+                            <h2>Finds files recursively on a file system</h2>
+                            <pre>findRecursive(string $sourceDir, \array(string) $includeFilters = array(), \array(string) $excludeFilters = array(), \array() &$statistics = null) : array</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>With this method you can scan the file system for files. You can use
+$includeFilters to include only specific files, and $excludeFilters to
+exclude certain files from being returned. The function will always go
+into subdirectories even if the entry would not have passed the filters.
+It uses the \walkRecursive() method to do the actually recursion.</p>
+<p>Filters are regular expressions and are therefore required to have
+starting and ending delimiters. The Perl Compatible syntax is used as
+regular expression language.</p>
+<p>If you pass an empty array to the $statistics argument, the function
+will in details about the number of files found into the 'count' array
+element, and the total filesize in the 'size' array element. Because this
+argument is passed by reference, you <em>have</em> to pass a variable and you
+can not pass a constant value such as &quot;array()&quot;.</p></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ezcBaseFileNotFoundException</dt>
+                                                        <dd><p>if the $sourceDir directory is not
+a directory or does not exist.</p></dd>
+                                                                                                            <dt>\ezcBaseFilePermissionException</dt>
+                                                        <dd><p>if the $sourceDir directory could
+not be opened for reading.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$sourceDir</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$includeFilters</h4>
+                                                <code>\array(string)</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$excludeFilters</h4>
+                                                <code>\array(string)</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$statistics</h4>
+                                                <code>\array()</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_findRecursiveCallback"></a>
+                        <div class="element clickable method protected  method_findRecursiveCallback" data-toggle="collapse" data-target=".method_findRecursiveCallback .collapse">
+                            <h2>This is the callback used by findRecursive to collect data.</h2>
+                            <pre>findRecursiveCallback(\ezcBaseFileFindContext $context, string $sourceDir, string $fileName, \array(stat) $fileInfo) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This callback method works together with walkRecursive() and is called
+for every file/and or directory. The $context is a callback specific
+container in which data can be stored and shared between the different
+calls to the callback function. The walkRecursive() function also passes
+in the full absolute directory in $sourceDir, the filename in $fileName
+and file information (such as size, modes, types) as an array as
+returned by PHP's stat() in the $fileInfo parameter.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$context</h4>
+                                                <code><a href="../classes/ezcBaseFileFindContext.html">\ezcBaseFileFindContext</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$sourceDir</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fileName</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fileInfo</h4>
+                                                <code>\array(stat)</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isAbsolutePath"></a>
+                        <div class="element clickable method public  method_isAbsolutePath" data-toggle="collapse" data-target=".method_isAbsolutePath .collapse">
+                            <h2>Returns whether the passed $path is an absolute path, giving the current $os.</h2>
+                            <pre>isAbsolutePath(string $path, string $os = null) : boolean</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>With the $os parameter you can tell this function to use the semantics
+for a different operating system to determine whether a path is
+absolute. The $os argument defaults to the OS that the script is running
+on.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$os</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_removeRecursive"></a>
+                        <div class="element clickable method public  method_removeRecursive" data-toggle="collapse" data-target=".method_removeRecursive .collapse">
+                            <h2>Removes files and directories recursively from a file system</h2>
+                            <pre>removeRecursive(string $directory) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This method recursively removes the $directory and all its contents.
+You should be <b>extremely</b> careful with this method as it has the
+potential to erase everything that the current user has access to.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$directory</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_walkRecursive"></a>
+                        <div class="element clickable method public  method_walkRecursive" data-toggle="collapse" data-target=".method_walkRecursive .collapse">
+                            <h2>Walks files and directories recursively on a file system</h2>
+                            <pre>walkRecursive(string $sourceDir, \array(string) $includeFilters = array(), \array(string) $excludeFilters = array(), callback $callback, mixed &$callbackContext) : array</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This method walks over a directory and calls a callback from every file
+and directory it finds. You can use $includeFilters to include only
+specific files, and $excludeFilters to exclude certain files from being
+returned. The function will always go into subdirectories even if the
+entry would not have passed the filters.</p>
+<p>The callback is passed in the $callback parameter, and the
+$callbackContext will be send to the callback function/method as
+parameter so that you can store data in there that persists with all the
+calls and recursive calls to this method. It's up to the callback method
+to do something useful with this. The callback function's parameters are
+in order:</p>
+<ul>
+<li>ezcBaseFileFindContext $context</li>
+<li>string $sourceDir</li>
+<li>string $fileName</li>
+<li>array(stat) $fileInfo</li>
+</ul>
+<p>See \findRecursiveCallback() for an example of a callback function.</p>
+<p>Filters are regular expressions and are therefore required to have
+starting and ending delimiters. The Perl Compatible syntax is used as
+regular expression language.</p></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ezcBaseFileNotFoundException</dt>
+                                                        <dd><p>if the $sourceDir directory is not
+a directory or does not exist.</p></dd>
+                                                                                                            <dt>\ezcBaseFilePermissionException</dt>
+                                                        <dd><p>if the $sourceDir directory could
+not be opened for reading.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$sourceDir</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$includeFilters</h4>
+                                                <code>\array(string)</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$excludeFilters</h4>
+                                                <code>\array(string)</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callback</h4>
+                                                <code>callback</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callbackContext</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                        </div>
+            </div>
+            <a id="\ezcBaseFile"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/default.html">\</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/ezcBaseFile.html">ezcBaseFile</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:36 +0000.<br/>
+    </footer>
+    </body>
+</html>

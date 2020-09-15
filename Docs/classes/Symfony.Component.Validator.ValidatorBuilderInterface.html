@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \Symfony\Component\Validator\ValidatorBuilderInterface
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_addMethodMapping" title="addMethodMapping :: Enables constraint mapping using the given static method.">
+            <span class="description">Enables constraint mapping using the given static method.</span><pre>addMethodMapping</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addMethodMappings" title="addMethodMappings :: Enables constraint mapping using the given static methods.">
+            <span class="description">Enables constraint mapping using the given static methods.</span><pre>addMethodMappings</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addObjectInitializer" title="addObjectInitializer :: Adds an object initializer to the validator.">
+            <span class="description">Adds an object initializer to the validator.</span><pre>addObjectInitializer</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addObjectInitializers" title="addObjectInitializers :: Adds a list of object initializers to the validator.">
+            <span class="description">Adds a list of object initializers to the validator.</span><pre>addObjectInitializers</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addXmlMapping" title="addXmlMapping :: Adds an XML constraint mapping file to the validator.">
+            <span class="description">Adds an XML constraint mapping file to the validator.</span><pre>addXmlMapping</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addXmlMappings" title="addXmlMappings :: Adds a list of XML constraint mapping files to the validator.">
+            <span class="description">Adds a list of XML constraint mapping files to the validator.</span><pre>addXmlMappings</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addYamlMapping" title="addYamlMapping :: Adds a YAML constraint mapping file to the validator.">
+            <span class="description">Adds a YAML constraint mapping file to the validator.</span><pre>addYamlMapping</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addYamlMappings" title="addYamlMappings :: Adds a list of YAML constraint mappings file to the validator.">
+            <span class="description">Adds a list of YAML constraint mappings file to the validator.</span><pre>addYamlMappings</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_disableAnnotationMapping" title="disableAnnotationMapping :: Disables annotation based constraint mapping.">
+            <span class="description">Disables annotation based constraint mapping.</span><pre>disableAnnotationMapping</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_enableAnnotationMapping" title="enableAnnotationMapping :: Enables annotation based constraint mapping.">
+            <span class="description">Enables annotation based constraint mapping.</span><pre>enableAnnotationMapping</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getValidator" title="getValidator :: Builds and returns a new validator object.">
+            <span class="description">Builds and returns a new validator object.</span><pre>getValidator</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setApiVersion" title="setApiVersion :: Sets the API version that the returned validator should support.">
+            <span class="description">Sets the API version that the returned validator should support.</span><pre>setApiVersion</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setConstraintValidatorFactory" title="setConstraintValidatorFactory :: Sets the constraint validator factory used by the validator.">
+            <span class="description">Sets the constraint validator factory used by the validator.</span><pre>setConstraintValidatorFactory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setMetadataCache" title="setMetadataCache :: Sets the cache for caching class metadata.">
+            <span class="description">Sets the cache for caching class metadata.</span><pre>setMetadataCache</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setMetadataFactory" title="setMetadataFactory :: Sets the class metadata factory used by the validator.">
+            <span class="description">Sets the class metadata factory used by the validator.</span><pre>setMetadataFactory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setPropertyAccessor" title="setPropertyAccessor :: Sets the property accessor for resolving property paths.">
+            <span class="description">Sets the property accessor for resolving property paths.</span><pre>setPropertyAccessor</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setTranslationDomain" title="setTranslationDomain :: Sets the default translation domain of violation messages.">
+            <span class="description">Sets the default translation domain of violation messages.</span><pre>setTranslationDomain</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setTranslator" title="setTranslator :: Sets the translator used for translating violation messages.">
+            <span class="description">Sets the translator used for translating violation messages.</span><pre>setTranslator</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ValidatorBuilderInterface</h1>
+                <small style="display: block; text-align: right">
+                                            Extends 
+                                                        </small>
+                <p class="short_description">A configurable builder for ValidatorInterface objects.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Bernhard Schussek <a href="mailto:bschussek@gmail.com">bschussek@gmail.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                            </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_addMethodMapping"></a>
+                        <div class="element clickable method public  method_addMethodMapping" data-toggle="collapse" data-target=".method_addMethodMapping .collapse">
+                            <h2>Enables constraint mapping using the given static method.</h2>
+                            <pre>addMethodMapping(string $methodName) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$methodName</h4>
+                                                <code>string</code><p><p>The name of the method</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addMethodMappings"></a>
+                        <div class="element clickable method public  method_addMethodMappings" data-toggle="collapse" data-target=".method_addMethodMappings .collapse">
+                            <h2>Enables constraint mapping using the given static methods.</h2>
+                            <pre>addMethodMappings(array&lt;mixed,string&gt; $methodNames) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$methodNames</h4>
+                                                <code>array&lt;mixed,string&gt;</code><p><p>The names of the methods</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addObjectInitializer"></a>
+                        <div class="element clickable method public  method_addObjectInitializer" data-toggle="collapse" data-target=".method_addObjectInitializer .collapse">
+                            <h2>Adds an object initializer to the validator.</h2>
+                            <pre>addObjectInitializer(\Symfony\Component\Validator\ObjectInitializerInterface $initializer) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$initializer</h4>
+                                                <code><a href="../classes/Symfony.Component.Validator.ObjectInitializerInterface.html">\Symfony\Component\Validator\ObjectInitializerInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addObjectInitializers"></a>
+                        <div class="element clickable method public  method_addObjectInitializers" data-toggle="collapse" data-target=".method_addObjectInitializers .collapse">
+                            <h2>Adds a list of object initializers to the validator.</h2>
+                            <pre>addObjectInitializers(array&lt;mixed,\Symfony\Component\Validator\ObjectInitializerInterface&gt; $initializers) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$initializers</h4>
+                                                <code>array&lt;mixed,<a href="../classes/Symfony.Component.Validator.ObjectInitializerInterface.html">\Symfony\Component\Validator\ObjectInitializerInterface</a>&gt;</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addXmlMapping"></a>
+                        <div class="element clickable method public  method_addXmlMapping" data-toggle="collapse" data-target=".method_addXmlMapping .collapse">
+                            <h2>Adds an XML constraint mapping file to the validator.</h2>
+                            <pre>addXmlMapping(string $path) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p><p>The path to the mapping file</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addXmlMappings"></a>
+                        <div class="element clickable method public  method_addXmlMappings" data-toggle="collapse" data-target=".method_addXmlMappings .collapse">
+                            <h2>Adds a list of XML constraint mapping files to the validator.</h2>
+                            <pre>addXmlMappings(array&lt;mixed,string&gt; $paths) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$paths</h4>
+                                                <code>array&lt;mixed,string&gt;</code><p><p>The paths to the mapping files</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addYamlMapping"></a>
+                        <div class="element clickable method public  method_addYamlMapping" data-toggle="collapse" data-target=".method_addYamlMapping .collapse">
+                            <h2>Adds a YAML constraint mapping file to the validator.</h2>
+                            <pre>addYamlMapping(string $path) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p><p>The path to the mapping file</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addYamlMappings"></a>
+                        <div class="element clickable method public  method_addYamlMappings" data-toggle="collapse" data-target=".method_addYamlMappings .collapse">
+                            <h2>Adds a list of YAML constraint mappings file to the validator.</h2>
+                            <pre>addYamlMappings(array&lt;mixed,string&gt; $paths) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$paths</h4>
+                                                <code>array&lt;mixed,string&gt;</code><p><p>The paths to the mapping files</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_disableAnnotationMapping"></a>
+                        <div class="element clickable method public  method_disableAnnotationMapping" data-toggle="collapse" data-target=".method_disableAnnotationMapping .collapse">
+                            <h2>Disables annotation based constraint mapping.</h2>
+                            <pre>disableAnnotationMapping() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_enableAnnotationMapping"></a>
+                        <div class="element clickable method public  method_enableAnnotationMapping" data-toggle="collapse" data-target=".method_enableAnnotationMapping .collapse">
+                            <h2>Enables annotation based constraint mapping.</h2>
+                            <pre>enableAnnotationMapping(\Doctrine\Common\Annotations\Reader $annotationReader = null) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$annotationReader</h4>
+                                                <code><a href="../classes/Doctrine.Common.Annotations.Reader.html">\Doctrine\Common\Annotations\Reader</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getValidator"></a>
+                        <div class="element clickable method public  method_getValidator" data-toggle="collapse" data-target=".method_getValidator .collapse">
+                            <h2>Builds and returns a new validator object.</h2>
+                            <pre>getValidator() : \Symfony\Component\Validator\ValidatorInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Validator.ValidatorInterface.html">\Symfony\Component\Validator\ValidatorInterface</a></code><p><p>The built validator</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setApiVersion"></a>
+                        <div class="element clickable method public deprecated method_setApiVersion" data-toggle="collapse" data-target=".method_setApiVersion .collapse">
+                            <h2>Sets the API version that the returned validator should support.</h2>
+                            <pre>setApiVersion(integer $apiVersion) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Validator.Validation.html#constant_API_VERSION_2_5">\Symfony\Component\Validator\Validation::API_VERSION_2_5</a>
+                                                                                                                
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Validator.Validation.html#constant_API_VERSION_2_5_BC">\Symfony\Component\Validator\Validation::API_VERSION_2_5_BC</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>since version 2.7, to be removed in 3.0.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$apiVersion</h4>
+                                                <code>integer</code><p><p>The required API version</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setConstraintValidatorFactory"></a>
+                        <div class="element clickable method public  method_setConstraintValidatorFactory" data-toggle="collapse" data-target=".method_setConstraintValidatorFactory .collapse">
+                            <h2>Sets the constraint validator factory used by the validator.</h2>
+                            <pre>setConstraintValidatorFactory(\Symfony\Component\Validator\ConstraintValidatorFactoryInterface $validatorFactory) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$validatorFactory</h4>
+                                                <code><a href="../classes/Symfony.Component.Validator.ConstraintValidatorFactoryInterface.html">\Symfony\Component\Validator\ConstraintValidatorFactoryInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setMetadataCache"></a>
+                        <div class="element clickable method public  method_setMetadataCache" data-toggle="collapse" data-target=".method_setMetadataCache .collapse">
+                            <h2>Sets the cache for caching class metadata.</h2>
+                            <pre>setMetadataCache(\Symfony\Component\Validator\Mapping\Cache\CacheInterface $cache) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$cache</h4>
+                                                <code><a href="../classes/Symfony.Component.Validator.Mapping.Cache.CacheInterface.html">\Symfony\Component\Validator\Mapping\Cache\CacheInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setMetadataFactory"></a>
+                        <div class="element clickable method public  method_setMetadataFactory" data-toggle="collapse" data-target=".method_setMetadataFactory .collapse">
+                            <h2>Sets the class metadata factory used by the validator.</h2>
+                            <pre>setMetadataFactory(\Symfony\Component\Validator\MetadataFactoryInterface $metadataFactory) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$metadataFactory</h4>
+                                                <code><a href="../classes/Symfony.Component.Validator.MetadataFactoryInterface.html">\Symfony\Component\Validator\MetadataFactoryInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setPropertyAccessor"></a>
+                        <div class="element clickable method public deprecated method_setPropertyAccessor" data-toggle="collapse" data-target=".method_setPropertyAccessor .collapse">
+                            <h2>Sets the property accessor for resolving property paths.</h2>
+                            <pre>setPropertyAccessor(\Symfony\Component\PropertyAccess\PropertyAccessorInterface $propertyAccessor) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>since version 2.5, to be removed in 3.0.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$propertyAccessor</h4>
+                                                <code>\Symfony\Component\PropertyAccess\PropertyAccessorInterface</code><p><p>The property accessor</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setTranslationDomain"></a>
+                        <div class="element clickable method public  method_setTranslationDomain" data-toggle="collapse" data-target=".method_setTranslationDomain .collapse">
+                            <h2>Sets the default translation domain of violation messages.</h2>
+                            <pre>setTranslationDomain(string $translationDomain) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The same message can have different translations in different domains.
+Pass the domain that is used for violation messages by default to this
+method.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$translationDomain</h4>
+                                                <code>string</code><p><p>The translation domain of the violation messages</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setTranslator"></a>
+                        <div class="element clickable method public  method_setTranslator" data-toggle="collapse" data-target=".method_setTranslator .collapse">
+                            <h2>Sets the translator used for translating violation messages.</h2>
+                            <pre>setTranslator(\Symfony\Component\Translation\TranslatorInterface $translator) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$translator</h4>
+                                                <code><a href="../classes/Symfony.Component.Translation.TranslatorInterface.html">\Symfony\Component\Translation\TranslatorInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                        </div>
+            </div>
+            <a id="\Symfony\Component\Validator\ValidatorBuilderInterface"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.html">Validator</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/Symfony.Component.Validator.ValidatorBuilderInterface.html">ValidatorBuilderInterface</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:17:01 +0000.<br/>
+    </footer>
+    </body>
+</html>

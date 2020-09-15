@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \JMS\Serializer\Annotation
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/JMS.Serializer.Annotation.html" title="Annotation">
+                    <i class="icon-th"></i> Annotation
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Annotation.html">Annotation</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Accessor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Accessor .collapse">
+        <h1>Accessor<a href="../classes/JMS.Serializer.Annotation.Accessor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Accessor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AccessorOrder" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AccessorOrder .collapse">
+        <h1>AccessorOrder<a href="../classes/JMS.Serializer.Annotation.AccessorOrder.html">¶</a></h1>
+        <p class="short_description">Controls the order of properties in a class.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.AccessorOrder.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AccessType" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AccessType .collapse">
+        <h1>AccessType<a href="../classes/JMS.Serializer.Annotation.AccessType.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.AccessType.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Discriminator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Discriminator .collapse">
+        <h1>Discriminator<a href="../classes/JMS.Serializer.Annotation.Discriminator.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Discriminator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Exclude" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Exclude .collapse">
+        <h1>Exclude<a href="../classes/JMS.Serializer.Annotation.Exclude.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Exclude.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ExclusionPolicy" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ExclusionPolicy .collapse">
+        <h1>ExclusionPolicy<a href="../classes/JMS.Serializer.Annotation.ExclusionPolicy.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.ExclusionPolicy.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Expose" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Expose .collapse">
+        <h1>Expose<a href="../classes/JMS.Serializer.Annotation.Expose.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Expose.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Groups" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Groups .collapse">
+        <h1>Groups<a href="../classes/JMS.Serializer.Annotation.Groups.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Groups.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HandlerCallback" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HandlerCallback .collapse">
+        <h1>HandlerCallback<a href="../classes/JMS.Serializer.Annotation.HandlerCallback.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.HandlerCallback.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Inline" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Inline .collapse">
+        <h1>Inline<a href="../classes/JMS.Serializer.Annotation.Inline.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Inline.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MaxDepth" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MaxDepth .collapse">
+        <h1>MaxDepth<a href="../classes/JMS.Serializer.Annotation.MaxDepth.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.MaxDepth.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PostDeserialize" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PostDeserialize .collapse">
+        <h1>PostDeserialize<a href="../classes/JMS.Serializer.Annotation.PostDeserialize.html">¶</a></h1>
+        <p class="short_description">This annotation can be defined on methods which are called after the
+deserialization of the object is complete.</p>
+        <div class="details collapse">
+                            <p>These methods do not necessarily have to be public.</p>
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.PostDeserialize.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PostSerialize" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PostSerialize .collapse">
+        <h1>PostSerialize<a href="../classes/JMS.Serializer.Annotation.PostSerialize.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.PostSerialize.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PreSerialize" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PreSerialize .collapse">
+        <h1>PreSerialize<a href="../classes/JMS.Serializer.Annotation.PreSerialize.html">¶</a></h1>
+        <p class="short_description">This annotation can be declared on methods which should be called
+before the Serialization process.</p>
+        <div class="details collapse">
+                            <p>These methods do not need to be public, and should do any clean-up, or
+preparation of the object that is necessary.</p>
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.PreSerialize.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ReadOnly" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ReadOnly .collapse">
+        <h1>ReadOnly<a href="../classes/JMS.Serializer.Annotation.ReadOnly.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.ReadOnly.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SerializedName" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SerializedName .collapse">
+        <h1>SerializedName<a href="../classes/JMS.Serializer.Annotation.SerializedName.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.SerializedName.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Since" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Since .collapse">
+        <h1>Since<a href="../classes/JMS.Serializer.Annotation.Since.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Since.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SkipWhenEmpty" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SkipWhenEmpty .collapse">
+        <h1>SkipWhenEmpty<a href="../classes/JMS.Serializer.Annotation.SkipWhenEmpty.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.SkipWhenEmpty.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Type" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Type .collapse">
+        <h1>Type<a href="../classes/JMS.Serializer.Annotation.Type.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Type.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Until" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Until .collapse">
+        <h1>Until<a href="../classes/JMS.Serializer.Annotation.Until.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Until.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Version" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Version .collapse">
+        <h1>Version<a href="../classes/JMS.Serializer.Annotation.Version.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.Version.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VirtualProperty" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VirtualProperty .collapse">
+        <h1>VirtualProperty<a href="../classes/JMS.Serializer.Annotation.VirtualProperty.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.VirtualProperty.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlAttribute" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlAttribute .collapse">
+        <h1>XmlAttribute<a href="../classes/JMS.Serializer.Annotation.XmlAttribute.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlAttribute.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlAttributeMap" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlAttributeMap .collapse">
+        <h1>XmlAttributeMap<a href="../classes/JMS.Serializer.Annotation.XmlAttributeMap.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlAttributeMap.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlCollection" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlCollection .collapse">
+        <h1>XmlCollection<a href="../classes/JMS.Serializer.Annotation.XmlCollection.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlCollection.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlDiscriminator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlDiscriminator .collapse">
+        <h1>XmlDiscriminator<a href="../classes/JMS.Serializer.Annotation.XmlDiscriminator.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlDiscriminator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlElement" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlElement .collapse">
+        <h1>XmlElement<a href="../classes/JMS.Serializer.Annotation.XmlElement.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlElement.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlKeyValuePairs" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlKeyValuePairs .collapse">
+        <h1>XmlKeyValuePairs<a href="../classes/JMS.Serializer.Annotation.XmlKeyValuePairs.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlKeyValuePairs.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlList" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlList .collapse">
+        <h1>XmlList<a href="../classes/JMS.Serializer.Annotation.XmlList.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlList.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlMap" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlMap .collapse">
+        <h1>XmlMap<a href="../classes/JMS.Serializer.Annotation.XmlMap.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlMap.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlNamespace" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlNamespace .collapse">
+        <h1>XmlNamespace<a href="../classes/JMS.Serializer.Annotation.XmlNamespace.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlNamespace.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlRoot" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlRoot .collapse">
+        <h1>XmlRoot<a href="../classes/JMS.Serializer.Annotation.XmlRoot.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlRoot.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlValue" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlValue .collapse">
+        <h1>XmlValue<a href="../classes/JMS.Serializer.Annotation.XmlValue.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Annotation.XmlValue.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:31 +0000.<br/>
+    </footer>
+    </body>
+</html>

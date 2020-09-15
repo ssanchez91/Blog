@@ -1,13 +1,33 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: sstee
+ * Date: 25/08/2020
+ * Time: 16:08
+ */
 
+/**
+ * Class Autoloader
+ *
+ *
+ */
 class Autoloader
 {
-
+    /**
+     * Method Static function register
+     */
     static function register()
     {
+        /**
+         * Call to spl_autoload_register
+         */
         spl_autoload_register(array(__CLASS__, 'autoload'));
     }
 
+    /**
+     * Method Static function autoload
+     * @param string $className
+     */
     static function autoload($className)
     {
         $configFile = file_get_contents("Config/config.json");

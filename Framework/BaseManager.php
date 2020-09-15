@@ -12,12 +12,38 @@ use App\Framework\BDD;
 use App\Framework\Exception\ExecuteQueryException;
 use App\Framework\Exception\PropertyNotFoundException;
 
+/**
+ * Class BaseManager
+ *
+ * @package App\Framework
+ */
 class BaseManager
 {
+    /**
+     * Property table
+     * @var
+     */
     private $table;
+
+    /**
+     * Property object
+     * @var
+     */
     private $object;
+
+    /**
+     * Property PDO
+     * @var \PDO
+     */
     protected $bdd;
 
+    /**
+     * Constructor
+     *
+     * @param string $table Table name
+     * @param object $object object
+     * @param string $datasource connection information
+     */
     public function __construct($table, $object, $datasource)
     {
         $this->table = $table;
@@ -25,6 +51,12 @@ class BaseManager
         $this->bdd = BDD::getInstance($datasource);
     }
 
+    /**
+     * Method getById
+     *
+     * @param int $id Object Id
+     * @return mixed
+     */
     public function getById($id)
     {
         $query = $this->bdd->prepare('SELECT * FROM ' . $this->table . ' WHERE id= :id');
@@ -33,6 +65,11 @@ class BaseManager
         return $query->fetch();
     }
 
+    /**
+     * Method listAll
+     *
+     * @return array
+     */
     public function listAll()
     {
         $query = $this->bdd->prepare('SELECT * FROM ' . $this->table);
@@ -41,6 +78,15 @@ class BaseManager
         return $query->fetchAll();
     }
 
+    /**
+     * Method insert
+     *
+     * @param object $obj Object Class
+     * @param array $param List of column
+     * @return string
+     * @throws ExecuteQueryException Database Error
+     * @throws PropertyNotFoundException This property has been not found
+     */
     public function insert($obj, $param)
     {
         $paramNumber = count($param);
@@ -58,6 +104,15 @@ class BaseManager
         }
     }
 
+    /**
+     * Method update
+     *
+     * @param object $obj Object Class
+     * @param array $param List of column
+     * @return string
+     * @throws ExecuteQueryException Database Error
+     * @throws PropertyNotFoundException This property has been not found
+     */
     public function update($obj, $param)
     {
         $sql = "UPDATE " . $this->table . " SET";
@@ -78,6 +133,12 @@ class BaseManager
         }
     }
 
+    /**
+     * Method delete
+     *
+     * @param object $obj Object Class
+     * @return bool
+     */
     public function delete($obj)
     {
         if (property_exists($obj, 'id')) {
@@ -89,6 +150,14 @@ class BaseManager
         }
     }
 
+    /**
+     * Method boundParam
+     *
+     * @param array $param
+     * @param object $obj Object
+     * @return array
+     * @throws PropertyNotFoundException This property has been not found
+     */
     private function boundParam($param, $obj)
     {
         $boundParam = array();

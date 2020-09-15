@@ -11,15 +11,37 @@ namespace App\Framework;
 
 use App\Model\Entity\Alert;
 
+
+/**
+ * Class AlertManager
+ *
+ * @package App\Framework
+ */
 class AlertManager
 {
+    /**
+     * List of Alert
+     *
+     * @var array
+     */
     private $listAlert;
 
+    /**
+     * Constructor
+     *
+     * @param array $listAlert List of Alert
+     */
     public function __construct($listAlert = [])
     {
         $this->listAlert = $listAlert;
     }
 
+    /**
+     * Method addAlert
+     *
+     * @param string $message Content of alert
+     * @param string $type Type of alert (success - danger - warning -...)
+     */
     public function addAlert($message, $type)
     {
         $alert = new Alert($message, $type);
@@ -27,6 +49,11 @@ class AlertManager
         $_SESSION['alert'] = $this->listAlert;
     }
 
+    /**
+     * Method showAlert
+     *
+     * @return string display alerts on the layout base.php
+     */
     public function showAlert()
     {
         $alertContent = '';
@@ -43,6 +70,11 @@ class AlertManager
         return $alertContent;
     }
 
+    /**
+     * Method clear
+     *
+     * Allow to clear List of alerts
+     */
     public function clear()
     {
         $_SESSION['alert'] = '';

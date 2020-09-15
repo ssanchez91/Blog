@@ -8,14 +8,30 @@
 
 namespace App\Model\Entity;
 
-
+/**
+ * Class Role
+ * @package App\Model\Entity
+ */
 class Role
 {
+    /**
+     * Variable id
+     * @var
+     */
     private $id;
+    /**
+     * Variable description
+     * @var
+     */
     private $description;
+    /**
+     * Variable slug
+     * @var
+     */
     private $slug;
 
     /**
+     * Accessor getId
      * @return mixed
      */
     public function getId()
@@ -24,6 +40,7 @@ class Role
     }
 
     /**
+     * Accessor setId
      * @param mixed $id
      */
     public function setId($id)
@@ -32,6 +49,7 @@ class Role
     }
 
     /**
+     * Accessor getDescription
      * @return mixed
      */
     public function getDescription()
@@ -40,6 +58,7 @@ class Role
     }
 
     /**
+     * Accessor setDescription
      * @param mixed $description
      */
     public function setDescription($description)
@@ -48,6 +67,7 @@ class Role
     }
 
     /**
+     * Accessor getSlug
      * @return mixed
      */
     public function getSlug()
@@ -56,6 +76,7 @@ class Role
     }
 
     /**
+     * Accessor setSlug
      * @param mixed $slug
      */
     public function setSlug($slug)

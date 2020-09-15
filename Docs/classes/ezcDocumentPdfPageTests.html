@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \ezcDocumentPdfPageTests
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_suite" title="suite :: ">
+            <span class="description"></span><pre>suite</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaBidirectionalMove1" title="testCoveredAreaBidirectionalMove1 :: ">
+            <span class="description"></span><pre>testCoveredAreaBidirectionalMove1</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaBidirectionalMove2" title="testCoveredAreaBidirectionalMove2 :: ">
+            <span class="description"></span><pre>testCoveredAreaBidirectionalMove2</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaExcatMatch" title="testCoveredAreaExcatMatch :: ">
+            <span class="description"></span><pre>testCoveredAreaExcatMatch</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaHorizontalMoving" title="testCoveredAreaHorizontalMoving :: ">
+            <span class="description"></span><pre>testCoveredAreaHorizontalMoving</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaHorizontalMovingImpossible" title="testCoveredAreaHorizontalMovingImpossible :: ">
+            <span class="description"></span><pre>testCoveredAreaHorizontalMovingImpossible</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaHorizontalMovingOutIntoBox" title="testCoveredAreaHorizontalMovingOutIntoBox :: ">
+            <span class="description"></span><pre>testCoveredAreaHorizontalMovingOutIntoBox</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaHorizontalMovingOutOfPage" title="testCoveredAreaHorizontalMovingOutOfPage :: ">
+            <span class="description"></span><pre>testCoveredAreaHorizontalMovingOutOfPage</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaIntersectionHeightIn" title="testCoveredAreaIntersectionHeightIn :: ">
+            <span class="description"></span><pre>testCoveredAreaIntersectionHeightIn</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaIntersectionInnerBox" title="testCoveredAreaIntersectionInnerBox :: ">
+            <span class="description"></span><pre>testCoveredAreaIntersectionInnerBox</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaIntersectionWidthIn" title="testCoveredAreaIntersectionWidthIn :: ">
+            <span class="description"></span><pre>testCoveredAreaIntersectionWidthIn</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaIntersectionXIn" title="testCoveredAreaIntersectionXIn :: ">
+            <span class="description"></span><pre>testCoveredAreaIntersectionXIn</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaIntersectionXInSecond" title="testCoveredAreaIntersectionXInSecond :: ">
+            <span class="description"></span><pre>testCoveredAreaIntersectionXInSecond</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaIntersectionYIn" title="testCoveredAreaIntersectionYIn :: ">
+            <span class="description"></span><pre>testCoveredAreaIntersectionYIn</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaNoIntersection" title="testCoveredAreaNoIntersection :: ">
+            <span class="description"></span><pre>testCoveredAreaNoIntersection</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaOnLineNoIntersection" title="testCoveredAreaOnLineNoIntersection :: ">
+            <span class="description"></span><pre>testCoveredAreaOnLineNoIntersection</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreasInDifferentTransactions" title="testCoveredAreasInDifferentTransactions :: ">
+            <span class="description"></span><pre>testCoveredAreasInDifferentTransactions</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreasWithMultipleRevertedTransactions" title="testCoveredAreasWithMultipleRevertedTransactions :: ">
+            <span class="description"></span><pre>testCoveredAreasWithMultipleRevertedTransactions</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreasWithRevertedTransaction" title="testCoveredAreasWithRevertedTransaction :: ">
+            <span class="description"></span><pre>testCoveredAreasWithRevertedTransaction</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaVerticalMoving" title="testCoveredAreaVerticalMoving :: ">
+            <span class="description"></span><pre>testCoveredAreaVerticalMoving</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaVerticalMovingOutIntoBox" title="testCoveredAreaVerticalMovingOutIntoBox :: ">
+            <span class="description"></span><pre>testCoveredAreaVerticalMovingOutIntoBox</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredAreaVerticalMovingOutOfPage" title="testCoveredAreaVerticalMovingOutOfPage :: ">
+            <span class="description"></span><pre>testCoveredAreaVerticalMovingOutOfPage</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxBiderectionalExtension1" title="testCoveredBoxBiderectionalExtension1 :: ">
+            <span class="description"></span><pre>testCoveredBoxBiderectionalExtension1</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxBiderectionalExtension2" title="testCoveredBoxBiderectionalExtension2 :: ">
+            <span class="description"></span><pre>testCoveredBoxBiderectionalExtension2</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxExtensionAndOrthogonalMovement1" title="testCoveredBoxExtensionAndOrthogonalMovement1 :: ">
+            <span class="description"></span><pre>testCoveredBoxExtensionAndOrthogonalMovement1</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxExtensionAndOrthogonalMovement2" title="testCoveredBoxExtensionAndOrthogonalMovement2 :: ">
+            <span class="description"></span><pre>testCoveredBoxExtensionAndOrthogonalMovement2</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxHorizontalExtension1" title="testCoveredBoxHorizontalExtension1 :: ">
+            <span class="description"></span><pre>testCoveredBoxHorizontalExtension1</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxHorizontalExtension2" title="testCoveredBoxHorizontalExtension2 :: ">
+            <span class="description"></span><pre>testCoveredBoxHorizontalExtension2</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxHorizontalExtension3" title="testCoveredBoxHorizontalExtension3 :: ">
+            <span class="description"></span><pre>testCoveredBoxHorizontalExtension3</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxVerticalExtension1" title="testCoveredBoxVerticalExtension1 :: ">
+            <span class="description"></span><pre>testCoveredBoxVerticalExtension1</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxVerticalExtension2" title="testCoveredBoxVerticalExtension2 :: ">
+            <span class="description"></span><pre>testCoveredBoxVerticalExtension2</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testCoveredBoxVerticalExtension3" title="testCoveredBoxVerticalExtension3 :: ">
+            <span class="description"></span><pre>testCoveredBoxVerticalExtension3</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testEmptyPageFixedBlock" title="testEmptyPageFixedBlock :: ">
+            <span class="description"></span><pre>testEmptyPageFixedBlock</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testHorizontalFullPageExtension" title="testHorizontalFullPageExtension :: ">
+            <span class="description"></span><pre>testHorizontalFullPageExtension</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testMoveAndExtendInSameDirection1" title="testMoveAndExtendInSameDirection1 :: ">
+            <span class="description"></span><pre>testMoveAndExtendInSameDirection1</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testMoveAndExtendInSameDirection2" title="testMoveAndExtendInSameDirection2 :: ">
+            <span class="description"></span><pre>testMoveAndExtendInSameDirection2</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testMoveAndExtendInSameDirection3" title="testMoveAndExtendInSameDirection3 :: ">
+            <span class="description"></span><pre>testMoveAndExtendInSameDirection3</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testOnPageBoundings" title="testOnPageBoundings :: ">
+            <span class="description"></span><pre>testOnPageBoundings</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testOutOfPageBoundingsHeight" title="testOutOfPageBoundingsHeight :: ">
+            <span class="description"></span><pre>testOutOfPageBoundingsHeight</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testOutOfPageBoundingsWidth" title="testOutOfPageBoundingsWidth :: ">
+            <span class="description"></span><pre>testOutOfPageBoundingsWidth</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testOutOfPageBoundingsX" title="testOutOfPageBoundingsX :: ">
+            <span class="description"></span><pre>testOutOfPageBoundingsX</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testOutOfPageBoundingsY" title="testOutOfPageBoundingsY :: ">
+            <span class="description"></span><pre>testOutOfPageBoundingsY</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_testUncoverArea" title="testUncoverArea :: ">
+            <span class="description"></span><pre>testUncoverArea</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ezcDocumentPdfPageTests</h1>
+                <small style="display: block; text-align: right">
+                                            Extends \ezcTestCase
+                                                        </small>
+                <p class="short_description">Test suite for class.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Document</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        subpackage
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Tests</p>
+                                    </td>
+                                </tr>
+                                                                                                                            </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_suite"></a>
+                        <div class="element clickable method public  method_suite" data-toggle="collapse" data-target=".method_suite .collapse">
+                            <h2>suite</h2>
+                            <pre>suite() </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaBidirectionalMove1"></a>
+                        <div class="element clickable method public  method_testCoveredAreaBidirectionalMove1" data-toggle="collapse" data-target=".method_testCoveredAreaBidirectionalMove1 .collapse">
+                            <h2>testCoveredAreaBidirectionalMove1</h2>
+                            <pre>testCoveredAreaBidirectionalMove1() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaBidirectionalMove2"></a>
+                        <div class="element clickable method public  method_testCoveredAreaBidirectionalMove2" data-toggle="collapse" data-target=".method_testCoveredAreaBidirectionalMove2 .collapse">
+                            <h2>testCoveredAreaBidirectionalMove2</h2>
+                            <pre>testCoveredAreaBidirectionalMove2() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaExcatMatch"></a>
+                        <div class="element clickable method public  method_testCoveredAreaExcatMatch" data-toggle="collapse" data-target=".method_testCoveredAreaExcatMatch .collapse">
+                            <h2>testCoveredAreaExcatMatch</h2>
+                            <pre>testCoveredAreaExcatMatch() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaHorizontalMoving"></a>
+                        <div class="element clickable method public  method_testCoveredAreaHorizontalMoving" data-toggle="collapse" data-target=".method_testCoveredAreaHorizontalMoving .collapse">
+                            <h2>testCoveredAreaHorizontalMoving</h2>
+                            <pre>testCoveredAreaHorizontalMoving() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaHorizontalMovingImpossible"></a>
+                        <div class="element clickable method public  method_testCoveredAreaHorizontalMovingImpossible" data-toggle="collapse" data-target=".method_testCoveredAreaHorizontalMovingImpossible .collapse">
+                            <h2>testCoveredAreaHorizontalMovingImpossible</h2>
+                            <pre>testCoveredAreaHorizontalMovingImpossible() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaHorizontalMovingOutIntoBox"></a>
+                        <div class="element clickable method public  method_testCoveredAreaHorizontalMovingOutIntoBox" data-toggle="collapse" data-target=".method_testCoveredAreaHorizontalMovingOutIntoBox .collapse">
+                            <h2>testCoveredAreaHorizontalMovingOutIntoBox</h2>
+                            <pre>testCoveredAreaHorizontalMovingOutIntoBox() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaHorizontalMovingOutOfPage"></a>
+                        <div class="element clickable method public  method_testCoveredAreaHorizontalMovingOutOfPage" data-toggle="collapse" data-target=".method_testCoveredAreaHorizontalMovingOutOfPage .collapse">
+                            <h2>testCoveredAreaHorizontalMovingOutOfPage</h2>
+                            <pre>testCoveredAreaHorizontalMovingOutOfPage() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaIntersectionHeightIn"></a>
+                        <div class="element clickable method public  method_testCoveredAreaIntersectionHeightIn" data-toggle="collapse" data-target=".method_testCoveredAreaIntersectionHeightIn .collapse">
+                            <h2>testCoveredAreaIntersectionHeightIn</h2>
+                            <pre>testCoveredAreaIntersectionHeightIn() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaIntersectionInnerBox"></a>
+                        <div class="element clickable method public  method_testCoveredAreaIntersectionInnerBox" data-toggle="collapse" data-target=".method_testCoveredAreaIntersectionInnerBox .collapse">
+                            <h2>testCoveredAreaIntersectionInnerBox</h2>
+                            <pre>testCoveredAreaIntersectionInnerBox() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaIntersectionWidthIn"></a>
+                        <div class="element clickable method public  method_testCoveredAreaIntersectionWidthIn" data-toggle="collapse" data-target=".method_testCoveredAreaIntersectionWidthIn .collapse">
+                            <h2>testCoveredAreaIntersectionWidthIn</h2>
+                            <pre>testCoveredAreaIntersectionWidthIn() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaIntersectionXIn"></a>
+                        <div class="element clickable method public  method_testCoveredAreaIntersectionXIn" data-toggle="collapse" data-target=".method_testCoveredAreaIntersectionXIn .collapse">
+                            <h2>testCoveredAreaIntersectionXIn</h2>
+                            <pre>testCoveredAreaIntersectionXIn() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaIntersectionXInSecond"></a>
+                        <div class="element clickable method public  method_testCoveredAreaIntersectionXInSecond" data-toggle="collapse" data-target=".method_testCoveredAreaIntersectionXInSecond .collapse">
+                            <h2>testCoveredAreaIntersectionXInSecond</h2>
+                            <pre>testCoveredAreaIntersectionXInSecond() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaIntersectionYIn"></a>
+                        <div class="element clickable method public  method_testCoveredAreaIntersectionYIn" data-toggle="collapse" data-target=".method_testCoveredAreaIntersectionYIn .collapse">
+                            <h2>testCoveredAreaIntersectionYIn</h2>
+                            <pre>testCoveredAreaIntersectionYIn() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaNoIntersection"></a>
+                        <div class="element clickable method public  method_testCoveredAreaNoIntersection" data-toggle="collapse" data-target=".method_testCoveredAreaNoIntersection .collapse">
+                            <h2>testCoveredAreaNoIntersection</h2>
+                            <pre>testCoveredAreaNoIntersection() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaOnLineNoIntersection"></a>
+                        <div class="element clickable method public  method_testCoveredAreaOnLineNoIntersection" data-toggle="collapse" data-target=".method_testCoveredAreaOnLineNoIntersection .collapse">
+                            <h2>testCoveredAreaOnLineNoIntersection</h2>
+                            <pre>testCoveredAreaOnLineNoIntersection() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreasInDifferentTransactions"></a>
+                        <div class="element clickable method public  method_testCoveredAreasInDifferentTransactions" data-toggle="collapse" data-target=".method_testCoveredAreasInDifferentTransactions .collapse">
+                            <h2>testCoveredAreasInDifferentTransactions</h2>
+                            <pre>testCoveredAreasInDifferentTransactions() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreasWithMultipleRevertedTransactions"></a>
+                        <div class="element clickable method public  method_testCoveredAreasWithMultipleRevertedTransactions" data-toggle="collapse" data-target=".method_testCoveredAreasWithMultipleRevertedTransactions .collapse">
+                            <h2>testCoveredAreasWithMultipleRevertedTransactions</h2>
+                            <pre>testCoveredAreasWithMultipleRevertedTransactions() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreasWithRevertedTransaction"></a>
+                        <div class="element clickable method public  method_testCoveredAreasWithRevertedTransaction" data-toggle="collapse" data-target=".method_testCoveredAreasWithRevertedTransaction .collapse">
+                            <h2>testCoveredAreasWithRevertedTransaction</h2>
+                            <pre>testCoveredAreasWithRevertedTransaction() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaVerticalMoving"></a>
+                        <div class="element clickable method public  method_testCoveredAreaVerticalMoving" data-toggle="collapse" data-target=".method_testCoveredAreaVerticalMoving .collapse">
+                            <h2>testCoveredAreaVerticalMoving</h2>
+                            <pre>testCoveredAreaVerticalMoving() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaVerticalMovingOutIntoBox"></a>
+                        <div class="element clickable method public  method_testCoveredAreaVerticalMovingOutIntoBox" data-toggle="collapse" data-target=".method_testCoveredAreaVerticalMovingOutIntoBox .collapse">
+                            <h2>testCoveredAreaVerticalMovingOutIntoBox</h2>
+                            <pre>testCoveredAreaVerticalMovingOutIntoBox() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredAreaVerticalMovingOutOfPage"></a>
+                        <div class="element clickable method public  method_testCoveredAreaVerticalMovingOutOfPage" data-toggle="collapse" data-target=".method_testCoveredAreaVerticalMovingOutOfPage .collapse">
+                            <h2>testCoveredAreaVerticalMovingOutOfPage</h2>
+                            <pre>testCoveredAreaVerticalMovingOutOfPage() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxBiderectionalExtension1"></a>
+                        <div class="element clickable method public  method_testCoveredBoxBiderectionalExtension1" data-toggle="collapse" data-target=".method_testCoveredBoxBiderectionalExtension1 .collapse">
+                            <h2>testCoveredBoxBiderectionalExtension1</h2>
+                            <pre>testCoveredBoxBiderectionalExtension1() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxBiderectionalExtension2"></a>
+                        <div class="element clickable method public  method_testCoveredBoxBiderectionalExtension2" data-toggle="collapse" data-target=".method_testCoveredBoxBiderectionalExtension2 .collapse">
+                            <h2>testCoveredBoxBiderectionalExtension2</h2>
+                            <pre>testCoveredBoxBiderectionalExtension2() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxExtensionAndOrthogonalMovement1"></a>
+                        <div class="element clickable method public  method_testCoveredBoxExtensionAndOrthogonalMovement1" data-toggle="collapse" data-target=".method_testCoveredBoxExtensionAndOrthogonalMovement1 .collapse">
+                            <h2>testCoveredBoxExtensionAndOrthogonalMovement1</h2>
+                            <pre>testCoveredBoxExtensionAndOrthogonalMovement1() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxExtensionAndOrthogonalMovement2"></a>
+                        <div class="element clickable method public  method_testCoveredBoxExtensionAndOrthogonalMovement2" data-toggle="collapse" data-target=".method_testCoveredBoxExtensionAndOrthogonalMovement2 .collapse">
+                            <h2>testCoveredBoxExtensionAndOrthogonalMovement2</h2>
+                            <pre>testCoveredBoxExtensionAndOrthogonalMovement2() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxHorizontalExtension1"></a>
+                        <div class="element clickable method public  method_testCoveredBoxHorizontalExtension1" data-toggle="collapse" data-target=".method_testCoveredBoxHorizontalExtension1 .collapse">
+                            <h2>testCoveredBoxHorizontalExtension1</h2>
+                            <pre>testCoveredBoxHorizontalExtension1() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxHorizontalExtension2"></a>
+                        <div class="element clickable method public  method_testCoveredBoxHorizontalExtension2" data-toggle="collapse" data-target=".method_testCoveredBoxHorizontalExtension2 .collapse">
+                            <h2>testCoveredBoxHorizontalExtension2</h2>
+                            <pre>testCoveredBoxHorizontalExtension2() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxHorizontalExtension3"></a>
+                        <div class="element clickable method public  method_testCoveredBoxHorizontalExtension3" data-toggle="collapse" data-target=".method_testCoveredBoxHorizontalExtension3 .collapse">
+                            <h2>testCoveredBoxHorizontalExtension3</h2>
+                            <pre>testCoveredBoxHorizontalExtension3() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxVerticalExtension1"></a>
+                        <div class="element clickable method public  method_testCoveredBoxVerticalExtension1" data-toggle="collapse" data-target=".method_testCoveredBoxVerticalExtension1 .collapse">
+                            <h2>testCoveredBoxVerticalExtension1</h2>
+                            <pre>testCoveredBoxVerticalExtension1() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxVerticalExtension2"></a>
+                        <div class="element clickable method public  method_testCoveredBoxVerticalExtension2" data-toggle="collapse" data-target=".method_testCoveredBoxVerticalExtension2 .collapse">
+                            <h2>testCoveredBoxVerticalExtension2</h2>
+                            <pre>testCoveredBoxVerticalExtension2() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testCoveredBoxVerticalExtension3"></a>
+                        <div class="element clickable method public  method_testCoveredBoxVerticalExtension3" data-toggle="collapse" data-target=".method_testCoveredBoxVerticalExtension3 .collapse">
+                            <h2>testCoveredBoxVerticalExtension3</h2>
+                            <pre>testCoveredBoxVerticalExtension3() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testEmptyPageFixedBlock"></a>
+                        <div class="element clickable method public  method_testEmptyPageFixedBlock" data-toggle="collapse" data-target=".method_testEmptyPageFixedBlock .collapse">
+                            <h2>testEmptyPageFixedBlock</h2>
+                            <pre>testEmptyPageFixedBlock() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testHorizontalFullPageExtension"></a>
+                        <div class="element clickable method public  method_testHorizontalFullPageExtension" data-toggle="collapse" data-target=".method_testHorizontalFullPageExtension .collapse">
+                            <h2>testHorizontalFullPageExtension</h2>
+                            <pre>testHorizontalFullPageExtension() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testMoveAndExtendInSameDirection1"></a>
+                        <div class="element clickable method public  method_testMoveAndExtendInSameDirection1" data-toggle="collapse" data-target=".method_testMoveAndExtendInSameDirection1 .collapse">
+                            <h2>testMoveAndExtendInSameDirection1</h2>
+                            <pre>testMoveAndExtendInSameDirection1() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testMoveAndExtendInSameDirection2"></a>
+                        <div class="element clickable method public  method_testMoveAndExtendInSameDirection2" data-toggle="collapse" data-target=".method_testMoveAndExtendInSameDirection2 .collapse">
+                            <h2>testMoveAndExtendInSameDirection2</h2>
+                            <pre>testMoveAndExtendInSameDirection2() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testMoveAndExtendInSameDirection3"></a>
+                        <div class="element clickable method public  method_testMoveAndExtendInSameDirection3" data-toggle="collapse" data-target=".method_testMoveAndExtendInSameDirection3 .collapse">
+                            <h2>testMoveAndExtendInSameDirection3</h2>
+                            <pre>testMoveAndExtendInSameDirection3() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testOnPageBoundings"></a>
+                        <div class="element clickable method public  method_testOnPageBoundings" data-toggle="collapse" data-target=".method_testOnPageBoundings .collapse">
+                            <h2>testOnPageBoundings</h2>
+                            <pre>testOnPageBoundings() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testOutOfPageBoundingsHeight"></a>
+                        <div class="element clickable method public  method_testOutOfPageBoundingsHeight" data-toggle="collapse" data-target=".method_testOutOfPageBoundingsHeight .collapse">
+                            <h2>testOutOfPageBoundingsHeight</h2>
+                            <pre>testOutOfPageBoundingsHeight() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testOutOfPageBoundingsWidth"></a>
+                        <div class="element clickable method public  method_testOutOfPageBoundingsWidth" data-toggle="collapse" data-target=".method_testOutOfPageBoundingsWidth .collapse">
+                            <h2>testOutOfPageBoundingsWidth</h2>
+                            <pre>testOutOfPageBoundingsWidth() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testOutOfPageBoundingsX"></a>
+                        <div class="element clickable method public  method_testOutOfPageBoundingsX" data-toggle="collapse" data-target=".method_testOutOfPageBoundingsX .collapse">
+                            <h2>testOutOfPageBoundingsX</h2>
+                            <pre>testOutOfPageBoundingsX() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testOutOfPageBoundingsY"></a>
+                        <div class="element clickable method public  method_testOutOfPageBoundingsY" data-toggle="collapse" data-target=".method_testOutOfPageBoundingsY .collapse">
+                            <h2>testOutOfPageBoundingsY</h2>
+                            <pre>testOutOfPageBoundingsY() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_testUncoverArea"></a>
+                        <div class="element clickable method public  method_testUncoverArea" data-toggle="collapse" data-target=".method_testUncoverArea .collapse">
+                            <h2>testUncoverArea</h2>
+                            <pre>testUncoverArea() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                        </div>
+            </div>
+            <a id="\ezcDocumentPdfPageTests"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/default.html">\</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/ezcDocumentPdfPageTests.html">ezcDocumentPdfPageTests</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:50 +0000.<br/>
+    </footer>
+    </body>
+</html>

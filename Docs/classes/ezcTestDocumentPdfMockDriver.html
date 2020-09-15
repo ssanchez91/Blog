@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \ezcTestDocumentPdfMockDriver
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public inherited">
+        <a href="#method___construct" title="__construct :: Construct driver">
+            <span class="description">Construct driver</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_addExternalLink" title="addExternalLink :: Add an external link">
+            <span class="description">Add an external link</span><pre>addExternalLink</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_addInternalLink" title="addInternalLink :: Add an internal link">
+            <span class="description">Add an internal link</span><pre>addInternalLink</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_addInternalLinkTarget" title="addInternalLinkTarget :: Add an internal link target">
+            <span class="description">Add an internal link target</span><pre>addInternalLinkTarget</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_calculateWordWidth" title="calculateWordWidth :: Calculate the rendered width of the current word">
+            <span class="description">Calculate the rendered width of the current word</span><pre>calculateWordWidth</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_convertValue" title="convertValue :: Convert values">
+            <span class="description">Convert values</span><pre>convertValue</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_createPage" title="createPage :: Create a new page">
+            <span class="description">Create a new page</span><pre>createPage</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_debugDump" title="debugDump :: Show a debug dump of all calls to the driver.">
+            <span class="description">Show a debug dump of all calls to the driver.</span><pre>debugDump</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_drawImage" title="drawImage :: Draw image">
+            <span class="description">Draw image</span><pre>drawImage</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_drawPolygon" title="drawPolygon :: Draw a fileld polygon">
+            <span class="description">Draw a fileld polygon</span><pre>drawPolygon</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_drawPolyline" title="drawPolyline :: Draw a polyline">
+            <span class="description">Draw a polyline</span><pre>drawPolyline</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_drawWord" title="drawWord :: Draw word at given position">
+            <span class="description">Draw word at given position</span><pre>drawWord</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getCurrentLineHeight" title="getCurrentLineHeight :: Get current line height">
+            <span class="description">Get current line height</span><pre>getCurrentLineHeight</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_registerFont" title="registerFont :: Register a font">
+            <span class="description">Register a font</span><pre>registerFont</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_save" title="save :: Generate and return PDF">
+            <span class="description">Generate and return PDF</span><pre>save</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_setMetaData" title="setMetaData :: Set metadata">
+            <span class="description">Set metadata</span><pre>setMetaData</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_setOptions" title="setOptions :: Set compression">
+            <span class="description">Set compression</span><pre>setOptions</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_setTextFormatting" title="setTextFormatting :: Set text formatting option">
+            <span class="description">Set text formatting option</span><pre>setTextFormatting</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method protected inherited">
+                            <a href="#method_getPointString" title="getPointString :: Get SVG path string">
+                                <span class="description">Get SVG path string</span><pre>getPointString</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                                <li class="constant ">
+                    <a href="#constant_FONT_BOLD" title="FONT_BOLD :: Bold text">
+                        <span class="description">Bold text</span><pre>FONT_BOLD</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_FONT_OBLIQUE" title="FONT_OBLIQUE :: Italic text">
+                        <span class="description">Italic text</span><pre>FONT_OBLIQUE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_FONT_PLAIN" title="FONT_PLAIN :: Normal text">
+                        <span class="description">Normal text</span><pre>FONT_PLAIN</pre>
+                    </a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ezcTestDocumentPdfMockDriver</h1>
+                <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/ezcDocumentPdfSvgDriver.html">\ezcDocumentPdfSvgDriver</a>
+                                                        </small>
+                <p class="short_description">Test implemenation of PDF driver mocking actual driver behaviour</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>ONLY FOR TESTING - especially, since the text width estimation does not
+work properly without using SVG glyph support. The generated XML files are
+therefore only used for easy comparision of the general rendering results.</p>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Document</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Construct driver</h2>
+                            <pre>__construct() : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Creates a new PDF driver.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addExternalLink"></a>
+                        <div class="element clickable method public  method_addExternalLink inherited" data-toggle="collapse" data-target=".method_addExternalLink .collapse">
+                            <h2>Add an external link</h2>
+                            <pre>addExternalLink(float $x, float $y, float $width, float $height, string $url) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Add an external link to the rectangle specified by its top-left
+position, width and height. The last parameter is the actual URL to link
+to.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$x</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$y</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$url</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addInternalLink"></a>
+                        <div class="element clickable method public  method_addInternalLink inherited" data-toggle="collapse" data-target=".method_addInternalLink .collapse">
+                            <h2>Add an internal link</h2>
+                            <pre>addInternalLink(float $x, float $y, float $width, float $height, string $target) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Add an internal link to the rectangle specified by its top-left
+position, width and height. The last parameter is the target identifier
+to link to.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$x</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$y</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$target</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addInternalLinkTarget"></a>
+                        <div class="element clickable method public  method_addInternalLinkTarget inherited" data-toggle="collapse" data-target=".method_addInternalLinkTarget .collapse">
+                            <h2>Add an internal link target</h2>
+                            <pre>addInternalLinkTarget(string $id) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Add an internal link to the current page. The last parameter
+is the target identifier.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$id</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_calculateWordWidth"></a>
+                        <div class="element clickable method public  method_calculateWordWidth inherited" data-toggle="collapse" data-target=".method_calculateWordWidth .collapse">
+                            <h2>Calculate the rendered width of the current word</h2>
+                            <pre>calculateWordWidth(string $word) : float</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Calculate the width of the passed word, using the currently set text
+formatting options.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$word</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>float</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_convertValue"></a>
+                        <div class="element clickable method public  method_convertValue" data-toggle="collapse" data-target=".method_convertValue .collapse">
+                            <h2>Convert values</h2>
+                            <pre>convertValue(mixed $input, string $format = &#039;mm&#039;) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Convert measure values from the PCSS input file into another unit. The
+input unit is read from the passed value and defaults to milli meters.
+The output unit can be specified as the second parameter and also
+default to milli meters.</p>
+<p>Supported units currently are: mm, px, pt, in</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$input</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$format</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_createPage"></a>
+                        <div class="element clickable method public  method_createPage inherited" data-toggle="collapse" data-target=".method_createPage .collapse">
+                            <h2>Create a new page</h2>
+                            <pre>createPage(float $width, float $height) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Create a new page in the PDF document with the given width and height.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_debugDump"></a>
+                        <div class="element clickable method public  method_debugDump" data-toggle="collapse" data-target=".method_debugDump .collapse">
+                            <h2>Show a debug dump of all calls to the driver.</h2>
+                            <pre>debugDump() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_drawImage"></a>
+                        <div class="element clickable method public  method_drawImage inherited" data-toggle="collapse" data-target=".method_drawImage .collapse">
+                            <h2>Draw image</h2>
+                            <pre>drawImage(string $file, string $type, float $x, float $y, float $width, float $height) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Draw image at the defined position. The first parameter is the
+(absolute) path to the image file, and the second defines the type of
+the image. If the driver cannot handle this aprticular image type, it
+should throw an exception.</p>
+<p>The further parameters define the location where the image should be
+rendered and the dimensions of the image in the rendered output. The
+dimensions do not neccesarily match the real image dimensions, and might
+require some kind of scaling inside the driver depending on the used
+backend.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$file</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$x</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$y</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_drawPolygon"></a>
+                        <div class="element clickable method public  method_drawPolygon inherited" data-toggle="collapse" data-target=".method_drawPolygon .collapse">
+                            <h2>Draw a fileld polygon</h2>
+                            <pre>drawPolygon(array $points, array $color) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Draw any filled polygon, filled using the defined color. The color
+should be passed as an array with the keys &quot;red&quot;, &quot;green&quot;, &quot;blue&quot; and
+optionally &quot;alpha&quot;. Each key should have a value between 0 and 1
+associated.</p>
+<p>The polygon itself is specified as an array of two-tuples, specifying
+the x and y coordinate of the point.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$points</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$color</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_drawPolyline"></a>
+                        <div class="element clickable method public  method_drawPolyline inherited" data-toggle="collapse" data-target=".method_drawPolyline .collapse">
+                            <h2>Draw a polyline</h2>
+                            <pre>drawPolyline(array $points, array $color, float $width, boolean $close = true) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Draw any non-filled polygon, filled using the defined color. The color
+should be passed as an array with the keys &quot;red&quot;, &quot;green&quot;, &quot;blue&quot; and
+optionally &quot;alpha&quot;. Each key should have a value between 0 and 1
+associated.</p>
+<p>The polyline itself is specified as an array of two-tuples, specifying
+the x and y coordinate of the point.</p>
+<p>The thrid parameter defines the width of the border and the last
+parameter may optionally be set to false to not close the polygon (draw
+another line from the last point to the first one).</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$points</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$color</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$close</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_drawWord"></a>
+                        <div class="element clickable method public  method_drawWord inherited" data-toggle="collapse" data-target=".method_drawWord .collapse">
+                            <h2>Draw word at given position</h2>
+                            <pre>drawWord(float $x, float $y, string $word) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Draw the given word at the given position using the currently set text
+formatting options.</p>
+<p>The coordinate specifies the left bottom edge of the words bounding box.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$x</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$y</h4>
+                                                <code>float</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$word</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getCurrentLineHeight"></a>
+                        <div class="element clickable method public  method_getCurrentLineHeight inherited" data-toggle="collapse" data-target=".method_getCurrentLineHeight .collapse">
+                            <h2>Get current line height</h2>
+                            <pre>getCurrentLineHeight() : float</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Return the current line height in millimeter based on the current font
+and text rendering settings.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>float</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getPointString"></a>
+                        <div class="element clickable method protected  method_getPointString inherited" data-toggle="collapse" data-target=".method_getPointString .collapse">
+                            <h2>Get SVG path string</h2>
+                            <pre>getPointString(array $points, boolean $close = true) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Transform the points array into a SVG path string.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$points</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$close</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_registerFont"></a>
+                        <div class="element clickable method public  method_registerFont inherited" data-toggle="collapse" data-target=".method_registerFont .collapse">
+                            <h2>Register a font</h2>
+                            <pre>registerFont(string $name, integer $type, array $pathes) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Registers a font, which can be used by its name later in the driver. The
+given type is either self::FONT_PLAIN or a bitwise combination of self::FONT_BOLD
+and self::FONT_OBLIQUE.</p>
+<p>The third paramater specifies an array of pathes with references to font
+definition files. Multiple pathes may be specified to provide the same
+font using different types, because not all drivers may process all font
+types.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$pathes</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_save"></a>
+                        <div class="element clickable method public  method_save inherited" data-toggle="collapse" data-target=".method_save .collapse">
+                            <h2>Generate and return PDF</h2>
+                            <pre>save() : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Return the generated binary PDF content as a string.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setMetaData"></a>
+                        <div class="element clickable method public  method_setMetaData inherited" data-toggle="collapse" data-target=".method_setMetaData .collapse">
+                            <h2>Set metadata</h2>
+                            <pre>setMetaData(string $key, string $value) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Set document meta data. The meta data types are identified by a list of
+keys, common to PDF, like: title, author, subject, created, modified.</p>
+<p>The values are passed like embedded in the docbook document and might
+need to be reformatted.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$key</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setOptions"></a>
+                        <div class="element clickable method public  method_setOptions inherited" data-toggle="collapse" data-target=".method_setOptions .collapse">
+                            <h2>Set compression</h2>
+                            <pre>setOptions(\ezcDocumentPdfOptions $options) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Set whether the generated PDF should be compressed or not.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
+                                                <code><a href="../classes/ezcDocumentPdfOptions.html">\ezcDocumentPdfOptions</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setTextFormatting"></a>
+                        <div class="element clickable method public  method_setTextFormatting inherited" data-toggle="collapse" data-target=".method_setTextFormatting .collapse">
+                            <h2>Set text formatting option</h2>
+                            <pre>setTextFormatting(string $type, mixed $value) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Set a text formatting option. The names of the options are the same used
+in the PCSS files and need to be translated by the driver to the proper
+backend calls.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                                    <a id="constant_FONT_PLAIN"> </a>
+                            <div class="element clickable constant  constant_FONT_PLAIN inherited" data-toggle="collapse" data-target=".constant_FONT_PLAIN .collapse">
+                                <h2>Normal text</h2>
+                                <pre>FONT_PLAIN</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_FONT_BOLD"> </a>
+                            <div class="element clickable constant  constant_FONT_BOLD inherited" data-toggle="collapse" data-target=".constant_FONT_BOLD .collapse">
+                                <h2>Bold text</h2>
+                                <pre>FONT_BOLD</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_FONT_OBLIQUE"> </a>
+                            <div class="element clickable constant  constant_FONT_OBLIQUE inherited" data-toggle="collapse" data-target=".constant_FONT_OBLIQUE .collapse">
+                                <h2>Italic text</h2>
+                                <pre>FONT_OBLIQUE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_style"> </a>
+                            <div class="element clickable property  protected property_style" data-toggle="collapse" data-target=".property_style .collapse">
+                                <h2>style</h2>
+                                <pre>style : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_size"> </a>
+                            <div class="element clickable property  protected property_size" data-toggle="collapse" data-target=".property_size .collapse">
+                                <h2>size</h2>
+                                <pre>size : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_calls"> </a>
+                            <div class="element clickable property  public property_calls" data-toggle="collapse" data-target=".property_calls .collapse">
+                                <h2>calls</h2>
+                                <pre>calls : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_document"> </a>
+                            <div class="element clickable property  protected property_document inherited" data-toggle="collapse" data-target=".property_document .collapse">
+                                <h2>Svg Document instance</h2>
+                                <pre>document : \DOMDocument</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\DOMDocument</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_svg"> </a>
+                            <div class="element clickable property  protected property_svg inherited" data-toggle="collapse" data-target=".property_svg .collapse">
+                                <h2>Node of SVG root element</h2>
+                                <pre>svg : \DOMElement</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\DOMElement</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_pages"> </a>
+                            <div class="element clickable property  protected property_pages inherited" data-toggle="collapse" data-target=".property_pages .collapse">
+                                <h2>Root node for page elements</h2>
+                                <pre>pages : \DOMElement</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\DOMElement</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_metadata"> </a>
+                            <div class="element clickable property  protected property_metadata inherited" data-toggle="collapse" data-target=".property_metadata .collapse">
+                                <h2>Root node for metadata</h2>
+                                <pre>metadata : \DOMElement</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\DOMElement</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_currentpage"> </a>
+                            <div class="element clickable property  protected property_currentpage inherited" data-toggle="collapse" data-target=".property_currentpage .collapse">
+                                <h2>Root node of current page</h2>
+                                <pre>currentpage : \DOMElement</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\DOMElement</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_offset"> </a>
+                            <div class="element clickable property  protected property_offset inherited" data-toggle="collapse" data-target=".property_offset .collapse">
+                                <h2>Current inner document offset</h2>
+                                <pre>offset : float</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>float</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_nextOffset"> </a>
+                            <div class="element clickable property  protected property_nextOffset inherited" data-toggle="collapse" data-target=".property_nextOffset .collapse">
+                                <h2>Next inner document offset after page creation</h2>
+                                <pre>nextOffset : float</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>float</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_fonts"> </a>
+                            <div class="element clickable property  protected property_fonts inherited" data-toggle="collapse" data-target=".property_fonts .collapse">
+                                <h2>Array with fonts, and their equivalents for bold and italic markup. This
+array will be extended when loading new fonts, but contains the builtin
+fonts by default.</h2>
+                                <pre>fonts : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"><p>The fourth value for each font is bold + oblique, the index is the
+bitwise and combination of the repective combinations. Each font MUST
+have at least a value for FONT_PLAIN assigned.</p></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_currentFont"> </a>
+                            <div class="element clickable property  protected property_currentFont inherited" data-toggle="collapse" data-target=".property_currentFont .collapse">
+                                <h2>Name and style of default font / currently used font</h2>
+                                <pre>currentFont : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_options"> </a>
+                            <div class="element clickable property  protected property_options inherited" data-toggle="collapse" data-target=".property_options .collapse">
+                                <h2>PDF options</h2>
+                                <pre>options : \ezcDocumentPdfOptions</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/ezcDocumentPdfOptions.html">\ezcDocumentPdfOptions</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\ezcTestDocumentPdfMockDriver"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/default.html">\</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/ezcTestDocumentPdfMockDriver.html">ezcTestDocumentPdfMockDriver</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:36 +0000.<br/>
+    </footer>
+    </body>
+</html>

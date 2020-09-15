@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: sstee
- * Date: 23/07/2020
- * Time: 10:26
+ * showErrorView
  */
 ?>
 <div class="content">

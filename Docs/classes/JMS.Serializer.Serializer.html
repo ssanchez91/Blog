@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \JMS\Serializer\Serializer
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: Constructor.">
+            <span class="description">Constructor.</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_deserialize" title="deserialize :: Deserializes the given data to the specified type.">
+            <span class="description">Deserializes the given data to the specified type.</span><pre>deserialize</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_fromArray" title="fromArray :: Restores objects from an array structure.">
+            <span class="description">Restores objects from an array structure.</span><pre>fromArray</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getMetadataFactory" title="getMetadataFactory :: ">
+            <span class="description"></span><pre>getMetadataFactory</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_serialize" title="serialize :: Serializes the given data to the specified output format.">
+            <span class="description">Serializes the given data to the specified output format.</span><pre>serialize</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setDeserializationContextFactory" title="setDeserializationContextFactory :: ">
+            <span class="description"></span><pre>setDeserializationContextFactory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setSerializationContextFactory" title="setSerializationContextFactory :: ">
+            <span class="description"></span><pre>setSerializationContextFactory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_toArray" title="toArray :: Converts objects to an array structure.">
+            <span class="description">Converts objects to an array structure.</span><pre>toArray</pre>
+        </a>
+    </li>
+
+                                                                                                        </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                <li class="method private">
+                            <a href="#method_convertArrayObjects" title="convertArrayObjects :: ">
+                                <span class="description"></span><pre>convertArrayObjects</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                            <li class="method private">
+                            <a href="#method_handleDeserializeResult" title="handleDeserializeResult :: ">
+                                <span class="description"></span><pre>handleDeserializeResult</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                <li class="method private">
+                            <a href="#method_visit" title="visit :: ">
+                                <span class="description"></span><pre>visit</pre>
+                            </a>
+                        </li>
+                                                </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>Serializer</h1>
+                <small style="display: block; text-align: right">
+                                                                Implements <a href="../classes/JMS.Serializer.SerializerInterface.html">\JMS\Serializer\SerializerInterface</a>, <a href="../classes/JMS.Serializer.ArrayTransformerInterface.html">\JMS\Serializer\ArrayTransformerInterface</a>
+                                    </small>
+                <p class="short_description">Serializer Implementation.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Johannes M. Schmitt <a href="mailto:schmittjoh@gmail.com">schmittjoh@gmail.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Constructor.</h2>
+                            <pre>__construct(\Metadata\MetadataFactoryInterface $factory, \JMS\Serializer\Handler\HandlerRegistryInterface $handlerRegistry, \JMS\Serializer\Construction\ObjectConstructorInterface $objectConstructor, \PhpCollection\MapInterface $serializationVisitors, \PhpCollection\MapInterface $deserializationVisitors, \JMS\Serializer\EventDispatcher\EventDispatcherInterface $dispatcher = null, \JMS\Serializer\TypeParser $typeParser = null, \JMS\Serializer\Expression\ExpressionEvaluatorInterface|null $expressionEvaluator = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$factory</h4>
+                                                <code><a href="../classes/Metadata.MetadataFactoryInterface.html">\Metadata\MetadataFactoryInterface</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$handlerRegistry</h4>
+                                                <code><a href="../classes/JMS.Serializer.Handler.HandlerRegistryInterface.html">\JMS\Serializer\Handler\HandlerRegistryInterface</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$objectConstructor</h4>
+                                                <code><a href="../classes/JMS.Serializer.Construction.ObjectConstructorInterface.html">\JMS\Serializer\Construction\ObjectConstructorInterface</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$serializationVisitors</h4>
+                                                <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code><p><p>of VisitorInterface</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$deserializationVisitors</h4>
+                                                <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code><p><p>of VisitorInterface</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dispatcher</h4>
+                                                <code><a href="../classes/JMS.Serializer.EventDispatcher.EventDispatcherInterface.html">\JMS\Serializer\EventDispatcher\EventDispatcherInterface</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$typeParser</h4>
+                                                <code><a href="../classes/JMS.Serializer.TypeParser.html">\JMS\Serializer\TypeParser</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$expressionEvaluator</h4>
+                                                <code><a href="../classes/JMS.Serializer.Expression.ExpressionEvaluatorInterface.html">\JMS\Serializer\Expression\ExpressionEvaluatorInterface</a>|null</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_convertArrayObjects"></a>
+                        <div class="element clickable method private  method_convertArrayObjects" data-toggle="collapse" data-target=".method_convertArrayObjects .collapse">
+                            <h2>convertArrayObjects</h2>
+                            <pre>convertArrayObjects( $data) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$data</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_deserialize"></a>
+                        <div class="element clickable method public  method_deserialize" data-toggle="collapse" data-target=".method_deserialize .collapse">
+                            <h2>Deserializes the given data to the specified type.</h2>
+                            <pre>deserialize(string $data, string $type, string $format, \JMS\Serializer\DeserializationContext $context = null) : object|array|scalar</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$data</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$format</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$context</h4>
+                                                <code><a href="../classes/JMS.Serializer.DeserializationContext.html">\JMS\Serializer\DeserializationContext</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>object|array|scalar</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_fromArray"></a>
+                        <div class="element clickable method public  method_fromArray" data-toggle="collapse" data-target=".method_fromArray .collapse">
+                            <h2>Restores objects from an array structure.</h2>
+                            <pre>fromArray(array $data, string $type, \JMS\Serializer\DeserializationContext $context = null) : mixed</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$data</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$context</h4>
+                                                <code><a href="../classes/JMS.Serializer.DeserializationContext.html">\JMS\Serializer\DeserializationContext</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p><p>this returns whatever the passed type is, typically an object or an array of objects</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getMetadataFactory"></a>
+                        <div class="element clickable method public  method_getMetadataFactory" data-toggle="collapse" data-target=".method_getMetadataFactory .collapse">
+                            <h2>getMetadataFactory</h2>
+                            <pre>getMetadataFactory() : \Metadata\MetadataFactoryInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Metadata.MetadataFactoryInterface.html">\Metadata\MetadataFactoryInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_handleDeserializeResult"></a>
+                        <div class="element clickable method private  method_handleDeserializeResult" data-toggle="collapse" data-target=".method_handleDeserializeResult .collapse">
+                            <h2>handleDeserializeResult</h2>
+                            <pre>handleDeserializeResult( $visitorResult,  $navigatorResult) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$visitorResult</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$navigatorResult</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_serialize"></a>
+                        <div class="element clickable method public  method_serialize" data-toggle="collapse" data-target=".method_serialize .collapse">
+                            <h2>Serializes the given data to the specified output format.</h2>
+                            <pre>serialize(object|array|scalar $data, string $format, \JMS\Serializer\SerializationContext $context = null) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$data</h4>
+                                                <code>object|array|scalar</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$format</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$context</h4>
+                                                <code><a href="../classes/JMS.Serializer.SerializationContext.html">\JMS\Serializer\SerializationContext</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setDeserializationContextFactory"></a>
+                        <div class="element clickable method public  method_setDeserializationContextFactory" data-toggle="collapse" data-target=".method_setDeserializationContextFactory .collapse">
+                            <h2>setDeserializationContextFactory</h2>
+                            <pre>setDeserializationContextFactory(\JMS\Serializer\ContextFactory\DeserializationContextFactoryInterface $deserializationContextFactory) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$deserializationContextFactory</h4>
+                                                <code><a href="../classes/JMS.Serializer.ContextFactory.DeserializationContextFactoryInterface.html">\JMS\Serializer\ContextFactory\DeserializationContextFactoryInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setSerializationContextFactory"></a>
+                        <div class="element clickable method public  method_setSerializationContextFactory" data-toggle="collapse" data-target=".method_setSerializationContextFactory .collapse">
+                            <h2>setSerializationContextFactory</h2>
+                            <pre>setSerializationContextFactory(\JMS\Serializer\ContextFactory\SerializationContextFactoryInterface $serializationContextFactory) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$serializationContextFactory</h4>
+                                                <code><a href="../classes/JMS.Serializer.ContextFactory.SerializationContextFactoryInterface.html">\JMS\Serializer\ContextFactory\SerializationContextFactoryInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_toArray"></a>
+                        <div class="element clickable method public  method_toArray" data-toggle="collapse" data-target=".method_toArray .collapse">
+                            <h2>Converts objects to an array structure.</h2>
+                            <pre>toArray(mixed $data, \JMS\Serializer\SerializationContext $context = null) : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This is useful when the data needs to be passed on to other methods which expect array data.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$data</h4>
+                                                <code>mixed</code><p><p>anything that converts to an array, typically an object or an array of objects</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$context</h4>
+                                                <code><a href="../classes/JMS.Serializer.SerializationContext.html">\JMS\Serializer\SerializationContext</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visit"></a>
+                        <div class="element clickable method private  method_visit" data-toggle="collapse" data-target=".method_visit .collapse">
+                            <h2>visit</h2>
+                            <pre>visit(\JMS\Serializer\VisitorInterface $visitor, \JMS\Serializer\Context $context,  $data,  $format, array $type = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$visitor</h4>
+                                                <code><a href="../classes/JMS.Serializer.VisitorInterface.html">\JMS\Serializer\VisitorInterface</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$context</h4>
+                                                <code><a href="../classes/JMS.Serializer.Context.html">\JMS\Serializer\Context</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$data</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$format</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_factory"> </a>
+                            <div class="element clickable property  private property_factory" data-toggle="collapse" data-target=".property_factory .collapse">
+                                <h2>factory</h2>
+                                <pre>factory : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_handlerRegistry"> </a>
+                            <div class="element clickable property  private property_handlerRegistry" data-toggle="collapse" data-target=".property_handlerRegistry .collapse">
+                                <h2>handlerRegistry</h2>
+                                <pre>handlerRegistry : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_objectConstructor"> </a>
+                            <div class="element clickable property  private property_objectConstructor" data-toggle="collapse" data-target=".property_objectConstructor .collapse">
+                                <h2>objectConstructor</h2>
+                                <pre>objectConstructor : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_dispatcher"> </a>
+                            <div class="element clickable property  private property_dispatcher" data-toggle="collapse" data-target=".property_dispatcher .collapse">
+                                <h2>dispatcher</h2>
+                                <pre>dispatcher : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_typeParser"> </a>
+                            <div class="element clickable property  private property_typeParser" data-toggle="collapse" data-target=".property_typeParser .collapse">
+                                <h2>typeParser</h2>
+                                <pre>typeParser : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_serializationVisitors"> </a>
+                            <div class="element clickable property  private property_serializationVisitors" data-toggle="collapse" data-target=".property_serializationVisitors .collapse">
+                                <h2>serializationVisitors</h2>
+                                <pre>serializationVisitors : \PhpCollection\MapInterface</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_deserializationVisitors"> </a>
+                            <div class="element clickable property  private property_deserializationVisitors" data-toggle="collapse" data-target=".property_deserializationVisitors .collapse">
+                                <h2>deserializationVisitors</h2>
+                                <pre>deserializationVisitors : \PhpCollection\MapInterface</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/PhpCollection.MapInterface.html">\PhpCollection\MapInterface</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_navigator"> </a>
+                            <div class="element clickable property  private property_navigator" data-toggle="collapse" data-target=".property_navigator .collapse">
+                                <h2>navigator</h2>
+                                <pre>navigator : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_serializationContextFactory"> </a>
+                            <div class="element clickable property  private property_serializationContextFactory" data-toggle="collapse" data-target=".property_serializationContextFactory .collapse">
+                                <h2>serializationContextFactory</h2>
+                                <pre>serializationContextFactory : \JMS\Serializer\ContextFactory\SerializationContextFactoryInterface</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/JMS.Serializer.ContextFactory.SerializationContextFactoryInterface.html">\JMS\Serializer\ContextFactory\SerializationContextFactoryInterface</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_deserializationContextFactory"> </a>
+                            <div class="element clickable property  private property_deserializationContextFactory" data-toggle="collapse" data-target=".property_deserializationContextFactory .collapse">
+                                <h2>deserializationContextFactory</h2>
+                                <pre>deserializationContextFactory : \JMS\Serializer\ContextFactory\DeserializationContextFactoryInterface</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/JMS.Serializer.ContextFactory.DeserializationContextFactoryInterface.html">\JMS\Serializer\ContextFactory\DeserializationContextFactoryInterface</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\JMS\Serializer\Serializer"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/JMS.Serializer.Serializer.html">Serializer</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:44 +0000.<br/>
+    </footer>
+    </body>
+</html>

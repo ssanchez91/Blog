@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \ezcDocumentRstXhtmlBodyVisitor
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public inherited">
+        <a href="#method___construct" title="__construct :: Create visitor from RST document handler.">
+            <span class="description">Create visitor from RST document handler.</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_escapeUrl" title="escapeUrl :: Escape all special characters in URIs">
+            <span class="description">Escape all special characters in URIs</span><pre>escapeUrl</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_getAnonymousReferenceTarget" title="getAnonymousReferenceTarget :: Get anonymous reference target">
+            <span class="description">Get anonymous reference target</span><pre>getAnonymousReferenceTarget</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getErrors" title="getErrors :: Return list of errors occured during visiting the document.">
+            <span class="description">Return list of errors occured during visiting the document.</span><pre>getErrors</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getNamedExternalReference" title="getNamedExternalReference :: Return named external reference target">
+            <span class="description">Return named external reference target</span><pre>getNamedExternalReference</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_hasFootnoteTarget" title="hasFootnoteTarget :: Check for internal footnote reference target">
+            <span class="description">Check for internal footnote reference target</span><pre>hasFootnoteTarget</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_hasReferenceTarget" title="hasReferenceTarget :: Check for internal reference target">
+            <span class="description">Check for internal reference target</span><pre>hasReferenceTarget</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_nodeToString" title="nodeToString :: Transform a node tree into a string">
+            <span class="description">Transform a node tree into a string</span><pre>nodeToString</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_triggerError" title="triggerError :: Trigger visitor error">
+            <span class="description">Trigger visitor error</span><pre>triggerError</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_visit" title="visit :: Docarate RST AST">
+            <span class="description">Docarate RST AST</span><pre>visit</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                <li class="method protected inherited">
+                            <a href="#method_addFootnote" title="addFootnote :: Add footnote">
+                                <span class="description">Add footnote</span><pre>addFootnote</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method protected inherited">
+                            <a href="#method_addStylesheets" title="addStylesheets :: Add stylesheets to header">
+                                <span class="description">Add stylesheets to header</span><pre>addStylesheets</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_aggregateListItems" title="aggregateListItems :: Aggregate list items">
+                                <span class="description">Aggregate list items</span><pre>aggregateListItems</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_calculateId" title="calculateId :: Get a valid identifier string">
+                                <span class="description">Get a valid identifier string</span><pre>calculateId</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_calculateUniqueId" title="calculateUniqueId :: Calculate unique ID">
+                                <span class="description">Calculate unique ID</span><pre>calculateUniqueId</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_compareListType" title="compareListType :: Compare two list items">
+                                <span class="description">Compare two list items</span><pre>compareListType</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method protected inherited">
+                            <a href="#method_generateFootnoteReferenceLink" title="generateFootnoteReferenceLink :: Generate footnote reference link">
+                                <span class="description">Generate footnote reference link</span><pre>generateFootnoteReferenceLink</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                        <li class="method protected inherited">
+                            <a href="#method_preProcessAst" title="preProcessAst :: Pre process AST">
+                                <span class="description">Pre process AST</span><pre>preProcessAst</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_substitute" title="substitute :: Get substitution contents">
+                                <span class="description">Get substitution contents</span><pre>substitute</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_tokenListToString" title="tokenListToString :: Get string from token list.">
+                                <span class="description">Get string from token list.</span><pre>tokenListToString</pre>
+                            </a>
+                        </li>
+                                                                                                                                                        <li class="method protected inherited">
+                            <a href="#method_visitAnonymousReference" title="visitAnonymousReference :: Visit anonomyous reference node">
+                                <span class="description">Visit anonomyous reference node</span><pre>visitAnonymousReference</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitBlockquote" title="visitBlockquote :: Visit blockquotes">
+                                <span class="description">Visit blockquotes</span><pre>visitBlockquote</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitBulletList" title="visitBulletList :: Visit bullet lists">
+                                <span class="description">Visit bullet lists</span><pre>visitBulletList</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitChildren" title="visitChildren :: Visit children">
+                                <span class="description">Visit children</span><pre>visitChildren</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitComment" title="visitComment :: Visit comment">
+                                <span class="description">Visit comment</span><pre>visitComment</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitDefinitionListItem" title="visitDefinitionListItem :: Visit definition list item">
+                                <span class="description">Visit definition list item</span><pre>visitDefinitionListItem</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitDirective" title="visitDirective :: Visit directive">
+                                <span class="description">Visit directive</span><pre>visitDirective</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitEnumeratedList" title="visitEnumeratedList :: Visit enumerated lists">
+                                <span class="description">Visit enumerated lists</span><pre>visitEnumeratedList</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitExternalReference" title="visitExternalReference :: Visit external reference node">
+                                <span class="description">Visit external reference node</span><pre>visitExternalReference</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitFieldListItem" title="visitFieldListItem :: Visit field list item">
+                                <span class="description">Visit field list item</span><pre>visitFieldListItem</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitFootnote" title="visitFootnote :: Visit footnote">
+                                <span class="description">Visit footnote</span><pre>visitFootnote</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitInlineTarget" title="visitInlineTarget :: Visit inline target node">
+                                <span class="description">Visit inline target node</span><pre>visitInlineTarget</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitInternalFootnoteReference" title="visitInternalFootnoteReference :: Visit internal reference node">
+                                <span class="description">Visit internal reference node</span><pre>visitInternalFootnoteReference</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitInterpretedTextNode" title="visitInterpretedTextNode :: Visit interpreted text node markup">
+                                <span class="description">Visit interpreted text node markup</span><pre>visitInterpretedTextNode</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitLineBlock" title="visitLineBlock :: Visit line block">
+                                <span class="description">Visit line block</span><pre>visitLineBlock</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitLineBlockLine" title="visitLineBlockLine :: Visit line block line">
+                                <span class="description">Visit line block line</span><pre>visitLineBlockLine</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitNode" title="visitNode :: Visit single AST node">
+                                <span class="description">Visit single AST node</span><pre>visitNode</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitSection" title="visitSection :: Visit section node">
+                                <span class="description">Visit section node</span><pre>visitSection</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitSubstitutionReference" title="visitSubstitutionReference :: Visit substitution reference node">
+                                <span class="description">Visit substitution reference node</span><pre>visitSubstitutionReference</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitTableCell" title="visitTableCell :: Visit table cell">
+                                <span class="description">Visit table cell</span><pre>visitTableCell</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_visitText" title="visitText :: Visit text node">
+                                <span class="description">Visit text node</span><pre>visitText</pre>
+                            </a>
+                        </li>
+                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                    <li class="method private inherited">
+                            <a href="#method_addReferenceTarget" title="addReferenceTarget :: Add a reference target">
+                                <span class="description">Add a reference target</span><pre>addReferenceTarget</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                                <li class="constant ">
+                    <a href="#constant_DUBLICATE" title="DUBLICATE :: Duplicate reference target. Will throw an error on use.">
+                        <span class="description">Duplicate reference target. Will throw an error on use.</span><pre>DUBLICATE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_UNUSED" title="UNUSED :: Unused reference target">
+                        <span class="description">Unused reference target</span><pre>UNUSED</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_USED" title="USED :: Used reference target">
+                        <span class="description">Used reference target</span><pre>USED</pre>
+                    </a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ezcDocumentRstXhtmlBodyVisitor</h1>
+                <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/ezcDocumentRstXhtmlVisitor.html">\ezcDocumentRstXhtmlVisitor</a>
+                                                        </small>
+                <p class="short_description">HTML visitor for the RST AST, which only produces contents to be embedded
+somewhere into the body of an existing HTML document.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Document</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        version
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>//autogen//</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                            </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Create visitor from RST document handler.</h2>
+                            <pre>__construct(\ezcDocumentRst $document, string $path) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$document</h4>
+                                                <code><a href="../classes/ezcDocumentRst.html">\ezcDocumentRst</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addFootnote"></a>
+                        <div class="element clickable method protected  method_addFootnote inherited" data-toggle="collapse" data-target=".method_addFootnote .collapse">
+                            <h2>Add footnote</h2>
+                            <pre>addFootnote(\ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addReferenceTarget"></a>
+                        <div class="element clickable method private  method_addReferenceTarget inherited" data-toggle="collapse" data-target=".method_addReferenceTarget .collapse">
+                            <h2>Add a reference target</h2>
+                            <pre>addReferenceTarget(string $string) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addStylesheets"></a>
+                        <div class="element clickable method protected  method_addStylesheets inherited" data-toggle="collapse" data-target=".method_addStylesheets .collapse">
+                            <h2>Add stylesheets to header</h2>
+                            <pre>addStylesheets(\DOMElement $head) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$head</h4>
+                                                <code>\DOMElement</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_aggregateListItems"></a>
+                        <div class="element clickable method protected  method_aggregateListItems inherited" data-toggle="collapse" data-target=".method_aggregateListItems .collapse">
+                            <h2>Aggregate list items</h2>
+                            <pre>aggregateListItems(\ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Aggregate list items into lists. In RST there are only list items, which
+are aggregated to lists depending on their bullet type. The related list
+items are aggregated into one list.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_calculateId"></a>
+                        <div class="element clickable method protected  method_calculateId inherited" data-toggle="collapse" data-target=".method_calculateId .collapse">
+                            <h2>Get a valid identifier string</h2>
+                            <pre>calculateId(string $string) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Get a valid identifier string from an arbritrary string.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_calculateUniqueId"></a>
+                        <div class="element clickable method protected  method_calculateUniqueId inherited" data-toggle="collapse" data-target=".method_calculateUniqueId .collapse">
+                            <h2>Calculate unique ID</h2>
+                            <pre>calculateUniqueId(string $string) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Calculate a valid identifier, which is unique for this document.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_compareListType"></a>
+                        <div class="element clickable method protected  method_compareListType inherited" data-toggle="collapse" data-target=".method_compareListType .collapse">
+                            <h2>Compare two list items</h2>
+                            <pre>compareListType(\ezcDocumentRstNode $item, \ezcDocumentRstNode $lastItem) : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Check if the given list item may be a successor in the same list, as the
+last item in the list. Returns the boolean status o the check.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$item</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$lastItem</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_escapeUrl"></a>
+                        <div class="element clickable method public  method_escapeUrl inherited" data-toggle="collapse" data-target=".method_escapeUrl .collapse">
+                            <h2>Escape all special characters in URIs</h2>
+                            <pre>escapeUrl(string $url) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$url</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_generateFootnoteReferenceLink"></a>
+                        <div class="element clickable method protected  method_generateFootnoteReferenceLink inherited" data-toggle="collapse" data-target=".method_generateFootnoteReferenceLink .collapse">
+                            <h2>Generate footnote reference link</h2>
+                            <pre>generateFootnoteReferenceLink(string $name, string $number) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Generate an internal target name out of the footnote name, which may
+contain special characters, which are not allowed for URL anchors and
+are converted to alphanumeric strings by this method.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$number</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getAnonymousReferenceTarget"></a>
+                        <div class="element clickable method public  method_getAnonymousReferenceTarget inherited" data-toggle="collapse" data-target=".method_getAnonymousReferenceTarget .collapse">
+                            <h2>Get anonymous reference target</h2>
+                            <pre>getAnonymousReferenceTarget() : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Get the target URL of an anonomyous reference target.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getErrors"></a>
+                        <div class="element clickable method public  method_getErrors inherited" data-toggle="collapse" data-target=".method_getErrors .collapse">
+                            <h2>Return list of errors occured during visiting the document.</h2>
+                            <pre>getErrors() : array</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>May be an empty array, if on errors occured, or a list of
+ezcDocumentVisitException objects.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getNamedExternalReference"></a>
+                        <div class="element clickable method public  method_getNamedExternalReference inherited" data-toggle="collapse" data-target=".method_getNamedExternalReference .collapse">
+                            <h2>Return named external reference target</h2>
+                            <pre>getNamedExternalReference(string $name) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Get the target value of a named external reference.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasFootnoteTarget"></a>
+                        <div class="element clickable method public  method_hasFootnoteTarget inherited" data-toggle="collapse" data-target=".method_hasFootnoteTarget .collapse">
+                            <h2>Check for internal footnote reference target</h2>
+                            <pre>hasFootnoteTarget(string $string, \ezcDocumentRstNode $node) : \ezcDocumentRstFootnoteNode</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Returns the target name, when an internal reference target exists and
+sets it to used, and false otherwise.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ezcDocumentRstFootnoteNode.html">\ezcDocumentRstFootnoteNode</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasReferenceTarget"></a>
+                        <div class="element clickable method public  method_hasReferenceTarget inherited" data-toggle="collapse" data-target=".method_hasReferenceTarget .collapse">
+                            <h2>Check for internal reference target</h2>
+                            <pre>hasReferenceTarget(string $string, \ezcDocumentRstNode $node = null, boolean $force = false) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Returns the target name, when an internal reference target exists and
+sets it to used, and false otherwise. For duplicate reference targets
+and missing reference targets an error will be triggered.</p>
+<p>An optional third parameter may enforce the fetching of the reference,
+even if there are duplicates, so that they still can be referenced in
+some way.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$force</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_nodeToString"></a>
+                        <div class="element clickable method public  method_nodeToString inherited" data-toggle="collapse" data-target=".method_nodeToString .collapse">
+                            <h2>Transform a node tree into a string</h2>
+                            <pre>nodeToString(\ezcDocumentRstNode $node) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Transform a node tree, with all its subnodes into a string by only
+getting the textuual contents from ezcDocumentRstTextLineNode objects.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_preProcessAst"></a>
+                        <div class="element clickable method protected  method_preProcessAst inherited" data-toggle="collapse" data-target=".method_preProcessAst .collapse">
+                            <h2>Pre process AST</h2>
+                            <pre>preProcessAst(\ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Performs multiple preprocessing steps on the AST:</p>
+<p>Collect all possible reference targets in the AST to know the actual
+destianation for references while decorating. The references are stored
+in an internal structure and you may request the actual link by using
+the getReferenceTarget() method.</p>
+<p>Aggregate list items into lists. In RST there are only list items, which
+are aggregated to lists depending on their bullet type. The related list
+items are aggregated into one list.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_substitute"></a>
+                        <div class="element clickable method protected  method_substitute inherited" data-toggle="collapse" data-target=".method_substitute .collapse">
+                            <h2>Get substitution contents</h2>
+                            <pre>substitute(string $string) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_tokenListToString"></a>
+                        <div class="element clickable method protected  method_tokenListToString inherited" data-toggle="collapse" data-target=".method_tokenListToString .collapse">
+                            <h2>Get string from token list.</h2>
+                            <pre>tokenListToString(array $tokens) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$tokens</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_triggerError"></a>
+                        <div class="element clickable method public  method_triggerError inherited" data-toggle="collapse" data-target=".method_triggerError .collapse">
+                            <h2>Trigger visitor error</h2>
+                            <pre>triggerError(integer $level, string $message, string $file = null, integer $line = null, integer $position = null) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Emit a vistitor error, and convert it to an exception depending on the
+error reporting settings.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$level</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$file</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$line</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$position</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visit"></a>
+                        <div class="element clickable method public  method_visit inherited" data-toggle="collapse" data-target=".method_visit .collapse">
+                            <h2>Docarate RST AST</h2>
+                            <pre>visit(\ezcDocumentRstDocumentNode $ast) : mixed</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Visit the RST abstract syntax tree.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$ast</h4>
+                                                <code><a href="../classes/ezcDocumentRstDocumentNode.html">\ezcDocumentRstDocumentNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitAnonymousReference"></a>
+                        <div class="element clickable method protected  method_visitAnonymousReference inherited" data-toggle="collapse" data-target=".method_visitAnonymousReference .collapse">
+                            <h2>Visit anonomyous reference node</h2>
+                            <pre>visitAnonymousReference(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitBlockquote"></a>
+                        <div class="element clickable method protected  method_visitBlockquote inherited" data-toggle="collapse" data-target=".method_visitBlockquote .collapse">
+                            <h2>Visit blockquotes</h2>
+                            <pre>visitBlockquote(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitBulletList"></a>
+                        <div class="element clickable method protected  method_visitBulletList inherited" data-toggle="collapse" data-target=".method_visitBulletList .collapse">
+                            <h2>Visit bullet lists</h2>
+                            <pre>visitBulletList(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitChildren"></a>
+                        <div class="element clickable method protected  method_visitChildren inherited" data-toggle="collapse" data-target=".method_visitChildren .collapse">
+                            <h2>Visit children</h2>
+                            <pre>visitChildren(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Just recurse into node and visit its children, ignoring the actual
+node.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitComment"></a>
+                        <div class="element clickable method protected  method_visitComment inherited" data-toggle="collapse" data-target=".method_visitComment .collapse">
+                            <h2>Visit comment</h2>
+                            <pre>visitComment(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitDefinitionListItem"></a>
+                        <div class="element clickable method protected  method_visitDefinitionListItem inherited" data-toggle="collapse" data-target=".method_visitDefinitionListItem .collapse">
+                            <h2>Visit definition list item</h2>
+                            <pre>visitDefinitionListItem(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitDirective"></a>
+                        <div class="element clickable method protected  method_visitDirective inherited" data-toggle="collapse" data-target=".method_visitDirective .collapse">
+                            <h2>Visit directive</h2>
+                            <pre>visitDirective(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitEnumeratedList"></a>
+                        <div class="element clickable method protected  method_visitEnumeratedList inherited" data-toggle="collapse" data-target=".method_visitEnumeratedList .collapse">
+                            <h2>Visit enumerated lists</h2>
+                            <pre>visitEnumeratedList(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitExternalReference"></a>
+                        <div class="element clickable method protected  method_visitExternalReference inherited" data-toggle="collapse" data-target=".method_visitExternalReference .collapse">
+                            <h2>Visit external reference node</h2>
+                            <pre>visitExternalReference(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitFieldListItem"></a>
+                        <div class="element clickable method protected  method_visitFieldListItem inherited" data-toggle="collapse" data-target=".method_visitFieldListItem .collapse">
+                            <h2>Visit field list item</h2>
+                            <pre>visitFieldListItem(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitFootnote"></a>
+                        <div class="element clickable method protected  method_visitFootnote inherited" data-toggle="collapse" data-target=".method_visitFootnote .collapse">
+                            <h2>Visit footnote</h2>
+                            <pre>visitFootnote(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitInlineTarget"></a>
+                        <div class="element clickable method protected  method_visitInlineTarget inherited" data-toggle="collapse" data-target=".method_visitInlineTarget .collapse">
+                            <h2>Visit inline target node</h2>
+                            <pre>visitInlineTarget(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitInternalFootnoteReference"></a>
+                        <div class="element clickable method protected  method_visitInternalFootnoteReference inherited" data-toggle="collapse" data-target=".method_visitInternalFootnoteReference .collapse">
+                            <h2>Visit internal reference node</h2>
+                            <pre>visitInternalFootnoteReference(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitInterpretedTextNode"></a>
+                        <div class="element clickable method protected  method_visitInterpretedTextNode inherited" data-toggle="collapse" data-target=".method_visitInterpretedTextNode .collapse">
+                            <h2>Visit interpreted text node markup</h2>
+                            <pre>visitInterpretedTextNode(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitLineBlock"></a>
+                        <div class="element clickable method protected  method_visitLineBlock inherited" data-toggle="collapse" data-target=".method_visitLineBlock .collapse">
+                            <h2>Visit line block</h2>
+                            <pre>visitLineBlock(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitLineBlockLine"></a>
+                        <div class="element clickable method protected  method_visitLineBlockLine inherited" data-toggle="collapse" data-target=".method_visitLineBlockLine .collapse">
+                            <h2>Visit line block line</h2>
+                            <pre>visitLineBlockLine(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitNode"></a>
+                        <div class="element clickable method protected  method_visitNode inherited" data-toggle="collapse" data-target=".method_visitNode .collapse">
+                            <h2>Visit single AST node</h2>
+                            <pre>visitNode(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Visit a single AST node, may be called for each node found anywhere
+as child. The current position in the DOMDocument is passed by a
+reference to the current DOMNode, which is operated on.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitSection"></a>
+                        <div class="element clickable method protected  method_visitSection inherited" data-toggle="collapse" data-target=".method_visitSection .collapse">
+                            <h2>Visit section node</h2>
+                            <pre>visitSection(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitSubstitutionReference"></a>
+                        <div class="element clickable method protected  method_visitSubstitutionReference inherited" data-toggle="collapse" data-target=".method_visitSubstitutionReference .collapse">
+                            <h2>Visit substitution reference node</h2>
+                            <pre>visitSubstitutionReference(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitTableCell"></a>
+                        <div class="element clickable method protected  method_visitTableCell inherited" data-toggle="collapse" data-target=".method_visitTableCell .collapse">
+                            <h2>Visit table cell</h2>
+                            <pre>visitTableCell(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_visitText"></a>
+                        <div class="element clickable method protected  method_visitText inherited" data-toggle="collapse" data-target=".method_visitText .collapse">
+                            <h2>Visit text node</h2>
+                            <pre>visitText(\DOMNode $root, \ezcDocumentRstNode $node) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$root</h4>
+                                                <code>\DOMNode</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                                    <a id="constant_UNUSED"> </a>
+                            <div class="element clickable constant  constant_UNUSED inherited" data-toggle="collapse" data-target=".constant_UNUSED .collapse">
+                                <h2>Unused reference target</h2>
+                                <pre>UNUSED</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_USED"> </a>
+                            <div class="element clickable constant  constant_USED inherited" data-toggle="collapse" data-target=".constant_USED .collapse">
+                                <h2>Used reference target</h2>
+                                <pre>USED</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_DUBLICATE"> </a>
+                            <div class="element clickable constant  constant_DUBLICATE inherited" data-toggle="collapse" data-target=".constant_DUBLICATE .collapse">
+                                <h2>Duplicate reference target. Will throw an error on use.</h2>
+                                <pre>DUBLICATE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_complexVisitMapping"> </a>
+                            <div class="element clickable property  protected property_complexVisitMapping inherited" data-toggle="collapse" data-target=".property_complexVisitMapping .collapse">
+                                <h2>Mapping of class names to internal visitors for the respective nodes.</h2>
+                                <pre>complexVisitMapping : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_simpleVisitMapping"> </a>
+                            <div class="element clickable property  protected property_simpleVisitMapping inherited" data-toggle="collapse" data-target=".property_simpleVisitMapping .collapse">
+                                <h2>Direct mapping of AST node class names to docbook element names.</h2>
+                                <pre>simpleVisitMapping : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_skipNodes"> </a>
+                            <div class="element clickable property  protected property_skipNodes inherited" data-toggle="collapse" data-target=".property_skipNodes .collapse">
+                                <h2>Array with nodes, which can be ignored during the transformation
+process, they only provide additional information during preprocessing.</h2>
+                                <pre>skipNodes : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_document"> </a>
+                            <div class="element clickable property  protected property_document inherited" data-toggle="collapse" data-target=".property_document .collapse">
+                                <h2>DOM document</h2>
+                                <pre>document : \DOMDocument</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\DOMDocument</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_head"> </a>
+                            <div class="element clickable property  protected property_head inherited" data-toggle="collapse" data-target=".property_head .collapse">
+                                <h2>Reference to head node</h2>
+                                <pre>head : \DOMElement</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\DOMElement</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_depth"> </a>
+                            <div class="element clickable property  protected property_depth inherited" data-toggle="collapse" data-target=".property_depth .collapse">
+                                <h2>Current depth in document.</h2>
+                                <pre>depth : integer</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_options"> </a>
+                            <div class="element clickable property  protected property_options inherited" data-toggle="collapse" data-target=".property_options .collapse">
+                                <h2>HTML rendering options</h2>
+                                <pre>options : \ezcDocumentHtmlConverterOptions</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/ezcDocumentHtmlConverterOptions.html">\ezcDocumentHtmlConverterOptions</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_rst"> </a>
+                            <div class="element clickable property  protected property_rst inherited" data-toggle="collapse" data-target=".property_rst .collapse">
+                                <h2>RST document handler</h2>
+                                <pre>rst : \ezcDocumentRst</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/ezcDocumentRst.html">\ezcDocumentRst</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_ast"> </a>
+                            <div class="element clickable property  protected property_ast inherited" data-toggle="collapse" data-target=".property_ast .collapse">
+                                <h2>Reference to the AST root node.</h2>
+                                <pre>ast : \ezcDocumentRstDocumentNode</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/ezcDocumentRstDocumentNode.html">\ezcDocumentRstDocumentNode</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_path"> </a>
+                            <div class="element clickable property  protected property_path inherited" data-toggle="collapse" data-target=".property_path .collapse">
+                                <h2>Location of the currently processed RST file, relevant for inclusion.</h2>
+                                <pre>path : string</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_references"> </a>
+                            <div class="element clickable property  protected property_references inherited" data-toggle="collapse" data-target=".property_references .collapse">
+                                <h2>Collected refrence targets.</h2>
+                                <pre>references : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_referenceCounter"> </a>
+                            <div class="element clickable property  protected property_referenceCounter inherited" data-toggle="collapse" data-target=".property_referenceCounter .collapse">
+                                <h2>Counter of duplicate references for duplicate references.</h2>
+                                <pre>referenceCounter : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_namedExternalReferences"> </a>
+                            <div class="element clickable property  protected property_namedExternalReferences inherited" data-toggle="collapse" data-target=".property_namedExternalReferences .collapse">
+                                <h2>Collected named external reference targets</h2>
+                                <pre>namedExternalReferences : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_anonymousReferences"> </a>
+                            <div class="element clickable property  protected property_anonymousReferences inherited" data-toggle="collapse" data-target=".property_anonymousReferences .collapse">
+                                <h2>Collected anonymous externals reference targets</h2>
+                                <pre>anonymousReferences : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_anonymousReferenceCounter"> </a>
+                            <div class="element clickable property  protected property_anonymousReferenceCounter inherited" data-toggle="collapse" data-target=".property_anonymousReferenceCounter .collapse">
+                                <h2>Index of last requested anonymous reference target.</h2>
+                                <pre>anonymousReferenceCounter : integer</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_substitutions"> </a>
+                            <div class="element clickable property  protected property_substitutions inherited" data-toggle="collapse" data-target=".property_substitutions .collapse">
+                                <h2>Collected substitutions.</h2>
+                                <pre>substitutions : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_footnotes"> </a>
+                            <div class="element clickable property  protected property_footnotes inherited" data-toggle="collapse" data-target=".property_footnotes .collapse">
+                                <h2>List with footnotes for later rendering.</h2>
+                                <pre>footnotes : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_footnoteCounter"> </a>
+                            <div class="element clickable property  protected property_footnoteCounter inherited" data-toggle="collapse" data-target=".property_footnoteCounter .collapse">
+                                <h2>Label dependant foot note counters for footnote auto enumeration.</h2>
+                                <pre>footnoteCounter : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_footnoteSymbols"> </a>
+                            <div class="element clickable property  protected property_footnoteSymbols inherited" data-toggle="collapse" data-target=".property_footnoteSymbols .collapse">
+                                <h2>Foot note symbol signs, as defined at
+http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#auto-symbol-footnotes</h2>
+                                <pre>footnoteSymbols : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_errors"> </a>
+                            <div class="element clickable property  protected property_errors inherited" data-toggle="collapse" data-target=".property_errors .collapse">
+                                <h2>Aggregated minor errors during document processing.</h2>
+                                <pre>errors : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_usedIDs"> </a>
+                            <div class="element clickable property  protected property_usedIDs inherited" data-toggle="collapse" data-target=".property_usedIDs .collapse">
+                                <h2>Array of already generated IDs, so none will be used twice.</h2>
+                                <pre>usedIDs : array</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\ezcDocumentRstXhtmlBodyVisitor"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/default.html">\</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/ezcDocumentRstXhtmlBodyVisitor.html">ezcDocumentRstXhtmlBodyVisitor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:43 +0000.<br/>
+    </footer>
+    </body>
+</html>

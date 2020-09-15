@@ -13,12 +13,19 @@ use App\Framework\Exception\PageNotFoundException;
 use App\Model\Entity\Alert;
 use App\Model\Entity\Comment;
 
+/**
+ * Class CommentController
+ *
+ * @package App\Controller
+ */
 class CommentController extends BaseController
 {
     /**
-     * @param $description
-     * @param $userId
-     * @param $postId
+     * Method listComment
+     *
+     * @param string $description Content of comment.
+     * @param int $userId User Id
+     * @param int $postId Post Id
      * @throws \Exception
      */
     public function addCommentAction($description, $userId, $postId)
@@ -42,9 +49,11 @@ class CommentController extends BaseController
     }
 
     /**
-     * @param int $page
-     * @throws PageNotFoundException
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method listComment
+     *
+     * @param int $page Page number asked
+     * @throws PageNotFoundException The page number X is not found ! The number of pages is Y.
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function listCommentAction($page = 1)
     {
@@ -62,8 +71,10 @@ class CommentController extends BaseController
     }
 
     /**
-     * @param $id
-     * @param $state
+     * Method publishComment
+     *
+     * @param int $id Comment Id
+     * @param string $state State of comment (publish - ban)
      * @throws \Exception
      */
     public function publishCommentAction($id, $state)
@@ -77,6 +88,12 @@ class CommentController extends BaseController
         }
     }
 
+    /**
+     * Method deleteComment
+     *
+     * @param int $id Comment Id
+     * @throws \Exception
+     */
     public function deleteCommentAction($id)
     {
         try {

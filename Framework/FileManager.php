@@ -8,28 +8,61 @@
 
 namespace App\Framework;
 
-
+/**
+ * Class FileManager
+ *
+ * @package App\Framework
+ */
 class FileManager
 {
+    /**
+     * Varaiable listCssFile
+     *
+     * @var array
+     */
     private $listCssFile;
+
+    /**
+     * Variable $listJsFile
+     *
+     * @var array
+     */
     private $listJsFile;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         $this->listCssFile = array();
         $this->listJsFile = array();
     }
 
+    /**
+     * Method addCssFile
+     *
+     * @param string $file css file
+     */
     public function addCssFile($file)
     {
         $this->listCssFile[] = $file;
     }
 
+    /**
+     * Method addJsFile
+     *
+     * @param string $file Js file
+     */
     public function addJsFile($file)
     {
         $this->listJsFile[] = $file;
     }
 
+    /**
+     * Method generateCss
+     *
+     * @return string
+     */
     public function generateCss()
     {
         $cssContent = '';
@@ -39,6 +72,11 @@ class FileManager
         return $cssContent;
     }
 
+    /**
+     * Method generateJs
+     *
+     * @return string
+     */
     public function generateJs()
     {
         $jsContent = '';

@@ -13,21 +13,75 @@ use App\Framework\Exception\NoViewFoundException;
 use App\Model\Entity\Role;
 use App\Model\Manager\RoleManager;
 
+/**
+ * Class BaseController
+ *
+ * @package App\Framework
+ */
 class BaseController
 {
     /**
+     * HttpRequest Object
+     *
      * @var HttpRequest
      */
     protected $httpRequest;
+
+    /**
+     * List of param
+     *
+     * @var array
+     */
     private $param;
+
+    /**
+     * Config Json File
+     *
+     * @var mixed
+     */
     private $config;
+
+    /**
+     * FileManager Object
+     *
+     * @var FileManager
+     */
     protected $fileManager;
+
+    /**
+     * MailManager Object
+     *
+     * @var MailManager
+     */
     protected $mailManager;
+
+    /**
+     * AlertManager Object
+     *
+     * @var AlertManager
+     */
     protected $alertManager;
+
+    /**
+     * Variable manager
+     *
+     * @var
+     */
     protected $manager;
+
+    /**
+     * Variable User
+     *
+     * @var
+     */
     protected $user;
 
-
+    /**
+     * Constructor
+     *
+     * @param HttpRequest $httpRequest Content HttpRequest Object
+     * @param object $config Config Json File
+     */
     public function __construct(HttpRequest $httpRequest, $config)
     {
         $this->httpRequest = $httpRequest;
@@ -53,6 +107,16 @@ class BaseController
         }
     }
 
+    /**
+     * Method view
+     *
+     * Display asked view
+     *
+     * @param string $filename filename of the view
+     * @param bool|false $partial if you want include partial view
+     * @param bool|false $shared if you want include shared view
+     * @throws NoViewFoundException No view found with this name
+     */
     protected function view($filename, $partial = false, $shared = false)
     {
         $this->loadCssAndJsFile($filename);
@@ -78,16 +142,34 @@ class BaseController
         }
     }
 
+    /**
+     * Method partialView
+     *
+     * @param string $filename filename of the view
+     * @throws NoViewFoundException No view found with this name
+     */
     public function partialView($filename)
     {
         $this->view($filename, true);
     }
 
+    /**
+     * Method sharedView
+     *
+     * @param string $filename filename of the shared view
+     * @param string $directory folder of this view
+     * @throws NoViewFoundException No view found with this name
+     */
     public function sharedView($filename, $directory)
     {
         $this->view($directory . '/' . $filename, true, true);
     }
 
+    /**
+     * Method loadCssAndJsFile
+     *
+     * @param string $filename filename of the js or css file to load
+     */
     public function loadCssAndJsFile($filename)
     {
         $listExt = ['css', 'js'];
@@ -98,6 +180,11 @@ class BaseController
         }
     }
 
+    /**
+     * Method BindManager
+     *
+     * Allow to instance manager
+     */
     public function bindManager()
     {
         foreach ($this->httpRequest->getRoute()->getManager() as $manager) {
@@ -108,26 +195,52 @@ class BaseController
         }
     }
 
+    /**
+     * Method addParam
+     *
+     * @param string $key Key of array
+     * @param string $value value or array
+     */
     public function addParam($key, $value)
     {
         $this->param[$key] = $value;
     }
 
+    /**
+     * Method addCss
+     *
+     * @param mixed $file Add css File
+     */
     public function addCss($file)
     {
         $this->fileManager->addCssFile($file);
     }
 
+    /**
+     * Method addJs
+     *
+     * @param mixed $file Add js file
+     */
     public function addJs($file)
     {
         $this->fileManager->addJsFile($file);
     }
 
+    /**
+     * Method setUser
+     *
+     * @param \App\Model\Entity\User $user User Object
+     */
     public function setUser($user)
     {
         $this->user = $user;
     }
 
+    /**
+     * Method getConfig
+     *
+     * @return mixed
+     */
     public function getConfig()
     {
         return $this->config;

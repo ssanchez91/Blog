@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \phpDocumentor\Descriptor
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/phpDocumentor.Descriptor.html" title="Descriptor">
+                    <i class="icon-th"></i> Descriptor
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Builder.html" title="Builder">
+            <i class="icon-th"></i> Builder
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Builder.Reflector.html" title="Reflector">
+            <i class="icon-th"></i> Reflector
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Builder.Reflector.Tags.html" title="Tags">
+            <i class="icon-th"></i> Tags
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Cache.html" title="Cache">
+            <i class="icon-th"></i> Cache
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Example.html" title="Example">
+            <i class="icon-th"></i> Example
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Exception.html" title="Exception">
+            <i class="icon-th"></i> Exception
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Filter.html" title="Filter">
+            <i class="icon-th"></i> Filter
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Interfaces.html" title="Interfaces">
+            <i class="icon-th"></i> Interfaces
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.ProjectDescriptor.html" title="ProjectDescriptor">
+            <i class="icon-th"></i> ProjectDescriptor
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Tag.html" title="Tag">
+            <i class="icon-th"></i> Tag
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Tag.BaseTypes.html" title="BaseTypes">
+            <i class="icon-th"></i> BaseTypes
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Type.html" title="Type">
+            <i class="icon-th"></i> Type
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Descriptor.Validator.html" title="Validator">
+            <i class="icon-th"></i> Validator
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ArgumentDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ArgumentDescriptor .collapse">
+        <h1>ArgumentDescriptor<a href="../classes/phpDocumentor.Descriptor.ArgumentDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a single Argument of a method or function.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.ArgumentDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ClassDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ClassDescriptor .collapse">
+        <h1>ClassDescriptor<a href="../classes/phpDocumentor.Descriptor.ClassDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a Class.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.ClassDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Collection" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Collection .collapse">
+        <h1>Collection<a href="../classes/phpDocumentor.Descriptor.Collection.html">¶</a></h1>
+        <p class="short_description">Represents an easily accessible collection of elements.</p>
+        <div class="details collapse">
+                            <p>The goal for this class is to allow Descriptors to be easily retrieved and set so that interaction in
+templates becomes easier.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Collection.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstantDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstantDescriptor .collapse">
+        <h1>ConstantDescriptor<a href="../classes/phpDocumentor.Descriptor.ConstantDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a constant</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.ConstantDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DescriptorAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DescriptorAbstract .collapse">
+        <h1>DescriptorAbstract<a href="../classes/phpDocumentor.Descriptor.DescriptorAbstract.html">¶</a></h1>
+        <p class="short_description">Base class for descriptors containing the most used options.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.DescriptorAbstract.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FileDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FileDescriptor .collapse">
+        <h1>FileDescriptor<a href="../classes/phpDocumentor.Descriptor.FileDescriptor.html">¶</a></h1>
+        <p class="short_description">Represents a file in the project.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.FileDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FunctionDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FunctionDescriptor .collapse">
+        <h1>FunctionDescriptor<a href="../classes/phpDocumentor.Descriptor.FunctionDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a function.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.FunctionDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InterfaceDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InterfaceDescriptor .collapse">
+        <h1>InterfaceDescriptor<a href="../classes/phpDocumentor.Descriptor.InterfaceDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing an Interface.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.InterfaceDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodDescriptor .collapse">
+        <h1>MethodDescriptor<a href="../classes/phpDocumentor.Descriptor.MethodDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a Method in a Class, Interface or Trait.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.MethodDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NamespaceDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NamespaceDescriptor .collapse">
+        <h1>NamespaceDescriptor<a href="../classes/phpDocumentor.Descriptor.NamespaceDescriptor.html">¶</a></h1>
+        <p class="short_description">Represents a namespace and its children for a project.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.NamespaceDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PackageDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PackageDescriptor .collapse">
+        <h1>PackageDescriptor<a href="../classes/phpDocumentor.Descriptor.PackageDescriptor.html">¶</a></h1>
+        <p class="short_description">Represents the package for a class, trait, interface or file.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.PackageDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ProjectAnalyzer" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ProjectAnalyzer .collapse">
+        <h1>ProjectAnalyzer<a href="../classes/phpDocumentor.Descriptor.ProjectAnalyzer.html">¶</a></h1>
+        <p class="short_description">Analyzes a Project Descriptor and collects key information.</p>
+        <div class="details collapse">
+                            <p>This class can be used by external tools to analyze the Project Descriptor and collect key information from it such
+as the total number of elements per type of Descriptor, the number of top level namespaces or the number of parent
+classes that could not be interpreted by the Compiler passes.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.ProjectAnalyzer.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ProjectDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ProjectDescriptor .collapse">
+        <h1>ProjectDescriptor<a href="../classes/phpDocumentor.Descriptor.ProjectDescriptor.html">¶</a></h1>
+        <p class="short_description">Represents the entire project with its files, namespaces and indexes.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.ProjectDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ProjectDescriptorBuilder" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ProjectDescriptorBuilder .collapse">
+        <h1>ProjectDescriptorBuilder<a href="../classes/phpDocumentor.Descriptor.ProjectDescriptorBuilder.html">¶</a></h1>
+        <p class="short_description">Builds a Project Descriptor and underlying tree.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.ProjectDescriptorBuilder.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyDescriptor .collapse">
+        <h1>PropertyDescriptor<a href="../classes/phpDocumentor.Descriptor.PropertyDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a property.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.PropertyDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceProvider" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceProvider .collapse">
+        <h1>ServiceProvider<a href="../classes/phpDocumentor.Descriptor.ServiceProvider.html">¶</a></h1>
+        <p class="short_description">This provider is responsible for registering the Descriptor component with the given Application.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.ServiceProvider.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TagDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TagDescriptor .collapse">
+        <h1>TagDescriptor<a href="../classes/phpDocumentor.Descriptor.TagDescriptor.html">¶</a></h1>
+        <p class="short_description">Base class for any tag descriptor and used when a tag has no specific descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.TagDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TraitDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TraitDescriptor .collapse">
+        <h1>TraitDescriptor<a href="../classes/phpDocumentor.Descriptor.TraitDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a Trait.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.TraitDescriptor.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Builder.html">Builder</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_AssemblerInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_AssemblerInterface .collapse">
+        <h1>AssemblerInterface<a href="../classes/phpDocumentor.Descriptor.Builder.AssemblerInterface.html">¶</a></h1>
+        <p class="short_description">Interface for Assembler classes that transform data to specific Descriptor types.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.AssemblerInterface.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_AssemblerAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AssemblerAbstract .collapse">
+        <h1>AssemblerAbstract<a href="../classes/phpDocumentor.Descriptor.Builder.AssemblerAbstract.html">¶</a></h1>
+        <p class="short_description">Base class for all assemblers.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.AssemblerAbstract.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AssemblerFactory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AssemblerFactory .collapse">
+        <h1>AssemblerFactory<a href="../classes/phpDocumentor.Descriptor.Builder.AssemblerFactory.html">¶</a></h1>
+        <p class="short_description">Attempts to retrieve an Assembler for the provided criteria.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.AssemblerFactory.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Builder.html">Builder</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Builder.Reflector.html">Reflector</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ArgumentAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ArgumentAssembler .collapse">
+        <h1>ArgumentAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.ArgumentAssembler.html">¶</a></h1>
+        <p class="short_description">Assembles an ArgumentDescriptor using an ArgumentReflector and ParamDescriptors.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.ArgumentAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AssemblerAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AssemblerAbstract .collapse">
+        <h1>AssemblerAbstract<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.AssemblerAbstract.html">¶</a></h1>
+        <p class="short_description">Base class for all assemblers.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.AssemblerAbstract.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ClassAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ClassAssembler .collapse">
+        <h1>ClassAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.ClassAssembler.html">¶</a></h1>
+        <p class="short_description">Assembles an ClassDescriptor using an ClassReflector.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.ClassAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstantAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstantAssembler .collapse">
+        <h1>ConstantAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.ConstantAssembler.html">¶</a></h1>
+        <p class="short_description">Assembles a ConstantDescriptor from a ConstantReflector.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.ConstantAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FileAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FileAssembler .collapse">
+        <h1>FileAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.FileAssembler.html">¶</a></h1>
+        <p class="short_description">Assembles an FileDescriptor using an FileReflector and ParamDescriptors.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.FileAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FunctionAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FunctionAssembler .collapse">
+        <h1>FunctionAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.FunctionAssembler.html">¶</a></h1>
+        <p class="short_description">Assembles a FunctionDescriptor from a FunctionReflector.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.FunctionAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InterfaceAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InterfaceAssembler .collapse">
+        <h1>InterfaceAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.InterfaceAssembler.html">¶</a></h1>
+        <p class="short_description">Assembles an InterfaceDescriptor using an InterfaceReflector.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.InterfaceAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodAssembler .collapse">
+        <h1>MethodAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.MethodAssembler.html">¶</a></h1>
+        <p class="short_description">Assembles a MethodDescriptor from a MethodReflector.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.MethodAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyAssembler .collapse">
+        <h1>PropertyAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.PropertyAssembler.html">¶</a></h1>
+        <p class="short_description">Assembles a PropertyDescriptor from a PropertyReflector.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.PropertyAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TraitAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TraitAssembler .collapse">
+        <h1>TraitAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.TraitAssembler.html">¶</a></h1>
+        <p class="short_description">Assembles an TraitDescriptor using an TraitReflector.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.TraitAssembler.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Builder.html">Builder</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Builder.Reflector.html">Reflector</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Builder.Reflector.Tags.html">Tags</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AuthorAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AuthorAssembler .collapse">
+        <h1>AuthorAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.AuthorAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@author` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@author</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.AuthorDescriptor.html">\phpDocumentor\Descriptor\Tag\AuthorDescriptor</a> object
+that can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.AuthorAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DeprecatedAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DeprecatedAssembler .collapse">
+        <h1>DeprecatedAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.DeprecatedAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@deprecated` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@deprecated</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.DeprecatedDescriptor.html">\phpDocumentor\Descriptor\Tag\DeprecatedDescriptor</a>
+object that can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.DeprecatedAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ExampleAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ExampleAssembler .collapse">
+        <h1>ExampleAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ExampleAssembler.html">¶</a></h1>
+        <p class="short_description">This class collects data from the example tag definition of the Reflection library, tries to find the correlating
+example file on disk and creates a complete Descriptor from that.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ExampleAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GenericTagAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GenericTagAssembler .collapse">
+        <h1>GenericTagAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.GenericTagAssembler.html">¶</a></h1>
+        <p class="short_description">Base class for all assemblers.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.GenericTagAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LinkAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LinkAssembler .collapse">
+        <h1>LinkAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.LinkAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@link` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@link</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.LinkDescriptor.html">\phpDocumentor\Descriptor\Tag\LinkDescriptor</a> object that
+can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.LinkAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodAssembler .collapse">
+        <h1>MethodAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.MethodAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@method` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@method</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.MethodDescriptor.html">\phpDocumentor\Descriptor\Tag\MethodDescriptor</a> object
+that can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.MethodAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ParamAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ParamAssembler .collapse">
+        <h1>ParamAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ParamAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@param` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@param</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.ParamDescriptor.html">\phpDocumentor\Descriptor\Tag\ParamDescriptor</a> object that
+can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ParamAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyAssembler .collapse">
+        <h1>PropertyAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.PropertyAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@property` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@property</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.PropertyDescriptor.html">\phpDocumentor\Descriptor\Tag\PropertyDescriptor</a>
+object that can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.PropertyAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ReturnAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ReturnAssembler .collapse">
+        <h1>ReturnAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ReturnAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@return` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@return</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.ReturnDescriptor.html">\phpDocumentor\Descriptor\Tag\ReturnDescriptor</a> object
+that can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ReturnAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SeeAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SeeAssembler .collapse">
+        <h1>SeeAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.SeeAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new Descriptor from a Reflector object for the `@see` tag.</p>
+        <div class="details collapse">
+                            <p>This class will gather the properties that were parsed by the Reflection mechanism for, specifically, an <code>@see</code> tag
+and use that to create a SeeDescriptor that describes all properties that an <code>@see</code> tag may have.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.SeeAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SinceAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SinceAssembler .collapse">
+        <h1>SinceAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.SinceAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@since` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@since</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.SinceDescriptor.html">\phpDocumentor\Descriptor\Tag\SinceDescriptor</a> object that
+can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.SinceAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ThrowsAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ThrowsAssembler .collapse">
+        <h1>ThrowsAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ThrowsAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@throws` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@throws</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.ThrowsDescriptor.html">\phpDocumentor\Descriptor\Tag\ThrowsDescriptor</a> object
+that can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ThrowsAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TypeCollectionAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TypeCollectionAssembler .collapse">
+        <h1>TypeCollectionAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.TypeCollectionAssembler.html">¶</a></h1>
+        <p class="short_description">Creates a Collection of type-related value objects for the given Type Collection from the Reflector.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.TypeCollectionAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_UsesAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_UsesAssembler .collapse">
+        <h1>UsesAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.UsesAssembler.html">¶</a></h1>
+        <p class="short_description">Base class for all assemblers.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.UsesAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VarAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VarAssembler .collapse">
+        <h1>VarAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.VarAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@var` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@var</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.VarDescriptor.html">\phpDocumentor\Descriptor\Tag\VarDescriptor</a> object that
+can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.VarAssembler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VersionAssembler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VersionAssembler .collapse">
+        <h1>VersionAssembler<a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.VersionAssembler.html">¶</a></h1>
+        <p class="short_description">Constructs a new descriptor from the Reflector for an `@version` tag.</p>
+        <div class="details collapse">
+                            <p>This object will read the reflected information for the <code>@version</code> tag and create a <a href="../classes/phpDocumentor.Descriptor.Tag.VersionDescriptor.html">\phpDocumentor\Descriptor\Tag\VersionDescriptor</a> object
+that can be used in the rest of the application and templates.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.VersionAssembler.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Cache.html">Cache</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ProjectDescriptorMapper" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ProjectDescriptorMapper .collapse">
+        <h1>ProjectDescriptorMapper<a href="../classes/phpDocumentor.Descriptor.Cache.ProjectDescriptorMapper.html">¶</a></h1>
+        <p class="short_description">Maps a projectDescriptor to and from a cache instance.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Cache.ProjectDescriptorMapper.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Filter.html">Filter</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_Filterable" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_Filterable .collapse">
+        <h1>Filterable<a href="../classes/phpDocumentor.Descriptor.Filter.Filterable.html">¶</a></h1>
+        <p class="short_description">Interface to determine which elements can be filtered and to provide a way to set errors on the descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Filter.Filterable.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_ClassFactory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ClassFactory .collapse">
+        <h1>ClassFactory<a href="../classes/phpDocumentor.Descriptor.Filter.ClassFactory.html">¶</a></h1>
+        <p class="short_description">Retrieves a series of filters to manipulate a specific Descriptor with during building.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Filter.ClassFactory.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Filter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Filter .collapse">
+        <h1>Filter<a href="../classes/phpDocumentor.Descriptor.Filter.Filter.html">¶</a></h1>
+        <p class="short_description">Filter used to manipulate a descriptor after being build.</p>
+        <div class="details collapse">
+                            <p>This class is used during the building of descriptors. It passes the descriptor to each individual sub-filter, which
+may change data in the descriptor or even remove it from the building process by returning null.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Filter.Filter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_StripIgnore" class="element ajax clickable class" data-toggle="collapse" data-target="#class_StripIgnore .collapse">
+        <h1>StripIgnore<a href="../classes/phpDocumentor.Descriptor.Filter.StripIgnore.html">¶</a></h1>
+        <p class="short_description">Strips any Descriptor if the ignore tag is present with that element.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Filter.StripIgnore.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_StripInternal" class="element ajax clickable class" data-toggle="collapse" data-target="#class_StripInternal .collapse">
+        <h1>StripInternal<a href="../classes/phpDocumentor.Descriptor.Filter.StripInternal.html">¶</a></h1>
+        <p class="short_description">Filters a Descriptor when the @internal inline tag, or normal tag, is used.</p>
+        <div class="details collapse">
+                            <p>When a Descriptor's description contains the inline tag @internal then the description of that tag should be
+included only when the visibility allows INTERNAL information. Otherwise it needs to be removed.</p>
+<p>Similarly, whenever the normal @internal tag is used should this filter return null if the visibility does not allow
+INTERNAL information. This will remove this descriptor from the project.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Filter.StripInternal.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_StripOnVisibility" class="element ajax clickable class" data-toggle="collapse" data-target="#class_StripOnVisibility .collapse">
+        <h1>StripOnVisibility<a href="../classes/phpDocumentor.Descriptor.Filter.StripOnVisibility.html">¶</a></h1>
+        <p class="short_description">Strips any Descriptor if their visibility is allowed according to the ProjectDescriptorBuilder.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Filter.StripOnVisibility.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Interfaces.html">Interfaces</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_ArgumentInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ArgumentInterface .collapse">
+        <h1>ArgumentInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.ArgumentInterface.html">¶</a></h1>
+        <p class="short_description">Describes the public interface for a descriptor of an Argument.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.ArgumentInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ChildInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ChildInterface .collapse">
+        <h1>ChildInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.ChildInterface.html">¶</a></h1>
+        <p class="short_description">Describes the public interface for any descriptor that is the child is another.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.ChildInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ClassInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ClassInterface .collapse">
+        <h1>ClassInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.ClassInterface.html">¶</a></h1>
+        <p class="short_description">Common interface representing the description of a class.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.ClassInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ConstantInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ConstantInterface .collapse">
+        <h1>ConstantInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.ConstantInterface.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a constant on a class, trait, property or file.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.ConstantInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ContainerInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ContainerInterface .collapse">
+        <h1>ContainerInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.ContainerInterface.html">¶</a></h1>
+        <p class="short_description">Interface representing the common interface for all elements that can contain sub-elements.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.ContainerInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ElementInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ElementInterface .collapse">
+        <h1>ElementInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.ElementInterface.html">¶</a></h1>
+        <p class="short_description">Represents the public interface to which all descriptors should be held.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.ElementInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_FileInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_FileInterface .collapse">
+        <h1>FileInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.FileInterface.html">¶</a></h1>
+        <p class="short_description">Describes the public interface for a description of a File.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.FileInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_FunctionInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_FunctionInterface .collapse">
+        <h1>FunctionInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.FunctionInterface.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a global function in a file.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.FunctionInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_InterfaceInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_InterfaceInterface .collapse">
+        <h1>InterfaceInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.InterfaceInterface.html">¶</a></h1>
+        <p class="short_description">Represents the public interface for an interface descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.InterfaceInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_MethodInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_MethodInterface .collapse">
+        <h1>MethodInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.MethodInterface.html">¶</a></h1>
+        <p class="short_description">Describes the public interface of the description for a method.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.MethodInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_NamespaceInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_NamespaceInterface .collapse">
+        <h1>NamespaceInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.NamespaceInterface.html">¶</a></h1>
+        <p class="short_description">Describes the public interface for the description of a namespace.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.NamespaceInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_PackageInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_PackageInterface .collapse">
+        <h1>PackageInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.PackageInterface.html">¶</a></h1>
+        <p class="short_description">Describes the public interface for a package descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.PackageInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ProjectInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ProjectInterface .collapse">
+        <h1>ProjectInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.ProjectInterface.html">¶</a></h1>
+        <p class="short_description">Describes the public interface for the description of a project.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.ProjectInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_PropertyInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_PropertyInterface .collapse">
+        <h1>PropertyInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.PropertyInterface.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a property on a class or trait.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.PropertyInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_TraitInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_TraitInterface .collapse">
+        <h1>TraitInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.TraitInterface.html">¶</a></h1>
+        <p class="short_description">Public interface definition for object representing traits.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.TraitInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_TypeInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_TypeInterface .collapse">
+        <h1>TypeInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.TypeInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.TypeInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_VisibilityInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_VisibilityInterface .collapse">
+        <h1>VisibilityInterface<a href="../classes/phpDocumentor.Descriptor.Interfaces.VisibilityInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Interfaces.VisibilityInterface.html" class="more">« More »</a>    </div>
+
+                
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Tag.html">Tag</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AuthorDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AuthorDescriptor .collapse">
+        <h1>AuthorDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.AuthorDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the author tag with a descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.AuthorDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DeprecatedDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DeprecatedDescriptor .collapse">
+        <h1>DeprecatedDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.DeprecatedDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the deprecated tag with a descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.DeprecatedDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ExampleDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ExampleDescriptor .collapse">
+        <h1>ExampleDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.ExampleDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the example tag with a descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.ExampleDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LinkDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LinkDescriptor .collapse">
+        <h1>LinkDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.LinkDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the link tag with a descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.LinkDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodDescriptor .collapse">
+        <h1>MethodDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.MethodDescriptor.html">¶</a></h1>
+        <p class="short_description">Base class for any tag descriptor and used when a tag has no specific descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.MethodDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ParamDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ParamDescriptor .collapse">
+        <h1>ParamDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.ParamDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the param tag with a function or method.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.ParamDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyDescriptor .collapse">
+        <h1>PropertyDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.PropertyDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the property tag on a class or trait.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.PropertyDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ReturnDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ReturnDescriptor .collapse">
+        <h1>ReturnDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.ReturnDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the return tag on a function or method.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.ReturnDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SeeDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SeeDescriptor .collapse">
+        <h1>SeeDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.SeeDescriptor.html">¶</a></h1>
+        <p class="short_description">Base class for any tag descriptor and used when a tag has no specific descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.SeeDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SinceDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SinceDescriptor .collapse">
+        <h1>SinceDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.SinceDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the since tag with another descriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.SinceDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ThrowsDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ThrowsDescriptor .collapse">
+        <h1>ThrowsDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.ThrowsDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the throws tag on a class or trait.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.ThrowsDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_UsesDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_UsesDescriptor .collapse">
+        <h1>UsesDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.UsesDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the uses tag on any element.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.UsesDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VarDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VarDescriptor .collapse">
+        <h1>VarDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.VarDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the var tag on a property.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.VarDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VersionDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VersionDescriptor .collapse">
+        <h1>VersionDescriptor<a href="../classes/phpDocumentor.Descriptor.Tag.VersionDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing the version tag on a class, interface, trait or file.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.VersionDescriptor.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Tag.html">Tag</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Tag.BaseTypes.html">BaseTypes</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_TypedAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TypedAbstract .collapse">
+        <h1>TypedAbstract<a href="../classes/phpDocumentor.Descriptor.Tag.BaseTypes.TypedAbstract.html">¶</a></h1>
+        <p class="short_description">Base descriptor for tags that have a type associated with them.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.BaseTypes.TypedAbstract.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TypedVariableAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TypedVariableAbstract .collapse">
+        <h1>TypedVariableAbstract<a href="../classes/phpDocumentor.Descriptor.Tag.BaseTypes.TypedVariableAbstract.html">¶</a></h1>
+        <p class="short_description">Abstract class for Descriptors with a type and variable name.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Tag.BaseTypes.TypedVariableAbstract.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Example.html">Example</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Finder" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Finder .collapse">
+        <h1>Finder<a href="../classes/phpDocumentor.Descriptor.Example.Finder.html">¶</a></h1>
+        <p class="short_description">Class used to find an example file&#039;s location based on a given ExampleDescriptor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Example.Finder.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Type.html">Type</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_BooleanDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BooleanDescriptor .collapse">
+        <h1>BooleanDescriptor<a href="../classes/phpDocumentor.Descriptor.Type.BooleanDescriptor.html">¶</a></h1>
+        <p class="short_description">A type representing a boolean.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Type.BooleanDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CollectionDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CollectionDescriptor .collapse">
+        <h1>CollectionDescriptor<a href="../classes/phpDocumentor.Descriptor.Type.CollectionDescriptor.html">¶</a></h1>
+        <p class="short_description">Descriptor representing a collection or compound type of collection object.</p>
+        <div class="details collapse">
+                            <p>This descriptor represents any type that is capable of containing other typed values. Examples of such
+types can be an array, DoctrineCollection or ArrayObject.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Type.CollectionDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FloatDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FloatDescriptor .collapse">
+        <h1>FloatDescriptor<a href="../classes/phpDocumentor.Descriptor.Type.FloatDescriptor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Type.FloatDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IntegerDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IntegerDescriptor .collapse">
+        <h1>IntegerDescriptor<a href="../classes/phpDocumentor.Descriptor.Type.IntegerDescriptor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Type.IntegerDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_StringDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_StringDescriptor .collapse">
+        <h1>StringDescriptor<a href="../classes/phpDocumentor.Descriptor.Type.StringDescriptor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Type.StringDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_UnknownTypeDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_UnknownTypeDescriptor .collapse">
+        <h1>UnknownTypeDescriptor<a href="../classes/phpDocumentor.Descriptor.Type.UnknownTypeDescriptor.html">¶</a></h1>
+        <p class="short_description">This class represents any Type that could not be identified.</p>
+        <div class="details collapse">
+                            <p>Sometimes DocBlocks refer to types, such as classes, that are outside the generated project's scope; in these
+cases we want to identify them as such with an unknown type descriptor.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Type.UnknownTypeDescriptor.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Exception.html">Exception</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_MissingDependencyException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MissingDependencyException .collapse">
+        <h1>MissingDependencyException<a href="../classes/phpDocumentor.Descriptor.Exception.MissingDependencyException.html">¶</a></h1>
+        <p class="short_description">This exception is thrown when a required dependency is not included.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Exception.MissingDependencyException.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.ProjectDescriptor.html">ProjectDescriptor</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Settings" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Settings .collapse">
+        <h1>Settings<a href="../classes/phpDocumentor.Descriptor.ProjectDescriptor.Settings.html">¶</a></h1>
+        <p class="short_description">Contains the Settings for the current Project.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.ProjectDescriptor.Settings.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Descriptor.Validator.html">Validator</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Error" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Error .collapse">
+        <h1>Error<a href="../classes/phpDocumentor.Descriptor.Validator.Error.html">¶</a></h1>
+        <p class="short_description">Struct to record a validation error.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Descriptor.Validator.Error.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:31 +0000.<br/>
+    </footer>
+    </body>
+</html>

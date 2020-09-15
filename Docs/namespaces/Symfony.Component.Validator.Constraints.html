@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \Symfony\Component\Validator\Constraints
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/Symfony.Component.Validator.Constraints.html" title="Constraints">
+                    <i class="icon-th"></i> Constraints
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+        <li>
+        <a href="../namespaces/Symfony.Component.Validator.Constraints.Collection.html" title="Collection">
+            <i class="icon-th"></i> Collection
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.html">Symfony</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.Constraints.html">Constraints</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AbstractComparison" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractComparison .collapse">
+        <h1>AbstractComparison<a href="../classes/Symfony.Component.Validator.Constraints.AbstractComparison.html">¶</a></h1>
+        <p class="short_description">Used for the comparison of values.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.AbstractComparison.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AbstractComparisonValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractComparisonValidator .collapse">
+        <h1>AbstractComparisonValidator<a href="../classes/Symfony.Component.Validator.Constraints.AbstractComparisonValidator.html">¶</a></h1>
+        <p class="short_description">Provides a base class for the validation of property comparisons.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.AbstractComparisonValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_All" class="element ajax clickable class" data-toggle="collapse" data-target="#class_All .collapse">
+        <h1>All<a href="../classes/Symfony.Component.Validator.Constraints.All.html">¶</a></h1>
+        <p class="short_description">A constraint that is composed of other constraints.</p>
+        <div class="details collapse">
+                            <p>You should never use the nested constraint instances anywhere else, because
+their groups are adapted when passed to the constructor of this class.</p>
+<p>If you want to create your own composite constraint, extend this class and
+let \Symfony\Component\Validator\Constraints\getCompositeOption() return the name of the property which
+contains the nested constraints.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.All.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AllValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AllValidator .collapse">
+        <h1>AllValidator<a href="../classes/Symfony.Component.Validator.Constraints.AllValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.AllValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Bic" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Bic .collapse">
+        <h1>Bic<a href="../classes/Symfony.Component.Validator.Constraints.Bic.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Bic.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BicValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BicValidator .collapse">
+        <h1>BicValidator<a href="../classes/Symfony.Component.Validator.Constraints.BicValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.BicValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Blank" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Blank .collapse">
+        <h1>Blank<a href="../classes/Symfony.Component.Validator.Constraints.Blank.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Blank.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BlankValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BlankValidator .collapse">
+        <h1>BlankValidator<a href="../classes/Symfony.Component.Validator.Constraints.BlankValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.BlankValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Callback" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Callback .collapse">
+        <h1>Callback<a href="../classes/Symfony.Component.Validator.Constraints.Callback.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Callback.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CallbackValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CallbackValidator .collapse">
+        <h1>CallbackValidator<a href="../classes/Symfony.Component.Validator.Constraints.CallbackValidator.html">¶</a></h1>
+        <p class="short_description">Validator for Callback constraint.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.CallbackValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CardScheme" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CardScheme .collapse">
+        <h1>CardScheme<a href="../classes/Symfony.Component.Validator.Constraints.CardScheme.html">¶</a></h1>
+        <p class="short_description">Metadata for the CardSchemeValidator.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.CardScheme.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CardSchemeValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CardSchemeValidator .collapse">
+        <h1>CardSchemeValidator<a href="../classes/Symfony.Component.Validator.Constraints.CardSchemeValidator.html">¶</a></h1>
+        <p class="short_description">Validates that a card number belongs to a specified scheme.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.CardSchemeValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Choice" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Choice .collapse">
+        <h1>Choice<a href="../classes/Symfony.Component.Validator.Constraints.Choice.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Choice.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ChoiceValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ChoiceValidator .collapse">
+        <h1>ChoiceValidator<a href="../classes/Symfony.Component.Validator.Constraints.ChoiceValidator.html">¶</a></h1>
+        <p class="short_description">ChoiceValidator validates that the value is one of the expected values.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.ChoiceValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Collection" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Collection .collapse">
+        <h1>Collection<a href="../classes/Symfony.Component.Validator.Constraints.Collection.html">¶</a></h1>
+        <p class="short_description">A constraint that is composed of other constraints.</p>
+        <div class="details collapse">
+                            <p>You should never use the nested constraint instances anywhere else, because
+their groups are adapted when passed to the constructor of this class.</p>
+<p>If you want to create your own composite constraint, extend this class and
+let \Symfony\Component\Validator\Constraints\getCompositeOption() return the name of the property which
+contains the nested constraints.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Collection.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CollectionValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CollectionValidator .collapse">
+        <h1>CollectionValidator<a href="../classes/Symfony.Component.Validator.Constraints.CollectionValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.CollectionValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Composite" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Composite .collapse">
+        <h1>Composite<a href="../classes/Symfony.Component.Validator.Constraints.Composite.html">¶</a></h1>
+        <p class="short_description">A constraint that is composed of other constraints.</p>
+        <div class="details collapse">
+                            <p>You should never use the nested constraint instances anywhere else, because
+their groups are adapted when passed to the constructor of this class.</p>
+<p>If you want to create your own composite constraint, extend this class and
+let \Symfony\Component\Validator\Constraints\getCompositeOption() return the name of the property which
+contains the nested constraints.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Composite.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Count" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Count .collapse">
+        <h1>Count<a href="../classes/Symfony.Component.Validator.Constraints.Count.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Count.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Country" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Country .collapse">
+        <h1>Country<a href="../classes/Symfony.Component.Validator.Constraints.Country.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Country.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CountryValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CountryValidator .collapse">
+        <h1>CountryValidator<a href="../classes/Symfony.Component.Validator.Constraints.CountryValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a value is a valid country code.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.CountryValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CountValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CountValidator .collapse">
+        <h1>CountValidator<a href="../classes/Symfony.Component.Validator.Constraints.CountValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.CountValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Currency" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Currency .collapse">
+        <h1>Currency<a href="../classes/Symfony.Component.Validator.Constraints.Currency.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Currency.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CurrencyValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CurrencyValidator .collapse">
+        <h1>CurrencyValidator<a href="../classes/Symfony.Component.Validator.Constraints.CurrencyValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a value is a valid currency.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.CurrencyValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Date" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Date .collapse">
+        <h1>Date<a href="../classes/Symfony.Component.Validator.Constraints.Date.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Date.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DateTime" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DateTime .collapse">
+        <h1>DateTime<a href="../classes/Symfony.Component.Validator.Constraints.DateTime.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.DateTime.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DateTimeValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DateTimeValidator .collapse">
+        <h1>DateTimeValidator<a href="../classes/Symfony.Component.Validator.Constraints.DateTimeValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.DateTimeValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DateValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DateValidator .collapse">
+        <h1>DateValidator<a href="../classes/Symfony.Component.Validator.Constraints.DateValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.DateValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Email" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Email .collapse">
+        <h1>Email<a href="../classes/Symfony.Component.Validator.Constraints.Email.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Email.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EmailValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EmailValidator .collapse">
+        <h1>EmailValidator<a href="../classes/Symfony.Component.Validator.Constraints.EmailValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.EmailValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EqualTo" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EqualTo .collapse">
+        <h1>EqualTo<a href="../classes/Symfony.Component.Validator.Constraints.EqualTo.html">¶</a></h1>
+        <p class="short_description">Used for the comparison of values.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.EqualTo.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EqualToValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EqualToValidator .collapse">
+        <h1>EqualToValidator<a href="../classes/Symfony.Component.Validator.Constraints.EqualToValidator.html">¶</a></h1>
+        <p class="short_description">Validates values are equal (==).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.EqualToValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Existence" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Existence .collapse">
+        <h1>Existence<a href="../classes/Symfony.Component.Validator.Constraints.Existence.html">¶</a></h1>
+        <p class="short_description">A constraint that is composed of other constraints.</p>
+        <div class="details collapse">
+                            <p>You should never use the nested constraint instances anywhere else, because
+their groups are adapted when passed to the constructor of this class.</p>
+<p>If you want to create your own composite constraint, extend this class and
+let \Symfony\Component\Validator\Constraints\getCompositeOption() return the name of the property which
+contains the nested constraints.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Existence.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Expression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Expression .collapse">
+        <h1>Expression<a href="../classes/Symfony.Component.Validator.Constraints.Expression.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Expression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ExpressionValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ExpressionValidator .collapse">
+        <h1>ExpressionValidator<a href="../classes/Symfony.Component.Validator.Constraints.ExpressionValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.ExpressionValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_False" class="element ajax clickable class" data-toggle="collapse" data-target="#class_False .collapse">
+        <h1>False<a href="../classes/Symfony.Component.Validator.Constraints.False.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.False.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FalseValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FalseValidator .collapse">
+        <h1>FalseValidator<a href="../classes/Symfony.Component.Validator.Constraints.FalseValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.FalseValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_File" class="element ajax clickable class" data-toggle="collapse" data-target="#class_File .collapse">
+        <h1>File<a href="../classes/Symfony.Component.Validator.Constraints.File.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.File.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FileValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FileValidator .collapse">
+        <h1>FileValidator<a href="../classes/Symfony.Component.Validator.Constraints.FileValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.FileValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GreaterThan" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GreaterThan .collapse">
+        <h1>GreaterThan<a href="../classes/Symfony.Component.Validator.Constraints.GreaterThan.html">¶</a></h1>
+        <p class="short_description">Used for the comparison of values.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.GreaterThan.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GreaterThanOrEqual" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GreaterThanOrEqual .collapse">
+        <h1>GreaterThanOrEqual<a href="../classes/Symfony.Component.Validator.Constraints.GreaterThanOrEqual.html">¶</a></h1>
+        <p class="short_description">Used for the comparison of values.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.GreaterThanOrEqual.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GreaterThanOrEqualValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GreaterThanOrEqualValidator .collapse">
+        <h1>GreaterThanOrEqualValidator<a href="../classes/Symfony.Component.Validator.Constraints.GreaterThanOrEqualValidator.html">¶</a></h1>
+        <p class="short_description">Validates values are greater than or equal to the previous (&gt;=).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.GreaterThanOrEqualValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GreaterThanValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GreaterThanValidator .collapse">
+        <h1>GreaterThanValidator<a href="../classes/Symfony.Component.Validator.Constraints.GreaterThanValidator.html">¶</a></h1>
+        <p class="short_description">Validates values are greater than the previous (&gt;).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.GreaterThanValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GroupSequence" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GroupSequence .collapse">
+        <h1>GroupSequence<a href="../classes/Symfony.Component.Validator.Constraints.GroupSequence.html">¶</a></h1>
+        <p class="short_description">A sequence of validation groups.</p>
+        <div class="details collapse">
+                            <p>When validating a group sequence, each group will only be validated if all
+of the previous groups in the sequence succeeded. For example:</p>
+<pre><code>$validator-&gt;validate($address, null, new GroupSequence(array('Basic', 'Strict')));</code></pre>
+<p>In the first step, all constraints that belong to the group &quot;Basic&quot; will be
+validated. If none of the constraints fail, the validator will then validate
+the constraints in group &quot;Strict&quot;. This is useful, for example, if &quot;Strict&quot;
+contains expensive checks that require a lot of CPU or slow, external
+services. You usually don't want to run expensive checks if any of the cheap
+checks fail.</p>
+<p>When adding metadata to a class, you can override the &quot;Default&quot; group of
+that class with a group sequence:</p>
+<pre><code>/**
+ * @GroupSequence({"Address", "Strict"})
+ *\/
+class Address
+{
+    // ...
+}</code></pre>
+<p>Whenever you validate that object in the &quot;Default&quot; group, the group sequence
+will be validated:</p>
+<pre><code>$validator-&gt;validate($address);</code></pre>
+<p>If you want to execute the constraints of the &quot;Default&quot; group for a class
+with an overridden default group, pass the class name as group name instead:</p>
+<pre><code>$validator-&gt;validate($address, null, "Address")</code></pre>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.GroupSequence.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GroupSequenceProvider" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GroupSequenceProvider .collapse">
+        <h1>GroupSequenceProvider<a href="../classes/Symfony.Component.Validator.Constraints.GroupSequenceProvider.html">¶</a></h1>
+        <p class="short_description">Annotation to define a group sequence provider.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.GroupSequenceProvider.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Iban" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Iban .collapse">
+        <h1>Iban<a href="../classes/Symfony.Component.Validator.Constraints.Iban.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Iban.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IbanValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IbanValidator .collapse">
+        <h1>IbanValidator<a href="../classes/Symfony.Component.Validator.Constraints.IbanValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IbanValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IdenticalTo" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IdenticalTo .collapse">
+        <h1>IdenticalTo<a href="../classes/Symfony.Component.Validator.Constraints.IdenticalTo.html">¶</a></h1>
+        <p class="short_description">Used for the comparison of values.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IdenticalTo.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IdenticalToValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IdenticalToValidator .collapse">
+        <h1>IdenticalToValidator<a href="../classes/Symfony.Component.Validator.Constraints.IdenticalToValidator.html">¶</a></h1>
+        <p class="short_description">Validates values are identical (===).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IdenticalToValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Image" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Image .collapse">
+        <h1>Image<a href="../classes/Symfony.Component.Validator.Constraints.Image.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Image.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ImageValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ImageValidator .collapse">
+        <h1>ImageValidator<a href="../classes/Symfony.Component.Validator.Constraints.ImageValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a value is a valid image file and is valid
+against minWidth, maxWidth, minHeight and maxHeight constraints.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.ImageValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Ip" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Ip .collapse">
+        <h1>Ip<a href="../classes/Symfony.Component.Validator.Constraints.Ip.html">¶</a></h1>
+        <p class="short_description">Validates that a value is a valid IP address.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Ip.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IpValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IpValidator .collapse">
+        <h1>IpValidator<a href="../classes/Symfony.Component.Validator.Constraints.IpValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a value is a valid IP address.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IpValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Isbn" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Isbn .collapse">
+        <h1>Isbn<a href="../classes/Symfony.Component.Validator.Constraints.Isbn.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Isbn.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsbnValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsbnValidator .collapse">
+        <h1>IsbnValidator<a href="../classes/Symfony.Component.Validator.Constraints.IsbnValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether the value is a valid ISBN-10 or ISBN-13.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IsbnValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsFalse" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsFalse .collapse">
+        <h1>IsFalse<a href="../classes/Symfony.Component.Validator.Constraints.IsFalse.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IsFalse.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsFalseValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsFalseValidator .collapse">
+        <h1>IsFalseValidator<a href="../classes/Symfony.Component.Validator.Constraints.IsFalseValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IsFalseValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsNull" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsNull .collapse">
+        <h1>IsNull<a href="../classes/Symfony.Component.Validator.Constraints.IsNull.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IsNull.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsNullValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsNullValidator .collapse">
+        <h1>IsNullValidator<a href="../classes/Symfony.Component.Validator.Constraints.IsNullValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IsNullValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Issn" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Issn .collapse">
+        <h1>Issn<a href="../classes/Symfony.Component.Validator.Constraints.Issn.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Issn.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IssnValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IssnValidator .collapse">
+        <h1>IssnValidator<a href="../classes/Symfony.Component.Validator.Constraints.IssnValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether the value is a valid ISSN.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IssnValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsTrue" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsTrue .collapse">
+        <h1>IsTrue<a href="../classes/Symfony.Component.Validator.Constraints.IsTrue.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IsTrue.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsTrueValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsTrueValidator .collapse">
+        <h1>IsTrueValidator<a href="../classes/Symfony.Component.Validator.Constraints.IsTrueValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.IsTrueValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Language" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Language .collapse">
+        <h1>Language<a href="../classes/Symfony.Component.Validator.Constraints.Language.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Language.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LanguageValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LanguageValidator .collapse">
+        <h1>LanguageValidator<a href="../classes/Symfony.Component.Validator.Constraints.LanguageValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a value is a valid language code.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.LanguageValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Length" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Length .collapse">
+        <h1>Length<a href="../classes/Symfony.Component.Validator.Constraints.Length.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Length.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LengthValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LengthValidator .collapse">
+        <h1>LengthValidator<a href="../classes/Symfony.Component.Validator.Constraints.LengthValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.LengthValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LessThan" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LessThan .collapse">
+        <h1>LessThan<a href="../classes/Symfony.Component.Validator.Constraints.LessThan.html">¶</a></h1>
+        <p class="short_description">Used for the comparison of values.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.LessThan.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LessThanOrEqual" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LessThanOrEqual .collapse">
+        <h1>LessThanOrEqual<a href="../classes/Symfony.Component.Validator.Constraints.LessThanOrEqual.html">¶</a></h1>
+        <p class="short_description">Used for the comparison of values.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.LessThanOrEqual.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LessThanOrEqualValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LessThanOrEqualValidator .collapse">
+        <h1>LessThanOrEqualValidator<a href="../classes/Symfony.Component.Validator.Constraints.LessThanOrEqualValidator.html">¶</a></h1>
+        <p class="short_description">Validates values are less than or equal to the previous (&lt;=).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.LessThanOrEqualValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LessThanValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LessThanValidator .collapse">
+        <h1>LessThanValidator<a href="../classes/Symfony.Component.Validator.Constraints.LessThanValidator.html">¶</a></h1>
+        <p class="short_description">Validates values are less than the previous (&lt;).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.LessThanValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Locale" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Locale .collapse">
+        <h1>Locale<a href="../classes/Symfony.Component.Validator.Constraints.Locale.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Locale.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LocaleValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LocaleValidator .collapse">
+        <h1>LocaleValidator<a href="../classes/Symfony.Component.Validator.Constraints.LocaleValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a value is a valid locale code.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.LocaleValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Luhn" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Luhn .collapse">
+        <h1>Luhn<a href="../classes/Symfony.Component.Validator.Constraints.Luhn.html">¶</a></h1>
+        <p class="short_description">Metadata for the LuhnValidator.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Luhn.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LuhnValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LuhnValidator .collapse">
+        <h1>LuhnValidator<a href="../classes/Symfony.Component.Validator.Constraints.LuhnValidator.html">¶</a></h1>
+        <p class="short_description">Validates a PAN using the LUHN Algorithm.</p>
+        <div class="details collapse">
+                            <p>For a list of example card numbers that are used to test this
+class, please see the LuhnValidatorTest class.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.LuhnValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotBlank" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotBlank .collapse">
+        <h1>NotBlank<a href="../classes/Symfony.Component.Validator.Constraints.NotBlank.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.NotBlank.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotBlankValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotBlankValidator .collapse">
+        <h1>NotBlankValidator<a href="../classes/Symfony.Component.Validator.Constraints.NotBlankValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.NotBlankValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotEqualTo" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotEqualTo .collapse">
+        <h1>NotEqualTo<a href="../classes/Symfony.Component.Validator.Constraints.NotEqualTo.html">¶</a></h1>
+        <p class="short_description">Used for the comparison of values.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.NotEqualTo.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotEqualToValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotEqualToValidator .collapse">
+        <h1>NotEqualToValidator<a href="../classes/Symfony.Component.Validator.Constraints.NotEqualToValidator.html">¶</a></h1>
+        <p class="short_description">Validates values are all unequal (!=).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.NotEqualToValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotIdenticalTo" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotIdenticalTo .collapse">
+        <h1>NotIdenticalTo<a href="../classes/Symfony.Component.Validator.Constraints.NotIdenticalTo.html">¶</a></h1>
+        <p class="short_description">Used for the comparison of values.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.NotIdenticalTo.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotIdenticalToValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotIdenticalToValidator .collapse">
+        <h1>NotIdenticalToValidator<a href="../classes/Symfony.Component.Validator.Constraints.NotIdenticalToValidator.html">¶</a></h1>
+        <p class="short_description">Validates values aren&#039;t identical (!==).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.NotIdenticalToValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotNull" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotNull .collapse">
+        <h1>NotNull<a href="../classes/Symfony.Component.Validator.Constraints.NotNull.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.NotNull.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotNullValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotNullValidator .collapse">
+        <h1>NotNullValidator<a href="../classes/Symfony.Component.Validator.Constraints.NotNullValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.NotNullValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Null" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Null .collapse">
+        <h1>Null<a href="../classes/Symfony.Component.Validator.Constraints.Null.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Null.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NullValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NullValidator .collapse">
+        <h1>NullValidator<a href="../classes/Symfony.Component.Validator.Constraints.NullValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.NullValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Optional" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Optional .collapse">
+        <h1>Optional<a href="../classes/Symfony.Component.Validator.Constraints.Optional.html">¶</a></h1>
+        <p class="short_description">A constraint that is composed of other constraints.</p>
+        <div class="details collapse">
+                            <p>You should never use the nested constraint instances anywhere else, because
+their groups are adapted when passed to the constructor of this class.</p>
+<p>If you want to create your own composite constraint, extend this class and
+let \Symfony\Component\Validator\Constraints\getCompositeOption() return the name of the property which
+contains the nested constraints.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Optional.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Range" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Range .collapse">
+        <h1>Range<a href="../classes/Symfony.Component.Validator.Constraints.Range.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Range.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_RangeValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_RangeValidator .collapse">
+        <h1>RangeValidator<a href="../classes/Symfony.Component.Validator.Constraints.RangeValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.RangeValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Regex" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Regex .collapse">
+        <h1>Regex<a href="../classes/Symfony.Component.Validator.Constraints.Regex.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Regex.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_RegexValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_RegexValidator .collapse">
+        <h1>RegexValidator<a href="../classes/Symfony.Component.Validator.Constraints.RegexValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a value match or not given regexp pattern.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.RegexValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Required" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Required .collapse">
+        <h1>Required<a href="../classes/Symfony.Component.Validator.Constraints.Required.html">¶</a></h1>
+        <p class="short_description">A constraint that is composed of other constraints.</p>
+        <div class="details collapse">
+                            <p>You should never use the nested constraint instances anywhere else, because
+their groups are adapted when passed to the constructor of this class.</p>
+<p>If you want to create your own composite constraint, extend this class and
+let \Symfony\Component\Validator\Constraints\getCompositeOption() return the name of the property which
+contains the nested constraints.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Required.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Time" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Time .collapse">
+        <h1>Time<a href="../classes/Symfony.Component.Validator.Constraints.Time.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Time.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TimeValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TimeValidator .collapse">
+        <h1>TimeValidator<a href="../classes/Symfony.Component.Validator.Constraints.TimeValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.TimeValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Traverse" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Traverse .collapse">
+        <h1>Traverse<a href="../classes/Symfony.Component.Validator.Constraints.Traverse.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Traverse.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_True" class="element ajax clickable class" data-toggle="collapse" data-target="#class_True .collapse">
+        <h1>True<a href="../classes/Symfony.Component.Validator.Constraints.True.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.True.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TrueValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TrueValidator .collapse">
+        <h1>TrueValidator<a href="../classes/Symfony.Component.Validator.Constraints.TrueValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.TrueValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Type" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Type .collapse">
+        <h1>Type<a href="../classes/Symfony.Component.Validator.Constraints.Type.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Type.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TypeValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TypeValidator .collapse">
+        <h1>TypeValidator<a href="../classes/Symfony.Component.Validator.Constraints.TypeValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.TypeValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Url" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Url .collapse">
+        <h1>Url<a href="../classes/Symfony.Component.Validator.Constraints.Url.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Url.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_UrlValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_UrlValidator .collapse">
+        <h1>UrlValidator<a href="../classes/Symfony.Component.Validator.Constraints.UrlValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.UrlValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Uuid" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Uuid .collapse">
+        <h1>Uuid<a href="../classes/Symfony.Component.Validator.Constraints.Uuid.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Uuid.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_UuidValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_UuidValidator .collapse">
+        <h1>UuidValidator<a href="../classes/Symfony.Component.Validator.Constraints.UuidValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether the value is a valid UUID (also known as GUID).</p>
+        <div class="details collapse">
+                            <p>Strict validation will allow a UUID as specified per RFC 4122.
+Loose validation will allow any type of UUID.</p>
+<p>For better compatibility, both loose and strict, you should consider using a specialized UUID library like &quot;ramsey/uuid&quot; instead.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.UuidValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Valid" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Valid .collapse">
+        <h1>Valid<a href="../classes/Symfony.Component.Validator.Constraints.Valid.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Valid.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.html">Symfony</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.Constraints.html">Constraints</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.Constraints.Collection.html">Collection</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Optional" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Optional .collapse">
+        <h1>Optional<a href="../classes/Symfony.Component.Validator.Constraints.Collection.Optional.html">¶</a></h1>
+        <p class="short_description">A constraint that is composed of other constraints.</p>
+        <div class="details collapse">
+                            <p>You should never use the nested constraint instances anywhere else, because
+their groups are adapted when passed to the constructor of this class.</p>
+<p>If you want to create your own composite constraint, extend this class and
+let \Symfony\Component\Validator\Constraints\getCompositeOption() return the name of the property which
+contains the nested constraints.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Collection.Optional.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Required" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Required .collapse">
+        <h1>Required<a href="../classes/Symfony.Component.Validator.Constraints.Collection.Required.html">¶</a></h1>
+        <p class="short_description">A constraint that is composed of other constraints.</p>
+        <div class="details collapse">
+                            <p>You should never use the nested constraint instances anywhere else, because
+their groups are adapted when passed to the constructor of this class.</p>
+<p>If you want to create your own composite constraint, extend this class and
+let \Symfony\Component\Validator\Constraints\getCompositeOption() return the name of the property which
+contains the nested constraints.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Constraints.Collection.Required.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:30 +0000.<br/>
+    </footer>
+    </body>
+</html>

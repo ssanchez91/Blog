@@ -1,4 +1,4 @@
-la<?php
+<?php
 /**
  * Created by PhpStorm.
  * User: sstee
@@ -8,18 +8,51 @@ la<?php
 
 namespace App\Model\Entity;
 
-
+/**
+ * Class Post
+ * @package App\Model\Entity
+ */
 class Post
 {
+    /**
+     * Variable id
+     * @var
+     */
     private $id;
+    /**
+     * Variable title
+     * @var
+     */
     private $title;
+    /**
+     * Variable hat
+     * @var
+     */
     private $hat;
+    /**
+     * Variable content
+     * @var
+     */
     private $content;
+    /**
+     * Variable author
+     * @var
+     */
     private $author;
+    /**
+     * Variable lastUpdate
+     * @var
+     */
     private $lastUpdate;
+    /**
+     * Variable userId
+     * @var
+     */
     private $userId;
 
     /**
+     * Accessor  getId
+     *
      * @return mixed
      */
     public function getId()
@@ -28,6 +61,8 @@ class Post
     }
 
     /**
+     * Accessor getLastUpdate
+     *
      * @return mixed
      */
     public function getLastUpdate()
@@ -36,6 +71,8 @@ class Post
     }
 
     /**
+     * Accessor setLastUpdate
+     *
      * @param mixed $lastUpdate
      */
     public function setLastUpdate($lastUpdate)
@@ -44,6 +81,8 @@ class Post
     }
 
     /**
+     * Accessor getContent
+     *
      * @return mixed
      */
     public function getContent()
@@ -52,6 +91,8 @@ class Post
     }
 
     /**
+     * Accessor setContent
+     *
      * @param mixed $content
      */
     public function setContent($content)
@@ -60,6 +101,8 @@ class Post
     }
 
     /**
+     * Accessor getHat
+     *
      * @return mixed
      */
     public function getHat()
@@ -68,6 +111,8 @@ class Post
     }
 
     /**
+     * Accessor setHat
+     *
      * @param mixed $hat
      */
     public function setHat($hat)
@@ -76,6 +121,8 @@ class Post
     }
 
     /**
+     * Accessor getTitle
+     *
      * @return mixed
      */
     public function getTitle()
@@ -85,6 +132,8 @@ class Post
 
 
     /**
+     * Accessor setTitle
+     *
      * @param mixed $title
      */
     public function setTitle($title)
@@ -93,6 +142,8 @@ class Post
     }
 
     /**
+     * Accessor getAuthor
+     *
      * @return mixed
      */
     public function getAuthor()
@@ -101,6 +152,8 @@ class Post
     }
 
     /**
+     * Accessor setAuthor
+     *
      * @param mixed $author
      */
     public function setAuthor($author)
@@ -109,6 +162,8 @@ class Post
     }
 
     /**
+     * Accessor setId
+     *
      * @param mixed $id
      */
     public function setId($id)
@@ -117,6 +172,8 @@ class Post
     }
 
     /**
+     * Accessor getUserId
+     *
      * @return mixed
      */
     public function getUserId()
@@ -125,6 +182,8 @@ class Post
     }
 
     /**
+     * Accessor setUserId
+     *
      * @param mixed $userId
      */
     public function setUserId($userId)

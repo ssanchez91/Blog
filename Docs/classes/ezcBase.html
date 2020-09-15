@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \ezcBase
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_addClassRepository" title="addClassRepository :: Adds an additional class repository.">
+            <span class="description">Adds an additional class repository.</span><pre>addClassRepository</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_autoload" title="autoload :: Tries to autoload the given className. If the className could be found
+this method returns true, otherwise false.">
+            <span class="description">Tries to autoload the given className. If the className could be found
+this method returns true, otherwise false.</span><pre>autoload</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_checkDependency" title="checkDependency :: Checks for dependencies on PHP versions or extensions">
+            <span class="description">Checks for dependencies on PHP versions or extensions</span><pre>checkDependency</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getInstallationPath" title="getInstallationPath :: Returns the base path of the Zeta Components installation">
+            <span class="description">Returns the base path of the Zeta Components installation</span><pre>getInstallationPath</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getInstallMethod" title="getInstallMethod :: Returns the installation method">
+            <span class="description">Returns the installation method</span><pre>getInstallMethod</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getRepositoryDirectories" title="getRepositoryDirectories :: Return the list of directories that contain class repositories.">
+            <span class="description">Return the list of directories that contain class repositories.</span><pre>getRepositoryDirectories</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getRunMode" title="getRunMode :: Returns the current development mode.">
+            <span class="description">Returns the current development mode.</span><pre>getRunMode</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_inDevMode" title="inDevMode :: Returns true when we are in development mode.">
+            <span class="description">Returns true when we are in development mode.</span><pre>inDevMode</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                <li class="method public">
+        <a href="#method_setOptions" title="setOptions :: Associates an option object with this static class.">
+            <span class="description">Associates an option object with this static class.</span><pre>setOptions</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_setRunMode" title="setRunMode :: Sets the development mode to the one specified.">
+            <span class="description">Sets the development mode to the one specified.</span><pre>setRunMode</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setWorkingDirectory" title="setWorkingDirectory :: Sets the current working directory to $directory.">
+            <span class="description">Sets the current working directory to $directory.</span><pre>setWorkingDirectory</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                            <li class="method protected">
+                            <a href="#method_loadExternalFile" title="loadExternalFile :: Loads, require(), the given file name from an external package.">
+                                <span class="description">Loads, require(), the given file name from an external package.</span><pre>loadExternalFile</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_loadFile" title="loadFile :: Loads, require(), the given file name. If we are in development mode,
+&quot;/src/&quot; is inserted into the path.">
+                                <span class="description">Loads, require(), the given file name. If we are in development mode,
+&quot;/src/&quot; is inserted into the path.</span><pre>loadFile</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_requireFile" title="requireFile :: Tries to load the autoload array and, if loaded correctly, includes the class.">
+                                <span class="description">Tries to load the autoload array and, if loaded correctly, includes the class.</span><pre>requireFile</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method protected">
+                            <a href="#method_setPackageDir" title="setPackageDir :: Figures out the base path of the Zeta Components installation.">
+                                <span class="description">Figures out the base path of the Zeta Components installation.</span><pre>setPackageDir</pre>
+                            </a>
+                        </li>
+                                                                                                                        </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                                <li class="constant ">
+                    <a href="#constant_DEP_PHP_EXTENSION" title="DEP_PHP_EXTENSION :: Used for dependency checking, to check for a PHP extension.">
+                        <span class="description">Used for dependency checking, to check for a PHP extension.</span><pre>DEP_PHP_EXTENSION</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_DEP_PHP_VERSION" title="DEP_PHP_VERSION :: Used for dependency checking, to check for a PHP version.">
+                        <span class="description">Used for dependency checking, to check for a PHP version.</span><pre>DEP_PHP_VERSION</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_MODE_DEVELOPMENT" title="MODE_DEVELOPMENT :: Denotes the development mode">
+                        <span class="description">Denotes the development mode</span><pre>MODE_DEVELOPMENT</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_MODE_PRODUCTION" title="MODE_PRODUCTION :: Denotes the production mode">
+                        <span class="description">Denotes the production mode</span><pre>MODE_PRODUCTION</pre>
+                    </a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ezcBase</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description">Base class implements the methods needed to use the eZ components.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Base</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        version
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>//autogentag//</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        mainclass
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_addClassRepository"></a>
+                        <div class="element clickable method public  method_addClassRepository" data-toggle="collapse" data-target=".method_addClassRepository .collapse">
+                            <h2>Adds an additional class repository.</h2>
+                            <pre>addClassRepository(string $basePath, string $autoloadDirPath = null, string $prefix = null) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Used for adding class repositoryies outside the eZ components to be
+loaded by the autoload system.</p>
+<p>This function takes two arguments: $basePath is the base path for the
+whole class repository and $autoloadDirPath the path where autoload
+files for this repository are found. The paths in the autoload files are
+relative to the package directory as specified by the $basePath
+argument. I.e. class definition file will be searched at location
+$basePath + path to the class definition file as stored in the autoload
+file.</p>
+<p>addClassRepository() should be called somewhere in code before external classes
+are used.</p>
+<p>Example:
+Take the following facts:</p>
+<ul>
+<li>there is a class repository stored in the directory "./repos"</li>
+<li>autoload files for that repository are stored in "./repos/autoloads"</li>
+<li>there are two components in this repository: "Me" and "You"</li>
+<li>the "Me" component has the classes "erMyClass1" and "erMyClass2"</li>
+<li>the "You" component has the classes "erYourClass1" and "erYourClass2"</li>
+</ul>
+<p>In this case you would need to create the following files in
+&quot;./repos/autoloads&quot;. Please note that the part before _autoload.php in
+the filename is the first part of the <b>classname</b>, not considering
+the all lower-case letter prefix.</p>
+<p>&quot;my_autoload.php&quot;:
+<code>
+&lt;?php
+return array (
+'erMyClass1' =&gt; 'Me/myclass1.php',
+'erMyClass2' =&gt; 'Me/myclass2.php',
+);
+?&gt;
+</code></p>
+<p>&quot;your_autoload.php&quot;:
+<code>
+&lt;?php
+return array (
+'erYourClass1' =&gt; 'You/yourclass1.php',
+'erYourClass2' =&gt; 'You/yourclass2.php',
+);
+?&gt;
+</code></p>
+<p>The directory structure for the external repository is then:
+<code>
+./repos/autoloads/my_autoload.php
+./repos/autoloads/you_autoload.php
+./repos/Me/myclass1.php
+./repos/Me/myclass2.php
+./repos/You/yourclass1.php
+./repos/You/yourclass2.php
+</code></p>
+<p>To use this repository with the autoload mechanism you have to use the
+following code:
+<code>
+&lt;?php
+ezcBase::addClassRepository( './repos', './repos/autoloads' );
+$myVar = new erMyClass2();
+?&gt;
+</code></p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\ezcBaseFileNotFoundException</dt>
+                                                        <dd><p>if $autoloadDirPath or $basePath do not exist.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$basePath</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$autoloadDirPath</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$prefix</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_autoload"></a>
+                        <div class="element clickable method public  method_autoload" data-toggle="collapse" data-target=".method_autoload .collapse">
+                            <h2>Tries to autoload the given className. If the className could be found
+this method returns true, otherwise false.</h2>
+                            <pre>autoload(string $className) : boolean</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This class caches the requested class names (including the ones who
+failed to load).</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$className</h4>
+                                                <code>string</code><p><p>The name of the class that should be loaded.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_checkDependency"></a>
+                        <div class="element clickable method public  method_checkDependency" data-toggle="collapse" data-target=".method_checkDependency .collapse">
+                            <h2>Checks for dependencies on PHP versions or extensions</h2>
+                            <pre>checkDependency(string $component, integer $type, mixed $value) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The function as called by the $component component checks for the $type
+dependency. The dependency $type is compared against the $value. The
+function aborts the script if the dependency is not matched.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$component</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getInstallationPath"></a>
+                        <div class="element clickable method public  method_getInstallationPath" data-toggle="collapse" data-target=".method_getInstallationPath .collapse">
+                            <h2>Returns the base path of the Zeta Components installation</h2>
+                            <pre>getInstallationPath() : string</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This method returns the base path, including a trailing directory
+separator.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getInstallMethod"></a>
+                        <div class="element clickable method public  method_getInstallMethod" data-toggle="collapse" data-target=".method_getInstallMethod .collapse">
+                            <h2>Returns the installation method</h2>
+                            <pre>getInstallMethod() : string</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Possible return values are 'custom', 'devel', 'tarball' and 'pear'. Only
+'tarball' and 'pear' are returned for user-installed versions.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getRepositoryDirectories"></a>
+                        <div class="element clickable method public  method_getRepositoryDirectories" data-toggle="collapse" data-target=".method_getRepositoryDirectories .collapse">
+                            <h2>Return the list of directories that contain class repositories.</h2>
+                            <pre>getRepositoryDirectories() : \array(string=&gt;ezcBaseRepositoryDirectory)</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The path to the eZ components directory is always included in the result
+array. Each element in the returned array has the format of:
+packageDirectory =&gt; ezcBaseRepositoryDirectory</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>\array(string=>ezcBaseRepositoryDirectory)</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getRunMode"></a>
+                        <div class="element clickable method public  method_getRunMode" data-toggle="collapse" data-target=".method_getRunMode .collapse">
+                            <h2>Returns the current development mode.</h2>
+                            <pre>getRunMode() : integer</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_inDevMode"></a>
+                        <div class="element clickable method public  method_inDevMode" data-toggle="collapse" data-target=".method_inDevMode .collapse">
+                            <h2>Returns true when we are in development mode.</h2>
+                            <pre>inDevMode() : boolean</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_loadExternalFile"></a>
+                        <div class="element clickable method protected  method_loadExternalFile" data-toggle="collapse" data-target=".method_loadExternalFile .collapse">
+                            <h2>Loads, require(), the given file name from an external package.</h2>
+                            <pre>loadExternalFile(string $file) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$file</h4>
+                                                <code>string</code><p><p>The name of the file that should be loaded.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_loadFile"></a>
+                        <div class="element clickable method protected  method_loadFile" data-toggle="collapse" data-target=".method_loadFile .collapse">
+                            <h2>Loads, require(), the given file name. If we are in development mode,
+&quot;/src/&quot; is inserted into the path.</h2>
+                            <pre>loadFile(string $file) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$file</h4>
+                                                <code>string</code><p><p>The name of the file that should be loaded.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_requireFile"></a>
+                        <div class="element clickable method protected  method_requireFile" data-toggle="collapse" data-target=".method_requireFile .collapse">
+                            <h2>Tries to load the autoload array and, if loaded correctly, includes the class.</h2>
+                            <pre>requireFile(string $fileName, string $className, string $prefix) : boolean</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fileName</h4>
+                                                <code>string</code><p><p>Name of the autoload file.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$className</h4>
+                                                <code>string</code><p><p>Name of the class that should be autoloaded.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$prefix</h4>
+                                                <code>string</code><p><p>The prefix of the class repository.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p><p>True is returned when the file is correctly loaded.
+Otherwise false is returned.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setOptions"></a>
+                        <div class="element clickable method public  method_setOptions" data-toggle="collapse" data-target=".method_setOptions .collapse">
+                            <h2>Associates an option object with this static class.</h2>
+                            <pre>setOptions(\ezcBaseAutoloadOptions $options) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
+                                                <code><a href="../classes/ezcBaseAutoloadOptions.html">\ezcBaseAutoloadOptions</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setPackageDir"></a>
+                        <div class="element clickable method protected  method_setPackageDir" data-toggle="collapse" data-target=".method_setPackageDir .collapse">
+                            <h2>Figures out the base path of the Zeta Components installation.</h2>
+                            <pre>setPackageDir() </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>It stores the path that it finds in a static member variable. The path
+depends on the installation method of the Zeta Components. The SVN version
+has a different path than the PEAR installed version.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setRunMode"></a>
+                        <div class="element clickable method public  method_setRunMode" data-toggle="collapse" data-target=".method_setRunMode .collapse">
+                            <h2>Sets the development mode to the one specified.</h2>
+                            <pre>setRunMode(integer $runMode) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$runMode</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setWorkingDirectory"></a>
+                        <div class="element clickable method public  method_setWorkingDirectory" data-toggle="collapse" data-target=".method_setWorkingDirectory .collapse">
+                            <h2>Sets the current working directory to $directory.</h2>
+                            <pre>setWorkingDirectory(string $directory) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$directory</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                                    <a id="constant_DEP_PHP_EXTENSION"> </a>
+                            <div class="element clickable constant  constant_DEP_PHP_EXTENSION" data-toggle="collapse" data-target=".constant_DEP_PHP_EXTENSION .collapse">
+                                <h2>Used for dependency checking, to check for a PHP extension.</h2>
+                                <pre>DEP_PHP_EXTENSION</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_DEP_PHP_VERSION"> </a>
+                            <div class="element clickable constant  constant_DEP_PHP_VERSION" data-toggle="collapse" data-target=".constant_DEP_PHP_VERSION .collapse">
+                                <h2>Used for dependency checking, to check for a PHP version.</h2>
+                                <pre>DEP_PHP_VERSION</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_MODE_PRODUCTION"> </a>
+                            <div class="element clickable constant  constant_MODE_PRODUCTION" data-toggle="collapse" data-target=".constant_MODE_PRODUCTION .collapse">
+                                <h2>Denotes the production mode</h2>
+                                <pre>MODE_PRODUCTION</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_MODE_DEVELOPMENT"> </a>
+                            <div class="element clickable constant  constant_MODE_DEVELOPMENT" data-toggle="collapse" data-target=".constant_MODE_DEVELOPMENT .collapse">
+                                <h2>Denotes the development mode</h2>
+                                <pre>MODE_DEVELOPMENT</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_libraryMode"> </a>
+                            <div class="element clickable property  private property_libraryMode" data-toggle="collapse" data-target=".property_libraryMode .collapse">
+                                <h2>Indirectly it determines the path where the autoloads are stored.</h2>
+                                <pre>libraryMode : string</pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_currentWorkingDirectory"> </a>
+                            <div class="element clickable property  private property_currentWorkingDirectory" data-toggle="collapse" data-target=".property_currentWorkingDirectory .collapse">
+                                <h2>Contains the current working directory, which is used when the
+$libraryMode is set to &quot;custom&quot;.</h2>
+                                <pre>currentWorkingDirectory : string</pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_packageDir"> </a>
+                            <div class="element clickable property  protected property_packageDir" data-toggle="collapse" data-target=".property_packageDir .collapse">
+                                <h2>The full path to the autoload directory.</h2>
+                                <pre>packageDir : string</pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_runMode"> </a>
+                            <div class="element clickable property  private property_runMode" data-toggle="collapse" data-target=".property_runMode .collapse">
+                                <h2>Contains which development mode is used. It&#039;s &quot;development&quot; by default,
+because of backwards compatibility reasons.</h2>
+                                <pre>runMode : </pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_repositoryDirs"> </a>
+                            <div class="element clickable property  protected property_repositoryDirs" data-toggle="collapse" data-target=".property_repositoryDirs .collapse">
+                                <h2>Stores info with additional paths where autoload files and classes for
+autoloading could be found. Each item of $repositoryDirs looks like
+array( autoloadFileDir, baseDir ). The array key is the prefix belonging
+to classes within that repository - if provided when calling
+addClassRepository(), or an autoincrement integer otherwise.</h2>
+                                <pre>repositoryDirs : \array(string=&gt;array)</pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\array(string=>array)</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_autoloadArray"> </a>
+                            <div class="element clickable property  protected property_autoloadArray" data-toggle="collapse" data-target=".property_autoloadArray .collapse">
+                                <h2>This variable stores all the elements from the autoload arrays. When a
+new autoload file is loaded, their files are added to this array.</h2>
+                                <pre>autoloadArray : \array(string=&gt;string)</pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\array(string=>string)</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_externalAutoloadArray"> </a>
+                            <div class="element clickable property  protected property_externalAutoloadArray" data-toggle="collapse" data-target=".property_externalAutoloadArray .collapse">
+                                <h2>This variable stores all the elements from the autoload arrays for
+external repositories. When a new autoload file is loaded, their files
+are added to this array.</h2>
+                                <pre>externalAutoloadArray : \array(string=&gt;string)</pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>\array(string=>string)</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_options"> </a>
+                            <div class="element clickable property  private property_options" data-toggle="collapse" data-target=".property_options .collapse">
+                                <h2>Options for the ezcBase class.</h2>
+                                <pre>options : \ezcBaseOptions</pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/ezcBaseOptions.html">\ezcBaseOptions</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\ezcBase"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/default.html">\</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/ezcBase.html">ezcBase</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:40 +0000.<br/>
+    </footer>
+    </body>
+</html>
