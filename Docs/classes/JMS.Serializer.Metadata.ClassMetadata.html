@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \JMS\Serializer\Metadata\ClassMetadata
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: ">
+            <span class="description"></span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addHandlerCallback" title="addHandlerCallback :: ">
+            <span class="description"></span><pre>addHandlerCallback</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addMethodMetadata" title="addMethodMetadata :: ">
+            <span class="description"></span><pre>addMethodMetadata</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addPostDeserializeMethod" title="addPostDeserializeMethod :: ">
+            <span class="description"></span><pre>addPostDeserializeMethod</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addPostSerializeMethod" title="addPostSerializeMethod :: ">
+            <span class="description"></span><pre>addPostSerializeMethod</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addPreSerializeMethod" title="addPreSerializeMethod :: ">
+            <span class="description"></span><pre>addPreSerializeMethod</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addPropertyMetadata" title="addPropertyMetadata :: ">
+            <span class="description"></span><pre>addPropertyMetadata</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isFresh" title="isFresh :: ">
+            <span class="description"></span><pre>isFresh</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_merge" title="merge :: ">
+            <span class="description"></span><pre>merge</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_registerNamespace" title="registerNamespace :: ">
+            <span class="description"></span><pre>registerNamespace</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_serialize" title="serialize :: ">
+            <span class="description"></span><pre>serialize</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setAccessorOrder" title="setAccessorOrder :: Sets the order of properties in the class.">
+            <span class="description">Sets the order of properties in the class.</span><pre>setAccessorOrder</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setDiscriminator" title="setDiscriminator :: ">
+            <span class="description"></span><pre>setDiscriminator</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_unserialize" title="unserialize :: ">
+            <span class="description"></span><pre>unserialize</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method private">
+                            <a href="#method_sortProperties" title="sortProperties :: ">
+                                <span class="description"></span><pre>sortProperties</pre>
+                            </a>
+                        </li>
+                                                                                    </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                                <li class="constant ">
+                    <a href="#constant_ACCESSOR_ORDER_ALPHABETICAL" title="ACCESSOR_ORDER_ALPHABETICAL :: ">
+                        <span class="description"></span><pre>ACCESSOR_ORDER_ALPHABETICAL</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ACCESSOR_ORDER_CUSTOM" title="ACCESSOR_ORDER_CUSTOM :: ">
+                        <span class="description"></span><pre>ACCESSOR_ORDER_CUSTOM</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ACCESSOR_ORDER_UNDEFINED" title="ACCESSOR_ORDER_UNDEFINED :: ">
+                        <span class="description"></span><pre>ACCESSOR_ORDER_UNDEFINED</pre>
+                    </a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ClassMetadata</h1>
+                <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/Metadata.MergeableClassMetadata.html">\Metadata\MergeableClassMetadata</a>
+                                                        </small>
+                <p class="short_description">Class Metadata used to customize the serialization process.</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>This class is intended to be extended to add your own application specific
+properties, and flags.</p>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Johannes M. Schmitt <a href="mailto:schmittjoh@gmail.com">schmittjoh@gmail.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>__construct</h2>
+                            <pre>__construct( $name) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addHandlerCallback"></a>
+                        <div class="element clickable method public  method_addHandlerCallback" data-toggle="collapse" data-target=".method_addHandlerCallback .collapse">
+                            <h2>addHandlerCallback</h2>
+                            <pre>addHandlerCallback(integer $direction, string|integer $format, string $methodName) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$direction</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$format</h4>
+                                                <code>string|integer</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$methodName</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addMethodMetadata"></a>
+                        <div class="element clickable method public  method_addMethodMetadata" data-toggle="collapse" data-target=".method_addMethodMetadata .collapse">
+                            <h2>addMethodMetadata</h2>
+                            <pre>addMethodMetadata(\Metadata\MethodMetadata $metadata) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$metadata</h4>
+                                                <code><a href="../classes/Metadata.MethodMetadata.html">\Metadata\MethodMetadata</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addPostDeserializeMethod"></a>
+                        <div class="element clickable method public  method_addPostDeserializeMethod" data-toggle="collapse" data-target=".method_addPostDeserializeMethod .collapse">
+                            <h2>addPostDeserializeMethod</h2>
+                            <pre>addPostDeserializeMethod(\Metadata\MethodMetadata $method) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$method</h4>
+                                                <code><a href="../classes/Metadata.MethodMetadata.html">\Metadata\MethodMetadata</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addPostSerializeMethod"></a>
+                        <div class="element clickable method public  method_addPostSerializeMethod" data-toggle="collapse" data-target=".method_addPostSerializeMethod .collapse">
+                            <h2>addPostSerializeMethod</h2>
+                            <pre>addPostSerializeMethod(\Metadata\MethodMetadata $method) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$method</h4>
+                                                <code><a href="../classes/Metadata.MethodMetadata.html">\Metadata\MethodMetadata</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addPreSerializeMethod"></a>
+                        <div class="element clickable method public  method_addPreSerializeMethod" data-toggle="collapse" data-target=".method_addPreSerializeMethod .collapse">
+                            <h2>addPreSerializeMethod</h2>
+                            <pre>addPreSerializeMethod(\Metadata\MethodMetadata $method) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$method</h4>
+                                                <code><a href="../classes/Metadata.MethodMetadata.html">\Metadata\MethodMetadata</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addPropertyMetadata"></a>
+                        <div class="element clickable method public  method_addPropertyMetadata" data-toggle="collapse" data-target=".method_addPropertyMetadata .collapse">
+                            <h2>addPropertyMetadata</h2>
+                            <pre>addPropertyMetadata(\Metadata\PropertyMetadata $metadata) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$metadata</h4>
+                                                <code><a href="../classes/Metadata.PropertyMetadata.html">\Metadata\PropertyMetadata</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isFresh"></a>
+                        <div class="element clickable method public  method_isFresh" data-toggle="collapse" data-target=".method_isFresh .collapse">
+                            <h2>isFresh</h2>
+                            <pre>isFresh( $timestamp = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$timestamp</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_merge"></a>
+                        <div class="element clickable method public  method_merge inherited" data-toggle="collapse" data-target=".method_merge .collapse">
+                            <h2>merge</h2>
+                            <pre>merge(\Metadata\MergeableInterface $object) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$object</h4>
+                                                <code><a href="../classes/Metadata.MergeableInterface.html">\Metadata\MergeableInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_registerNamespace"></a>
+                        <div class="element clickable method public  method_registerNamespace" data-toggle="collapse" data-target=".method_registerNamespace .collapse">
+                            <h2>registerNamespace</h2>
+                            <pre>registerNamespace( $uri,  $prefix = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$uri</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$prefix</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_serialize"></a>
+                        <div class="element clickable method public  method_serialize" data-toggle="collapse" data-target=".method_serialize .collapse">
+                            <h2>serialize</h2>
+                            <pre>serialize() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setAccessorOrder"></a>
+                        <div class="element clickable method public  method_setAccessorOrder" data-toggle="collapse" data-target=".method_setAccessorOrder .collapse">
+                            <h2>Sets the order of properties in the class.</h2>
+                            <pre>setAccessorOrder(string $order, array $customOrder = array()) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\JMS\Serializer\Exception\InvalidArgumentException</dt>
+                                                        <dd><p>When the accessor order is not valid</p></dd>
+                                                                                                            <dt>\JMS\Serializer\Exception\InvalidArgumentException</dt>
+                                                        <dd><p>When the custom order is not valid</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$order</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$customOrder</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setDiscriminator"></a>
+                        <div class="element clickable method public  method_setDiscriminator" data-toggle="collapse" data-target=".method_setDiscriminator .collapse">
+                            <h2>setDiscriminator</h2>
+                            <pre>setDiscriminator( $fieldName, array $map, array $groups = array()) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fieldName</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$map</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$groups</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_sortProperties"></a>
+                        <div class="element clickable method private  method_sortProperties" data-toggle="collapse" data-target=".method_sortProperties .collapse">
+                            <h2>sortProperties</h2>
+                            <pre>sortProperties() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_unserialize"></a>
+                        <div class="element clickable method public  method_unserialize" data-toggle="collapse" data-target=".method_unserialize .collapse">
+                            <h2>unserialize</h2>
+                            <pre>unserialize( $str) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$str</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                                    <a id="constant_ACCESSOR_ORDER_UNDEFINED"> </a>
+                            <div class="element clickable constant  constant_ACCESSOR_ORDER_UNDEFINED" data-toggle="collapse" data-target=".constant_ACCESSOR_ORDER_UNDEFINED .collapse">
+                                <h2>ACCESSOR_ORDER_UNDEFINED</h2>
+                                <pre>ACCESSOR_ORDER_UNDEFINED</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ACCESSOR_ORDER_ALPHABETICAL"> </a>
+                            <div class="element clickable constant  constant_ACCESSOR_ORDER_ALPHABETICAL" data-toggle="collapse" data-target=".constant_ACCESSOR_ORDER_ALPHABETICAL .collapse">
+                                <h2>ACCESSOR_ORDER_ALPHABETICAL</h2>
+                                <pre>ACCESSOR_ORDER_ALPHABETICAL</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ACCESSOR_ORDER_CUSTOM"> </a>
+                            <div class="element clickable constant  constant_ACCESSOR_ORDER_CUSTOM" data-toggle="collapse" data-target=".constant_ACCESSOR_ORDER_CUSTOM .collapse">
+                                <h2>ACCESSOR_ORDER_CUSTOM</h2>
+                                <pre>ACCESSOR_ORDER_CUSTOM</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_preSerializeMethods"> </a>
+                            <div class="element clickable property  public property_preSerializeMethods" data-toggle="collapse" data-target=".property_preSerializeMethods .collapse">
+                                <h2>preSerializeMethods</h2>
+                                <pre>preSerializeMethods : array&lt;mixed,\ReflectionMethod&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,\ReflectionMethod&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_postSerializeMethods"> </a>
+                            <div class="element clickable property  public property_postSerializeMethods" data-toggle="collapse" data-target=".property_postSerializeMethods .collapse">
+                                <h2>postSerializeMethods</h2>
+                                <pre>postSerializeMethods : array&lt;mixed,\ReflectionMethod&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,\ReflectionMethod&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_postDeserializeMethods"> </a>
+                            <div class="element clickable property  public property_postDeserializeMethods" data-toggle="collapse" data-target=".property_postDeserializeMethods .collapse">
+                                <h2>postDeserializeMethods</h2>
+                                <pre>postDeserializeMethods : array&lt;mixed,\ReflectionMethod&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,\ReflectionMethod&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_xmlRootName"> </a>
+                            <div class="element clickable property  public property_xmlRootName" data-toggle="collapse" data-target=".property_xmlRootName .collapse">
+                                <h2>xmlRootName</h2>
+                                <pre>xmlRootName : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_xmlRootNamespace"> </a>
+                            <div class="element clickable property  public property_xmlRootNamespace" data-toggle="collapse" data-target=".property_xmlRootNamespace .collapse">
+                                <h2>xmlRootNamespace</h2>
+                                <pre>xmlRootNamespace : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_xmlNamespaces"> </a>
+                            <div class="element clickable property  public property_xmlNamespaces" data-toggle="collapse" data-target=".property_xmlNamespaces .collapse">
+                                <h2>xmlNamespaces</h2>
+                                <pre>xmlNamespaces : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_accessorOrder"> </a>
+                            <div class="element clickable property  public property_accessorOrder" data-toggle="collapse" data-target=".property_accessorOrder .collapse">
+                                <h2>accessorOrder</h2>
+                                <pre>accessorOrder : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_customOrder"> </a>
+                            <div class="element clickable property  public property_customOrder" data-toggle="collapse" data-target=".property_customOrder .collapse">
+                                <h2>customOrder</h2>
+                                <pre>customOrder : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_usingExpression"> </a>
+                            <div class="element clickable property  public property_usingExpression" data-toggle="collapse" data-target=".property_usingExpression .collapse">
+                                <h2>usingExpression</h2>
+                                <pre>usingExpression : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_handlerCallbacks"> </a>
+                            <div class="element clickable property  public property_handlerCallbacks" data-toggle="collapse" data-target=".property_handlerCallbacks .collapse">
+                                <h2>handlerCallbacks</h2>
+                                <pre>handlerCallbacks : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_discriminatorDisabled"> </a>
+                            <div class="element clickable property  public property_discriminatorDisabled" data-toggle="collapse" data-target=".property_discriminatorDisabled .collapse">
+                                <h2>discriminatorDisabled</h2>
+                                <pre>discriminatorDisabled : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_discriminatorBaseClass"> </a>
+                            <div class="element clickable property  public property_discriminatorBaseClass" data-toggle="collapse" data-target=".property_discriminatorBaseClass .collapse">
+                                <h2>discriminatorBaseClass</h2>
+                                <pre>discriminatorBaseClass : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_discriminatorFieldName"> </a>
+                            <div class="element clickable property  public property_discriminatorFieldName" data-toggle="collapse" data-target=".property_discriminatorFieldName .collapse">
+                                <h2>discriminatorFieldName</h2>
+                                <pre>discriminatorFieldName : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_discriminatorValue"> </a>
+                            <div class="element clickable property  public property_discriminatorValue" data-toggle="collapse" data-target=".property_discriminatorValue .collapse">
+                                <h2>discriminatorValue</h2>
+                                <pre>discriminatorValue : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_discriminatorMap"> </a>
+                            <div class="element clickable property  public property_discriminatorMap" data-toggle="collapse" data-target=".property_discriminatorMap .collapse">
+                                <h2>discriminatorMap</h2>
+                                <pre>discriminatorMap : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_discriminatorGroups"> </a>
+                            <div class="element clickable property  public property_discriminatorGroups" data-toggle="collapse" data-target=".property_discriminatorGroups .collapse">
+                                <h2>discriminatorGroups</h2>
+                                <pre>discriminatorGroups : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_xmlDiscriminatorAttribute"> </a>
+                            <div class="element clickable property  public property_xmlDiscriminatorAttribute" data-toggle="collapse" data-target=".property_xmlDiscriminatorAttribute .collapse">
+                                <h2>xmlDiscriminatorAttribute</h2>
+                                <pre>xmlDiscriminatorAttribute : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_xmlDiscriminatorCData"> </a>
+                            <div class="element clickable property  public property_xmlDiscriminatorCData" data-toggle="collapse" data-target=".property_xmlDiscriminatorCData .collapse">
+                                <h2>xmlDiscriminatorCData</h2>
+                                <pre>xmlDiscriminatorCData : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_xmlDiscriminatorNamespace"> </a>
+                            <div class="element clickable property  public property_xmlDiscriminatorNamespace" data-toggle="collapse" data-target=".property_xmlDiscriminatorNamespace .collapse">
+                                <h2>xmlDiscriminatorNamespace</h2>
+                                <pre>xmlDiscriminatorNamespace : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_name"> </a>
+                            <div class="element clickable property  public property_name" data-toggle="collapse" data-target=".property_name .collapse">
+                                <h2>name</h2>
+                                <pre>name : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_reflection"> </a>
+                            <div class="element clickable property  public property_reflection" data-toggle="collapse" data-target=".property_reflection .collapse">
+                                <h2>reflection</h2>
+                                <pre>reflection : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_methodMetadata"> </a>
+                            <div class="element clickable property  public property_methodMetadata" data-toggle="collapse" data-target=".property_methodMetadata .collapse">
+                                <h2>methodMetadata</h2>
+                                <pre>methodMetadata : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_propertyMetadata"> </a>
+                            <div class="element clickable property  public property_propertyMetadata" data-toggle="collapse" data-target=".property_propertyMetadata .collapse">
+                                <h2>propertyMetadata</h2>
+                                <pre>propertyMetadata : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_fileResources"> </a>
+                            <div class="element clickable property  public property_fileResources" data-toggle="collapse" data-target=".property_fileResources .collapse">
+                                <h2>fileResources</h2>
+                                <pre>fileResources : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_createdAt"> </a>
+                            <div class="element clickable property  public property_createdAt" data-toggle="collapse" data-target=".property_createdAt .collapse">
+                                <h2>createdAt</h2>
+                                <pre>createdAt : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\JMS\Serializer\Metadata\ClassMetadata"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/JMS.Serializer.Metadata.html">Metadata</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/JMS.Serializer.Metadata.ClassMetadata.html">ClassMetadata</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:42 +0000.<br/>
+    </footer>
+    </body>
+</html>

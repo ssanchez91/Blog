@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \phpDocumentor\Reflection\DocBlock\Tag
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/phpDocumentor.Reflection.DocBlock.Tag.html" title="Tag">
+                    <i class="icon-th"></i> Tag
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Reflection.html">Reflection</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Reflection.DocBlock.html">DocBlock</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Reflection.DocBlock.Tag.html">Tag</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AuthorTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AuthorTag .collapse">
+        <h1>AuthorTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.AuthorTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for an @author tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.AuthorTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CoversTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CoversTag .collapse">
+        <h1>CoversTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.CoversTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @covers tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.CoversTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CoversTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CoversTagTest .collapse">
+        <h1>CoversTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.CoversTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\CoversTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.CoversTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DeprecatedTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DeprecatedTag .collapse">
+        <h1>DeprecatedTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.DeprecatedTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @deprecated tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.DeprecatedTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DeprecatedTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DeprecatedTagTest .collapse">
+        <h1>DeprecatedTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.DeprecatedTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\DeprecatedTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.DeprecatedTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ExampleTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ExampleTag .collapse">
+        <h1>ExampleTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ExampleTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @example tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ExampleTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ExampleTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ExampleTagTest .collapse">
+        <h1>ExampleTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ExampleTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\ExampleTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ExampleTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LinkTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LinkTag .collapse">
+        <h1>LinkTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.LinkTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @link tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.LinkTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LinkTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LinkTagTest .collapse">
+        <h1>LinkTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.LinkTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\LinkTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.LinkTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodTag .collapse">
+        <h1>MethodTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.MethodTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @method in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.MethodTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodTagTest .collapse">
+        <h1>MethodTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.MethodTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\MethodTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.MethodTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ParamTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ParamTag .collapse">
+        <h1>ParamTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ParamTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @param tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ParamTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ParamTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ParamTagTest .collapse">
+        <h1>ParamTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ParamTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\ParamTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ParamTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyReadTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyReadTag .collapse">
+        <h1>PropertyReadTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.PropertyReadTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @property-read tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.PropertyReadTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyTag .collapse">
+        <h1>PropertyTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.PropertyTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @property tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.PropertyTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyWriteTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyWriteTag .collapse">
+        <h1>PropertyWriteTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.PropertyWriteTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @property-write tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.PropertyWriteTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ReturnTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ReturnTag .collapse">
+        <h1>ReturnTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ReturnTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @return tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ReturnTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ReturnTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ReturnTagTest .collapse">
+        <h1>ReturnTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ReturnTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\ReturnTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ReturnTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SeeTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SeeTag .collapse">
+        <h1>SeeTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SeeTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @see tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SeeTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SeeTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SeeTagTest .collapse">
+        <h1>SeeTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SeeTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\SeeTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SeeTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SinceTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SinceTag .collapse">
+        <h1>SinceTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SinceTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @since tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SinceTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SinceTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SinceTagTest .collapse">
+        <h1>SinceTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SinceTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\SinceTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SinceTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SourceTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SourceTag .collapse">
+        <h1>SourceTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SourceTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @source tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SourceTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SourceTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SourceTagTest .collapse">
+        <h1>SourceTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SourceTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\SourceTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.SourceTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ThrowsTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ThrowsTag .collapse">
+        <h1>ThrowsTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ThrowsTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @throws tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ThrowsTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ThrowsTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ThrowsTagTest .collapse">
+        <h1>ThrowsTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ThrowsTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\ThrowsTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.ThrowsTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_UsesTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_UsesTag .collapse">
+        <h1>UsesTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.UsesTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @uses tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.UsesTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_UsesTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_UsesTagTest .collapse">
+        <h1>UsesTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.UsesTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\UsesTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.UsesTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VarTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VarTag .collapse">
+        <h1>VarTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.VarTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @var tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.VarTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VarTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VarTagTest .collapse">
+        <h1>VarTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.VarTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\VarTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.VarTagTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VersionTag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VersionTag .collapse">
+        <h1>VersionTag<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.VersionTag.html">¶</a></h1>
+        <p class="short_description">Reflection class for a @version tag in a Docblock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.VersionTag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VersionTagTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VersionTagTest .collapse">
+        <h1>VersionTagTest<a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.VersionTagTest.html">¶</a></h1>
+        <p class="short_description">Test class for \phpDocumentor\Reflection\DocBlock\Tag\VersionTag</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Reflection.DocBlock.Tag.VersionTagTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:31 +0000.<br/>
+    </footer>
+    </body>
+</html>

@@ -12,13 +12,26 @@ use App\Framework\BaseManager;
 use App\Framework\Exception\NoUserFoundException;
 use App\Framework\Exception\WrongPasswordException;
 
+/**
+ * Class UserManager
+ * @package App\Model\Manager
+ */
 class UserManager extends BaseManager
 {
+    /**
+     * Constructor
+     * @param string $datasource string connexion
+     */
     public function __construct($datasource)
     {
         parent::__construct('user', 'App\\Model\\Entity\\User', $datasource);
     }
 
+    /**
+     * Method getByMail
+     * @param string $mail login of user
+     * @return mixed
+     */
     public function getByMail($mail)
     {
         $query = $this->bdd->prepare('SELECT * FROM user WHERE MAIL = :mail');
@@ -27,18 +40,40 @@ class UserManager extends BaseManager
         return $query->fetch();
     }
 
+    /**
+     * Method insert
+     * @param object $obj
+     * @param array $param
+     * @throws \App\Framework\Exception\ExecuteQueryException
+     */
     public function insert($obj, $param)
     {
         $idUser = parent::insert($obj, $param);
         $this->addDefaultRole($idUser);
     }
 
+    /**
+     * Method addDefaultRole
+     * @param int $userId User Id
+     * @return bool
+     */
     public function addDefaultRole($userId)
     {
         $query = $this->bdd->prepare('INSERT INTO role_user (user_id, role_id) VALUES (:userId, 2)');
         return $query->execute(array('userId' => $userId));
     }
 
+    /**
+     * Method checkLogin
+     *
+     * Select user and check if the password is right
+     *
+     * @param string $mail used like login
+     * @param string $password password of the user
+     * @return mixed
+     * @throws NoUserFoundException
+     * @throws WrongPasswordException
+     */
     public function checkLogin($mail, $password)
     {
         $query = $this->bdd->prepare('SELECT * FROM user WHERE mail = :mail');
@@ -58,6 +93,13 @@ class UserManager extends BaseManager
         }
     }
 
+    /**
+     * Method listRolesByUserId
+     *
+     * Allow to list Roles by User Id
+     * @param int $userId User Id
+     * @return array
+     */
     public function listRolesByUserId($userId)
     {
         $query = $this->bdd->prepare('SELECT role.id, role.description, role.slug FROM user INNER JOIN role_user ON role_user.user_id = user.id INNER JOIN role ON role.id = role_user.role_id WHERE user.id = :userId');
@@ -66,6 +108,14 @@ class UserManager extends BaseManager
         return $query->fetchAll();
     }
 
+    /**
+     * Method getListUserOrderByName
+     *
+     * Allow to list users order by name asc
+     * @param int $page page number asked ( used for the paginate)
+     * @param int $nbUsersByPage Number of user displayed by page
+     * @return \stdClass
+     */
     public function getListUserOrderByName($page, $nbUsersByPage)
     {
         $nbUsers = $this->countUser();
@@ -91,6 +141,11 @@ class UserManager extends BaseManager
 
     }
 
+    /**
+     * Method countUser
+     *
+     * @return string
+     */
     public function countUser()
     {
         $query = $this->bdd->query("SELECT count(*) nb_user FROM user;");
@@ -98,6 +153,14 @@ class UserManager extends BaseManager
         return $query->fetchColumn();
     }
 
+    /**
+     * Method update
+     *
+     * @param object $obj
+     * @param array $param
+     * @return string
+     * @throws \App\Framework\Exception\ExecuteQueryException
+     */
     public function update($obj, $param)
     {
         $user = parent::update($obj, $param);
@@ -107,6 +170,12 @@ class UserManager extends BaseManager
         return $user;
     }
 
+    /**
+     * Method listUserByRole
+     *
+     * @param string $role this param content the slug of the role
+     * @return array
+     */
     public function listUserByRole($role)
     {
         $query = $this->bdd->prepare("SELECT user.id, user.firstname, user.lastname
@@ -121,6 +190,11 @@ class UserManager extends BaseManager
         return $query->fetchAll();
     }
 
+    /**
+     * Method countUserEnabled
+     *
+     * @return string
+     */
     public function countUserEnabled()
     {
         $query = $this->bdd->query("SELECT count(*) nb_user FROM user WHERE enabled = TRUE ;");
@@ -128,6 +202,10 @@ class UserManager extends BaseManager
         return $query->fetchColumn();
     }
 
+    /**
+     * Method countUserDisabled
+     * @return string
+     */
     public function countUserDisabled()
     {
         $query = $this->bdd->query("SELECT count(*) nb_user FROM user WHERE enabled = 0 ;");
@@ -135,6 +213,14 @@ class UserManager extends BaseManager
         return $query->fetchColumn();
     }
 
+    /**
+     * Method getUserByIdWithRoles
+     *
+     * Allow to list Users with their roles
+     *
+     * @param int $idUser User Id
+     * @return mixed
+     */
     public function getUserByIdWithRoles($idUser)
     {
         $user = parent::getById($idUser);
@@ -142,6 +228,12 @@ class UserManager extends BaseManager
         return $user;
     }
 
+    /**
+     * Method updateRoles
+     *
+     * @param int $userId User Id
+     * @param array $listRoles List of roles
+     */
     public function updateRoles($userId, $listRoles)
     {
         $listRoleSlug = [];
@@ -172,12 +264,26 @@ class UserManager extends BaseManager
         }
     }
 
+    /**
+     * Methode deleteRoleByUserIdAndRoleId
+     *
+     * @param int $userId User Id
+     * @param int $roleId Role Id
+     * @return bool
+     */
     public function deleteRoleByUserIdAndRoleId($userId, $roleId)
     {
         $query = $this->bdd->prepare('DELETE FROM role_user WHERE user_id = :userId AND role_id = :roleId');
         return $query->execute(array('userId' => $userId, 'roleId' => $roleId));
     }
 
+    /**
+     * Method addRoleByUserIdAndRoleId
+     *
+     * @param int $userId User Id
+     * @param int $roleId Role Id
+     * @return bool
+     */
     public function addRoleByUserIdAndRoleId($userId, $roleId)
     {
         $query = $this->bdd->prepare('INSERT INTO role_user SET user_id = :userId, role_id = :roleId');

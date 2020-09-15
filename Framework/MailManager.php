@@ -8,13 +8,34 @@
 
 namespace App\Framework;
 
-
+/**
+ * Class MailManager
+ *
+ * @package App\Framework
+ */
 class MailManager
 {
+    /**
+     * Variable To
+     * @var
+     */
     private $to;
+    /**
+     * Variable From
+     * @var
+     */
     private $from;
+    /**
+     * Variable Subject
+     * @var string
+     */
     private $subject;
 
+    /**
+     * Constructor
+     *
+     * @param object $config Json File Object Config
+     */
     public function __construct($config)
     {
         $this->to = $config->mailTo;
@@ -22,6 +43,15 @@ class MailManager
         $this->from = $config->mailFrom;
     }
 
+    /**
+     * Method sendMail
+     *
+     * @param string $to mail to
+     * @param string $subject mail subject
+     * @param string $body content of message
+     * @return bool
+     * @throws \Exception
+     */
     public function sendEmail($to = null, $subject = null, $body)
     {
         if (empty($subject)) {

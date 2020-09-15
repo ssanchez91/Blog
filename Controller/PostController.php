@@ -16,10 +16,19 @@ use App\Framework\Exception\PageNotFoundException;
 use App\Model\Entity\Alert;
 use App\Model\Entity\Post;
 
+/**
+ * Class PostController
+ *
+ * @package App\Controller
+ */
 class PostController extends BaseController
 {
     /**
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method showFormAddPost
+     *
+     * Display form to add a post.
+     *
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function showFormAddPostAction()
     {
@@ -27,10 +36,14 @@ class PostController extends BaseController
     }
 
     /**
-     * @param $title
-     * @param $hat
-     * @param $content
-     * @throws \Exception
+     * Method addPost
+     *
+     * Insert the post in database.
+     *
+     * @param string $title Title post
+     * @param string $hat Hat post
+     * @param string $content Content post
+     * @throws \Exception Display default exception
      */
     public function addPostAction($title, $hat, $content)
     {
@@ -53,8 +66,12 @@ class PostController extends BaseController
     }
 
     /**
-     * @param $id
-     * @throws \Exception
+     * Method deletePost
+     *
+     * Delete post in database.
+     *
+     * @param int $id Post Id
+     * @throws \Exception Display default exception
      */
     public function deletePostAction($id)
     {
@@ -73,9 +90,13 @@ class PostController extends BaseController
     }
 
     /**
-     * @param $id
-     * @throws ForbiddenAccessActionException
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method editPost
+     *
+     * Display form to edit a post
+     *
+     * @param int $id Post Id
+     * @throws ForbiddenAccessActionException You are not authorized to execute this action on this object !
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function editPostAction($id)
     {
@@ -90,11 +111,15 @@ class PostController extends BaseController
     }
 
     /**
-     * @param $id
-     * @param $title
-     * @param $hat
-     * @param $content
-     * @param $author
+     * Method updatePost
+     *
+     * Update the post in database.
+     *
+     * @param int $id Post Id
+     * @param string $title Post Title
+     * @param string $hat Post Hat
+     * @param string $content Post Content
+     * @param int $author Post User Id
      * @throws \Exception
      */
     public function updatePostAction($id, $title, $hat, $content, $author)
@@ -120,10 +145,14 @@ class PostController extends BaseController
     }
 
     /**
-     * @param $id
-     * @param int $page
-     * @throws PageNotFoundException
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method showPost
+     *
+     * Display a post with comments
+     *
+     * @param int $id Post id
+     * @param int $page Page number asked
+     * @throws PageNotFoundException The page number X is not found ! The number of pages is Y.
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function showPostAction($id, $page = 1)
     {
@@ -144,9 +173,13 @@ class PostController extends BaseController
     }
 
     /**
-     * @param int $page
-     * @throws PageNotFoundException
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method listPost
+     *
+     * Display list of posts for admin in back-office
+     *
+     * @param int $page Page number asked
+     * @throws PageNotFoundException The page number X is not found ! The number of pages is Y.
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function listPostAction($page = 1)
     {
@@ -168,9 +201,13 @@ class PostController extends BaseController
     }
 
     /**
-     * @param int $page
-     * @throws PageNotFoundException
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method listPostPublic
+     *
+     * Display list of posts for visitor or user
+     *
+     * @param int $page Page number asked
+     * @throws PageNotFoundException The page number X is not found ! The number of pages is Y.
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function listPostPublicAction($page = 1)
     {

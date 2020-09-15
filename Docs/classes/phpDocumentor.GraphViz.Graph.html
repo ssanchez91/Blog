@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \phpDocumentor\GraphViz\Graph
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___call" title="__call :: Magic method to provide a getter/setter to add attributes on the Graph.">
+            <span class="description">Magic method to provide a getter/setter to add attributes on the Graph.</span><pre>__call</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method___get" title="__get :: Returns the requested node by its name.">
+            <span class="description">Returns the requested node by its name.</span><pre>__get</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method___set" title="__set :: Sets a node using a custom name.">
+            <span class="description">Sets a node using a custom name.</span><pre>__set</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method___toString" title="__toString :: Generates a DOT file for use with GraphViz.">
+            <span class="description">Generates a DOT file for use with GraphViz.</span><pre>__toString</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addGraph" title="addGraph :: Adds a subgraph to this graph; automatically changes the type to subgraph.">
+            <span class="description">Adds a subgraph to this graph; automatically changes the type to subgraph.</span><pre>addGraph</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_create" title="create :: Factory method to instantiate a Graph so that you can use fluent coding
+to chain everything.">
+            <span class="description">Factory method to instantiate a Graph so that you can use fluent coding
+to chain everything.</span><pre>create</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_export" title="export :: Exports this graph to a generated image.">
+            <span class="description">Exports this graph to a generated image.</span><pre>export</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_findNode" title="findNode :: Finds a node in this graph or any of its subgraphs.">
+            <span class="description">Finds a node in this graph or any of its subgraphs.</span><pre>findNode</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getGraph" title="getGraph :: Returns the subgraph with a given name.">
+            <span class="description">Returns the subgraph with a given name.</span><pre>getGraph</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getName" title="getName :: Returns the name for this Graph.">
+            <span class="description">Returns the name for this Graph.</span><pre>getName</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getType" title="getType :: Returns the type of this Graph.">
+            <span class="description">Returns the type of this Graph.</span><pre>getType</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_hasGraph" title="hasGraph :: Checks whether a graph with a certain name already exists.">
+            <span class="description">Checks whether a graph with a certain name already exists.</span><pre>hasGraph</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isStrict" title="isStrict :: ">
+            <span class="description"></span><pre>isStrict</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_link" title="link :: Links two nodes to eachother and registers the Edge onto this graph.">
+            <span class="description">Links two nodes to eachother and registers the Edge onto this graph.</span><pre>link</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setCenter" title="setCenter :: ">
+            <span class="description"></span><pre>setCenter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setConcentrate" title="setConcentrate :: ">
+            <span class="description"></span><pre>setConcentrate</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setName" title="setName :: Sets the name for this graph.">
+            <span class="description">Sets the name for this graph.</span><pre>setName</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setNode" title="setNode :: Sets a node in the $nodes array; uses the name of the node as index.">
+            <span class="description">Sets a node in the $nodes array; uses the name of the node as index.</span><pre>setNode</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setPath" title="setPath :: Sets the path for the execution. Only needed if it is not in the PATH env.">
+            <span class="description">Sets the path for the execution. Only needed if it is not in the PATH env.</span><pre>setPath</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setRank" title="setRank :: ">
+            <span class="description"></span><pre>setRank</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setRankDir" title="setRankDir :: ">
+            <span class="description"></span><pre>setRankDir</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setRankSep" title="setRankSep :: ">
+            <span class="description"></span><pre>setRankSep</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setSplines" title="setSplines :: ">
+            <span class="description"></span><pre>setSplines</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setStrict" title="setStrict :: Set if the Graph should be strict. If the graph is strict then
+multiple edges are not allowed between the same pairs of nodes">
+            <span class="description">Set if the Graph should be strict. If the graph is strict then
+multiple edges are not allowed between the same pairs of nodes</span><pre>setStrict</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setType" title="setType :: Sets the type for this graph.">
+            <span class="description">Sets the type for this graph.</span><pre>setType</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>Graph</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description">Class representing a graph; this may be a main graph but also a subgraph.</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>In case of a subgraph:
+When the name of the subgraph is prefixed with <em>cluster</em> then the contents
+of this graph will be grouped and a border will be added. Otherwise it is
+used as logical container to place defaults in.</p>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Mike van Riel <a href="mailto:mike.vanriel@naenius.com">mike.vanriel@naenius.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        copyright
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>2010-2011 Mike van Riel / Naenius (<a href="http://www.naenius.com">http://www.naenius.com</a>)</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        license
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p><a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a> MIT</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        link
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p><a href="http://phpdoc.org">http://phpdoc.org</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                            </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___call"></a>
+                        <div class="element clickable method public  method___call" data-toggle="collapse" data-target=".method___call .collapse">
+                            <h2>Magic method to provide a getter/setter to add attributes on the Graph.</h2>
+                            <pre>__call(string $name, array&lt;mixed,mixed&gt; $arguments) : array&lt;mixed,\phpDocumentor\GraphViz\Attribute&gt;|\phpDocumentor\GraphViz\Graph|null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Using this method we make sure that we support any attribute without
+too much hassle. If the name for this method does not start with get
+or set we return null.</p>
+<p>Set methods return this graph (fluent interface) whilst get methods
+return the attribute value.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>Name of the method including get/set</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$arguments</h4>
+                                                <code>array&lt;mixed,mixed&gt;</code><p><p>The arguments, should be 1: the value</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,<a href="../classes/phpDocumentor.GraphViz.Attribute.html">\phpDocumentor\GraphViz\Attribute</a>&gt;|<a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a>|null</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method___get"></a>
+                        <div class="element clickable method public  method___get" data-toggle="collapse" data-target=".method___get .collapse">
+                            <h2>Returns the requested node by its name.</h2>
+                            <pre>__get(string $name) : \phpDocumentor\GraphViz\Node</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/phpDocumentor.GraphViz.Graph.html#method_setNode">\phpDocumentor\GraphViz\Graph::setNode()</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>The name of the node to retrieve.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Node.html">\phpDocumentor\GraphViz\Node</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method___set"></a>
+                        <div class="element clickable method public  method___set" data-toggle="collapse" data-target=".method___set .collapse">
+                            <h2>Sets a node using a custom name.</h2>
+                            <pre>__set(string $name, \phpDocumentor\GraphViz\Node $value) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/phpDocumentor.GraphViz.Graph.html#method_setNode">\phpDocumentor\GraphViz\Graph::setNode()</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>Name of the node.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code><a href="../classes/phpDocumentor.GraphViz.Node.html">\phpDocumentor\GraphViz\Node</a></code><p><p>Node to set on the given name.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method___toString"></a>
+                        <div class="element clickable method public  method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
+                            <h2>Generates a DOT file for use with GraphViz.</h2>
+                            <pre>__toString() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>GraphViz is not used in this method; it is safe to call it even without
+GraphViz installed.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addGraph"></a>
+                        <div class="element clickable method public  method_addGraph" data-toggle="collapse" data-target=".method_addGraph .collapse">
+                            <h2>Adds a subgraph to this graph; automatically changes the type to subgraph.</h2>
+                            <pre>addGraph(\phpDocumentor\GraphViz\Graph $graph) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Please note that an index is maintained using the name of the subgraph.
+Thus if you have 2 subgraphs with the same name that the first will be
+overwritten by the latter.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/phpDocumentor.GraphViz.Graph.html#method_create">\phpDocumentor\GraphViz\Graph::create()</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$graph</h4>
+                                                <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p><p>The graph to add onto this graph as
+subgraph.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_create"></a>
+                        <div class="element clickable method public  method_create" data-toggle="collapse" data-target=".method_create .collapse">
+                            <h2>Factory method to instantiate a Graph so that you can use fluent coding
+to chain everything.</h2>
+                            <pre>create(string $name = &#039;G&#039;, boolean $directional = true) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>The name for this graph.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$directional</h4>
+                                                <code>boolean</code><p><p>Whether this is a directed or undirected graph.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_export"></a>
+                        <div class="element clickable method public  method_export" data-toggle="collapse" data-target=".method_export .collapse">
+                            <h2>Exports this graph to a generated image.</h2>
+                            <pre>export(string $type, string $filename) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This is the only method that actually requires GraphViz.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    uses
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    link
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><a href="http://www.graphviz.org/content/output-formats">http://www.graphviz.org/content/output-formats</a></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\phpDocumentor\GraphViz\Exception</dt>
+                                                        <dd><p>if an error occurred in GraphViz.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p><p>The type to export to; see the link above for a
+list of supported types.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$filename</h4>
+                                                <code>string</code><p><p>The path to write to.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_findNode"></a>
+                        <div class="element clickable method public  method_findNode" data-toggle="collapse" data-target=".method_findNode .collapse">
+                            <h2>Finds a node in this graph or any of its subgraphs.</h2>
+                            <pre>findNode(string $name) : \phpDocumentor\GraphViz\Node</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>Name of the node to find.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Node.html">\phpDocumentor\GraphViz\Node</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getGraph"></a>
+                        <div class="element clickable method public  method_getGraph" data-toggle="collapse" data-target=".method_getGraph .collapse">
+                            <h2>Returns the subgraph with a given name.</h2>
+                            <pre>getGraph(string $name) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>Name of the requested graph.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getName"></a>
+                        <div class="element clickable method public  method_getName" data-toggle="collapse" data-target=".method_getName .collapse">
+                            <h2>Returns the name for this Graph.</h2>
+                            <pre>getName() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getType"></a>
+                        <div class="element clickable method public  method_getType" data-toggle="collapse" data-target=".method_getType .collapse">
+                            <h2>Returns the type of this Graph.</h2>
+                            <pre>getType() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasGraph"></a>
+                        <div class="element clickable method public  method_hasGraph" data-toggle="collapse" data-target=".method_hasGraph .collapse">
+                            <h2>Checks whether a graph with a certain name already exists.</h2>
+                            <pre>hasGraph(string $name) : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>Name of the graph to find.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isStrict"></a>
+                        <div class="element clickable method public  method_isStrict" data-toggle="collapse" data-target=".method_isStrict .collapse">
+                            <h2>isStrict</h2>
+                            <pre>isStrict() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_link"></a>
+                        <div class="element clickable method public  method_link" data-toggle="collapse" data-target=".method_link .collapse">
+                            <h2>Links two nodes to eachother and registers the Edge onto this graph.</h2>
+                            <pre>link(\phpDocumentor\GraphViz\Edge $edge) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/phpDocumentor.GraphViz.Edge.html#method_create">\phpDocumentor\GraphViz\Edge::create()</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$edge</h4>
+                                                <code><a href="../classes/phpDocumentor.GraphViz.Edge.html">\phpDocumentor\GraphViz\Edge</a></code><p><p>The link between two classes.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setCenter"></a>
+                        <div class="element clickable method public  method_setCenter" data-toggle="collapse" data-target=".method_setCenter .collapse">
+                            <h2>setCenter</h2>
+                            <pre>setCenter(string $center) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$center</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\phpDocumentor\GraphViz\Graph</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setConcentrate"></a>
+                        <div class="element clickable method public  method_setConcentrate" data-toggle="collapse" data-target=".method_setConcentrate .collapse">
+                            <h2>setConcentrate</h2>
+                            <pre>setConcentrate(string $concentrate) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$concentrate</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\phpDocumentor\GraphViz\Graph</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setName"></a>
+                        <div class="element clickable method public  method_setName" data-toggle="collapse" data-target=".method_setName .collapse">
+                            <h2>Sets the name for this graph.</h2>
+                            <pre>setName(string $name) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If this is a subgraph you can prefix the name with <em>cluster</em> to group all
+contained nodes and add a border.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p><p>The new name for this graph.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setNode"></a>
+                        <div class="element clickable method public  method_setNode" data-toggle="collapse" data-target=".method_setNode .collapse">
+                            <h2>Sets a node in the $nodes array; uses the name of the node as index.</h2>
+                            <pre>setNode(\phpDocumentor\GraphViz\Node $node) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Nodes can be retrieved by retrieving the property with the same name.
+Thus 'node1' can be retrieved by invoking: $graph-&gt;node1</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/phpDocumentor.GraphViz.Node.html#method_create">\phpDocumentor\GraphViz\Node::create()</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$node</h4>
+                                                <code><a href="../classes/phpDocumentor.GraphViz.Node.html">\phpDocumentor\GraphViz\Node</a></code><p><p>The node to set onto this Graph.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setPath"></a>
+                        <div class="element clickable method public  method_setPath" data-toggle="collapse" data-target=".method_setPath .collapse">
+                            <h2>Sets the path for the execution. Only needed if it is not in the PATH env.</h2>
+                            <pre>setPath(string $path) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p><p>The path to execute dot from</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setRank"></a>
+                        <div class="element clickable method public  method_setRank" data-toggle="collapse" data-target=".method_setRank .collapse">
+                            <h2>setRank</h2>
+                            <pre>setRank(string $rank) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$rank</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\phpDocumentor\GraphViz\Graph</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setRankDir"></a>
+                        <div class="element clickable method public  method_setRankDir" data-toggle="collapse" data-target=".method_setRankDir .collapse">
+                            <h2>setRankDir</h2>
+                            <pre>setRankDir(string $rankDir) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$rankDir</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\phpDocumentor\GraphViz\Graph</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setRankSep"></a>
+                        <div class="element clickable method public  method_setRankSep" data-toggle="collapse" data-target=".method_setRankSep .collapse">
+                            <h2>setRankSep</h2>
+                            <pre>setRankSep(string $rankSep) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$rankSep</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\phpDocumentor\GraphViz\Graph</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setSplines"></a>
+                        <div class="element clickable method public  method_setSplines" data-toggle="collapse" data-target=".method_setSplines .collapse">
+                            <h2>setSplines</h2>
+                            <pre>setSplines(string $splines) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$splines</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\phpDocumentor\GraphViz\Graph</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setStrict"></a>
+                        <div class="element clickable method public  method_setStrict" data-toggle="collapse" data-target=".method_setStrict .collapse">
+                            <h2>Set if the Graph should be strict. If the graph is strict then
+multiple edges are not allowed between the same pairs of nodes</h2>
+                            <pre>setStrict(boolean $isStrict) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$isStrict</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setType"></a>
+                        <div class="element clickable method public  method_setType" data-toggle="collapse" data-target=".method_setType .collapse">
+                            <h2>Sets the type for this graph.</h2>
+                            <pre>setType(string $type) : \phpDocumentor\GraphViz\Graph</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\InvalidArgumentException</dt>
+                                                        <dd><p>if $type is not &quot;digraph&quot;, &quot;graph&quot; or
+&quot;subgraph&quot;.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p><p>Must be either &quot;digraph&quot;, &quot;graph&quot; or &quot;subgraph&quot;.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_name"> </a>
+                            <div class="element clickable property  protected property_name" data-toggle="collapse" data-target=".property_name .collapse">
+                                <h2>Name of this graph</h2>
+                                <pre>name : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Name of this graph</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_type"> </a>
+                            <div class="element clickable property  protected property_type" data-toggle="collapse" data-target=".property_type .collapse">
+                                <h2>Type of this graph; may be digraph, graph or subgraph</h2>
+                                <pre>type : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Type of this graph; may be digraph, graph or subgraph</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_strict"> </a>
+                            <div class="element clickable property  protected property_strict" data-toggle="collapse" data-target=".property_strict .collapse">
+                                <h2>If the graph is strict then multiple edges are not allowed between the same pairs of nodes</h2>
+                                <pre>strict : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>If the graph is strict then multiple edges are not allowed between the same pairs of nodes</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_attributes"> </a>
+                            <div class="element clickable property  protected property_attributes" data-toggle="collapse" data-target=".property_attributes .collapse">
+                                <h2>A list of attributes for this Graph</h2>
+                                <pre>attributes : array&lt;mixed,\phpDocumentor\GraphViz\Attribute&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>A list of attributes for this Graph</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,<a href="../classes/phpDocumentor.GraphViz.Attribute.html">\phpDocumentor\GraphViz\Attribute</a>&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_graphs"> </a>
+                            <div class="element clickable property  protected property_graphs" data-toggle="collapse" data-target=".property_graphs .collapse">
+                                <h2>A list of subgraphs for this Graph</h2>
+                                <pre>graphs : array&lt;mixed,\phpDocumentor\GraphViz\Graph&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>A list of subgraphs for this Graph</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,<a href="../classes/phpDocumentor.GraphViz.Graph.html">\phpDocumentor\GraphViz\Graph</a>&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_nodes"> </a>
+                            <div class="element clickable property  protected property_nodes" data-toggle="collapse" data-target=".property_nodes .collapse">
+                                <h2>A list of nodes for this Graph</h2>
+                                <pre>nodes : array&lt;mixed,\phpDocumentor\GraphViz\Node&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>A list of nodes for this Graph</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,<a href="../classes/phpDocumentor.GraphViz.Node.html">\phpDocumentor\GraphViz\Node</a>&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_edges"> </a>
+                            <div class="element clickable property  protected property_edges" data-toggle="collapse" data-target=".property_edges .collapse">
+                                <h2>A list of edges / arrows for this Graph</h2>
+                                <pre>edges : array&lt;mixed,\phpDocumentor\GraphViz\Edge&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>A list of edges / arrows for this Graph</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,<a href="../classes/phpDocumentor.GraphViz.Edge.html">\phpDocumentor\GraphViz\Edge</a>&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_path"> </a>
+                            <div class="element clickable property  protected property_path" data-toggle="collapse" data-target=".property_path .collapse">
+                                <h2>The path to execute dot from</h2>
+                                <pre>path : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>The path to execute dot from</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\phpDocumentor\GraphViz\Graph"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/phpDocumentor.GraphViz.html">GraphViz</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/phpDocumentor.GraphViz.Graph.html">Graph</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:34 +0000.<br/>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \Symfony\Component\Validator\Tests\Fixtures
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/Symfony.Component.Validator.Tests.Fixtures.html" title="Fixtures">
+                    <i class="icon-th"></i> Fixtures
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.html">Symfony</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.html">Component</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.Tests.Fixtures.html">Fixtures</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_EntityInterfaceA" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_EntityInterfaceA .collapse">
+        <h1>EntityInterfaceA<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityInterfaceA.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityInterfaceA.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_EntityInterfaceB" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_EntityInterfaceB .collapse">
+        <h1>EntityInterfaceB<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityInterfaceB.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityInterfaceB.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_EntityParentInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_EntityParentInterface .collapse">
+        <h1>EntityParentInterface<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityParentInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityParentInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_LegacyClassMetadata" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_LegacyClassMetadata .collapse">
+        <h1>LegacyClassMetadata<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.LegacyClassMetadata.html">¶</a></h1>
+        <p class="short_description">A container for validation metadata.</p>
+        <div class="details collapse">
+                            <p>The container contains constraints that may belong to different validation
+groups. Constraints for a specific group can be fetched by calling
+\Symfony\Component\Validator\Tests\Fixtures\findConstraints.</p>
+<p>Implement this interface to add validation metadata to your own metadata
+layer. Each metadata may have named properties. Each property can be
+represented by one or more \Symfony\Component\Validator\Tests\Fixtures\PropertyMetadataInterface instances that
+are returned by \Symfony\Component\Validator\Tests\Fixtures\getPropertyMetadata. Since
+<tt>PropertyMetadataInterface</tt> inherits from <tt>MetadataInterface</tt>,
+each property may be divided into further properties.</p>
+<p>The \Symfony\Component\Validator\Tests\Fixtures\accept method of each metadata implements the Visitor pattern.
+The method should forward the call to the visitor's
+\Symfony\Component\Validator\Tests\Fixtures\ValidationVisitorInterface::visit method and additionally call
+<tt>accept()</tt> on all structurally related metadata instances.</p>
+<p>For example, to store constraints for PHP classes and their properties,
+create a class <tt>ClassMetadata</tt> (implementing <tt>MetadataInterface</tt>)
+and a class <tt>PropertyMetadata</tt> (implementing <tt>PropertyMetadataInterface</tt>).
+<tt>ClassMetadata::getPropertyMetadata($property)</tt> returns all
+<tt>PropertyMetadata</tt> instances for a property of that class. Its
+<tt>accept()</tt>-method simply forwards to <tt>ValidationVisitorInterface::visit()</tt>
+and calls <tt>accept()</tt> on all contained <tt>PropertyMetadata</tt>
+instances, which themselves call <tt>ValidationVisitorInterface::visit()</tt>
+again.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.LegacyClassMetadata.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_CallbackClass" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CallbackClass .collapse">
+        <h1>CallbackClass<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.CallbackClass.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.CallbackClass.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ClassConstraint" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ClassConstraint .collapse">
+        <h1>ClassConstraint<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ClassConstraint.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ClassConstraint.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstraintA" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstraintA .collapse">
+        <h1>ConstraintA<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintA.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintA.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstraintAValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstraintAValidator .collapse">
+        <h1>ConstraintAValidator<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintAValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintAValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstraintB" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstraintB .collapse">
+        <h1>ConstraintB<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintB.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintB.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstraintC" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstraintC .collapse">
+        <h1>ConstraintC<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintC.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintC.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstraintWithValue" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstraintWithValue .collapse">
+        <h1>ConstraintWithValue<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintWithValue.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintWithValue.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstraintWithValueAsDefault" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstraintWithValueAsDefault .collapse">
+        <h1>ConstraintWithValueAsDefault<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintWithValueAsDefault.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ConstraintWithValueAsDefault.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Countable" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Countable .collapse">
+        <h1>Countable<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.Countable.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.Countable.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CustomArrayObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CustomArrayObject .collapse">
+        <h1>CustomArrayObject<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.CustomArrayObject.html">¶</a></h1>
+        <p class="short_description">This class is a hand written simplified version of PHP native `ArrayObject`
+class, to show that it behaves differently than the PHP native implementation.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.CustomArrayObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Entity" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Entity .collapse">
+        <h1>Entity<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.Entity.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.Entity.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EntityParent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EntityParent .collapse">
+        <h1>EntityParent<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityParent.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityParent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EntityStaticCar" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EntityStaticCar .collapse">
+        <h1>EntityStaticCar<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityStaticCar.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityStaticCar.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EntityStaticCarTurbo" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EntityStaticCarTurbo .collapse">
+        <h1>EntityStaticCarTurbo<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityStaticCarTurbo.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityStaticCarTurbo.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EntityStaticVehicle" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EntityStaticVehicle .collapse">
+        <h1>EntityStaticVehicle<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityStaticVehicle.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.EntityStaticVehicle.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FailingConstraint" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FailingConstraint .collapse">
+        <h1>FailingConstraint<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FailingConstraint.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FailingConstraint.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FailingConstraintValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FailingConstraintValidator .collapse">
+        <h1>FailingConstraintValidator<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FailingConstraintValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FailingConstraintValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FakeClassMetadata" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FakeClassMetadata .collapse">
+        <h1>FakeClassMetadata<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FakeClassMetadata.html">¶</a></h1>
+        <p class="short_description">Default implementation of {@link ClassMetadataInterface}.</p>
+        <div class="details collapse">
+                            <p>This class supports serialization and cloning.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FakeClassMetadata.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FakeMetadataFactory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FakeMetadataFactory .collapse">
+        <h1>FakeMetadataFactory<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FakeMetadataFactory.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FakeMetadataFactory.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FilesLoader" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FilesLoader .collapse">
+        <h1>FilesLoader<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FilesLoader.html">¶</a></h1>
+        <p class="short_description">Base loader for loading validation metadata from a list of files.</p>
+        <div class="details collapse">
+                            <p>Pass the loaders when constructing the chain. Once
+\Symfony\Component\Validator\Mapping\Loader\loadClassMetadata() is called, that method will be called on all
+loaders in the chain.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.FilesLoader.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GroupSequenceProviderChildEntity" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GroupSequenceProviderChildEntity .collapse">
+        <h1>GroupSequenceProviderChildEntity<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.GroupSequenceProviderChildEntity.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.GroupSequenceProviderChildEntity.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GroupSequenceProviderEntity" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GroupSequenceProviderEntity .collapse">
+        <h1>GroupSequenceProviderEntity<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.GroupSequenceProviderEntity.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.GroupSequenceProviderEntity.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InvalidConstraint" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InvalidConstraint .collapse">
+        <h1>InvalidConstraint<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.InvalidConstraint.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.InvalidConstraint.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InvalidConstraintValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InvalidConstraintValidator .collapse">
+        <h1>InvalidConstraintValidator<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.InvalidConstraintValidator.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.InvalidConstraintValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyConstraint" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyConstraint .collapse">
+        <h1>PropertyConstraint<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.PropertyConstraint.html">¶</a></h1>
+        <p class="short_description">Contains the properties of a constraint definition.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.PropertyConstraint.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Reference" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Reference .collapse">
+        <h1>Reference<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.Reference.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.Reference.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_StubGlobalExecutionContext" class="element ajax clickable class" data-toggle="collapse" data-target="#class_StubGlobalExecutionContext .collapse">
+        <h1>StubGlobalExecutionContext<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.StubGlobalExecutionContext.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.StubGlobalExecutionContext.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ToString" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ToString .collapse">
+        <h1>ToString<a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ToString.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Symfony.Component.Validator.Tests.Fixtures.ToString.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:31 +0000.<br/>
+    </footer>
+    </body>
+</html>

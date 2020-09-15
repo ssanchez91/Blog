@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \Symfony\Component\Config\Definition\Builder\ScalarNodeDefinition
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public inherited">
+        <a href="#method___construct" title="__construct :: ">
+            <span class="description"></span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_attribute" title="attribute :: Sets an attribute on the node.">
+            <span class="description">Sets an attribute on the node.</span><pre>attribute</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_beforeNormalization" title="beforeNormalization :: Sets an expression to run before the normalization.">
+            <span class="description">Sets an expression to run before the normalization.</span><pre>beforeNormalization</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_cannotBeEmpty" title="cannotBeEmpty :: Denies the node value being empty.">
+            <span class="description">Denies the node value being empty.</span><pre>cannotBeEmpty</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_cannotBeOverwritten" title="cannotBeOverwritten :: Sets whether the node can be overwritten.">
+            <span class="description">Sets whether the node can be overwritten.</span><pre>cannotBeOverwritten</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_defaultFalse" title="defaultFalse :: Sets false as the default value.">
+            <span class="description">Sets false as the default value.</span><pre>defaultFalse</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_defaultNull" title="defaultNull :: Sets null as the default value.">
+            <span class="description">Sets null as the default value.</span><pre>defaultNull</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_defaultTrue" title="defaultTrue :: Sets true as the default value.">
+            <span class="description">Sets true as the default value.</span><pre>defaultTrue</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_defaultValue" title="defaultValue :: Sets the default value.">
+            <span class="description">Sets the default value.</span><pre>defaultValue</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_end" title="end :: Returns the parent node.">
+            <span class="description">Returns the parent node.</span><pre>end</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_example" title="example :: Sets example configuration.">
+            <span class="description">Sets example configuration.</span><pre>example</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getNode" title="getNode :: Creates the node.">
+            <span class="description">Creates the node.</span><pre>getNode</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_info" title="info :: Sets info message.">
+            <span class="description">Sets info message.</span><pre>info</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_isRequired" title="isRequired :: Sets the node as required.">
+            <span class="description">Sets the node as required.</span><pre>isRequired</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                        <li class="method public inherited">
+        <a href="#method_setParent" title="setParent :: Sets the parent node.">
+            <span class="description">Sets the parent node.</span><pre>setParent</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_treatFalseLike" title="treatFalseLike :: Sets the equivalent value used when the node contains false.">
+            <span class="description">Sets the equivalent value used when the node contains false.</span><pre>treatFalseLike</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_treatNullLike" title="treatNullLike :: Sets the equivalent value used when the node contains null.">
+            <span class="description">Sets the equivalent value used when the node contains null.</span><pre>treatNullLike</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_treatTrueLike" title="treatTrueLike :: Sets the equivalent value used when the node contains true.">
+            <span class="description">Sets the equivalent value used when the node contains true.</span><pre>treatTrueLike</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_validate" title="validate :: Sets an expression to run for the validation.">
+            <span class="description">Sets an expression to run for the validation.</span><pre>validate</pre>
+        </a>
+    </li>
+
+                                                                                                        </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                <li class="method protected inherited">
+                            <a href="#method_createNode" title="createNode :: Instantiate and configure the node according to this definition.">
+                                <span class="description">Instantiate and configure the node according to this definition.</span><pre>createNode</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                <li class="method protected inherited">
+                            <a href="#method_instantiateNode" title="instantiateNode :: Instantiate a Node.">
+                                <span class="description">Instantiate a Node.</span><pre>instantiateNode</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method protected inherited">
+                            <a href="#method_merge" title="merge :: Gets the builder for merging rules.">
+                                <span class="description">Gets the builder for merging rules.</span><pre>merge</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected inherited">
+                            <a href="#method_normalization" title="normalization :: Gets the builder for normalization rules.">
+                                <span class="description">Gets the builder for normalization rules.</span><pre>normalization</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                    <li class="method protected inherited">
+                            <a href="#method_validation" title="validation :: Gets the builder for validation rules.">
+                                <span class="description">Gets the builder for validation rules.</span><pre>validation</pre>
+                            </a>
+                        </li>
+                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ScalarNodeDefinition</h1>
+                <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/Symfony.Component.Config.Definition.Builder.VariableNodeDefinition.html">\Symfony\Component\Config\Definition\Builder\VariableNodeDefinition</a>
+                                                        </small>
+                <p class="short_description">This class provides a fluent interface for defining a node.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Johannes M. Schmitt <a href="mailto:schmittjoh@gmail.com">schmittjoh@gmail.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                            </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>__construct</h2>
+                            <pre>__construct(string|null $name, \Symfony\Component\Config\Definition\Builder\NodeParentInterface|null $parent = null) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string|null</code><p><p>The name of the node</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$parent</h4>
+                                                <code><a href="../classes/Symfony.Component.Config.Definition.Builder.NodeParentInterface.html">\Symfony\Component\Config\Definition\Builder\NodeParentInterface</a>|null</code><p><p>The parent</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_attribute"></a>
+                        <div class="element clickable method public  method_attribute inherited" data-toggle="collapse" data-target=".method_attribute .collapse">
+                            <h2>Sets an attribute on the node.</h2>
+                            <pre>attribute(string $key, mixed $value) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$key</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_beforeNormalization"></a>
+                        <div class="element clickable method public  method_beforeNormalization inherited" data-toggle="collapse" data-target=".method_beforeNormalization .collapse">
+                            <h2>Sets an expression to run before the normalization.</h2>
+                            <pre>beforeNormalization() : \Symfony\Component\Config\Definition\Builder\ExprBuilder</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Config.Definition.Builder.ExprBuilder.html">\Symfony\Component\Config\Definition\Builder\ExprBuilder</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_cannotBeEmpty"></a>
+                        <div class="element clickable method public  method_cannotBeEmpty inherited" data-toggle="collapse" data-target=".method_cannotBeEmpty .collapse">
+                            <h2>Denies the node value being empty.</h2>
+                            <pre>cannotBeEmpty() : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_cannotBeOverwritten"></a>
+                        <div class="element clickable method public  method_cannotBeOverwritten inherited" data-toggle="collapse" data-target=".method_cannotBeOverwritten .collapse">
+                            <h2>Sets whether the node can be overwritten.</h2>
+                            <pre>cannotBeOverwritten(boolean $deny = true) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$deny</h4>
+                                                <code>boolean</code><p><p>Whether the overwriting is forbidden or not</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_createNode"></a>
+                        <div class="element clickable method protected  method_createNode inherited" data-toggle="collapse" data-target=".method_createNode .collapse">
+                            <h2>Instantiate and configure the node according to this definition.</h2>
+                            <pre>createNode() : \Symfony\Component\Config\Definition\NodeInterface</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Symfony\Component\Config\Definition\Exception\InvalidDefinitionException</dt>
+                                                        <dd><p>When the definition is invalid</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Config.Definition.NodeInterface.html">\Symfony\Component\Config\Definition\NodeInterface</a></code><p><p>The node instance</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_defaultFalse"></a>
+                        <div class="element clickable method public  method_defaultFalse inherited" data-toggle="collapse" data-target=".method_defaultFalse .collapse">
+                            <h2>Sets false as the default value.</h2>
+                            <pre>defaultFalse() : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_defaultNull"></a>
+                        <div class="element clickable method public  method_defaultNull inherited" data-toggle="collapse" data-target=".method_defaultNull .collapse">
+                            <h2>Sets null as the default value.</h2>
+                            <pre>defaultNull() : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_defaultTrue"></a>
+                        <div class="element clickable method public  method_defaultTrue inherited" data-toggle="collapse" data-target=".method_defaultTrue .collapse">
+                            <h2>Sets true as the default value.</h2>
+                            <pre>defaultTrue() : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_defaultValue"></a>
+                        <div class="element clickable method public  method_defaultValue inherited" data-toggle="collapse" data-target=".method_defaultValue .collapse">
+                            <h2>Sets the default value.</h2>
+                            <pre>defaultValue(mixed $value) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>mixed</code><p><p>The default value</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_end"></a>
+                        <div class="element clickable method public  method_end inherited" data-toggle="collapse" data-target=".method_end .collapse">
+                            <h2>Returns the parent node.</h2>
+                            <pre>end() : \Symfony\Component\Config\Definition\Builder\NodeParentInterface|\Symfony\Component\Config\Definition\Builder\NodeBuilder|\Symfony\Component\Config\Definition\Builder\NodeDefinition|\Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition|\Symfony\Component\Config\Definition\Builder\VariableNodeDefinition|null</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Config.Definition.Builder.NodeParentInterface.html">\Symfony\Component\Config\Definition\Builder\NodeParentInterface</a>|<a href="../classes/Symfony.Component.Config.Definition.Builder.NodeBuilder.html">\Symfony\Component\Config\Definition\Builder\NodeBuilder</a>|<a href="../classes/Symfony.Component.Config.Definition.Builder.NodeDefinition.html">\Symfony\Component\Config\Definition\Builder\NodeDefinition</a>|<a href="../classes/Symfony.Component.Config.Definition.Builder.ArrayNodeDefinition.html">\Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition</a>|<a href="../classes/Symfony.Component.Config.Definition.Builder.VariableNodeDefinition.html">\Symfony\Component\Config\Definition\Builder\VariableNodeDefinition</a>|null</code><p><p>The builder of the parent node</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_example"></a>
+                        <div class="element clickable method public  method_example inherited" data-toggle="collapse" data-target=".method_example .collapse">
+                            <h2>Sets example configuration.</h2>
+                            <pre>example(string|array $example) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$example</h4>
+                                                <code>string|array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getNode"></a>
+                        <div class="element clickable method public  method_getNode inherited" data-toggle="collapse" data-target=".method_getNode .collapse">
+                            <h2>Creates the node.</h2>
+                            <pre>getNode(boolean $forceRootNode = false) : \Symfony\Component\Config\Definition\NodeInterface</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$forceRootNode</h4>
+                                                <code>boolean</code><p><p>Whether to force this node as the root node</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Config.Definition.NodeInterface.html">\Symfony\Component\Config\Definition\NodeInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_info"></a>
+                        <div class="element clickable method public  method_info inherited" data-toggle="collapse" data-target=".method_info .collapse">
+                            <h2>Sets info message.</h2>
+                            <pre>info(string $info) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$info</h4>
+                                                <code>string</code><p><p>The info text</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_instantiateNode"></a>
+                        <div class="element clickable method protected  method_instantiateNode inherited" data-toggle="collapse" data-target=".method_instantiateNode .collapse">
+                            <h2>Instantiate a Node.</h2>
+                            <pre>instantiateNode() : \Symfony\Component\Config\Definition\VariableNode</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Config.Definition.VariableNode.html">\Symfony\Component\Config\Definition\VariableNode</a></code><p><p>The node</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isRequired"></a>
+                        <div class="element clickable method public  method_isRequired inherited" data-toggle="collapse" data-target=".method_isRequired .collapse">
+                            <h2>Sets the node as required.</h2>
+                            <pre>isRequired() : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_merge"></a>
+                        <div class="element clickable method protected  method_merge inherited" data-toggle="collapse" data-target=".method_merge .collapse">
+                            <h2>Gets the builder for merging rules.</h2>
+                            <pre>merge() : \Symfony\Component\Config\Definition\Builder\MergeBuilder</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Config.Definition.Builder.MergeBuilder.html">\Symfony\Component\Config\Definition\Builder\MergeBuilder</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_normalization"></a>
+                        <div class="element clickable method protected  method_normalization inherited" data-toggle="collapse" data-target=".method_normalization .collapse">
+                            <h2>Gets the builder for normalization rules.</h2>
+                            <pre>normalization() : \Symfony\Component\Config\Definition\Builder\NormalizationBuilder</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Config.Definition.Builder.NormalizationBuilder.html">\Symfony\Component\Config\Definition\Builder\NormalizationBuilder</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setParent"></a>
+                        <div class="element clickable method public  method_setParent inherited" data-toggle="collapse" data-target=".method_setParent .collapse">
+                            <h2>Sets the parent node.</h2>
+                            <pre>setParent(\Symfony\Component\Config\Definition\Builder\NodeParentInterface $parent) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$parent</h4>
+                                                <code><a href="../classes/Symfony.Component.Config.Definition.Builder.NodeParentInterface.html">\Symfony\Component\Config\Definition\Builder\NodeParentInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_treatFalseLike"></a>
+                        <div class="element clickable method public  method_treatFalseLike inherited" data-toggle="collapse" data-target=".method_treatFalseLike .collapse">
+                            <h2>Sets the equivalent value used when the node contains false.</h2>
+                            <pre>treatFalseLike(mixed $value) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_treatNullLike"></a>
+                        <div class="element clickable method public  method_treatNullLike inherited" data-toggle="collapse" data-target=".method_treatNullLike .collapse">
+                            <h2>Sets the equivalent value used when the node contains null.</h2>
+                            <pre>treatNullLike(mixed $value) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_treatTrueLike"></a>
+                        <div class="element clickable method public  method_treatTrueLike inherited" data-toggle="collapse" data-target=".method_treatTrueLike .collapse">
+                            <h2>Sets the equivalent value used when the node contains true.</h2>
+                            <pre>treatTrueLike(mixed $value) : $this</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validate"></a>
+                        <div class="element clickable method public  method_validate inherited" data-toggle="collapse" data-target=".method_validate .collapse">
+                            <h2>Sets an expression to run for the validation.</h2>
+                            <pre>validate() : \Symfony\Component\Config\Definition\Builder\ExprBuilder</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The expression receives the value of the node and must return it. It can
+modify it.
+An exception should be thrown when the node is not valid.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Config.Definition.Builder.ExprBuilder.html">\Symfony\Component\Config\Definition\Builder\ExprBuilder</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validation"></a>
+                        <div class="element clickable method protected  method_validation inherited" data-toggle="collapse" data-target=".method_validation .collapse">
+                            <h2>Gets the builder for validation rules.</h2>
+                            <pre>validation() : \Symfony\Component\Config\Definition\Builder\ValidationBuilder</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Config.Definition.Builder.ValidationBuilder.html">\Symfony\Component\Config\Definition\Builder\ValidationBuilder</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_name"> </a>
+                            <div class="element clickable property  protected property_name inherited" data-toggle="collapse" data-target=".property_name .collapse">
+                                <h2>name</h2>
+                                <pre>name : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_normalization"> </a>
+                            <div class="element clickable property  protected property_normalization inherited" data-toggle="collapse" data-target=".property_normalization .collapse">
+                                <h2>normalization</h2>
+                                <pre>normalization : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_validation"> </a>
+                            <div class="element clickable property  protected property_validation inherited" data-toggle="collapse" data-target=".property_validation .collapse">
+                                <h2>validation</h2>
+                                <pre>validation : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_defaultValue"> </a>
+                            <div class="element clickable property  protected property_defaultValue inherited" data-toggle="collapse" data-target=".property_defaultValue .collapse">
+                                <h2>defaultValue</h2>
+                                <pre>defaultValue : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_default"> </a>
+                            <div class="element clickable property  protected property_default inherited" data-toggle="collapse" data-target=".property_default .collapse">
+                                <h2>default</h2>
+                                <pre>default : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_required"> </a>
+                            <div class="element clickable property  protected property_required inherited" data-toggle="collapse" data-target=".property_required .collapse">
+                                <h2>required</h2>
+                                <pre>required : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_merge"> </a>
+                            <div class="element clickable property  protected property_merge inherited" data-toggle="collapse" data-target=".property_merge .collapse">
+                                <h2>merge</h2>
+                                <pre>merge : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_allowEmptyValue"> </a>
+                            <div class="element clickable property  protected property_allowEmptyValue inherited" data-toggle="collapse" data-target=".property_allowEmptyValue .collapse">
+                                <h2>allowEmptyValue</h2>
+                                <pre>allowEmptyValue : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_nullEquivalent"> </a>
+                            <div class="element clickable property  protected property_nullEquivalent inherited" data-toggle="collapse" data-target=".property_nullEquivalent .collapse">
+                                <h2>nullEquivalent</h2>
+                                <pre>nullEquivalent : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_trueEquivalent"> </a>
+                            <div class="element clickable property  protected property_trueEquivalent inherited" data-toggle="collapse" data-target=".property_trueEquivalent .collapse">
+                                <h2>trueEquivalent</h2>
+                                <pre>trueEquivalent : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_falseEquivalent"> </a>
+                            <div class="element clickable property  protected property_falseEquivalent inherited" data-toggle="collapse" data-target=".property_falseEquivalent .collapse">
+                                <h2>falseEquivalent</h2>
+                                <pre>falseEquivalent : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_parent"> </a>
+                            <div class="element clickable property  protected property_parent inherited" data-toggle="collapse" data-target=".property_parent .collapse">
+                                <h2>parent</h2>
+                                <pre>parent : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_attributes"> </a>
+                            <div class="element clickable property  protected property_attributes inherited" data-toggle="collapse" data-target=".property_attributes .collapse">
+                                <h2>attributes</h2>
+                                <pre>attributes : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\Symfony\Component\Config\Definition\Builder\ScalarNodeDefinition"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/Symfony.Component.Config.Definition.Builder.html">Builder</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/Symfony.Component.Config.Definition.Builder.ScalarNodeDefinition.html">ScalarNodeDefinition</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:53 +0000.<br/>
+    </footer>
+    </body>
+</html>

@@ -8,9 +8,18 @@
 
 namespace App\Framework\Exception;
 
-
+/**
+ * Class UserAlreadyExistException
+ *
+ * @package App\Framework\Exception
+ */
 class UserAlreadyExistException extends \Exception
 {
+    /**
+     * Constructor
+     *
+     * @param string $message error message
+     */
     public function __construct($message = "This account already exist !")
     {
         parent::__construct($message, '0110');

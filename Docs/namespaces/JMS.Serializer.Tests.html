@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \JMS\Serializer\Tests
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/JMS.Serializer.Tests.html" title="Tests">
+                    <i class="icon-th"></i> Tests
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Exclusion.html" title="Exclusion">
+            <i class="icon-th"></i> Exclusion
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Fixtures.html" title="Fixtures">
+            <i class="icon-th"></i> Fixtures
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Fixtures.Discriminator.html" title="Discriminator">
+            <i class="icon-th"></i> Discriminator
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Fixtures.DiscriminatorGroup.html" title="DiscriminatorGroup">
+            <i class="icon-th"></i> DiscriminatorGroup
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Fixtures.Doctrine.html" title="Doctrine">
+            <i class="icon-th"></i> Doctrine
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.html" title="SingleTableInheritance">
+            <i class="icon-th"></i> SingleTableInheritance
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Fixtures.DoctrinePHPCR.html" title="DoctrinePHPCR">
+            <i class="icon-th"></i> DoctrinePHPCR
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Fixtures.ExclusionStrategy.html" title="ExclusionStrategy">
+            <i class="icon-th"></i> ExclusionStrategy
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Fixtures.MaxDepth.html" title="MaxDepth">
+            <i class="icon-th"></i> MaxDepth
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Handler.html" title="Handler">
+            <i class="icon-th"></i> Handler
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Metadata.html" title="Metadata">
+            <i class="icon-th"></i> Metadata
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Metadata.Driver.html" title="Driver">
+            <i class="icon-th"></i> Driver
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Serializer.html" title="Serializer">
+            <i class="icon-th"></i> Serializer
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Serializer.Doctrine.html" title="Doctrine">
+            <i class="icon-th"></i> Doctrine
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Serializer.EventDispatcher.html" title="EventDispatcher">
+            <i class="icon-th"></i> EventDispatcher
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Serializer.EventDispatcher.Subscriber.html" title="Subscriber">
+            <i class="icon-th"></i> Subscriber
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Serializer.Naming.html" title="Naming">
+            <i class="icon-th"></i> Naming
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/JMS.Serializer.Tests.Twig.html" title="Twig">
+            <i class="icon-th"></i> Twig
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_SerializerBuilderTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SerializerBuilderTest .collapse">
+        <h1>SerializerBuilderTest<a href="../classes/JMS.Serializer.Tests.SerializerBuilderTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.SerializerBuilderTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.html">Serializer</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ArrayTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ArrayTest .collapse">
+        <h1>ArrayTest<a href="../classes/JMS.Serializer.Tests.Serializer.ArrayTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.ArrayTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BaseSerializationTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BaseSerializationTest .collapse">
+        <h1>BaseSerializationTest<a href="../classes/JMS.Serializer.Tests.Serializer.BaseSerializationTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.BaseSerializationTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ContextTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ContextTest .collapse">
+        <h1>ContextTest<a href="../classes/JMS.Serializer.Tests.Serializer.ContextTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.ContextTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DateIntervalFormatTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DateIntervalFormatTest .collapse">
+        <h1>DateIntervalFormatTest<a href="../classes/JMS.Serializer.Tests.Serializer.DateIntervalFormatTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.DateIntervalFormatTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GraphNavigatorTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GraphNavigatorTest .collapse">
+        <h1>GraphNavigatorTest<a href="../classes/JMS.Serializer.Tests.Serializer.GraphNavigatorTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.GraphNavigatorTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_JsonSerializationTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_JsonSerializationTest .collapse">
+        <h1>JsonSerializationTest<a href="../classes/JMS.Serializer.Tests.Serializer.JsonSerializationTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.JsonSerializationTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LinkAddingSubscriber" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LinkAddingSubscriber .collapse">
+        <h1>LinkAddingSubscriber<a href="../classes/JMS.Serializer.Tests.Serializer.LinkAddingSubscriber.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.LinkAddingSubscriber.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ReplaceNameSubscriber" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ReplaceNameSubscriber .collapse">
+        <h1>ReplaceNameSubscriber<a href="../classes/JMS.Serializer.Tests.Serializer.ReplaceNameSubscriber.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.ReplaceNameSubscriber.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SerializableClass" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SerializableClass .collapse">
+        <h1>SerializableClass<a href="../classes/JMS.Serializer.Tests.Serializer.SerializableClass.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.SerializableClass.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SerializationContextFactoryTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SerializationContextFactoryTest .collapse">
+        <h1>SerializationContextFactoryTest<a href="../classes/JMS.Serializer.Tests.Serializer.SerializationContextFactoryTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.SerializationContextFactoryTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TestSubscribingHandler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TestSubscribingHandler .collapse">
+        <h1>TestSubscribingHandler<a href="../classes/JMS.Serializer.Tests.Serializer.TestSubscribingHandler.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.TestSubscribingHandler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TypeParserTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TypeParserTest .collapse">
+        <h1>TypeParserTest<a href="../classes/JMS.Serializer.Tests.Serializer.TypeParserTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.TypeParserTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlSerializationTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlSerializationTest .collapse">
+        <h1>XmlSerializationTest<a href="../classes/JMS.Serializer.Tests.Serializer.XmlSerializationTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.XmlSerializationTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_YamlSerializationTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_YamlSerializationTest .collapse">
+        <h1>YamlSerializationTest<a href="../classes/JMS.Serializer.Tests.Serializer.YamlSerializationTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.YamlSerializationTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.EventDispatcher.html">EventDispatcher</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_EventDispatcherTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EventDispatcherTest .collapse">
+        <h1>EventDispatcherTest<a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.EventDispatcherTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.EventDispatcherTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MockListener" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MockListener .collapse">
+        <h1>MockListener<a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.MockListener.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.MockListener.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MockSubscriber" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MockSubscriber .collapse">
+        <h1>MockSubscriber<a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.MockSubscriber.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.MockSubscriber.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.EventDispatcher.html">EventDispatcher</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.EventDispatcher.Subscriber.html">Subscriber</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_DoctrineProxySubscriberTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoctrineProxySubscriberTest .collapse">
+        <h1>DoctrineProxySubscriberTest<a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.Subscriber.DoctrineProxySubscriberTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.Subscriber.DoctrineProxySubscriberTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SymfonyValidatorSubscriberTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SymfonyValidatorSubscriberTest .collapse">
+        <h1>SymfonyValidatorSubscriberTest<a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.Subscriber.SymfonyValidatorSubscriberTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.Subscriber.SymfonyValidatorSubscriberTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SymfonyValidatorValidatorSubscriberTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SymfonyValidatorValidatorSubscriberTest .collapse">
+        <h1>SymfonyValidatorValidatorSubscriberTest<a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.Subscriber.SymfonyValidatorValidatorSubscriberTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.EventDispatcher.Subscriber.SymfonyValidatorValidatorSubscriberTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.Doctrine.html">Doctrine</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_IntegrationTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IntegrationTest .collapse">
+        <h1>IntegrationTest<a href="../classes/JMS.Serializer.Tests.Serializer.Doctrine.IntegrationTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.Doctrine.IntegrationTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectConstructorTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectConstructorTest .collapse">
+        <h1>ObjectConstructorTest<a href="../classes/JMS.Serializer.Tests.Serializer.Doctrine.ObjectConstructorTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.Doctrine.ObjectConstructorTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SimpleBaseManagerRegistry" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SimpleBaseManagerRegistry .collapse">
+        <h1>SimpleBaseManagerRegistry<a href="../classes/JMS.Serializer.Tests.Serializer.Doctrine.SimpleBaseManagerRegistry.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.Doctrine.SimpleBaseManagerRegistry.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SimpleManagerRegistry" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SimpleManagerRegistry .collapse">
+        <h1>SimpleManagerRegistry<a href="../classes/JMS.Serializer.Tests.Serializer.Doctrine.SimpleManagerRegistry.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.Doctrine.SimpleManagerRegistry.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Serializer.Naming.html">Naming</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_IdenticalPropertyNamingStrategyTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IdenticalPropertyNamingStrategyTest .collapse">
+        <h1>IdenticalPropertyNamingStrategyTest<a href="../classes/JMS.Serializer.Tests.Serializer.Naming.IdenticalPropertyNamingStrategyTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Serializer.Naming.IdenticalPropertyNamingStrategyTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Metadata.html">Metadata</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ClassMetadataTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ClassMetadataTest .collapse">
+        <h1>ClassMetadataTest<a href="../classes/JMS.Serializer.Tests.Metadata.ClassMetadataTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.ClassMetadataTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyMetadataOrder" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyMetadataOrder .collapse">
+        <h1>PropertyMetadataOrder<a href="../classes/JMS.Serializer.Tests.Metadata.PropertyMetadataOrder.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.PropertyMetadataOrder.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyMetadataPublicMethod" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyMetadataPublicMethod .collapse">
+        <h1>PropertyMetadataPublicMethod<a href="../classes/JMS.Serializer.Tests.Metadata.PropertyMetadataPublicMethod.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.PropertyMetadataPublicMethod.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Metadata.html">Metadata</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Metadata.Driver.html">Driver</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AnnotationDriverTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AnnotationDriverTest .collapse">
+        <h1>AnnotationDriverTest<a href="../classes/JMS.Serializer.Tests.Metadata.Driver.AnnotationDriverTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.Driver.AnnotationDriverTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BaseDriverTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BaseDriverTest .collapse">
+        <h1>BaseDriverTest<a href="../classes/JMS.Serializer.Tests.Metadata.Driver.BaseDriverTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.Driver.BaseDriverTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoctrineDriverTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoctrineDriverTest .collapse">
+        <h1>DoctrineDriverTest<a href="../classes/JMS.Serializer.Tests.Metadata.Driver.DoctrineDriverTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.Driver.DoctrineDriverTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoctrinePHPCRDriverTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoctrinePHPCRDriverTest .collapse">
+        <h1>DoctrinePHPCRDriverTest<a href="../classes/JMS.Serializer.Tests.Metadata.Driver.DoctrinePHPCRDriverTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.Driver.DoctrinePHPCRDriverTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PhpDriverTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PhpDriverTest .collapse">
+        <h1>PhpDriverTest<a href="../classes/JMS.Serializer.Tests.Metadata.Driver.PhpDriverTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.Driver.PhpDriverTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_XmlDriverTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_XmlDriverTest .collapse">
+        <h1>XmlDriverTest<a href="../classes/JMS.Serializer.Tests.Metadata.Driver.XmlDriverTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.Driver.XmlDriverTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_YamlDriverTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_YamlDriverTest .collapse">
+        <h1>YamlDriverTest<a href="../classes/JMS.Serializer.Tests.Metadata.Driver.YamlDriverTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Metadata.Driver.YamlDriverTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.html">Fixtures</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AccessorOrderChild" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AccessorOrderChild .collapse">
+        <h1>AccessorOrderChild<a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorOrderChild.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorOrderChild.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AccessorOrderMethod" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AccessorOrderMethod .collapse">
+        <h1>AccessorOrderMethod<a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorOrderMethod.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorOrderMethod.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AccessorOrderParent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AccessorOrderParent .collapse">
+        <h1>AccessorOrderParent<a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorOrderParent.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorOrderParent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AccessorSetter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AccessorSetter .collapse">
+        <h1>AccessorSetter<a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorSetter.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorSetter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AccessorSetterElement" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AccessorSetterElement .collapse">
+        <h1>AccessorSetterElement<a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorSetterElement.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AccessorSetterElement.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AllExcludedObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AllExcludedObject .collapse">
+        <h1>AllExcludedObject<a href="../classes/JMS.Serializer.Tests.Fixtures.AllExcludedObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AllExcludedObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Article" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Article .collapse">
+        <h1>Article<a href="../classes/JMS.Serializer.Tests.Fixtures.Article.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Article.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Author" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Author .collapse">
+        <h1>Author<a href="../classes/JMS.Serializer.Tests.Fixtures.Author.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Author.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AuthorExpressionAccess" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AuthorExpressionAccess .collapse">
+        <h1>AuthorExpressionAccess<a href="../classes/JMS.Serializer.Tests.Fixtures.AuthorExpressionAccess.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AuthorExpressionAccess.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AuthorList" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AuthorList .collapse">
+        <h1>AuthorList<a href="../classes/JMS.Serializer.Tests.Fixtures.AuthorList.html">¶</a></h1>
+        <p class="short_description">An array-acting object that holds many author instances.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AuthorList.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AuthorReadOnly" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AuthorReadOnly .collapse">
+        <h1>AuthorReadOnly<a href="../classes/JMS.Serializer.Tests.Fixtures.AuthorReadOnly.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AuthorReadOnly.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AuthorReadOnlyPerClass" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AuthorReadOnlyPerClass .collapse">
+        <h1>AuthorReadOnlyPerClass<a href="../classes/JMS.Serializer.Tests.Fixtures.AuthorReadOnlyPerClass.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.AuthorReadOnlyPerClass.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BlogPost" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BlogPost .collapse">
+        <h1>BlogPost<a href="../classes/JMS.Serializer.Tests.Fixtures.BlogPost.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.BlogPost.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CircularReferenceChild" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CircularReferenceChild .collapse">
+        <h1>CircularReferenceChild<a href="../classes/JMS.Serializer.Tests.Fixtures.CircularReferenceChild.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.CircularReferenceChild.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CircularReferenceParent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CircularReferenceParent .collapse">
+        <h1>CircularReferenceParent<a href="../classes/JMS.Serializer.Tests.Fixtures.CircularReferenceParent.html">¶</a></h1>
+        <p class="short_description">No annotation</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.CircularReferenceParent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Comment" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Comment .collapse">
+        <h1>Comment<a href="../classes/JMS.Serializer.Tests.Fixtures.Comment.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Comment.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CurrencyAwareOrder" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CurrencyAwareOrder .collapse">
+        <h1>CurrencyAwareOrder<a href="../classes/JMS.Serializer.Tests.Fixtures.CurrencyAwareOrder.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.CurrencyAwareOrder.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CurrencyAwarePrice" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CurrencyAwarePrice .collapse">
+        <h1>CurrencyAwarePrice<a href="../classes/JMS.Serializer.Tests.Fixtures.CurrencyAwarePrice.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.CurrencyAwarePrice.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CustomDeserializationObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CustomDeserializationObject .collapse">
+        <h1>CustomDeserializationObject<a href="../classes/JMS.Serializer.Tests.Fixtures.CustomDeserializationObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.CustomDeserializationObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DateTimeArraysObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DateTimeArraysObject .collapse">
+        <h1>DateTimeArraysObject<a href="../classes/JMS.Serializer.Tests.Fixtures.DateTimeArraysObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.DateTimeArraysObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Garage" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Garage .collapse">
+        <h1>Garage<a href="../classes/JMS.Serializer.Tests.Fixtures.Garage.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Garage.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GetSetObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GetSetObject .collapse">
+        <h1>GetSetObject<a href="../classes/JMS.Serializer.Tests.Fixtures.GetSetObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.GetSetObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GroupsObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GroupsObject .collapse">
+        <h1>GroupsObject<a href="../classes/JMS.Serializer.Tests.Fixtures.GroupsObject.html">¶</a></h1>
+        <p class="short_description">blablub</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.GroupsObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GroupsUser" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GroupsUser .collapse">
+        <h1>GroupsUser<a href="../classes/JMS.Serializer.Tests.Fixtures.GroupsUser.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.GroupsUser.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IndexedCommentsBlogPost" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IndexedCommentsBlogPost .collapse">
+        <h1>IndexedCommentsBlogPost<a href="../classes/JMS.Serializer.Tests.Fixtures.IndexedCommentsBlogPost.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.IndexedCommentsBlogPost.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IndexedCommentsList" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IndexedCommentsList .collapse">
+        <h1>IndexedCommentsList<a href="../classes/JMS.Serializer.Tests.Fixtures.IndexedCommentsList.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.IndexedCommentsList.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InitializedBlogPostConstructor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InitializedBlogPostConstructor .collapse">
+        <h1>InitializedBlogPostConstructor<a href="../classes/JMS.Serializer.Tests.Fixtures.InitializedBlogPostConstructor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.InitializedBlogPostConstructor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InitializedObjectConstructor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InitializedObjectConstructor .collapse">
+        <h1>InitializedObjectConstructor<a href="../classes/JMS.Serializer.Tests.Fixtures.InitializedObjectConstructor.html">¶</a></h1>
+        <p class="short_description">Object constructor that allows deserialization into already constructed
+objects passed through the deserialization context</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.InitializedObjectConstructor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InlineChild" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InlineChild .collapse">
+        <h1>InlineChild<a href="../classes/JMS.Serializer.Tests.Fixtures.InlineChild.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.InlineChild.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InlineChildEmpty" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InlineChildEmpty .collapse">
+        <h1>InlineChildEmpty<a href="../classes/JMS.Serializer.Tests.Fixtures.InlineChildEmpty.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.InlineChildEmpty.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InlineChildWithGroups" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InlineChildWithGroups .collapse">
+        <h1>InlineChildWithGroups<a href="../classes/JMS.Serializer.Tests.Fixtures.InlineChildWithGroups.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.InlineChildWithGroups.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InlineParent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InlineParent .collapse">
+        <h1>InlineParent<a href="../classes/JMS.Serializer.Tests.Fixtures.InlineParent.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.InlineParent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Input" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Input .collapse">
+        <h1>Input<a href="../classes/JMS.Serializer.Tests.Fixtures.Input.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Input.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InvalidGroupsObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InvalidGroupsObject .collapse">
+        <h1>InvalidGroupsObject<a href="../classes/JMS.Serializer.Tests.Fixtures.InvalidGroupsObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.InvalidGroupsObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InvalidUsageOfXmlValue" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InvalidUsageOfXmlValue .collapse">
+        <h1>InvalidUsageOfXmlValue<a href="../classes/JMS.Serializer.Tests.Fixtures.InvalidUsageOfXmlValue.html">¶</a></h1>
+        <p class="short_description">Dummy</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.InvalidUsageOfXmlValue.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Log" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Log .collapse">
+        <h1>Log<a href="../classes/JMS.Serializer.Tests.Fixtures.Log.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Log.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NamedDateTimeArraysObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NamedDateTimeArraysObject .collapse">
+        <h1>NamedDateTimeArraysObject<a href="../classes/JMS.Serializer.Tests.Fixtures.NamedDateTimeArraysObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.NamedDateTimeArraysObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NamedDateTimeImmutableArraysObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NamedDateTimeImmutableArraysObject .collapse">
+        <h1>NamedDateTimeImmutableArraysObject<a href="../classes/JMS.Serializer.Tests.Fixtures.NamedDateTimeImmutableArraysObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.NamedDateTimeImmutableArraysObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Node" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Node .collapse">
+        <h1>Node<a href="../classes/JMS.Serializer.Tests.Fixtures.Node.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Node.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithAbsentXmlListNode" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithAbsentXmlListNode .collapse">
+        <h1>ObjectWithAbsentXmlListNode<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithAbsentXmlListNode.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithAbsentXmlListNode.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithEmptyArrayAndHash" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithEmptyArrayAndHash .collapse">
+        <h1>ObjectWithEmptyArrayAndHash<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithEmptyArrayAndHash.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithEmptyArrayAndHash.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithEmptyHash" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithEmptyHash .collapse">
+        <h1>ObjectWithEmptyHash<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithEmptyHash.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithEmptyHash.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithEmptyNullableAndEmptyArrays" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithEmptyNullableAndEmptyArrays .collapse">
+        <h1>ObjectWithEmptyNullableAndEmptyArrays<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithEmptyNullableAndEmptyArrays.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithEmptyNullableAndEmptyArrays.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithExpressionVirtualPropertiesAndExcludeAll" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithExpressionVirtualPropertiesAndExcludeAll .collapse">
+        <h1>ObjectWithExpressionVirtualPropertiesAndExcludeAll<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithExpressionVirtualPropertiesAndExcludeAll.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithExpressionVirtualPropertiesAndExcludeAll.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithHandlerCallbacks" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithHandlerCallbacks .collapse">
+        <h1>ObjectWithHandlerCallbacks<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithHandlerCallbacks.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithHandlerCallbacks.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithIntListAndIntMap" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithIntListAndIntMap .collapse">
+        <h1>ObjectWithIntListAndIntMap<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithIntListAndIntMap.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithIntListAndIntMap.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithLifecycleCallbacks" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithLifecycleCallbacks .collapse">
+        <h1>ObjectWithLifecycleCallbacks<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithLifecycleCallbacks.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithLifecycleCallbacks.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithNamespacesAndList" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithNamespacesAndList .collapse">
+        <h1>ObjectWithNamespacesAndList<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithNamespacesAndList.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithNamespacesAndList.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithNullProperty" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithNullProperty .collapse">
+        <h1>ObjectWithNullProperty<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithNullProperty.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithNullProperty.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithObjectProperty" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithObjectProperty .collapse">
+        <h1>ObjectWithObjectProperty<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithObjectProperty.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithObjectProperty.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithToString" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithToString .collapse">
+        <h1>ObjectWithToString<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithToString.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithToString.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithVersionedVirtualProperties" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithVersionedVirtualProperties .collapse">
+        <h1>ObjectWithVersionedVirtualProperties<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithVersionedVirtualProperties.html">¶</a></h1>
+        <p class="short_description">dummy comment</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithVersionedVirtualProperties.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithVirtualProperties" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithVirtualProperties .collapse">
+        <h1>ObjectWithVirtualProperties<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithVirtualProperties.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithVirtualProperties.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithVirtualPropertiesAndExcludeAll" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithVirtualPropertiesAndExcludeAll .collapse">
+        <h1>ObjectWithVirtualPropertiesAndExcludeAll<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithVirtualPropertiesAndExcludeAll.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithVirtualPropertiesAndExcludeAll.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithVirtualXmlProperties" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithVirtualXmlProperties .collapse">
+        <h1>ObjectWithVirtualXmlProperties<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithVirtualXmlProperties.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithVirtualXmlProperties.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlKeyValuePairs" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlKeyValuePairs .collapse">
+        <h1>ObjectWithXmlKeyValuePairs<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlKeyValuePairs.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlKeyValuePairs.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlNamespaces" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlNamespaces .collapse">
+        <h1>ObjectWithXmlNamespaces<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlNamespaces.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlNamespaces.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlNamespacesAndObjectProperty" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlNamespacesAndObjectProperty .collapse">
+        <h1>ObjectWithXmlNamespacesAndObjectProperty<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlNamespacesAndObjectProperty.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlNamespacesAndObjectProperty.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlNamespacesAndObjectPropertyAuthor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlNamespacesAndObjectPropertyAuthor .collapse">
+        <h1>ObjectWithXmlNamespacesAndObjectPropertyAuthor<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlNamespacesAndObjectPropertyAuthor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlNamespacesAndObjectPropertyAuthor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlNamespacesAndObjectPropertyVirtual" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlNamespacesAndObjectPropertyVirtual .collapse">
+        <h1>ObjectWithXmlNamespacesAndObjectPropertyVirtual<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlNamespacesAndObjectPropertyVirtual.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlNamespacesAndObjectPropertyVirtual.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlRootNamespace" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlRootNamespace .collapse">
+        <h1>ObjectWithXmlRootNamespace<a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlRootNamespace.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ObjectWithXmlRootNamespace.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Order" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Order .collapse">
+        <h1>Order<a href="../classes/JMS.Serializer.Tests.Fixtures.Order.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Order.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ParentDoNotSkipWithEmptyChild" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ParentDoNotSkipWithEmptyChild .collapse">
+        <h1>ParentDoNotSkipWithEmptyChild<a href="../classes/JMS.Serializer.Tests.Fixtures.ParentDoNotSkipWithEmptyChild.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ParentDoNotSkipWithEmptyChild.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ParentSkipWithEmptyChild" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ParentSkipWithEmptyChild .collapse">
+        <h1>ParentSkipWithEmptyChild<a href="../classes/JMS.Serializer.Tests.Fixtures.ParentSkipWithEmptyChild.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ParentSkipWithEmptyChild.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Person" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Person .collapse">
+        <h1>Person<a href="../classes/JMS.Serializer.Tests.Fixtures.Person.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Person.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PersonCollection" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PersonCollection .collapse">
+        <h1>PersonCollection<a href="../classes/JMS.Serializer.Tests.Fixtures.PersonCollection.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.PersonCollection.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PersonLocation" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PersonLocation .collapse">
+        <h1>PersonLocation<a href="../classes/JMS.Serializer.Tests.Fixtures.PersonLocation.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.PersonLocation.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PersonSecret" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PersonSecret .collapse">
+        <h1>PersonSecret<a href="../classes/JMS.Serializer.Tests.Fixtures.PersonSecret.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.PersonSecret.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PersonSecretMore" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PersonSecretMore .collapse">
+        <h1>PersonSecretMore<a href="../classes/JMS.Serializer.Tests.Fixtures.PersonSecretMore.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.PersonSecretMore.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PersonSecretMoreVirtual" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PersonSecretMoreVirtual .collapse">
+        <h1>PersonSecretMoreVirtual<a href="../classes/JMS.Serializer.Tests.Fixtures.PersonSecretMoreVirtual.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.PersonSecretMoreVirtual.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PersonSecretVirtual" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PersonSecretVirtual .collapse">
+        <h1>PersonSecretVirtual<a href="../classes/JMS.Serializer.Tests.Fixtures.PersonSecretVirtual.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.PersonSecretVirtual.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Price" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Price .collapse">
+        <h1>Price<a href="../classes/JMS.Serializer.Tests.Fixtures.Price.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Price.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Publisher" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Publisher .collapse">
+        <h1>Publisher<a href="../classes/JMS.Serializer.Tests.Fixtures.Publisher.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Publisher.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SimpleClassObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SimpleClassObject .collapse">
+        <h1>SimpleClassObject<a href="../classes/JMS.Serializer.Tests.Fixtures.SimpleClassObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.SimpleClassObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SimpleObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SimpleObject .collapse">
+        <h1>SimpleObject<a href="../classes/JMS.Serializer.Tests.Fixtures.SimpleObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.SimpleObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SimpleObjectProxy" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SimpleObjectProxy .collapse">
+        <h1>SimpleObjectProxy<a href="../classes/JMS.Serializer.Tests.Fixtures.SimpleObjectProxy.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.SimpleObjectProxy.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SimpleSubClassObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SimpleSubClassObject .collapse">
+        <h1>SimpleSubClassObject<a href="../classes/JMS.Serializer.Tests.Fixtures.SimpleSubClassObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.SimpleSubClassObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Tag" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Tag .collapse">
+        <h1>Tag<a href="../classes/JMS.Serializer.Tests.Fixtures.Tag.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Tag.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Timestamp" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Timestamp .collapse">
+        <h1>Timestamp<a href="../classes/JMS.Serializer.Tests.Fixtures.Timestamp.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Timestamp.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Tree" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Tree .collapse">
+        <h1>Tree<a href="../classes/JMS.Serializer.Tests.Fixtures.Tree.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Tree.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VehicleInterfaceGarage" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VehicleInterfaceGarage .collapse">
+        <h1>VehicleInterfaceGarage<a href="../classes/JMS.Serializer.Tests.Fixtures.VehicleInterfaceGarage.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.VehicleInterfaceGarage.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_VersionedObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_VersionedObject .collapse">
+        <h1>VersionedObject<a href="../classes/JMS.Serializer.Tests.Fixtures.VersionedObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.VersionedObject.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.html">Fixtures</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.Discriminator.html">Discriminator</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_VehicleInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_VehicleInterface .collapse">
+        <h1>VehicleInterface<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.VehicleInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.VehicleInterface.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_Car" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Car .collapse">
+        <h1>Car<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.Car.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.Car.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Moped" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Moped .collapse">
+        <h1>Moped<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.Moped.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.Moped.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlAttributeDiscriminatorChild" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlAttributeDiscriminatorChild .collapse">
+        <h1>ObjectWithXmlAttributeDiscriminatorChild<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlAttributeDiscriminatorChild.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlAttributeDiscriminatorChild.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlAttributeDiscriminatorParent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlAttributeDiscriminatorParent .collapse">
+        <h1>ObjectWithXmlAttributeDiscriminatorParent<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlAttributeDiscriminatorParent.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlAttributeDiscriminatorParent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlNamespaceDiscriminatorChild" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlNamespaceDiscriminatorChild .collapse">
+        <h1>ObjectWithXmlNamespaceDiscriminatorChild<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlNamespaceDiscriminatorChild.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlNamespaceDiscriminatorChild.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlNamespaceDiscriminatorParent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlNamespaceDiscriminatorParent .collapse">
+        <h1>ObjectWithXmlNamespaceDiscriminatorParent<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlNamespaceDiscriminatorParent.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlNamespaceDiscriminatorParent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlNotCDataDiscriminatorChild" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlNotCDataDiscriminatorChild .collapse">
+        <h1>ObjectWithXmlNotCDataDiscriminatorChild<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlNotCDataDiscriminatorChild.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlNotCDataDiscriminatorChild.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectWithXmlNotCDataDiscriminatorParent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectWithXmlNotCDataDiscriminatorParent .collapse">
+        <h1>ObjectWithXmlNotCDataDiscriminatorParent<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlNotCDataDiscriminatorParent.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.ObjectWithXmlNotCDataDiscriminatorParent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Vehicle" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Vehicle .collapse">
+        <h1>Vehicle<a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.Vehicle.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Discriminator.Vehicle.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.html">Fixtures</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.Doctrine.html">Doctrine</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Author" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Author .collapse">
+        <h1>Author<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.Author.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.Author.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BlogPost" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BlogPost .collapse">
+        <h1>BlogPost<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.BlogPost.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.BlogPost.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Comment" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Comment .collapse">
+        <h1>Comment<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.Comment.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.Comment.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.html">Fixtures</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.Doctrine.html">Doctrine</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.html">SingleTableInheritance</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AbstractModel" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractModel .collapse">
+        <h1>AbstractModel<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.AbstractModel.html">¶</a></h1>
+        <p class="short_description">Abstract base class without Entity annotation</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.AbstractModel.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Clazz" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Clazz .collapse">
+        <h1>Clazz<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Clazz.html">¶</a></h1>
+        <p class="short_description">Abstract base class without Entity annotation</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Clazz.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Organization" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Organization .collapse">
+        <h1>Organization<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Organization.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Organization.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Person" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Person .collapse">
+        <h1>Person<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Person.html">¶</a></h1>
+        <p class="short_description">Abstract base class without Entity annotation</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Person.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_School" class="element ajax clickable class" data-toggle="collapse" data-target="#class_School .collapse">
+        <h1>School<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.School.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.School.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Student" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Student .collapse">
+        <h1>Student<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Student.html">¶</a></h1>
+        <p class="short_description">Abstract base class without Entity annotation</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Student.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Teacher" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Teacher .collapse">
+        <h1>Teacher<a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Teacher.html">¶</a></h1>
+        <p class="short_description">Abstract base class without Entity annotation</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.Doctrine.SingleTableInheritance.Teacher.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.html">Fixtures</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.DiscriminatorGroup.html">DiscriminatorGroup</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Car" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Car .collapse">
+        <h1>Car<a href="../classes/JMS.Serializer.Tests.Fixtures.DiscriminatorGroup.Car.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.DiscriminatorGroup.Car.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Vehicle" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Vehicle .collapse">
+        <h1>Vehicle<a href="../classes/JMS.Serializer.Tests.Fixtures.DiscriminatorGroup.Vehicle.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.DiscriminatorGroup.Vehicle.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.html">Fixtures</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.DoctrinePHPCR.html">DoctrinePHPCR</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Author" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Author .collapse">
+        <h1>Author<a href="../classes/JMS.Serializer.Tests.Fixtures.DoctrinePHPCR.Author.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.DoctrinePHPCR.Author.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BlogPost" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BlogPost .collapse">
+        <h1>BlogPost<a href="../classes/JMS.Serializer.Tests.Fixtures.DoctrinePHPCR.BlogPost.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.DoctrinePHPCR.BlogPost.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Comment" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Comment .collapse">
+        <h1>Comment<a href="../classes/JMS.Serializer.Tests.Fixtures.DoctrinePHPCR.Comment.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.DoctrinePHPCR.Comment.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.html">Fixtures</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.MaxDepth.html">MaxDepth</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Gh236Bar" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Gh236Bar .collapse">
+        <h1>Gh236Bar<a href="../classes/JMS.Serializer.Tests.Fixtures.MaxDepth.Gh236Bar.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.MaxDepth.Gh236Bar.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Gh236Foo" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Gh236Foo .collapse">
+        <h1>Gh236Foo<a href="../classes/JMS.Serializer.Tests.Fixtures.MaxDepth.Gh236Foo.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.MaxDepth.Gh236Foo.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.html">Fixtures</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Fixtures.ExclusionStrategy.html">ExclusionStrategy</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AlwaysExcludeExclusionStrategy" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AlwaysExcludeExclusionStrategy .collapse">
+        <h1>AlwaysExcludeExclusionStrategy<a href="../classes/JMS.Serializer.Tests.Fixtures.ExclusionStrategy.AlwaysExcludeExclusionStrategy.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Fixtures.ExclusionStrategy.AlwaysExcludeExclusionStrategy.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Exclusion.html">Exclusion</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_DisjunctExclusionStrategyTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DisjunctExclusionStrategyTest .collapse">
+        <h1>DisjunctExclusionStrategyTest<a href="../classes/JMS.Serializer.Tests.Exclusion.DisjunctExclusionStrategyTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Exclusion.DisjunctExclusionStrategyTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GroupsExclusionStrategyTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GroupsExclusionStrategyTest .collapse">
+        <h1>GroupsExclusionStrategyTest<a href="../classes/JMS.Serializer.Tests.Exclusion.GroupsExclusionStrategyTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Exclusion.GroupsExclusionStrategyTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Handler.html">Handler</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ArrayCollectionHandlerTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ArrayCollectionHandlerTest .collapse">
+        <h1>ArrayCollectionHandlerTest<a href="../classes/JMS.Serializer.Tests.Handler.ArrayCollectionHandlerTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Handler.ArrayCollectionHandlerTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FormErrorHandlerTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FormErrorHandlerTest .collapse">
+        <h1>FormErrorHandlerTest<a href="../classes/JMS.Serializer.Tests.Handler.FormErrorHandlerTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Handler.FormErrorHandlerTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropelCollectionHandlerTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropelCollectionHandlerTest .collapse">
+        <h1>PropelCollectionHandlerTest<a href="../classes/JMS.Serializer.Tests.Handler.PropelCollectionHandlerTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Handler.PropelCollectionHandlerTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TestSubject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TestSubject .collapse">
+        <h1>TestSubject<a href="../classes/JMS.Serializer.Tests.Handler.TestSubject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Handler.TestSubject.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.html">JMS</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.html">Serializer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.html">Tests</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/JMS.Serializer.Tests.Twig.html">Twig</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_SerializerExtensionTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SerializerExtensionTest .collapse">
+        <h1>SerializerExtensionTest<a href="../classes/JMS.Serializer.Tests.Twig.SerializerExtensionTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/JMS.Serializer.Tests.Twig.SerializerExtensionTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:30 +0000.<br/>
+    </footer>
+    </body>
+</html>

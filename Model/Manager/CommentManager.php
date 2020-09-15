@@ -8,16 +8,30 @@
 
 namespace App\Model\Manager;
 
-
 use App\Framework\BaseManager;
 
+/**
+ * Class CommentManager
+ * @package App\Model\Manager
+ */
 class CommentManager extends BaseManager
 {
+    /**
+     * Constructor
+     * @param string $datasource string connexion
+     */
     public function __construct($datasource)
     {
         parent::__construct('comment', 'App\\Model\\Entity\\Comment', $datasource);
     }
 
+    /**
+     * Method getByPostId
+     * @param int $id Post Id
+     * @param int $page page number asked
+     * @param int $nbCommentsByPage number of comments by page
+     * @return \stdClass
+     */
     public function getByPostId($id, $page, $nbCommentsByPage)
     {
         $nbComments = $this->countCommentByPostId($id);
@@ -43,6 +57,11 @@ class CommentManager extends BaseManager
         return $result;
     }
 
+    /**
+     * Method countCommentByPostId
+     * @param int $postId Post id
+     * @return string
+     */
     public function countCommentByPostId($postId)
     {
         $query = $this->bdd->prepare("SELECT count(*) nb_comment FROM comment WHERE post_id = ? AND publish = 1;");
@@ -50,6 +69,12 @@ class CommentManager extends BaseManager
         return $query->fetchColumn();
     }
 
+    /**
+     * Method getListCommentOrderByDate
+     * @param int $page page number asked
+     * @param int $nbCommentsByPage number of comments by page
+     * @return \stdClass
+     */
     public function getListCommentOrderByDate($page, $nbCommentsByPage)
     {
         $nbComments = $this->countCommentWithUserAndPostExist();
@@ -72,6 +97,11 @@ class CommentManager extends BaseManager
         return $result;
     }
 
+    /**
+     * Method countComment
+     * @param null $idUser
+     * @return string
+     */
     public function countComment($idUser = null)
     {
         if (empty($idUser)) {
@@ -84,6 +114,10 @@ class CommentManager extends BaseManager
         return $query->fetchColumn();
     }
 
+    /**
+     * Method countCommentWithUserAndPostExist
+     * @return string
+     */
     public function countCommentWithUserAndPostExist()
     {
         $query = $this->bdd->prepare("SELECT count(*) nb_comment
@@ -98,6 +132,15 @@ class CommentManager extends BaseManager
         return $query->fetchColumn();
     }
 
+    /**
+     * Method publishCommentById
+     *
+     * Allow to publish a comment
+     *
+     * @param int $id Comment Id
+     * @param bool $state State of comment
+     * @return bool
+     */
     public function publishCommentById($id, $state)
     {
         if ($state == 'publish') {
@@ -110,6 +153,11 @@ class CommentManager extends BaseManager
         return $query->execute(array('publish' => $publish, 'id' => $id));
     }
 
+    /**
+     * Method countCommentPublished
+     * @param bool $state state of comment
+     * @return string
+     */
     public function countCommentPublished($state)
     {
         $query = $this->bdd->prepare("SELECT count(*) nb_comment FROM comment WHERE publish = ?;");

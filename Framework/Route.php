@@ -14,18 +14,59 @@ use App\Framework\Exception\ControllerNotFoundException;
 use App\Framework\Exception\ForbiddenAccessException;
 use App\Model\Manager\RoleManager;
 
+/**
+ * Class Route
+ *
+ * @package App\Framework
+ */
 class Route
 {
+
+    /**
+     * Variable name
+     * @var
+     */
     private $name;
+    /**
+     * Variable controller
+     * @var
+     */
     private $controller;
+    /**
+     * Variable url
+     * @var
+     */
     private $url;
+    /**
+     * Variable method
+     * @var
+     */
     private $method;
+    /**
+     * variable action
+     * @var
+     */
     private $action;
+    /**
+     * variable params
+     * @var
+     */
     private $params;
+    /**
+     * variable manager
+     * @var
+     */
     private $manager;
+    /**
+     * variable role
+     * @var
+     */
     private $role;
 
-
+    /**
+     * Constructor
+     * @param object $route route object
+     */
     public function __construct($route)
     {
         $this->setName($route->name);
@@ -38,6 +79,17 @@ class Route
         $this->setRole((!isset($route->role)) ? null : $route->role);
     }
 
+    /**
+     * Method run
+     *
+     * @param object $httpRequest HttpRequest Object
+     * @param Object $config Json File Config
+     * @throws ActionNotFoundException
+     * @throws AuthenticationRequiredException
+     * @throws ControllerNotFoundException
+     * @throws ForbiddenAccessException
+     *
+     */
     public function run($httpRequest, $config)
     {
         if (empty($this->role)) {
@@ -58,6 +110,8 @@ class Route
     }
 
     /**
+     * Accessor getName
+     *
      * @return mixed
      */
     public function getName()
@@ -66,6 +120,8 @@ class Route
     }
 
     /**
+     * Accessor setName
+     *
      * @param mixed $name
      */
     public function setName($name)
@@ -74,6 +130,8 @@ class Route
     }
 
     /**
+     * Accessor getController
+     *
      * @return mixed
      */
     public function getController()
@@ -82,6 +140,8 @@ class Route
     }
 
     /**
+     * Accessor setController
+     *
      * @param mixed $controller
      */
     public function setController($controller)
@@ -90,6 +150,8 @@ class Route
     }
 
     /**
+     * Accessor getUrl
+     *
      * @return mixed
      */
     public function getUrl()
@@ -98,6 +160,8 @@ class Route
     }
 
     /**
+     * Accessor setUrl
+     *
      * @param mixed $url
      */
     public function setUrl($url)
@@ -106,6 +170,8 @@ class Route
     }
 
     /**
+     * Accessor getMethod
+     *
      * @return mixed
      */
     public function getMethod()
@@ -114,6 +180,8 @@ class Route
     }
 
     /**
+     * Accessor setMethod
+     *
      * @param mixed $method
      */
     public function setMethod($method)
@@ -122,6 +190,8 @@ class Route
     }
 
     /**
+     * Accessor getParams
+     *
      * @return mixed
      */
     public function getParams()
@@ -130,6 +200,8 @@ class Route
     }
 
     /**
+     * Accessor setParams
+     *
      * @param mixed $params
      */
     public function setParams($params)
@@ -138,6 +210,8 @@ class Route
     }
 
     /**
+     * Accessor getAction
+     *
      * @return mixed
      */
     public function getAction()
@@ -146,6 +220,8 @@ class Route
     }
 
     /**
+     * Accessor setAction
+     *
      * @param mixed $action
      */
     public function setAction($action)
@@ -154,6 +230,8 @@ class Route
     }
 
     /**
+     * Accessor getManager
+     *
      * @return mixed
      */
     public function getManager()
@@ -162,6 +240,8 @@ class Route
     }
 
     /**
+     * Accessor setManager
+     *
      * @param mixed $manager
      */
     public function setManager($manager)
@@ -170,6 +250,8 @@ class Route
     }
 
     /**
+     * Accessor getRole
+     *
      * @return mixed
      */
     public function getRole()
@@ -178,6 +260,8 @@ class Route
     }
 
     /**
+     * Accessor setRole
+     *
      * @param mixed $role
      */
     public function setRole($role)
@@ -185,6 +269,15 @@ class Route
         $this->role = $role;
     }
 
+    /**
+     * Method Call
+     *
+     * @param object $httpRequest HttpRequest Object
+     * @param object $config Json File object
+     * @return mixed
+     * @throws ActionNotFoundException
+     * @throws ControllerNotFoundException
+     */
     private function callAction($httpRequest, $config)
     {
         $controller = null;

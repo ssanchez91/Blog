@@ -8,13 +8,38 @@
 
 namespace App\Model\Entity;
 
-
+/**
+ * Class Alert
+ *
+ * Allow to create new Alert Object
+ *
+ * @package App\Model\Entity
+ */
 class Alert
 {
+    /**
+     * Variable message
+     * @var
+     */
     private $message;
+    /**
+     * Variable type of alert (success - warning - danger - info )
+     * @var
+     */
     private $type;
+    /**
+     * Variable listType (List Type of alert allowed)
+     *
+     * @var
+     */
     private $listType;
 
+    /**
+     * Constructor
+     *
+     * @param string $message message to display for user
+     * @param string $type type of alert
+     */
     public function __construct($message, $type)
     {
         $config = file_get_contents('Config/config.json');
@@ -24,6 +49,8 @@ class Alert
     }
 
     /**
+     * Accessor getMessage
+     *
      * @return mixed
      */
     public function getMessage()
@@ -32,6 +59,8 @@ class Alert
     }
 
     /**
+     * Accessor setMessage
+     *
      * @param mixed $message
      */
     public function setMessage($message)
@@ -40,6 +69,7 @@ class Alert
     }
 
     /**
+     * Accessor getType
      * @return mixed
      */
     public function getType()
@@ -48,6 +78,8 @@ class Alert
     }
 
     /**
+     * Accessor setType
+     *
      * @param mixed $type
      */
     public function setType($type)

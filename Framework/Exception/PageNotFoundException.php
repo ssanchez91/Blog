@@ -8,12 +8,19 @@
 
 namespace App\Framework\Exception;
 
-
+/**
+ * Class PageNotFoundException
+ *
+ * @package App\Framework\Exception
+ */
 class PageNotFoundException extends \Exception
 {
 
     /**
      * PageNotFoundException constructor.
+     *
+     * @param string $page number of the page asked
+     * @param int $pageMax number of max page
      */
     public function __construct($page, $pageMax)
     {

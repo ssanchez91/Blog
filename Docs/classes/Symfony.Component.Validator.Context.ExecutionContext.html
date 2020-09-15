@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \Symfony\Component\Validator\Context\ExecutionContext
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_addViolation" title="addViolation :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>addViolation</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addViolationAt" title="addViolationAt :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>addViolationAt</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_buildViolation" title="buildViolation :: Returns a builder for adding a violation with extended information.">
+            <span class="description">Returns a builder for adding a violation with extended information.</span><pre>buildViolation</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getClassName" title="getClassName :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getClassName</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getConstraint" title="getConstraint :: ">
+            <span class="description"></span><pre>getConstraint</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getGroup" title="getGroup :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getGroup</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getMetadata" title="getMetadata :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getMetadata</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getMetadataFactory" title="getMetadataFactory :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getMetadataFactory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getObject" title="getObject :: Returns the currently validated object.">
+            <span class="description">Returns the currently validated object.</span><pre>getObject</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getPropertyName" title="getPropertyName :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getPropertyName</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getPropertyPath" title="getPropertyPath :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getPropertyPath</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getRoot" title="getRoot :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getRoot</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getValidator" title="getValidator :: Returns the validator.">
+            <span class="description">Returns the validator.</span><pre>getValidator</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getValue" title="getValue :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getValue</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getViolations" title="getViolations :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getViolations</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isConstraintValidated" title="isConstraintValidated :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>isConstraintValidated</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isGroupValidated" title="isGroupValidated :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>isGroupValidated</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isObjectInitialized" title="isObjectInitialized :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>isObjectInitialized</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_markConstraintAsValidated" title="markConstraintAsValidated :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>markConstraintAsValidated</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_markGroupAsValidated" title="markGroupAsValidated :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>markGroupAsValidated</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_markObjectAsInitialized" title="markObjectAsInitialized :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>markObjectAsInitialized</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setConstraint" title="setConstraint :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>setConstraint</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setGroup" title="setGroup :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>setGroup</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setNode" title="setNode :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>setNode</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_validate" title="validate :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>validate</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_validateValue" title="validateValue :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>validateValue</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ExecutionContext</h1>
+                <small style="display: block; text-align: right">
+                                                                Implements <a href="../classes/Symfony.Component.Validator.Context.ExecutionContextInterface.html">\Symfony\Component\Validator\Context\ExecutionContextInterface</a>
+                                    </small>
+                <p class="short_description">The context used and created by {@link ExecutionContextFactory}.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Bernhard Schussek <a href="mailto:bschussek@gmail.com">bschussek@gmail.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        see
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        internal
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>You should not instantiate or use this class. Code against
+{@link ExecutionContextInterface} instead.</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_addViolation"></a>
+                        <div class="element clickable method public  method_addViolation" data-toggle="collapse" data-target=".method_addViolation .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>addViolation( $message, array $parameters = array(),  $invalidValue = null,  $plural = null,  $code = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$parameters</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$invalidValue</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$plural</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$code</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addViolationAt"></a>
+                        <div class="element clickable method public  method_addViolationAt" data-toggle="collapse" data-target=".method_addViolationAt .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>addViolationAt( $subPath,  $message, array $parameters = array(),  $invalidValue = null,  $plural = null,  $code = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$subPath</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$parameters</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$invalidValue</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$plural</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$code</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_buildViolation"></a>
+                        <div class="element clickable method public  method_buildViolation" data-toggle="collapse" data-target=".method_buildViolation .collapse">
+                            <h2>Returns a builder for adding a violation with extended information.</h2>
+                            <pre>buildViolation(string $message, array $parameters = array()) : \Symfony\Component\Validator\Violation\ConstraintViolationBuilderInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Call \Symfony\Component\Validator\Context\ConstraintViolationBuilderInterface::addViolation() to
+add the violation when you're done with the configuration:</p>
+<pre><code>$context-&gt;buildViolation('Please enter a number between %min% and %max%.')
+    -&gt;setParameter('%min%', 3)
+    -&gt;setParameter('%max%', 10)
+    -&gt;setTranslationDomain('number_validation')
+    -&gt;addViolation();</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code>string</code><p><p>The error message</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$parameters</h4>
+                                                <code>array</code><p><p>The parameters substituted in the error message</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Validator.Violation.ConstraintViolationBuilderInterface.html">\Symfony\Component\Validator\Violation\ConstraintViolationBuilderInterface</a></code><p><p>The violation builder</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getClassName"></a>
+                        <div class="element clickable method public  method_getClassName" data-toggle="collapse" data-target=".method_getClassName .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getClassName() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getConstraint"></a>
+                        <div class="element clickable method public  method_getConstraint" data-toggle="collapse" data-target=".method_getConstraint .collapse">
+                            <h2>getConstraint</h2>
+                            <pre>getConstraint() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getGroup"></a>
+                        <div class="element clickable method public  method_getGroup" data-toggle="collapse" data-target=".method_getGroup .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getGroup() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getMetadata"></a>
+                        <div class="element clickable method public  method_getMetadata" data-toggle="collapse" data-target=".method_getMetadata .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getMetadata() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getMetadataFactory"></a>
+                        <div class="element clickable method public  method_getMetadataFactory" data-toggle="collapse" data-target=".method_getMetadataFactory .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getMetadataFactory() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getObject"></a>
+                        <div class="element clickable method public  method_getObject" data-toggle="collapse" data-target=".method_getObject .collapse">
+                            <h2>Returns the currently validated object.</h2>
+                            <pre>getObject() : object|null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the validator is currently validating a class constraint, the
+object of that class is returned. If it is a validating a property or
+getter constraint, the object that the property/getter belongs to is
+returned.</p>
+<p>In other cases, null is returned.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>object|null</code><p><p>The currently validated object or null</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getPropertyName"></a>
+                        <div class="element clickable method public  method_getPropertyName" data-toggle="collapse" data-target=".method_getPropertyName .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getPropertyName() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getPropertyPath"></a>
+                        <div class="element clickable method public  method_getPropertyPath" data-toggle="collapse" data-target=".method_getPropertyPath .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getPropertyPath( $subPath = &#039;&#039;) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$subPath</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getRoot"></a>
+                        <div class="element clickable method public  method_getRoot" data-toggle="collapse" data-target=".method_getRoot .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getRoot() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getValidator"></a>
+                        <div class="element clickable method public  method_getValidator" data-toggle="collapse" data-target=".method_getValidator .collapse">
+                            <h2>Returns the validator.</h2>
+                            <pre>getValidator() : \Symfony\Component\Validator\Validator\ValidatorInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Useful if you want to validate additional constraints:</p>
+<pre><code>public function validate($value, Constraint $constraint)
+{
+    $validator = $this-&gt;context-&gt;getValidator();
+
+    $violations = $validator-&gt;validate($value, new Length(array('min' =&gt; 3)));
+
+    if (count($violations) &gt; 0) {
+        // ...
+    }
+}</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Validator.Validator.ValidatorInterface.html">\Symfony\Component\Validator\Validator\ValidatorInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getValue"></a>
+                        <div class="element clickable method public  method_getValue" data-toggle="collapse" data-target=".method_getValue .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getValue() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getViolations"></a>
+                        <div class="element clickable method public  method_getViolations" data-toggle="collapse" data-target=".method_getViolations .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getViolations() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isConstraintValidated"></a>
+                        <div class="element clickable method public  method_isConstraintValidated" data-toggle="collapse" data-target=".method_isConstraintValidated .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>isConstraintValidated( $cacheKey,  $constraintHash) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$cacheKey</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$constraintHash</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isGroupValidated"></a>
+                        <div class="element clickable method public  method_isGroupValidated" data-toggle="collapse" data-target=".method_isGroupValidated .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>isGroupValidated( $cacheKey,  $groupHash) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$cacheKey</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$groupHash</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isObjectInitialized"></a>
+                        <div class="element clickable method public  method_isObjectInitialized" data-toggle="collapse" data-target=".method_isObjectInitialized .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>isObjectInitialized( $cacheKey) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$cacheKey</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_markConstraintAsValidated"></a>
+                        <div class="element clickable method public  method_markConstraintAsValidated" data-toggle="collapse" data-target=".method_markConstraintAsValidated .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>markConstraintAsValidated( $cacheKey,  $constraintHash) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$cacheKey</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$constraintHash</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_markGroupAsValidated"></a>
+                        <div class="element clickable method public  method_markGroupAsValidated" data-toggle="collapse" data-target=".method_markGroupAsValidated .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>markGroupAsValidated( $cacheKey,  $groupHash) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$cacheKey</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$groupHash</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_markObjectAsInitialized"></a>
+                        <div class="element clickable method public  method_markObjectAsInitialized" data-toggle="collapse" data-target=".method_markObjectAsInitialized .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>markObjectAsInitialized( $cacheKey) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$cacheKey</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setConstraint"></a>
+                        <div class="element clickable method public  method_setConstraint" data-toggle="collapse" data-target=".method_setConstraint .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>setConstraint(\Symfony\Component\Validator\Constraint $constraint) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$constraint</h4>
+                                                <code><a href="../classes/Symfony.Component.Validator.Constraint.html">\Symfony\Component\Validator\Constraint</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setGroup"></a>
+                        <div class="element clickable method public  method_setGroup" data-toggle="collapse" data-target=".method_setGroup .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>setGroup( $group) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$group</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setNode"></a>
+                        <div class="element clickable method public  method_setNode" data-toggle="collapse" data-target=".method_setNode .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>setNode( $value,  $object, \Symfony\Component\Validator\Mapping\MetadataInterface $metadata = null,  $propertyPath) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$object</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$metadata</h4>
+                                                <code><a href="../classes/Symfony.Component.Validator.Mapping.MetadataInterface.html">\Symfony\Component\Validator\Mapping\MetadataInterface</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$propertyPath</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validate"></a>
+                        <div class="element clickable method public  method_validate" data-toggle="collapse" data-target=".method_validate .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>validate( $value,  $subPath = &#039;&#039;,  $groups = null,  $traverse = false,  $deep = false) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$subPath</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$groups</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$traverse</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$deep</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validateValue"></a>
+                        <div class="element clickable method public  method_validateValue" data-toggle="collapse" data-target=".method_validateValue .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>validateValue( $value,  $constraints,  $subPath = &#039;&#039;,  $groups = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$constraints</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$subPath</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$groups</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_validator"> </a>
+                            <div class="element clickable property  private property_validator" data-toggle="collapse" data-target=".property_validator .collapse">
+                                <h2>validator</h2>
+                                <pre>validator : \Symfony\Component\Validator\Validator\ValidatorInterface</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/Symfony.Component.Validator.Validator.ValidatorInterface.html">\Symfony\Component\Validator\Validator\ValidatorInterface</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_root"> </a>
+                            <div class="element clickable property  private property_root" data-toggle="collapse" data-target=".property_root .collapse">
+                                <h2>The root value of the validated object graph.</h2>
+                                <pre>root : mixed</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>mixed</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_translator"> </a>
+                            <div class="element clickable property  private property_translator" data-toggle="collapse" data-target=".property_translator .collapse">
+                                <h2>translator</h2>
+                                <pre>translator : \Symfony\Component\Translation\TranslatorInterface</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/Symfony.Component.Translation.TranslatorInterface.html">\Symfony\Component\Translation\TranslatorInterface</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_translationDomain"> </a>
+                            <div class="element clickable property  private property_translationDomain" data-toggle="collapse" data-target=".property_translationDomain .collapse">
+                                <h2>translationDomain</h2>
+                                <pre>translationDomain : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_violations"> </a>
+                            <div class="element clickable property  private property_violations" data-toggle="collapse" data-target=".property_violations .collapse">
+                                <h2>The violations generated in the current context.</h2>
+                                <pre>violations : \Symfony\Component\Validator\ConstraintViolationList</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/Symfony.Component.Validator.ConstraintViolationList.html">\Symfony\Component\Validator\ConstraintViolationList</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_value"> </a>
+                            <div class="element clickable property  private property_value" data-toggle="collapse" data-target=".property_value .collapse">
+                                <h2>The currently validated value.</h2>
+                                <pre>value : mixed</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>mixed</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_object"> </a>
+                            <div class="element clickable property  private property_object" data-toggle="collapse" data-target=".property_object .collapse">
+                                <h2>The currently validated object.</h2>
+                                <pre>object : object|null</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>object|null</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_propertyPath"> </a>
+                            <div class="element clickable property  private property_propertyPath" data-toggle="collapse" data-target=".property_propertyPath .collapse">
+                                <h2>The property path leading to the current value.</h2>
+                                <pre>propertyPath : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_metadata"> </a>
+                            <div class="element clickable property  private property_metadata" data-toggle="collapse" data-target=".property_metadata .collapse">
+                                <h2>The current validation metadata.</h2>
+                                <pre>metadata : \Symfony\Component\Validator\Mapping\MetadataInterface|null</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/Symfony.Component.Validator.Mapping.MetadataInterface.html">\Symfony\Component\Validator\Mapping\MetadataInterface</a>|null</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_group"> </a>
+                            <div class="element clickable property  private property_group" data-toggle="collapse" data-target=".property_group .collapse">
+                                <h2>The currently validated group.</h2>
+                                <pre>group : string|null</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string|null</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_constraint"> </a>
+                            <div class="element clickable property  private property_constraint" data-toggle="collapse" data-target=".property_constraint .collapse">
+                                <h2>The currently validated constraint.</h2>
+                                <pre>constraint : \Symfony\Component\Validator\Constraint|null</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/Symfony.Component.Validator.Constraint.html">\Symfony\Component\Validator\Constraint</a>|null</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_validatedObjects"> </a>
+                            <div class="element clickable property  private property_validatedObjects" data-toggle="collapse" data-target=".property_validatedObjects .collapse">
+                                <h2>Stores which objects have been validated in which group.</h2>
+                                <pre>validatedObjects : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_validatedConstraints"> </a>
+                            <div class="element clickable property  private property_validatedConstraints" data-toggle="collapse" data-target=".property_validatedConstraints .collapse">
+                                <h2>Stores which class constraint has been validated for which object.</h2>
+                                <pre>validatedConstraints : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_initializedObjects"> </a>
+                            <div class="element clickable property  private property_initializedObjects" data-toggle="collapse" data-target=".property_initializedObjects .collapse">
+                                <h2>Stores which objects have been initialized.</h2>
+                                <pre>initializedObjects : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\Symfony\Component\Validator\Context\ExecutionContext"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/Symfony.Component.Validator.Context.html">Context</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/Symfony.Component.Validator.Context.ExecutionContext.html">ExecutionContext</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:42 +0000.<br/>
+    </footer>
+    </body>
+</html>

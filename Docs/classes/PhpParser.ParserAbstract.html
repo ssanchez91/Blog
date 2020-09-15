@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \PhpParser\ParserAbstract
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: Creates a parser instance.">
+            <span class="description">Creates a parser instance.</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_getErrors" title="getErrors :: Get array of errors that occurred during the last parse.">
+            <span class="description">Get array of errors that occurred during the last parse.</span><pre>getErrors</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                <li class="method public">
+        <a href="#method_parse" title="parse :: Parses PHP code into a node tree.">
+            <span class="description">Parses PHP code into a node tree.</span><pre>parse</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                <li class="method protected">
+                            <a href="#method_getErrorMessage" title="getErrorMessage :: ">
+                                <span class="description"></span><pre>getErrorMessage</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method protected">
+                            <a href="#method_getExpectedTokens" title="getExpectedTokens :: ">
+                                <span class="description"></span><pre>getExpectedTokens</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method protected">
+                            <a href="#method_handleNamespaces" title="handleNamespaces :: Moves statements of semicolon-style namespaces into $ns-&gt;stmts and checks various error conditions.">
+                                <span class="description">Moves statements of semicolon-style namespaces into $ns-&gt;stmts and checks various error conditions.</span><pre>handleNamespaces</pre>
+                            </a>
+                        </li>
+                                                                                    </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                            <li class="method private">
+                            <a href="#method_getNamespacingStyle" title="getNamespacingStyle :: ">
+                                <span class="description"></span><pre>getNamespacingStyle</pre>
+                            </a>
+                        </li>
+                                                                                                                        </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                                <li class="constant ">
+                    <a href="#constant_SYMBOL_NONE" title="SYMBOL_NONE :: ">
+                        <span class="description"></span><pre>SYMBOL_NONE</pre>
+                    </a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ParserAbstract</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description"></p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                            </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Creates a parser instance.</h2>
+                            <pre>__construct(\PhpParser\Lexer $lexer, array $options = array()) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$lexer</h4>
+                                                <code><a href="../classes/PhpParser.Lexer.html">\PhpParser\Lexer</a></code><p><p>A lexer</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$options</h4>
+                                                <code>array</code><p><p>Options array. The boolean 'throwOnError' option determines whether an exception should be
+thrown on first error, or if the parser should try to continue parsing the remaining code
+and build a partial AST.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getErrorMessage"></a>
+                        <div class="element clickable method protected  method_getErrorMessage" data-toggle="collapse" data-target=".method_getErrorMessage .collapse">
+                            <h2>getErrorMessage</h2>
+                            <pre>getErrorMessage( $symbol,  $state) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$symbol</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$state</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getErrors"></a>
+                        <div class="element clickable method public  method_getErrors" data-toggle="collapse" data-target=".method_getErrors .collapse">
+                            <h2>Get array of errors that occurred during the last parse.</h2>
+                            <pre>getErrors() : array&lt;mixed,\PhpParser\Error&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This method may only return multiple errors if the 'throwOnError' option is disabled.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,<a href="../classes/PhpParser.Error.html">\PhpParser\Error</a>&gt;</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getExpectedTokens"></a>
+                        <div class="element clickable method protected  method_getExpectedTokens" data-toggle="collapse" data-target=".method_getExpectedTokens .collapse">
+                            <h2>getExpectedTokens</h2>
+                            <pre>getExpectedTokens( $state) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$state</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getNamespacingStyle"></a>
+                        <div class="element clickable method private  method_getNamespacingStyle" data-toggle="collapse" data-target=".method_getNamespacingStyle .collapse">
+                            <h2>getNamespacingStyle</h2>
+                            <pre>getNamespacingStyle(array $stmts) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$stmts</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_handleNamespaces"></a>
+                        <div class="element clickable method protected  method_handleNamespaces" data-toggle="collapse" data-target=".method_handleNamespaces .collapse">
+                            <h2>Moves statements of semicolon-style namespaces into $ns-&gt;stmts and checks various error conditions.</h2>
+                            <pre>handleNamespaces(array&lt;mixed,\PhpParser\Node&gt; $stmts) : array&lt;mixed,\PhpParser\Node&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$stmts</h4>
+                                                <code>array&lt;mixed,<a href="../classes/PhpParser.Node.html">\PhpParser\Node</a>&gt;</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,<a href="../classes/PhpParser.Node.html">\PhpParser\Node</a>&gt;</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_parse"></a>
+                        <div class="element clickable method public  method_parse" data-toggle="collapse" data-target=".method_parse .collapse">
+                            <h2>Parses PHP code into a node tree.</h2>
+                            <pre>parse(string $code) : array&lt;mixed,\PhpParser\Node&gt;|null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$code</h4>
+                                                <code>string</code><p><p>The source code to parse</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,<a href="../classes/PhpParser.Node.html">\PhpParser\Node</a>&gt;|null</code><p><p>Array of statements (or null if the 'throwOnError' option is disabled and the parser was
+unable to recover from an error).</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                                    <a id="constant_SYMBOL_NONE"> </a>
+                            <div class="element clickable constant  constant_SYMBOL_NONE" data-toggle="collapse" data-target=".constant_SYMBOL_NONE .collapse">
+                                <h2>SYMBOL_NONE</h2>
+                                <pre>SYMBOL_NONE</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_tokenToSymbolMapSize"> </a>
+                            <div class="element clickable property  protected property_tokenToSymbolMapSize" data-toggle="collapse" data-target=".property_tokenToSymbolMapSize .collapse">
+                                <h2>Size of $tokenToSymbol map</h2>
+                                <pre>tokenToSymbolMapSize : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Size of $tokenToSymbol map</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_actionTableSize"> </a>
+                            <div class="element clickable property  protected property_actionTableSize" data-toggle="collapse" data-target=".property_actionTableSize .collapse">
+                                <h2>Size of $action table</h2>
+                                <pre>actionTableSize : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Size of $action table</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_gotoTableSize"> </a>
+                            <div class="element clickable property  protected property_gotoTableSize" data-toggle="collapse" data-target=".property_gotoTableSize .collapse">
+                                <h2>Size of $goto table</h2>
+                                <pre>gotoTableSize : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Size of $goto table</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_invalidSymbol"> </a>
+                            <div class="element clickable property  protected property_invalidSymbol" data-toggle="collapse" data-target=".property_invalidSymbol .collapse">
+                                <h2>Symbol number signifying an invalid token</h2>
+                                <pre>invalidSymbol : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Symbol number signifying an invalid token</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_errorSymbol"> </a>
+                            <div class="element clickable property  protected property_errorSymbol" data-toggle="collapse" data-target=".property_errorSymbol .collapse">
+                                <h2>Symbol number of error recovery token</h2>
+                                <pre>errorSymbol : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Symbol number of error recovery token</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_defaultAction"> </a>
+                            <div class="element clickable property  protected property_defaultAction" data-toggle="collapse" data-target=".property_defaultAction .collapse">
+                                <h2>Action number signifying default action</h2>
+                                <pre>defaultAction : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Action number signifying default action</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_unexpectedTokenRule"> </a>
+                            <div class="element clickable property  protected property_unexpectedTokenRule" data-toggle="collapse" data-target=".property_unexpectedTokenRule .collapse">
+                                <h2>Rule number signifying that an unexpected token was encountered</h2>
+                                <pre>unexpectedTokenRule : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Rule number signifying that an unexpected token was encountered</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_YY2TBLSTATE"> </a>
+                            <div class="element clickable property  protected property_YY2TBLSTATE" data-toggle="collapse" data-target=".property_YY2TBLSTATE .collapse">
+                                <h2>YY2TBLSTATE</h2>
+                                <pre>YY2TBLSTATE : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_YYNLSTATES"> </a>
+                            <div class="element clickable property  protected property_YYNLSTATES" data-toggle="collapse" data-target=".property_YYNLSTATES .collapse">
+                                <h2>YYNLSTATES</h2>
+                                <pre>YYNLSTATES : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_tokenToSymbol"> </a>
+                            <div class="element clickable property  protected property_tokenToSymbol" data-toggle="collapse" data-target=".property_tokenToSymbol .collapse">
+                                <h2>Map of lexer tokens to internal symbols</h2>
+                                <pre>tokenToSymbol : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Map of lexer tokens to internal symbols</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_symbolToName"> </a>
+                            <div class="element clickable property  protected property_symbolToName" data-toggle="collapse" data-target=".property_symbolToName .collapse">
+                                <h2>Map of symbols to their names</h2>
+                                <pre>symbolToName : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Map of symbols to their names</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_productions"> </a>
+                            <div class="element clickable property  protected property_productions" data-toggle="collapse" data-target=".property_productions .collapse">
+                                <h2>Names of the production rules (only necessary for debugging)</h2>
+                                <pre>productions : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Names of the production rules (only necessary for debugging)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_actionBase"> </a>
+                            <div class="element clickable property  protected property_actionBase" data-toggle="collapse" data-target=".property_actionBase .collapse">
+                                <h2>Map of states to a displacement into the $action table. The corresponding action for this
+            state/symbol pair is $action[$actionBase[$state] + $symbol]. If $actionBase[$state] is 0, the
+action is defaulted, i.e. $actionDefault[$state] should be used instead.</h2>
+                                <pre>actionBase : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Map of states to a displacement into the $action table. The corresponding action for this
+state/symbol pair is $action[$actionBase[$state] + $symbol]. If $actionBase[$state] is 0, the
+action is defaulted, i.e. $actionDefault[$state] should be used instead.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_action"> </a>
+                            <div class="element clickable property  protected property_action" data-toggle="collapse" data-target=".property_action .collapse">
+                                <h2>Table of actions. Indexed according to $actionBase comment.</h2>
+                                <pre>action : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Table of actions. Indexed according to $actionBase comment.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_actionCheck"> </a>
+                            <div class="element clickable property  protected property_actionCheck" data-toggle="collapse" data-target=".property_actionCheck .collapse">
+                                <h2>Table indexed analogously to $action. If $actionCheck[$actionBase[$state] + $symbol] != $symbol
+            then the action is defaulted, i.e. $actionDefault[$state] should be used instead.</h2>
+                                <pre>actionCheck : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Table indexed analogously to $action. If $actionCheck[$actionBase[$state] + $symbol] != $symbol
+then the action is defaulted, i.e. $actionDefault[$state] should be used instead.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_actionDefault"> </a>
+                            <div class="element clickable property  protected property_actionDefault" data-toggle="collapse" data-target=".property_actionDefault .collapse">
+                                <h2>Map of states to their default action</h2>
+                                <pre>actionDefault : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Map of states to their default action</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_gotoBase"> </a>
+                            <div class="element clickable property  protected property_gotoBase" data-toggle="collapse" data-target=".property_gotoBase .collapse">
+                                <h2>Map of non-terminals to a displacement into the $goto table. The corresponding goto state for this
+            non-terminal/state pair is $goto[$gotoBase[$nonTerminal] + $state] (unless defaulted)</h2>
+                                <pre>gotoBase : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Map of non-terminals to a displacement into the $goto table. The corresponding goto state for this
+non-terminal/state pair is $goto[$gotoBase[$nonTerminal] + $state] (unless defaulted)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_goto"> </a>
+                            <div class="element clickable property  protected property_goto" data-toggle="collapse" data-target=".property_goto .collapse">
+                                <h2>Table of states to goto after reduction. Indexed according to $gotoBase comment.</h2>
+                                <pre>goto : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Table of states to goto after reduction. Indexed according to $gotoBase comment.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_gotoCheck"> </a>
+                            <div class="element clickable property  protected property_gotoCheck" data-toggle="collapse" data-target=".property_gotoCheck .collapse">
+                                <h2>Table indexed analogously to $goto. If $gotoCheck[$gotoBase[$nonTerminal] + $state] != $nonTerminal
+            then the goto state is defaulted, i.e. $gotoDefault[$nonTerminal] should be used.</h2>
+                                <pre>gotoCheck : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Table indexed analogously to $goto. If $gotoCheck[$gotoBase[$nonTerminal] + $state] != $nonTerminal
+then the goto state is defaulted, i.e. $gotoDefault[$nonTerminal] should be used.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_gotoDefault"> </a>
+                            <div class="element clickable property  protected property_gotoDefault" data-toggle="collapse" data-target=".property_gotoDefault .collapse">
+                                <h2>Map of non-terminals to the default state to goto after their reduction</h2>
+                                <pre>gotoDefault : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Map of non-terminals to the default state to goto after their reduction</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_ruleToNonTerminal"> </a>
+                            <div class="element clickable property  protected property_ruleToNonTerminal" data-toggle="collapse" data-target=".property_ruleToNonTerminal .collapse">
+                                <h2>Map of rules to the non-terminal on their left-hand side, i.e. the non-terminal to use for
+            determining the state to goto after reduction.</h2>
+                                <pre>ruleToNonTerminal : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Map of rules to the non-terminal on their left-hand side, i.e. the non-terminal to use for
+determining the state to goto after reduction.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_ruleToLength"> </a>
+                            <div class="element clickable property  protected property_ruleToLength" data-toggle="collapse" data-target=".property_ruleToLength .collapse">
+                                <h2>Map of rules to the length of their right-hand side, which is the number of elements that have to
+            be popped from the stack(s) on reduction.</h2>
+                                <pre>ruleToLength : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Map of rules to the length of their right-hand side, which is the number of elements that have to
+be popped from the stack(s) on reduction.</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_lexer"> </a>
+                            <div class="element clickable property  protected property_lexer" data-toggle="collapse" data-target=".property_lexer .collapse">
+                                <h2>Lexer that is used when parsing</h2>
+                                <pre>lexer : \PhpParser\Lexer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Lexer that is used when parsing</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/PhpParser.Lexer.html">\PhpParser\Lexer</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_semValue"> </a>
+                            <div class="element clickable property  protected property_semValue" data-toggle="collapse" data-target=".property_semValue .collapse">
+                                <h2>Temporary value containing the result of last semantic action (reduction)</h2>
+                                <pre>semValue : mixed</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Temporary value containing the result of last semantic action (reduction)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>mixed</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_stackPos"> </a>
+                            <div class="element clickable property  protected property_stackPos" data-toggle="collapse" data-target=".property_stackPos .collapse">
+                                <h2>Position in stacks (state stack, semantic value stack, attribute stack)</h2>
+                                <pre>stackPos : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Position in stacks (state stack, semantic value stack, attribute stack)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_semStack"> </a>
+                            <div class="element clickable property  protected property_semStack" data-toggle="collapse" data-target=".property_semStack .collapse">
+                                <h2>Semantic value stack (contains values of tokens and semantic action results)</h2>
+                                <pre>semStack : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Semantic value stack (contains values of tokens and semantic action results)</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_startAttributeStack"> </a>
+                            <div class="element clickable property  protected property_startAttributeStack" data-toggle="collapse" data-target=".property_startAttributeStack .collapse">
+                                <h2>Start attribute stack</h2>
+                                <pre>startAttributeStack : array&lt;mixed,array&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Start attribute stack</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,array&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_endAttributes"> </a>
+                            <div class="element clickable property  protected property_endAttributes" data-toggle="collapse" data-target=".property_endAttributes .collapse">
+                                <h2>End attributes of last *shifted* token</h2>
+                                <pre>endAttributes : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>End attributes of last <em>shifted</em> token</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_throwOnError"> </a>
+                            <div class="element clickable property  protected property_throwOnError" data-toggle="collapse" data-target=".property_throwOnError .collapse">
+                                <h2>Whether to throw on first error</h2>
+                                <pre>throwOnError : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Whether to throw on first error</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_errors"> </a>
+                            <div class="element clickable property  protected property_errors" data-toggle="collapse" data-target=".property_errors .collapse">
+                                <h2>Errors collected during last parse</h2>
+                                <pre>errors : array&lt;mixed,\PhpParser\Error&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Errors collected during last parse</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,<a href="../classes/PhpParser.Error.html">\PhpParser\Error</a>&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\PhpParser\ParserAbstract"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/PhpParser.ParserAbstract.html">ParserAbstract</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:50 +0000.<br/>
+    </footer>
+    </body>
+</html>

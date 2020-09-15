@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \phpDocumentor\Transformer
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/phpDocumentor.Transformer.html" title="Transformer">
+                    <i class="icon-th"></i> Transformer
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Behaviour.html" title="Behaviour">
+            <i class="icon-th"></i> Behaviour
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Command.html" title="Command">
+            <i class="icon-th"></i> Command
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Command.Project.html" title="Project">
+            <i class="icon-th"></i> Project
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Command.Template.html" title="Template">
+            <i class="icon-th"></i> Template
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Configuration.html" title="Configuration">
+            <i class="icon-th"></i> Configuration
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Configuration.Transformations.html" title="Transformations">
+            <i class="icon-th"></i> Transformations
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Event.html" title="Event">
+            <i class="icon-th"></i> Event
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Exception.html" title="Exception">
+            <i class="icon-th"></i> Exception
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Router.html" title="Router">
+            <i class="icon-th"></i> Router
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Router.Matcher.html" title="Matcher">
+            <i class="icon-th"></i> Matcher
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Router.UrlGenerator.html" title="UrlGenerator">
+            <i class="icon-th"></i> UrlGenerator
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Router.UrlGenerator.Standard.html" title="Standard">
+            <i class="icon-th"></i> Standard
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Template.html" title="Template">
+            <i class="icon-th"></i> Template
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Writer.html" title="Writer">
+            <i class="icon-th"></i> Writer
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Transformer.Writer.Exception.html" title="Exception">
+            <i class="icon-th"></i> Exception
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Configuration" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Configuration .collapse">
+        <h1>Configuration<a href="../classes/phpDocumentor.Transformer.Configuration.html">¶</a></h1>
+        <p class="short_description">Configuration definition for the transformer.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Configuration.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Exception" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Exception .collapse">
+        <h1>Exception<a href="../classes/phpDocumentor.Transformer.Exception.html">¶</a></h1>
+        <p class="short_description">Provides the basic exception for the parser package.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Exception.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceProvider" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceProvider .collapse">
+        <h1>ServiceProvider<a href="../classes/phpDocumentor.Transformer.ServiceProvider.html">¶</a></h1>
+        <p class="short_description">This provider is responsible for registering the transformer component with the given Application.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.ServiceProvider.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Template" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Template .collapse">
+        <h1>Template<a href="../classes/phpDocumentor.Transformer.Template.html">¶</a></h1>
+        <p class="short_description">Model representing a template.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Template.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Transformation" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Transformation .collapse">
+        <h1>Transformation<a href="../classes/phpDocumentor.Transformer.Transformation.html">¶</a></h1>
+        <p class="short_description">Class representing a single Transformation.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Transformation.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Transformer" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Transformer .collapse">
+        <h1>Transformer<a href="../classes/phpDocumentor.Transformer.Transformer.html">¶</a></h1>
+        <p class="short_description">Core class responsible for transforming the cache file to a set of artifacts.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Transformer.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Writer.html">Writer</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_Initializable" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_Initializable .collapse">
+        <h1>Initializable<a href="../classes/phpDocumentor.Transformer.Writer.Initializable.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Writer.Initializable.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_Routable" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_Routable .collapse">
+        <h1>Routable<a href="../classes/phpDocumentor.Transformer.Writer.Routable.html">¶</a></h1>
+        <p class="short_description">Public interface for writers who use the routing system to determine relative URLs for Descriptors.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Writer.Routable.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_Translatable" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_Translatable .collapse">
+        <h1>Translatable<a href="../classes/phpDocumentor.Transformer.Writer.Translatable.html">¶</a></h1>
+        <p class="short_description">All writers that have items that should be translated should implement this interface</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Writer.Translatable.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_Collection" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Collection .collapse">
+        <h1>Collection<a href="../classes/phpDocumentor.Transformer.Writer.Collection.html">¶</a></h1>
+        <p class="short_description">A collection of Writer objects.</p>
+        <div class="details collapse">
+                            <p>In this collection we can receive writers, and if they implement the Routable interface assign the router queue that
+was provided to this class so that those writers can generate urls for various Descriptors.</p>
+<p>In addition this class can also verify if all requirements for the various writers in it are met.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Writer.Collection.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_WriterAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_WriterAbstract .collapse">
+        <h1>WriterAbstract<a href="../classes/phpDocumentor.Transformer.Writer.WriterAbstract.html">¶</a></h1>
+        <p class="short_description">Base class for the actual transformation business logic (writers).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Writer.WriterAbstract.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Writer.html">Writer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Writer.Exception.html">Exception</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_RequirementMissing" class="element ajax clickable class" data-toggle="collapse" data-target="#class_RequirementMissing .collapse">
+        <h1>RequirementMissing<a href="../classes/phpDocumentor.Transformer.Writer.Exception.RequirementMissing.html">¶</a></h1>
+        <p class="short_description">This exception should be thrown by a Writer when it is missing one of its requirements.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Writer.Exception.RequirementMissing.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Template.html">Template</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Collection" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Collection .collapse">
+        <h1>Collection<a href="../classes/phpDocumentor.Transformer.Template.Collection.html">¶</a></h1>
+        <p class="short_description">Contains a collection of Templates that may be queried.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Template.Collection.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Factory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Factory .collapse">
+        <h1>Factory<a href="../classes/phpDocumentor.Transformer.Template.Factory.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Template.Factory.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Parameter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Parameter .collapse">
+        <h1>Parameter<a href="../classes/phpDocumentor.Transformer.Template.Parameter.html">¶</a></h1>
+        <p class="short_description">Model representing a parameter in a template or transformation.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Template.Parameter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PathResolver" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PathResolver .collapse">
+        <h1>PathResolver<a href="../classes/phpDocumentor.Transformer.Template.PathResolver.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Template.PathResolver.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Configuration.html">Configuration</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ExternalClassDocumentation" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ExternalClassDocumentation .collapse">
+        <h1>ExternalClassDocumentation<a href="../classes/phpDocumentor.Transformer.Configuration.ExternalClassDocumentation.html">¶</a></h1>
+        <p class="short_description">Reference that relates classes with a specific prefix to a URL template.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Configuration.ExternalClassDocumentation.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Transformations" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Transformations .collapse">
+        <h1>Transformations<a href="../classes/phpDocumentor.Transformer.Configuration.Transformations.html">¶</a></h1>
+        <p class="short_description">Contains the templates and custom transformations that are applied during transformation.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Configuration.Transformations.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Configuration.html">Configuration</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Configuration.Transformations.html">Transformations</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_Template" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Template .collapse">
+        <h1>Template<a href="../classes/phpDocumentor.Transformer.Configuration.Transformations.Template.html">¶</a></h1>
+        <p class="short_description">Configuration object for a template selection.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Configuration.Transformations.Template.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Router.html">Router</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ExternalRouter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ExternalRouter .collapse">
+        <h1>ExternalRouter<a href="../classes/phpDocumentor.Transformer.Router.ExternalRouter.html">¶</a></h1>
+        <p class="short_description">Connects class, interface and traits to remote documentation sets.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.ExternalRouter.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ForFileProxy" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ForFileProxy .collapse">
+        <h1>ForFileProxy<a href="../classes/phpDocumentor.Transformer.Router.ForFileProxy.html">¶</a></h1>
+        <p class="short_description">Proxies a generated Routing Rule to generate physical filenames.</p>
+        <div class="details collapse">
+                            <p>By default a RoutingRule will generate a relative path on a webserver. This causes
+issues between operating systems since Linux uses / and Windows \ as a directory
+separator.</p>
+<p>To make sure that the correct file is generated can this proxy be used to generate
+a filename instead of a webserver path.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.ForFileProxy.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Queue" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Queue .collapse">
+        <h1>Queue<a href="../classes/phpDocumentor.Transformer.Router.Queue.html">¶</a></h1>
+        <p class="short_description">Provides a queue of routers to determine the order in which they are executed.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.Queue.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Renderer" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Renderer .collapse">
+        <h1>Renderer<a href="../classes/phpDocumentor.Transformer.Router.Renderer.html">¶</a></h1>
+        <p class="short_description">Renders an HTML anchor pointing to the location of the provided element.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.Renderer.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_RouterAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_RouterAbstract .collapse">
+        <h1>RouterAbstract<a href="../classes/phpDocumentor.Transformer.Router.RouterAbstract.html">¶</a></h1>
+        <p class="short_description">Object containing a collection of routes.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.RouterAbstract.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Rule" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Rule .collapse">
+        <h1>Rule<a href="../classes/phpDocumentor.Transformer.Router.Rule.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.Rule.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_StandardRouter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_StandardRouter .collapse">
+        <h1>StandardRouter<a href="../classes/phpDocumentor.Transformer.Router.StandardRouter.html">¶</a></h1>
+        <p class="short_description">The default router for phpDocumentor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.StandardRouter.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Router.html">Router</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Router.UrlGenerator.html">UrlGenerator</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_UrlGeneratorInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_UrlGeneratorInterface .collapse">
+        <h1>UrlGeneratorInterface<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.UrlGeneratorInterface.html">¶</a></h1>
+        <p class="short_description">Generates relative URLs with elements for use in the generated HTML documentation.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.UrlGeneratorInterface.html" class="more">« More »</a>    </div>
+
+                
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Router.html">Router</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Router.UrlGenerator.html">UrlGenerator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Router.UrlGenerator.Standard.html">Standard</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ClassDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ClassDescriptor .collapse">
+        <h1>ClassDescriptor<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.ClassDescriptor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.ClassDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstantDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstantDescriptor .collapse">
+        <h1>ConstantDescriptor<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.ConstantDescriptor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.ConstantDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FileDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FileDescriptor .collapse">
+        <h1>FileDescriptor<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FileDescriptor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FileDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FunctionDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FunctionDescriptor .collapse">
+        <h1>FunctionDescriptor<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FunctionDescriptor.html">¶</a></h1>
+        <p class="short_description">Generates a relative URL with functions for use in the generated HTML documentation.</p>
+        <div class="details collapse">
+                            <p>.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FunctionDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodDescriptor .collapse">
+        <h1>MethodDescriptor<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.MethodDescriptor.html">¶</a></h1>
+        <p class="short_description">Generates a relative URL with methods for use in the generated HTML documentation.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.MethodDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NamespaceDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NamespaceDescriptor .collapse">
+        <h1>NamespaceDescriptor<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.NamespaceDescriptor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.NamespaceDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PackageDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PackageDescriptor .collapse">
+        <h1>PackageDescriptor<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.PackageDescriptor.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.PackageDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PropertyDescriptor" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PropertyDescriptor .collapse">
+        <h1>PropertyDescriptor<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.PropertyDescriptor.html">¶</a></h1>
+        <p class="short_description">Generates a relative URL with properties for use in the generated HTML documentation.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.PropertyDescriptor.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_QualifiedNameToUrlConverter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_QualifiedNameToUrlConverter .collapse">
+        <h1>QualifiedNameToUrlConverter<a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.QualifiedNameToUrlConverter.html">¶</a></h1>
+        <p class="short_description">Service class used to convert Qualified names into URL paths for the Standard Router.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.QualifiedNameToUrlConverter.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Router.html">Router</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Router.Matcher.html">Matcher</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_MatcherInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_MatcherInterface .collapse">
+        <h1>MatcherInterface<a href="../classes/phpDocumentor.Transformer.Router.Matcher.MatcherInterface.html">¶</a></h1>
+        <p class="short_description">Description of the public interface to match Descriptors with a Routing rule.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Router.Matcher.MatcherInterface.html" class="more">« More »</a>    </div>
+
+                
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Exception.html">Exception</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_MissingDependencyException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MissingDependencyException .collapse">
+        <h1>MissingDependencyException<a href="../classes/phpDocumentor.Transformer.Exception.MissingDependencyException.html">¶</a></h1>
+        <p class="short_description">This exception is thrown when a required dependency is not included.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Exception.MissingDependencyException.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_UnknownWriter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_UnknownWriter .collapse">
+        <h1>UnknownWriter<a href="../classes/phpDocumentor.Transformer.Exception.UnknownWriter.html">¶</a></h1>
+        <p class="short_description">Exception thrown when a template attempts to use a writer that is unknown to phpDocumentor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Exception.UnknownWriter.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Event.html">Event</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_PostTransformationEvent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PostTransformationEvent .collapse">
+        <h1>PostTransformationEvent<a href="../classes/phpDocumentor.Transformer.Event.PostTransformationEvent.html">¶</a></h1>
+        <p class="short_description">Event that happens after each individual transformation.</p>
+        <div class="details collapse">
+                            <p>This class contains no event data. It is used by events that do not pass
+state information to an event handler when an event is raised.</p>
+<p>You can call the method stopPropagation() to abort the execution of
+further listeners in your event listener.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Event.PostTransformationEvent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PostTransformEvent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PostTransformEvent .collapse">
+        <h1>PostTransformEvent<a href="../classes/phpDocumentor.Transformer.Event.PostTransformEvent.html">¶</a></h1>
+        <p class="short_description">Event happen right after all transformations have completed.</p>
+        <div class="details collapse">
+                            <p>This class contains no event data. It is used by events that do not pass
+state information to an event handler when an event is raised.</p>
+<p>You can call the method stopPropagation() to abort the execution of
+further listeners in your event listener.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Event.PostTransformEvent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PreTransformationEvent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PreTransformationEvent .collapse">
+        <h1>PreTransformationEvent<a href="../classes/phpDocumentor.Transformer.Event.PreTransformationEvent.html">¶</a></h1>
+        <p class="short_description">Event happening prior to each individual transformation.</p>
+        <div class="details collapse">
+                            <p>This class contains no event data. It is used by events that do not pass
+state information to an event handler when an event is raised.</p>
+<p>You can call the method stopPropagation() to abort the execution of
+further listeners in your event listener.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Event.PreTransformationEvent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PreTransformEvent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PreTransformEvent .collapse">
+        <h1>PreTransformEvent<a href="../classes/phpDocumentor.Transformer.Event.PreTransformEvent.html">¶</a></h1>
+        <p class="short_description">Event that happens prior to the execution of all transformations.</p>
+        <div class="details collapse">
+                            <p>This class contains no event data. It is used by events that do not pass
+state information to an event handler when an event is raised.</p>
+<p>You can call the method stopPropagation() to abort the execution of
+further listeners in your event listener.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Event.PreTransformEvent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PreXslWriterEvent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PreXslWriterEvent .collapse">
+        <h1>PreXslWriterEvent<a href="../classes/phpDocumentor.Transformer.Event.PreXslWriterEvent.html">¶</a></h1>
+        <p class="short_description">Event launched during the Xsl Transformation of an individual output file.</p>
+        <div class="details collapse">
+                            <p>If the XSL Writer loops through a resultset then this event will be thrown
+for each result.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Event.PreXslWriterEvent.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_WriterInitializationEvent" class="element ajax clickable class" data-toggle="collapse" data-target="#class_WriterInitializationEvent .collapse">
+        <h1>WriterInitializationEvent<a href="../classes/phpDocumentor.Transformer.Event.WriterInitializationEvent.html">¶</a></h1>
+        <p class="short_description">Abstract class representing the base elements of a phpDocumentor event.</p>
+        <div class="details collapse">
+                            <p>This class contains no event data. It is used by events that do not pass
+state information to an event handler when an event is raised.</p>
+<p>You can call the method stopPropagation() to abort the execution of
+further listeners in your event listener.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Event.WriterInitializationEvent.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Behaviour.html">Behaviour</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_BehaviourAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BehaviourAbstract .collapse">
+        <h1>BehaviourAbstract<a href="../classes/phpDocumentor.Transformer.Behaviour.BehaviourAbstract.html">¶</a></h1>
+        <p class="short_description">Collection object for a set of Behaviours.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Behaviour.BehaviourAbstract.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Collection" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Collection .collapse">
+        <h1>Collection<a href="../classes/phpDocumentor.Transformer.Behaviour.Collection.html">¶</a></h1>
+        <p class="short_description">Collection object for a set of Behaviours.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Behaviour.Collection.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Command.html">Command</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Command.Template.html">Template</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ListCommand" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ListCommand .collapse">
+        <h1>ListCommand<a href="../classes/phpDocumentor.Transformer.Command.Template.ListCommand.html">¶</a></h1>
+        <p class="short_description">Lists all templates known to phpDocumentor.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Command.Template.ListCommand.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.html">Transformer</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Command.html">Command</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Transformer.Command.Project.html">Project</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_TransformCommand" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TransformCommand .collapse">
+        <h1>TransformCommand<a href="../classes/phpDocumentor.Transformer.Command.Project.TransformCommand.html">¶</a></h1>
+        <p class="short_description">Transforms the structure file into the specified output format</p>
+        <div class="details collapse">
+                            <p>This task will execute the transformation rules described in the given
+template (defaults to 'responsive') with the given source (defaults to
+output/structure.xml) and writes these to the target location (defaults to
+'output').</p>
+<p>It is possible for the user to receive additional information using the
+verbose option or stop additional information using the quiet option. Please
+take note that the quiet option also disables logging to file.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Transformer.Command.Project.TransformCommand.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:30 +0000.<br/>
+    </footer>
+    </body>
+</html>

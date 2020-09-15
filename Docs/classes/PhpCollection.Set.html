@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \PhpCollection\Set
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: ">
+            <span class="description"></span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_add" title="add :: ">
+            <span class="description"></span><pre>add</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addAll" title="addAll :: ">
+            <span class="description"></span><pre>addAll</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                <li class="method public">
+        <a href="#method_addSet" title="addSet :: Adds the elements of another Set to this Set.">
+            <span class="description">Adds the elements of another Set to this Set.</span><pre>addSet</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_all" title="all :: Returns all elements in this Set.">
+            <span class="description">Returns all elements in this Set.</span><pre>all</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_contains" title="contains :: ">
+            <span class="description"></span><pre>contains</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                <li class="method public">
+        <a href="#method_count" title="count :: ">
+            <span class="description"></span><pre>count</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_drop" title="drop :: Returns a new Set by omitting the given number of elements from the beginning.">
+            <span class="description">Returns a new Set by omitting the given number of elements from the beginning.</span><pre>drop</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_dropRight" title="dropRight :: Returns a new Set by omitting the given number of elements from the end.">
+            <span class="description">Returns a new Set by omitting the given number of elements from the end.</span><pre>dropRight</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_dropWhile" title="dropWhile :: Returns a new Set by omitting elements from the beginning for as long as the callable returns true.">
+            <span class="description">Returns a new Set by omitting elements from the beginning for as long as the callable returns true.</span><pre>dropWhile</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_filter" title="filter :: ">
+            <span class="description"></span><pre>filter</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_filterNot" title="filterNot :: ">
+            <span class="description"></span><pre>filterNot</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_first" title="first :: Returns the first element in the collection if available.">
+            <span class="description">Returns the first element in the collection if available.</span><pre>first</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_foldLeft" title="foldLeft :: ">
+            <span class="description"></span><pre>foldLeft</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_foldRight" title="foldRight :: ">
+            <span class="description"></span><pre>foldRight</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getIterator" title="getIterator :: ">
+            <span class="description"></span><pre>getIterator</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_isEmpty" title="isEmpty :: ">
+            <span class="description"></span><pre>isEmpty</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_last" title="last :: Returns the last element in the collection if available.">
+            <span class="description">Returns the last element in the collection if available.</span><pre>last</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_map" title="map :: Creates a new collection by applying the passed callable to all elements
+of the current collection.">
+            <span class="description">Creates a new collection by applying the passed callable to all elements
+of the current collection.</span><pre>map</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_remove" title="remove :: ">
+            <span class="description"></span><pre>remove</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                                                                        <li class="method public">
+        <a href="#method_reverse" title="reverse :: Returns a new Set with all elements in reverse order.">
+            <span class="description">Returns a new Set with all elements in reverse order.</span><pre>reverse</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_take" title="take :: Creates a new collection by taking the given number of elements from the beginning
+of the current collection.">
+            <span class="description">Creates a new collection by taking the given number of elements from the beginning
+of the current collection.</span><pre>take</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_takeWhile" title="takeWhile :: Extracts element from the head while the passed callable returns true.">
+            <span class="description">Extracts element from the head while the passed callable returns true.</span><pre>takeWhile</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method protected">
+                            <a href="#method_createNew" title="createNew :: ">
+                                <span class="description"></span><pre>createNew</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                        <li class="method private">
+                            <a href="#method_addObject" title="addObject :: ">
+                                <span class="description"></span><pre>addObject</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_addObjectWithHandler" title="addObjectWithHandler :: ">
+                                <span class="description"></span><pre>addObjectWithHandler</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_addScalar" title="addScalar :: ">
+                                <span class="description"></span><pre>addScalar</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                            <li class="method private">
+                            <a href="#method_containsObject" title="containsObject :: ">
+                                <span class="description"></span><pre>containsObject</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_containsObjectWithHandler" title="containsObjectWithHandler :: ">
+                                <span class="description"></span><pre>containsObjectWithHandler</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_containsScalar" title="containsScalar :: ">
+                                <span class="description"></span><pre>containsScalar</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                        <li class="method private">
+                            <a href="#method_filterInternal" title="filterInternal :: ">
+                                <span class="description"></span><pre>filterInternal</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                    <li class="method private">
+                            <a href="#method_insertElement" title="insertElement :: ">
+                                <span class="description"></span><pre>insertElement</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                <li class="method private">
+                            <a href="#method_removeElement" title="removeElement :: ">
+                                <span class="description"></span><pre>removeElement</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_removeObject" title="removeObject :: ">
+                                <span class="description"></span><pre>removeObject</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_removeObjectWithHandler" title="removeObjectWithHandler :: ">
+                                <span class="description"></span><pre>removeObjectWithHandler</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_removeScalar" title="removeScalar :: ">
+                                <span class="description"></span><pre>removeScalar</pre>
+                            </a>
+                        </li>
+                                                                                                                                                            </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                                <li class="constant ">
+                    <a href="#constant_ELEM_TYPE_OBJECT" title="ELEM_TYPE_OBJECT :: ">
+                        <span class="description"></span><pre>ELEM_TYPE_OBJECT</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ELEM_TYPE_OBJECT_WITH_HANDLER" title="ELEM_TYPE_OBJECT_WITH_HANDLER :: ">
+                        <span class="description"></span><pre>ELEM_TYPE_OBJECT_WITH_HANDLER</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ELEM_TYPE_SCALAR" title="ELEM_TYPE_SCALAR :: ">
+                        <span class="description"></span><pre>ELEM_TYPE_SCALAR</pre>
+                    </a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>Set</h1>
+                <small style="display: block; text-align: right">
+                                                                Implements <a href="../classes/PhpCollection.SetInterface.html">\PhpCollection\SetInterface</a>
+                                    </small>
+                <p class="short_description">Implementation of a Set.</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>Each set guarantees that equal elements are only contained once in the Set.</p>
+<p>This implementation constraints Sets to either consist of objects that implement ObjectBasics, or objects that have
+an external ObjectBasicsHandler implementation, or simple scalars. These types cannot be mixed within the same Set.</p>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Johannes M. Schmitt <a href="mailto:schmittjoh@gmail.com">schmittjoh@gmail.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>__construct</h2>
+                            <pre>__construct(array $elements = array()) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elements</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_add"></a>
+                        <div class="element clickable method public  method_add" data-toggle="collapse" data-target=".method_add .collapse">
+                            <h2>add</h2>
+                            <pre>add(object|scalar $elem) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elem</h4>
+                                                <code>object|scalar</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addAll"></a>
+                        <div class="element clickable method public  method_addAll" data-toggle="collapse" data-target=".method_addAll .collapse">
+                            <h2>addAll</h2>
+                            <pre>addAll(array $elements) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elements</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addObject"></a>
+                        <div class="element clickable method private  method_addObject" data-toggle="collapse" data-target=".method_addObject .collapse">
+                            <h2>addObject</h2>
+                            <pre>addObject(\PhpCollection\ObjectBasics $elem) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elem</h4>
+                                                <code><a href="../classes/PhpCollection.ObjectBasics.html">\PhpCollection\ObjectBasics</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addObjectWithHandler"></a>
+                        <div class="element clickable method private  method_addObjectWithHandler" data-toggle="collapse" data-target=".method_addObjectWithHandler .collapse">
+                            <h2>addObjectWithHandler</h2>
+                            <pre>addObjectWithHandler( $object, \PhpCollection\ObjectBasicsHandler $handler) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$object</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$handler</h4>
+                                                <code><a href="../classes/PhpCollection.ObjectBasicsHandler.html">\PhpCollection\ObjectBasicsHandler</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addScalar"></a>
+                        <div class="element clickable method private  method_addScalar" data-toggle="collapse" data-target=".method_addScalar .collapse">
+                            <h2>addScalar</h2>
+                            <pre>addScalar( $elem) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elem</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addSet"></a>
+                        <div class="element clickable method public  method_addSet" data-toggle="collapse" data-target=".method_addSet .collapse">
+                            <h2>Adds the elements of another Set to this Set.</h2>
+                            <pre>addSet(\PhpCollection\SetInterface $set) : \PhpCollection\SetInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$set</h4>
+                                                <code><a href="../classes/PhpCollection.SetInterface.html">\PhpCollection\SetInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.SetInterface.html">\PhpCollection\SetInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_all"></a>
+                        <div class="element clickable method public  method_all" data-toggle="collapse" data-target=".method_all .collapse">
+                            <h2>Returns all elements in this Set.</h2>
+                            <pre>all() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_contains"></a>
+                        <div class="element clickable method public  method_contains" data-toggle="collapse" data-target=".method_contains .collapse">
+                            <h2>contains</h2>
+                            <pre>contains( $elem) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elem</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_containsObject"></a>
+                        <div class="element clickable method private  method_containsObject" data-toggle="collapse" data-target=".method_containsObject .collapse">
+                            <h2>containsObject</h2>
+                            <pre>containsObject(\PhpCollection\ObjectBasics $object) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$object</h4>
+                                                <code><a href="../classes/PhpCollection.ObjectBasics.html">\PhpCollection\ObjectBasics</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_containsObjectWithHandler"></a>
+                        <div class="element clickable method private  method_containsObjectWithHandler" data-toggle="collapse" data-target=".method_containsObjectWithHandler .collapse">
+                            <h2>containsObjectWithHandler</h2>
+                            <pre>containsObjectWithHandler( $object, \PhpCollection\ObjectBasicsHandler $handler) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$object</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$handler</h4>
+                                                <code><a href="../classes/PhpCollection.ObjectBasicsHandler.html">\PhpCollection\ObjectBasicsHandler</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_containsScalar"></a>
+                        <div class="element clickable method private  method_containsScalar" data-toggle="collapse" data-target=".method_containsScalar .collapse">
+                            <h2>containsScalar</h2>
+                            <pre>containsScalar( $elem) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elem</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_count"></a>
+                        <div class="element clickable method public  method_count" data-toggle="collapse" data-target=".method_count .collapse">
+                            <h2>count</h2>
+                            <pre>count() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_createNew"></a>
+                        <div class="element clickable method protected  method_createNew" data-toggle="collapse" data-target=".method_createNew .collapse">
+                            <h2>createNew</h2>
+                            <pre>createNew(array $elements) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elements</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_drop"></a>
+                        <div class="element clickable method public  method_drop" data-toggle="collapse" data-target=".method_drop .collapse">
+                            <h2>Returns a new Set by omitting the given number of elements from the beginning.</h2>
+                            <pre>drop(integer $number) : \PhpCollection\SetInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the passed number is greater than the available number of elements, all will be removed.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$number</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.SetInterface.html">\PhpCollection\SetInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_dropRight"></a>
+                        <div class="element clickable method public  method_dropRight" data-toggle="collapse" data-target=".method_dropRight .collapse">
+                            <h2>Returns a new Set by omitting the given number of elements from the end.</h2>
+                            <pre>dropRight(integer $number) : \PhpCollection\SetInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the passed number is greater than the available number of elements, all will be removed.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$number</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.SetInterface.html">\PhpCollection\SetInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_dropWhile"></a>
+                        <div class="element clickable method public  method_dropWhile" data-toggle="collapse" data-target=".method_dropWhile .collapse">
+                            <h2>Returns a new Set by omitting elements from the beginning for as long as the callable returns true.</h2>
+                            <pre>dropWhile(callable $callable) : \PhpCollection\SetInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p><p>Receives the element to drop as first argument, and returns true (drop), or false (stop).</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.SetInterface.html">\PhpCollection\SetInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_filter"></a>
+                        <div class="element clickable method public  method_filter" data-toggle="collapse" data-target=".method_filter .collapse">
+                            <h2>filter</h2>
+                            <pre>filter( $callable) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_filterInternal"></a>
+                        <div class="element clickable method private  method_filterInternal" data-toggle="collapse" data-target=".method_filterInternal .collapse">
+                            <h2>filterInternal</h2>
+                            <pre>filterInternal( $callable,  $booleanKeep) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$booleanKeep</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_filterNot"></a>
+                        <div class="element clickable method public  method_filterNot" data-toggle="collapse" data-target=".method_filterNot .collapse">
+                            <h2>filterNot</h2>
+                            <pre>filterNot( $callable) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_first"></a>
+                        <div class="element clickable method public  method_first" data-toggle="collapse" data-target=".method_first .collapse">
+                            <h2>Returns the first element in the collection if available.</h2>
+                            <pre>first() : \PhpOption\Option</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpOption.Option.html">\PhpOption\Option</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_foldLeft"></a>
+                        <div class="element clickable method public  method_foldLeft" data-toggle="collapse" data-target=".method_foldLeft .collapse">
+                            <h2>foldLeft</h2>
+                            <pre>foldLeft( $initialValue,  $callable) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$initialValue</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_foldRight"></a>
+                        <div class="element clickable method public  method_foldRight" data-toggle="collapse" data-target=".method_foldRight .collapse">
+                            <h2>foldRight</h2>
+                            <pre>foldRight( $initialValue,  $callable) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$initialValue</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getIterator"></a>
+                        <div class="element clickable method public  method_getIterator" data-toggle="collapse" data-target=".method_getIterator .collapse">
+                            <h2>getIterator</h2>
+                            <pre>getIterator() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_insertElement"></a>
+                        <div class="element clickable method private  method_insertElement" data-toggle="collapse" data-target=".method_insertElement .collapse">
+                            <h2>insertElement</h2>
+                            <pre>insertElement( $elem,  $hash) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elem</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$hash</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isEmpty"></a>
+                        <div class="element clickable method public  method_isEmpty" data-toggle="collapse" data-target=".method_isEmpty .collapse">
+                            <h2>isEmpty</h2>
+                            <pre>isEmpty() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_last"></a>
+                        <div class="element clickable method public  method_last" data-toggle="collapse" data-target=".method_last .collapse">
+                            <h2>Returns the last element in the collection if available.</h2>
+                            <pre>last() : \PhpOption\Option</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpOption.Option.html">\PhpOption\Option</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_map"></a>
+                        <div class="element clickable method public  method_map" data-toggle="collapse" data-target=".method_map .collapse">
+                            <h2>Creates a new collection by applying the passed callable to all elements
+of the current collection.</h2>
+                            <pre>map(callable $callable) : \PhpCollection\CollectionInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.CollectionInterface.html">\PhpCollection\CollectionInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_remove"></a>
+                        <div class="element clickable method public  method_remove" data-toggle="collapse" data-target=".method_remove .collapse">
+                            <h2>remove</h2>
+                            <pre>remove(object|scalar $elem) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elem</h4>
+                                                <code>object|scalar</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_removeElement"></a>
+                        <div class="element clickable method private  method_removeElement" data-toggle="collapse" data-target=".method_removeElement .collapse">
+                            <h2>removeElement</h2>
+                            <pre>removeElement( $hash,  $lookupIndex,  $storageIndex) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$hash</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$lookupIndex</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$storageIndex</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_removeObject"></a>
+                        <div class="element clickable method private  method_removeObject" data-toggle="collapse" data-target=".method_removeObject .collapse">
+                            <h2>removeObject</h2>
+                            <pre>removeObject(\PhpCollection\ObjectBasics $object) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$object</h4>
+                                                <code><a href="../classes/PhpCollection.ObjectBasics.html">\PhpCollection\ObjectBasics</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_removeObjectWithHandler"></a>
+                        <div class="element clickable method private  method_removeObjectWithHandler" data-toggle="collapse" data-target=".method_removeObjectWithHandler .collapse">
+                            <h2>removeObjectWithHandler</h2>
+                            <pre>removeObjectWithHandler( $object, \PhpCollection\ObjectBasicsHandler $handler) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$object</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$handler</h4>
+                                                <code><a href="../classes/PhpCollection.ObjectBasicsHandler.html">\PhpCollection\ObjectBasicsHandler</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_removeScalar"></a>
+                        <div class="element clickable method private  method_removeScalar" data-toggle="collapse" data-target=".method_removeScalar .collapse">
+                            <h2>removeScalar</h2>
+                            <pre>removeScalar( $elem) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$elem</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_reverse"></a>
+                        <div class="element clickable method public  method_reverse" data-toggle="collapse" data-target=".method_reverse .collapse">
+                            <h2>Returns a new Set with all elements in reverse order.</h2>
+                            <pre>reverse() : \PhpCollection\SetInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.SetInterface.html">\PhpCollection\SetInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_take"></a>
+                        <div class="element clickable method public  method_take" data-toggle="collapse" data-target=".method_take .collapse">
+                            <h2>Creates a new collection by taking the given number of elements from the beginning
+of the current collection.</h2>
+                            <pre>take(integer $number) : \PhpCollection\CollectionInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>If the passed number is greater than the available number of elements, then all elements
+will be returned as a new collection.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$number</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.CollectionInterface.html">\PhpCollection\CollectionInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_takeWhile"></a>
+                        <div class="element clickable method public  method_takeWhile" data-toggle="collapse" data-target=".method_takeWhile .collapse">
+                            <h2>Extracts element from the head while the passed callable returns true.</h2>
+                            <pre>takeWhile(callable $callable) : \PhpCollection\Set</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$callable</h4>
+                                                <code>callable</code><p><p>receives elements of this Set as first argument, and returns true/false.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/PhpCollection.Set.html">\PhpCollection\Set</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                                    <a id="constant_ELEM_TYPE_SCALAR"> </a>
+                            <div class="element clickable constant  constant_ELEM_TYPE_SCALAR" data-toggle="collapse" data-target=".constant_ELEM_TYPE_SCALAR .collapse">
+                                <h2>ELEM_TYPE_SCALAR</h2>
+                                <pre>ELEM_TYPE_SCALAR</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ELEM_TYPE_OBJECT"> </a>
+                            <div class="element clickable constant  constant_ELEM_TYPE_OBJECT" data-toggle="collapse" data-target=".constant_ELEM_TYPE_OBJECT .collapse">
+                                <h2>ELEM_TYPE_OBJECT</h2>
+                                <pre>ELEM_TYPE_OBJECT</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ELEM_TYPE_OBJECT_WITH_HANDLER"> </a>
+                            <div class="element clickable constant  constant_ELEM_TYPE_OBJECT_WITH_HANDLER" data-toggle="collapse" data-target=".constant_ELEM_TYPE_OBJECT_WITH_HANDLER .collapse">
+                                <h2>ELEM_TYPE_OBJECT_WITH_HANDLER</h2>
+                                <pre>ELEM_TYPE_OBJECT_WITH_HANDLER</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_elementType"> </a>
+                            <div class="element clickable property  private property_elementType" data-toggle="collapse" data-target=".property_elementType .collapse">
+                                <h2>elementType</h2>
+                                <pre>elementType : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_elements"> </a>
+                            <div class="element clickable property  private property_elements" data-toggle="collapse" data-target=".property_elements .collapse">
+                                <h2>elements</h2>
+                                <pre>elements : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_elementCount"> </a>
+                            <div class="element clickable property  private property_elementCount" data-toggle="collapse" data-target=".property_elementCount .collapse">
+                                <h2>elementCount</h2>
+                                <pre>elementCount : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_lookup"> </a>
+                            <div class="element clickable property  private property_lookup" data-toggle="collapse" data-target=".property_lookup .collapse">
+                                <h2>lookup</h2>
+                                <pre>lookup : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\PhpCollection\Set"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/PhpCollection.Set.html">Set</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:45 +0000.<br/>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \phpDocumentor\Plugin\Core\Descriptor\Validator
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html" title="Validator">
+                    <i class="icon-th"></i> Validator
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.html" title="Constraints">
+            <i class="icon-th"></i> Constraints
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.html" title="Classes">
+            <i class="icon-th"></i> Classes
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.html" title="Functions">
+            <i class="icon-th"></i> Functions
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.html" title="Property">
+            <i class="icon-th"></i> Property
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Functions.html" title="Functions">
+            <i class="icon-th"></i> Functions
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ValidationValueObject" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ValidationValueObject .collapse">
+        <h1>ValidationValueObject<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.ValidationValueObject.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.ValidationValueObject.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ValidatorAbstract" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ValidatorAbstract .collapse">
+        <h1>ValidatorAbstract<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.ValidatorAbstract.html">¶</a></h1>
+        <p class="short_description">Base class for DocBlock Validations.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.ValidatorAbstract.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.html">Constraints</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.html">Classes</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_HasPackageWithSubpackage" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasPackageWithSubpackage .collapse">
+        <h1>HasPackageWithSubpackage<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasPackageWithSubpackage.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait always has a package if there is a subpackage present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasPackageWithSubpackage.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasPackageWithSubpackageValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasPackageWithSubpackageValidator .collapse">
+        <h1>HasPackageWithSubpackageValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasPackageWithSubpackageValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait always has a package if there is a subpackage present.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasPackageWithSubpackageValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSinglePackage" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSinglePackage .collapse">
+        <h1>HasSinglePackage<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSinglePackage.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait has not more than ! package tags.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSinglePackage.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSinglePackageValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSinglePackageValidator .collapse">
+        <h1>HasSinglePackageValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSinglePackageValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait has not more than 1 package tags.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSinglePackageValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSingleSubpackage" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSingleSubpackage .collapse">
+        <h1>HasSingleSubpackage<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSingleSubpackage.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait has not more than 1 subpackage tags.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSingleSubpackage.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSingleSubpackageValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSingleSubpackageValidator .collapse">
+        <h1>HasSingleSubpackageValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSingleSubpackageValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a file, class, interface or trait has not more than 1 subpackage tags.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Classes.HasSingleSubpackageValidator.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.html">Constraints</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.html">Property</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_HasSummary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSummary .collapse">
+        <h1>HasSummary<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.HasSummary.html">¶</a></h1>
+        <p class="short_description">Detects whether a property has a summary, or an `@var` tag with a description.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.HasSummary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_HasSummaryValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_HasSummaryValidator .collapse">
+        <h1>HasSummaryValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.HasSummaryValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether a property has a summary, or an `@var` tag with a description.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Property.HasSummaryValidator.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.html">Constraints</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.html">Functions</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AreAllArgumentsValid" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AreAllArgumentsValid .collapse">
+        <h1>AreAllArgumentsValid<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.AreAllArgumentsValid.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default return type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.AreAllArgumentsValid.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AreAllArgumentsValidValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AreAllArgumentsValidValidator .collapse">
+        <h1>AreAllArgumentsValidValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.AreAllArgumentsValidValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.AreAllArgumentsValidValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesArgumentNameMatchParam" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesArgumentNameMatchParam .collapse">
+        <h1>DoesArgumentNameMatchParam<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentNameMatchParam.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default return type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentNameMatchParam.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesArgumentNameMatchParamValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesArgumentNameMatchParamValidator .collapse">
+        <h1>DoesArgumentNameMatchParamValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentNameMatchParamValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentNameMatchParamValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesArgumentTypehintMatchParam" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesArgumentTypehintMatchParam .collapse">
+        <h1>DoesArgumentTypehintMatchParam<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentTypehintMatchParam.html">¶</a></h1>
+        <p class="short_description">Checks the typehint of the argument versus the @param tag.</p>
+        <div class="details collapse">
+                            <p>If the argument has no typehint we do not check anything. When multiple
+type are given then the typehint needs to be one of them.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentTypehintMatchParam.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesArgumentTypehintMatchParamValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesArgumentTypehintMatchParamValidator .collapse">
+        <h1>DoesArgumentTypehintMatchParamValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentTypehintMatchParamValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesArgumentTypehintMatchParamValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesParamsExists" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesParamsExists .collapse">
+        <h1>DoesParamsExists<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesParamsExists.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default return type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesParamsExists.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DoesParamsExistsValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DoesParamsExistsValidator .collapse">
+        <h1>DoesParamsExistsValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesParamsExistsValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.DoesParamsExistsValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsArgumentInDocBlock" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsArgumentInDocBlock .collapse">
+        <h1>IsArgumentInDocBlock<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsArgumentInDocBlock.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a missing argument in the docblock.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsArgumentInDocBlock.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsArgumentInDocBlockValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsArgumentInDocBlockValidator .collapse">
+        <h1>IsArgumentInDocBlockValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsArgumentInDocBlockValidator.html">¶</a></h1>
+        <p class="short_description">Validates if a Method or Function&#039;s arguments all have an accompanying param tag in the DocBlock.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsArgumentInDocBlockValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsParamTypeNotAnIdeDefault" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsParamTypeNotAnIdeDefault .collapse">
+        <h1>IsParamTypeNotAnIdeDefault<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsParamTypeNotAnIdeDefault.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default param type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsParamTypeNotAnIdeDefault.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsParamTypeNotAnIdeDefaultValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsParamTypeNotAnIdeDefaultValidator .collapse">
+        <h1>IsParamTypeNotAnIdeDefaultValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsParamTypeNotAnIdeDefaultValidator.html">¶</a></h1>
+        <p class="short_description">Validates whether the type for a param tag with a Method or Function is not a known default.</p>
+        <div class="details collapse">
+                            <p>Whenever this validator triggers then it means that someone forgot to replace the pseudo type generated by the IDE
+with the real type for the given parameter.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsParamTypeNotAnIdeDefaultValidator.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsReturnTypeNotAnIdeDefault" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsReturnTypeNotAnIdeDefault .collapse">
+        <h1>IsReturnTypeNotAnIdeDefault<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsReturnTypeNotAnIdeDefault.html">¶</a></h1>
+        <p class="short_description">Validates whether a function has a default return type in the docblock present.</p>
+        <div class="details collapse">
+                            <p>A constraint can be defined on a class, a property or a getter method.
+The Constraint class encapsulates all the configuration required for
+validating this class, property or getter result successfully.</p>
+<p>Constraint instances are immutable and serializable.</p>
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsReturnTypeNotAnIdeDefault.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IsReturnTypeNotAnIdeDefaultValidator" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IsReturnTypeNotAnIdeDefaultValidator .collapse">
+        <h1>IsReturnTypeNotAnIdeDefaultValidator<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsReturnTypeNotAnIdeDefaultValidator.html">¶</a></h1>
+        <p class="short_description">Base class for constraint validators.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Constraints.Functions.IsReturnTypeNotAnIdeDefaultValidator.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.html">phpDocumentor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.html">Plugin</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.html">Core</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.html">Descriptor</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/phpDocumentor.Plugin.Core.Descriptor.Validator.Functions.html">Functions</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AreAllArgumentsValid" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AreAllArgumentsValid .collapse">
+        <h1>AreAllArgumentsValid<a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Functions.AreAllArgumentsValid.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/phpDocumentor.Plugin.Core.Descriptor.Validator.Functions.AreAllArgumentsValid.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:31 +0000.<br/>
+    </footer>
+    </body>
+</html>

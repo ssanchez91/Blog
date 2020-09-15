@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \Twig\Node\Expression
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/Twig.Node.Expression.html" title="Expression">
+                    <i class="icon-th"></i> Expression
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+        <li>
+        <a href="../namespaces/Twig.Node.Expression.Binary.html" title="Binary">
+            <i class="icon-th"></i> Binary
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/Twig.Node.Expression.Filter.html" title="Filter">
+            <i class="icon-th"></i> Filter
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/Twig.Node.Expression.Test.html" title="Test">
+            <i class="icon-th"></i> Test
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/Twig.Node.Expression.Unary.html" title="Unary">
+            <i class="icon-th"></i> Unary
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.html">Twig</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.html">Node</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.Expression.html">Expression</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AbstractExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractExpression .collapse">
+        <h1>AbstractExpression<a href="../classes/Twig.Node.Expression.AbstractExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.AbstractExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ArrayExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ArrayExpression .collapse">
+        <h1>ArrayExpression<a href="../classes/Twig.Node.Expression.ArrayExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.ArrayExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ArrowFunctionExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ArrowFunctionExpression .collapse">
+        <h1>ArrowFunctionExpression<a href="../classes/Twig.Node.Expression.ArrowFunctionExpression.html">¶</a></h1>
+        <p class="short_description">Represents an arrow function.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.ArrowFunctionExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AssignNameExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AssignNameExpression .collapse">
+        <h1>AssignNameExpression<a href="../classes/Twig.Node.Expression.AssignNameExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.AssignNameExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BlockReferenceExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BlockReferenceExpression .collapse">
+        <h1>BlockReferenceExpression<a href="../classes/Twig.Node.Expression.BlockReferenceExpression.html">¶</a></h1>
+        <p class="short_description">Represents a block call node.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.BlockReferenceExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CallExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CallExpression .collapse">
+        <h1>CallExpression<a href="../classes/Twig.Node.Expression.CallExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.CallExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConditionalExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConditionalExpression .collapse">
+        <h1>ConditionalExpression<a href="../classes/Twig.Node.Expression.ConditionalExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.ConditionalExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConstantExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstantExpression .collapse">
+        <h1>ConstantExpression<a href="../classes/Twig.Node.Expression.ConstantExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.ConstantExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FilterExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FilterExpression .collapse">
+        <h1>FilterExpression<a href="../classes/Twig.Node.Expression.FilterExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.FilterExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FunctionExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FunctionExpression .collapse">
+        <h1>FunctionExpression<a href="../classes/Twig.Node.Expression.FunctionExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.FunctionExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InlinePrint" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InlinePrint .collapse">
+        <h1>InlinePrint<a href="../classes/Twig.Node.Expression.InlinePrint.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.InlinePrint.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MethodCallExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MethodCallExpression .collapse">
+        <h1>MethodCallExpression<a href="../classes/Twig.Node.Expression.MethodCallExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.MethodCallExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NameExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NameExpression .collapse">
+        <h1>NameExpression<a href="../classes/Twig.Node.Expression.NameExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.NameExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NullCoalesceExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NullCoalesceExpression .collapse">
+        <h1>NullCoalesceExpression<a href="../classes/Twig.Node.Expression.NullCoalesceExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.NullCoalesceExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ParentExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ParentExpression .collapse">
+        <h1>ParentExpression<a href="../classes/Twig.Node.Expression.ParentExpression.html">¶</a></h1>
+        <p class="short_description">Represents a parent node.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.ParentExpression.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_TempNameExpression" class="element ajax clickable class" data-toggle="collapse" data-target="#class_TempNameExpression .collapse">
+        <h1>TempNameExpression<a href="../classes/Twig.Node.Expression.TempNameExpression.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.TempNameExpression.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.html">Twig</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.html">Node</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.Expression.html">Expression</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.Expression.Test.html">Test</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_ConstantTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConstantTest .collapse">
+        <h1>ConstantTest<a href="../classes/Twig.Node.Expression.Test.ConstantTest.html">¶</a></h1>
+        <p class="short_description">Checks if a variable is the exact same value as a constant.</p>
+        <div class="details collapse">
+                            <p>{% if post.status is constant('Post::PUBLISHED') %}
+the status attribute is exactly the same as Post::PUBLISHED
+{% endif %}</p>
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Test.ConstantTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DivisiblebyTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DivisiblebyTest .collapse">
+        <h1>DivisiblebyTest<a href="../classes/Twig.Node.Expression.Test.DivisiblebyTest.html">¶</a></h1>
+        <p class="short_description">Checks if a variable is divisible by a number.</p>
+        <div class="details collapse">
+                            <p>{% if loop.index is divisible by(3) %}</p>
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Test.DivisiblebyTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EvenTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EvenTest .collapse">
+        <h1>EvenTest<a href="../classes/Twig.Node.Expression.Test.EvenTest.html">¶</a></h1>
+        <p class="short_description">Checks if a number is even.</p>
+        <div class="details collapse">
+                            <p>{{ var is even }}</p>
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Test.EvenTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NullTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NullTest .collapse">
+        <h1>NullTest<a href="../classes/Twig.Node.Expression.Test.NullTest.html">¶</a></h1>
+        <p class="short_description">Checks that a variable is null.</p>
+        <div class="details collapse">
+                            <p>{{ var is none }}</p>
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Test.NullTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_OddTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_OddTest .collapse">
+        <h1>OddTest<a href="../classes/Twig.Node.Expression.Test.OddTest.html">¶</a></h1>
+        <p class="short_description">Checks if a number is odd.</p>
+        <div class="details collapse">
+                            <p>{{ var is odd }}</p>
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Test.OddTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SameasTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SameasTest .collapse">
+        <h1>SameasTest<a href="../classes/Twig.Node.Expression.Test.SameasTest.html">¶</a></h1>
+        <p class="short_description">Checks if a variable is the same as another one (=== in PHP).</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Test.SameasTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.html">Twig</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.html">Node</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.Expression.html">Expression</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.Expression.Unary.html">Unary</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AbstractUnary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractUnary .collapse">
+        <h1>AbstractUnary<a href="../classes/Twig.Node.Expression.Unary.AbstractUnary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Unary.AbstractUnary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NegUnary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NegUnary .collapse">
+        <h1>NegUnary<a href="../classes/Twig.Node.Expression.Unary.NegUnary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Unary.NegUnary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotUnary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotUnary .collapse">
+        <h1>NotUnary<a href="../classes/Twig.Node.Expression.Unary.NotUnary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Unary.NotUnary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PosUnary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PosUnary .collapse">
+        <h1>PosUnary<a href="../classes/Twig.Node.Expression.Unary.PosUnary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Unary.PosUnary.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.html">Twig</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.html">Node</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.Expression.html">Expression</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.Expression.Binary.html">Binary</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_AbstractBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractBinary .collapse">
+        <h1>AbstractBinary<a href="../classes/Twig.Node.Expression.Binary.AbstractBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.AbstractBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AddBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AddBinary .collapse">
+        <h1>AddBinary<a href="../classes/Twig.Node.Expression.Binary.AddBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.AddBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AndBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AndBinary .collapse">
+        <h1>AndBinary<a href="../classes/Twig.Node.Expression.Binary.AndBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.AndBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BitwiseAndBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BitwiseAndBinary .collapse">
+        <h1>BitwiseAndBinary<a href="../classes/Twig.Node.Expression.Binary.BitwiseAndBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.BitwiseAndBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BitwiseOrBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BitwiseOrBinary .collapse">
+        <h1>BitwiseOrBinary<a href="../classes/Twig.Node.Expression.Binary.BitwiseOrBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.BitwiseOrBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_BitwiseXorBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_BitwiseXorBinary .collapse">
+        <h1>BitwiseXorBinary<a href="../classes/Twig.Node.Expression.Binary.BitwiseXorBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.BitwiseXorBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ConcatBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ConcatBinary .collapse">
+        <h1>ConcatBinary<a href="../classes/Twig.Node.Expression.Binary.ConcatBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.ConcatBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DivBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DivBinary .collapse">
+        <h1>DivBinary<a href="../classes/Twig.Node.Expression.Binary.DivBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.DivBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EndsWithBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EndsWithBinary .collapse">
+        <h1>EndsWithBinary<a href="../classes/Twig.Node.Expression.Binary.EndsWithBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.EndsWithBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_EqualBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_EqualBinary .collapse">
+        <h1>EqualBinary<a href="../classes/Twig.Node.Expression.Binary.EqualBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.EqualBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_FloorDivBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_FloorDivBinary .collapse">
+        <h1>FloorDivBinary<a href="../classes/Twig.Node.Expression.Binary.FloorDivBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.FloorDivBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GreaterBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GreaterBinary .collapse">
+        <h1>GreaterBinary<a href="../classes/Twig.Node.Expression.Binary.GreaterBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.GreaterBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_GreaterEqualBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_GreaterEqualBinary .collapse">
+        <h1>GreaterEqualBinary<a href="../classes/Twig.Node.Expression.Binary.GreaterEqualBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.GreaterEqualBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InBinary .collapse">
+        <h1>InBinary<a href="../classes/Twig.Node.Expression.Binary.InBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.InBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LessBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LessBinary .collapse">
+        <h1>LessBinary<a href="../classes/Twig.Node.Expression.Binary.LessBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.LessBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LessEqualBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LessEqualBinary .collapse">
+        <h1>LessEqualBinary<a href="../classes/Twig.Node.Expression.Binary.LessEqualBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.LessEqualBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MatchesBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MatchesBinary .collapse">
+        <h1>MatchesBinary<a href="../classes/Twig.Node.Expression.Binary.MatchesBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.MatchesBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ModBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ModBinary .collapse">
+        <h1>ModBinary<a href="../classes/Twig.Node.Expression.Binary.ModBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.ModBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_MulBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MulBinary .collapse">
+        <h1>MulBinary<a href="../classes/Twig.Node.Expression.Binary.MulBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.MulBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotEqualBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotEqualBinary .collapse">
+        <h1>NotEqualBinary<a href="../classes/Twig.Node.Expression.Binary.NotEqualBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.NotEqualBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_NotInBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_NotInBinary .collapse">
+        <h1>NotInBinary<a href="../classes/Twig.Node.Expression.Binary.NotInBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.NotInBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_OrBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_OrBinary .collapse">
+        <h1>OrBinary<a href="../classes/Twig.Node.Expression.Binary.OrBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.OrBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_PowerBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_PowerBinary .collapse">
+        <h1>PowerBinary<a href="../classes/Twig.Node.Expression.Binary.PowerBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.PowerBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_RangeBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_RangeBinary .collapse">
+        <h1>RangeBinary<a href="../classes/Twig.Node.Expression.Binary.RangeBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.RangeBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_StartsWithBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_StartsWithBinary .collapse">
+        <h1>StartsWithBinary<a href="../classes/Twig.Node.Expression.Binary.StartsWithBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.StartsWithBinary.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SubBinary" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SubBinary .collapse">
+        <h1>SubBinary<a href="../classes/Twig.Node.Expression.Binary.SubBinary.html">¶</a></h1>
+        <p class="short_description">Abstract class for all nodes that represents an expression.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Binary.SubBinary.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.html">Twig</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.html">Node</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.Expression.html">Expression</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Twig.Node.Expression.Filter.html">Filter</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_DefaultFilter" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DefaultFilter .collapse">
+        <h1>DefaultFilter<a href="../classes/Twig.Node.Expression.Filter.DefaultFilter.html">¶</a></h1>
+        <p class="short_description">Returns the value or the default value when it is undefined or empty.</p>
+        <div class="details collapse">
+                            <p>{{ var.foo|default('foo item on var is not defined') }}</p>
+                    </div>
+        <a href="../classes/Twig.Node.Expression.Filter.DefaultFilter.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:31 +0000.<br/>
+    </footer>
+    </body>
+</html>

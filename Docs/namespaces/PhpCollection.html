@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \PhpCollection
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/PhpCollection.html" title="PhpCollection">
+                    <i class="icon-th"></i> PhpCollection
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+        <li>
+        <a href="../namespaces/PhpCollection.ObjectBasicsHandler.html" title="ObjectBasicsHandler">
+            <i class="icon-th"></i> ObjectBasicsHandler
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/PhpCollection.Tests.html" title="Tests">
+            <i class="icon-th"></i> Tests
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/PhpCollection.html">PhpCollection</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                                        <div id="trait_EntityLikeObject" class="element ajax clickable trait" data-toggle="collapse" data-target="#trait_EntityLikeObject .collapse">
+        <h1>EntityLikeObject<a href="../classes/PhpCollection.EntityLikeObject.html">¶</a></h1>
+        <p class="short_description">Implementation for ObjectBasics for entity-like objects.</p>
+        <div class="details collapse">
+                            <p>Two objects are considered equal if they refer to the same instance.</p>
+                    </div>
+        <a href="../classes/PhpCollection.EntityLikeObject.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="interface_CollectionInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_CollectionInterface .collapse">
+        <h1>CollectionInterface<a href="../classes/PhpCollection.CollectionInterface.html">¶</a></h1>
+        <p class="short_description">Basic interface which adds some behaviors, and a few methods common to all collections.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.CollectionInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_MapInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_MapInterface .collapse">
+        <h1>MapInterface<a href="../classes/PhpCollection.MapInterface.html">¶</a></h1>
+        <p class="short_description">Basic map interface.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.MapInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ObjectBasics" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ObjectBasics .collapse">
+        <h1>ObjectBasics<a href="../classes/PhpCollection.ObjectBasics.html">¶</a></h1>
+        <p class="short_description">Interface that must be implemented by objects that are used as keys, or in sets.</p>
+        <div class="details collapse">
+                            <p>For entities, you can use the &quot;EntityLikeObject&quot; trait.</p>
+                    </div>
+        <a href="../classes/PhpCollection.ObjectBasics.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ObjectBasicsHandler" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ObjectBasicsHandler .collapse">
+        <h1>ObjectBasicsHandler<a href="../classes/PhpCollection.ObjectBasicsHandler.html">¶</a></h1>
+        <p class="short_description">Interface for external handlers that provide ObjectBasics functionality.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.ObjectBasicsHandler.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_SequenceInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_SequenceInterface .collapse">
+        <h1>SequenceInterface<a href="../classes/PhpCollection.SequenceInterface.html">¶</a></h1>
+        <p class="short_description">Interface for mutable sequences.</p>
+        <div class="details collapse">
+                            <p>Equality of elements in the sequence is established via a shallow comparison (===).</p>
+                    </div>
+        <a href="../classes/PhpCollection.SequenceInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_SetInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_SetInterface .collapse">
+        <h1>SetInterface<a href="../classes/PhpCollection.SetInterface.html">¶</a></h1>
+        <p class="short_description">Interface for sets.</p>
+        <div class="details collapse">
+                            <p>Each Set contains equal values only once.</p>
+                    </div>
+        <a href="../classes/PhpCollection.SetInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_SortableInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_SortableInterface .collapse">
+        <h1>SortableInterface<a href="../classes/PhpCollection.SortableInterface.html">¶</a></h1>
+        <p class="short_description">Interface for sortable collections.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.SortableInterface.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_AbstractCollection" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractCollection .collapse">
+        <h1>AbstractCollection<a href="../classes/PhpCollection.AbstractCollection.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.AbstractCollection.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AbstractMap" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractMap .collapse">
+        <h1>AbstractMap<a href="../classes/PhpCollection.AbstractMap.html">¶</a></h1>
+        <p class="short_description">A simple map implementation which basically wraps an array with an object oriented interface.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.AbstractMap.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_AbstractSequence" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractSequence .collapse">
+        <h1>AbstractSequence<a href="../classes/PhpCollection.AbstractSequence.html">¶</a></h1>
+        <p class="short_description">A sequence with numerically indexed elements.</p>
+        <div class="details collapse">
+                            <p>This is rawly equivalent to an array with only numeric keys.
+There are no restrictions on how many same values may occur in the sequence.</p>
+<p>This sequence is mutable.</p>
+                    </div>
+        <a href="../classes/PhpCollection.AbstractSequence.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Map" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Map .collapse">
+        <h1>Map<a href="../classes/PhpCollection.Map.html">¶</a></h1>
+        <p class="short_description">A simple map implementation which basically wraps an array with an object oriented interface.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.Map.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectBasicsHandlerRegistry" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectBasicsHandlerRegistry .collapse">
+        <h1>ObjectBasicsHandlerRegistry<a href="../classes/PhpCollection.ObjectBasicsHandlerRegistry.html">¶</a></h1>
+        <p class="short_description">Registry for handlers that provide ObjectBasics functionality for classes.</p>
+        <div class="details collapse">
+                            <p>You want to register a handler if you cannot implement the ObjectBasics interface, for example
+because a class is provided by a third-party package, or built into PHP.</p>
+                    </div>
+        <a href="../classes/PhpCollection.ObjectBasicsHandlerRegistry.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Sequence" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Sequence .collapse">
+        <h1>Sequence<a href="../classes/PhpCollection.Sequence.html">¶</a></h1>
+        <p class="short_description">Unsorted sequence implementation.</p>
+        <div class="details collapse">
+                            <p>Characteristics:</p>
+<pre><code>- Keys: consequentially numbered, without gaps
+- Values: anything, duplicates allowed
+- Ordering: same as input unless when explicitly sorted</code></pre>
+                    </div>
+        <a href="../classes/PhpCollection.Sequence.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Set" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Set .collapse">
+        <h1>Set<a href="../classes/PhpCollection.Set.html">¶</a></h1>
+        <p class="short_description">Implementation of a Set.</p>
+        <div class="details collapse">
+                            <p>Each set guarantees that equal elements are only contained once in the Set.</p>
+<p>This implementation constraints Sets to either consist of objects that implement ObjectBasics, or objects that have
+an external ObjectBasicsHandler implementation, or simple scalars. These types cannot be mixed within the same Set.</p>
+                    </div>
+        <a href="../classes/PhpCollection.Set.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SortedSequence" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SortedSequence .collapse">
+        <h1>SortedSequence<a href="../classes/PhpCollection.SortedSequence.html">¶</a></h1>
+        <p class="short_description">A sequence with a fixed sort-order.</p>
+        <div class="details collapse">
+                            <p>This is rawly equivalent to an array with only numeric keys.
+There are no restrictions on how many same values may occur in the sequence.</p>
+<p>This sequence is mutable.</p>
+                    </div>
+        <a href="../classes/PhpCollection.SortedSequence.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/PhpCollection.html">PhpCollection</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/PhpCollection.ObjectBasicsHandler.html">ObjectBasicsHandler</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_DateTimeHandler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DateTimeHandler .collapse">
+        <h1>DateTimeHandler<a href="../classes/PhpCollection.ObjectBasicsHandler.DateTimeHandler.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.ObjectBasicsHandler.DateTimeHandler.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_IdentityHandler" class="element ajax clickable class" data-toggle="collapse" data-target="#class_IdentityHandler .collapse">
+        <h1>IdentityHandler<a href="../classes/PhpCollection.ObjectBasicsHandler.IdentityHandler.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.ObjectBasicsHandler.IdentityHandler.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/PhpCollection.html">PhpCollection</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/PhpCollection.Tests.html">Tests</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_MapTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_MapTest .collapse">
+        <h1>MapTest<a href="../classes/PhpCollection.Tests.MapTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.Tests.MapTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ObjectThatImplementsBasics" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ObjectThatImplementsBasics .collapse">
+        <h1>ObjectThatImplementsBasics<a href="../classes/PhpCollection.Tests.ObjectThatImplementsBasics.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.Tests.ObjectThatImplementsBasics.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SequenceTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SequenceTest .collapse">
+        <h1>SequenceTest<a href="../classes/PhpCollection.Tests.SequenceTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.Tests.SequenceTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SetTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SetTest .collapse">
+        <h1>SetTest<a href="../classes/PhpCollection.Tests.SetTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.Tests.SetTest.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_SortedSequenceTest" class="element ajax clickable class" data-toggle="collapse" data-target="#class_SortedSequenceTest .collapse">
+        <h1>SortedSequenceTest<a href="../classes/PhpCollection.Tests.SortedSequenceTest.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/PhpCollection.Tests.SortedSequenceTest.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:31 +0000.<br/>
+    </footer>
+    </body>
+</html>

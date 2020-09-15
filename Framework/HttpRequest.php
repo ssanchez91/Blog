@@ -8,15 +8,45 @@
 
 namespace App\Framework;
 
-
+/**
+ * Class HttpRequest
+ *
+ * @package App\Framework
+ */
 class HttpRequest
 {
+    /**
+     * Variable url
+     *
+     * @var null
+     */
     private $url;
+
+    /**
+     * Variable params
+     *
+     * @var
+     */
     private $params;
+
+    /**
+     * Variable method
+     * @var
+     */
     private $method;
+
+    /**
+     * Variable route
+     * @var
+     */
     private $route;
 
-
+    /**
+     * Constructor
+     *
+     * @param null $url
+     * @param null $method
+     */
     public function __construct($url = null, $method = null)
     {
         $this->url = ($url === null) ? $_SERVER['REQUEST_URI'] : $url;
@@ -24,12 +54,22 @@ class HttpRequest
         $this->params = array();
     }
 
+    /**
+     * Method bindParams
+     *
+     * @param string $basepath basepath of the app
+     * @throws \Exception
+     */
     public function bindParams($basepath)
     {
         $this->bindRouteParam($basepath);
         $this->bindHttpParam();
     }
 
+    /**
+     * method bindRouteParam
+     * @param string $basepath basepath of the app
+     */
     public function bindRouteParam($basepath)
     {
         $url = str_replace($basepath, "", $this->url);
@@ -40,6 +80,11 @@ class HttpRequest
         }
     }
 
+    /**
+     * Method bindHttpParam
+     *
+     * @throws \Exception
+     */
     public function bindHttpParam()
     {
         switch ($this->method) {
@@ -67,12 +112,19 @@ class HttpRequest
         }
     }
 
+    /**
+     * Method run
+     *
+     * @param $config
+     */
     public function run($config)
     {
         $this->route->run($this, $config);
     }
 
     /**
+     * Accessor getUrl
+     *
      * @return mixed
      */
     public function getUrl()
@@ -81,6 +133,8 @@ class HttpRequest
     }
 
     /**
+     * Accessor getMethod
+     *
      * @return mixed
      */
     public function getMethod()
@@ -89,6 +143,8 @@ class HttpRequest
     }
 
     /**
+     * Accessor getRoute
+     *
      * @return mixed
      */
     public function getRoute()
@@ -97,6 +153,8 @@ class HttpRequest
     }
 
     /**
+     * Accessor setRoute
+     *
      * @param mixed $route
      */
     public function setRoute($route)
@@ -105,6 +163,8 @@ class HttpRequest
     }
 
     /**
+     * Accessor getParams
+     *
      * @return mixed
      */
     public function getParams()
@@ -112,6 +172,11 @@ class HttpRequest
         return $this->params;
     }
 
+    /**
+     * Method addParams
+     *
+     * @param mixed $value param
+     */
     public function addParams($value)
     {
         $this->params[] = $value;

@@ -8,16 +8,18 @@
 namespace App\Controller;
 
 use App\Framework\BaseController;
-use App\Framework\Exception\NoRouteFileFoundException;
-use App\Framework\HttpRequest;
-use App\Framework\Router;
-use App\Model\Entity\Alert;
 
-
+/**
+ * Class DefaultController
+ *
+ * @package App\Controller
+ */
 class DefaultController extends BaseController
 {
     /**
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method default
+     *
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      */
     public function defaultAction()
     {
@@ -25,15 +27,18 @@ class DefaultController extends BaseController
     }
 
     /**
-     * @param $fullname
-     * @param $contactEmail
-     * @param $message
-     * @throws \App\Framework\Exception\NoViewFoundException
+     * Method sendEmail
+     *
+     * Create email and send the message
+     *
+     * @param string $fullname Lastname and FirstName of visitor
+     * @param string $contactEmail mail of visitor
+     * @param string $message Message sent
+     * @throws \App\Framework\Exception\NoViewFoundException No view found with this name
      * @throws \Exception
      */
     public function sendEmailAction($fullname, $contactEmail, $message)
     {
-        // Create the email and send the message
         $email_subject = "Website Contact Form:  $fullname";
         $email_body = "You have received a new message from your website contact form.\n\n" . "Here are the details:\n\nName: $fullname\n\nEmail: $contactEmail\n\nMessage: $message";
         $this->mailManager->sendEmail(null, $email_subject, $email_body);

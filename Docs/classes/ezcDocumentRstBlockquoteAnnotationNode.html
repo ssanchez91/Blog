@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \ezcDocumentRstBlockquoteAnnotationNode
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public inherited">
+        <a href="#method___construct" title="__construct :: Construct RST node">
+            <span class="description">Construct RST node</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_dump" title="dump :: Get dump of document">
+            <span class="description">Get dump of document</span><pre>dump</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getTokenName" title="getTokenName :: Get node name from type">
+            <span class="description">Get node name from type</span><pre>getTokenName</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                <li class="method protected inherited">
+                            <a href="#method_content" title="content :: Return node content, if available somehow">
+                                <span class="description">Return node content, if available somehow</span><pre>content</pre>
+                            </a>
+                        </li>
+                                                                                                                        </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                            </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                                <li class="constant ">
+                    <a href="#constant_ANNOTATION" title="ANNOTATION :: Blockquote anotation AST node">
+                        <span class="description">Blockquote anotation AST node</span><pre>ANNOTATION</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ANON_REFERENCE" title="ANON_REFERENCE :: Anonymous reference target AST node">
+                        <span class="description">Anonymous reference target AST node</span><pre>ANON_REFERENCE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_BLOCKQUOTE" title="BLOCKQUOTE :: Blockquote AST node">
+                        <span class="description">Blockquote AST node</span><pre>BLOCKQUOTE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_BULLET_LIST" title="BULLET_LIST :: Bullet list item AST node">
+                        <span class="description">Bullet list item AST node</span><pre>BULLET_LIST</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_BULLET_LIST_LIST" title="BULLET_LIST_LIST :: Bullet list AST node">
+                        <span class="description">Bullet list AST node</span><pre>BULLET_LIST_LIST</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_COMMENT" title="COMMENT :: Comment AST node">
+                        <span class="description">Comment AST node</span><pre>COMMENT</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_DEFINITION_LIST" title="DEFINITION_LIST :: Definition list AST node">
+                        <span class="description">Definition list AST node</span><pre>DEFINITION_LIST</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_DEFINITION_LIST_LIST" title="DEFINITION_LIST_LIST :: Definition list item AST node">
+                        <span class="description">Definition list item AST node</span><pre>DEFINITION_LIST_LIST</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_DIRECTIVE" title="DIRECTIVE :: Directive AST node">
+                        <span class="description">Directive AST node</span><pre>DIRECTIVE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_DOCUMENT" title="DOCUMENT :: Document AST node">
+                        <span class="description">Document AST node</span><pre>DOCUMENT</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ENUMERATED_LIST" title="ENUMERATED_LIST :: Enumerated list item AST node">
+                        <span class="description">Enumerated list item AST node</span><pre>ENUMERATED_LIST</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ENUMERATED_LIST_LIST" title="ENUMERATED_LIST_LIST :: Enumerated list AST node">
+                        <span class="description">Enumerated list AST node</span><pre>ENUMERATED_LIST_LIST</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_FIELD_LIST" title="FIELD_LIST :: Field list AST node">
+                        <span class="description">Field list AST node</span><pre>FIELD_LIST</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_FOOTNOTE" title="FOOTNOTE :: Footnote target AST node">
+                        <span class="description">Footnote target AST node</span><pre>FOOTNOTE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_LINE_BLOCK" title="LINE_BLOCK :: Line block AST node">
+                        <span class="description">Line block AST node</span><pre>LINE_BLOCK</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_LINE_BLOCK_LINE" title="LINE_BLOCK_LINE :: Line block line AST node">
+                        <span class="description">Line block line AST node</span><pre>LINE_BLOCK_LINE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_LINK_ANONYMOUS" title="LINK_ANONYMOUS :: Anonymous hyperlink AST node">
+                        <span class="description">Anonymous hyperlink AST node</span><pre>LINK_ANONYMOUS</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_LINK_REFERENCE" title="LINK_REFERENCE :: External Reference AST node">
+                        <span class="description">External Reference AST node</span><pre>LINK_REFERENCE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_LITERAL" title="LITERAL :: Inline Literal AST node">
+                        <span class="description">Inline Literal AST node</span><pre>LITERAL</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_LITERAL_BLOCK" title="LITERAL_BLOCK :: Literal block AST node">
+                        <span class="description">Literal block AST node</span><pre>LITERAL_BLOCK</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_MARKUP_EMPHASIS" title="MARKUP_EMPHASIS :: Emphasis markup AST node">
+                        <span class="description">Emphasis markup AST node</span><pre>MARKUP_EMPHASIS</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_MARKUP_INTERPRETED" title="MARKUP_INTERPRETED :: Interpreted text markup AST node">
+                        <span class="description">Interpreted text markup AST node</span><pre>MARKUP_INTERPRETED</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_MARKUP_LITERAL" title="MARKUP_LITERAL :: Inline literal markup AST node">
+                        <span class="description">Inline literal markup AST node</span><pre>MARKUP_LITERAL</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_MARKUP_STRONG" title="MARKUP_STRONG :: Strong emphasis markup AST node">
+                        <span class="description">Strong emphasis markup AST node</span><pre>MARKUP_STRONG</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_MARKUP_SUBSTITUTION" title="MARKUP_SUBSTITUTION :: Substitution reference markup AST node">
+                        <span class="description">Substitution reference markup AST node</span><pre>MARKUP_SUBSTITUTION</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_NAMED_REFERENCE" title="NAMED_REFERENCE :: Named reference target AST node">
+                        <span class="description">Named reference target AST node</span><pre>NAMED_REFERENCE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_PARAGRAPH" title="PARAGRAPH :: Paragraph AST node">
+                        <span class="description">Paragraph AST node</span><pre>PARAGRAPH</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_REFERENCE" title="REFERENCE :: Internal Reference AST node">
+                        <span class="description">Internal Reference AST node</span><pre>REFERENCE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_SECTION" title="SECTION :: Section AST node">
+                        <span class="description">Section AST node</span><pre>SECTION</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_SUBSTITUTION" title="SUBSTITUTION :: Substitution target AST node">
+                        <span class="description">Substitution target AST node</span><pre>SUBSTITUTION</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_TABLE" title="TABLE :: Table node AST node">
+                        <span class="description">Table node AST node</span><pre>TABLE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_TABLE_BODY" title="TABLE_BODY :: Table body node AST node">
+                        <span class="description">Table body node AST node</span><pre>TABLE_BODY</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_TABLE_CELL" title="TABLE_CELL :: Table cell node AST node">
+                        <span class="description">Table cell node AST node</span><pre>TABLE_CELL</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_TABLE_HEAD" title="TABLE_HEAD :: Table head node AST node">
+                        <span class="description">Table head node AST node</span><pre>TABLE_HEAD</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_TABLE_ROW" title="TABLE_ROW :: Table row node AST node">
+                        <span class="description">Table row node AST node</span><pre>TABLE_ROW</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_TARGET" title="TARGET :: Internal Target AST node">
+                        <span class="description">Internal Target AST node</span><pre>TARGET</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_TEXT_LINE" title="TEXT_LINE :: Text line AST node">
+                        <span class="description">Text line AST node</span><pre>TEXT_LINE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_TITLE" title="TITLE :: Title AST node">
+                        <span class="description">Title AST node</span><pre>TITLE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_TRANSITION" title="TRANSITION :: Page transition AST node">
+                        <span class="description">Page transition AST node</span><pre>TRANSITION</pre>
+                    </a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ezcDocumentRstBlockquoteAnnotationNode</h1>
+                <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/ezcDocumentRstNode.html">\ezcDocumentRstNode</a>
+                                                        </small>
+                <p class="short_description">The blockquote annotation AST node</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Document</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        version
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>//autogen//</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        access
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>private</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Construct RST node</h2>
+                            <pre>__construct(\ezcDocumentRstToken $token, integer $type) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$token</h4>
+                                                <code><a href="../classes/ezcDocumentRstToken.html">\ezcDocumentRstToken</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_content"></a>
+                        <div class="element clickable method protected  method_content inherited" data-toggle="collapse" data-target=".method_content .collapse">
+                            <h2>Return node content, if available somehow</h2>
+                            <pre>content() : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_dump"></a>
+                        <div class="element clickable method public  method_dump inherited" data-toggle="collapse" data-target=".method_dump .collapse">
+                            <h2>Get dump of document</h2>
+                            <pre>dump(integer $depth) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$depth</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getTokenName"></a>
+                        <div class="element clickable method public  method_getTokenName inherited" data-toggle="collapse" data-target=".method_getTokenName .collapse">
+                            <h2>Get node name from type</h2>
+                            <pre>getTokenName(integer $type) : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Return a user readable name from the numeric node type.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                                    <a id="constant_DOCUMENT"> </a>
+                            <div class="element clickable constant  constant_DOCUMENT inherited" data-toggle="collapse" data-target=".constant_DOCUMENT .collapse">
+                                <h2>Document AST node</h2>
+                                <pre>DOCUMENT</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_SECTION"> </a>
+                            <div class="element clickable constant  constant_SECTION inherited" data-toggle="collapse" data-target=".constant_SECTION .collapse">
+                                <h2>Section AST node</h2>
+                                <pre>SECTION</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_TITLE"> </a>
+                            <div class="element clickable constant  constant_TITLE inherited" data-toggle="collapse" data-target=".constant_TITLE .collapse">
+                                <h2>Title AST node</h2>
+                                <pre>TITLE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_PARAGRAPH"> </a>
+                            <div class="element clickable constant  constant_PARAGRAPH inherited" data-toggle="collapse" data-target=".constant_PARAGRAPH .collapse">
+                                <h2>Paragraph AST node</h2>
+                                <pre>PARAGRAPH</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_TEXT_LINE"> </a>
+                            <div class="element clickable constant  constant_TEXT_LINE inherited" data-toggle="collapse" data-target=".constant_TEXT_LINE .collapse">
+                                <h2>Text line AST node</h2>
+                                <pre>TEXT_LINE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_BLOCKQUOTE"> </a>
+                            <div class="element clickable constant  constant_BLOCKQUOTE inherited" data-toggle="collapse" data-target=".constant_BLOCKQUOTE .collapse">
+                                <h2>Blockquote AST node</h2>
+                                <pre>BLOCKQUOTE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ANNOTATION"> </a>
+                            <div class="element clickable constant  constant_ANNOTATION inherited" data-toggle="collapse" data-target=".constant_ANNOTATION .collapse">
+                                <h2>Blockquote anotation AST node</h2>
+                                <pre>ANNOTATION</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_LITERAL_BLOCK"> </a>
+                            <div class="element clickable constant  constant_LITERAL_BLOCK inherited" data-toggle="collapse" data-target=".constant_LITERAL_BLOCK .collapse">
+                                <h2>Literal block AST node</h2>
+                                <pre>LITERAL_BLOCK</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_COMMENT"> </a>
+                            <div class="element clickable constant  constant_COMMENT inherited" data-toggle="collapse" data-target=".constant_COMMENT .collapse">
+                                <h2>Comment AST node</h2>
+                                <pre>COMMENT</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_TRANSITION"> </a>
+                            <div class="element clickable constant  constant_TRANSITION inherited" data-toggle="collapse" data-target=".constant_TRANSITION .collapse">
+                                <h2>Page transition AST node</h2>
+                                <pre>TRANSITION</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_FIELD_LIST"> </a>
+                            <div class="element clickable constant  constant_FIELD_LIST inherited" data-toggle="collapse" data-target=".constant_FIELD_LIST .collapse">
+                                <h2>Field list AST node</h2>
+                                <pre>FIELD_LIST</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_DEFINITION_LIST"> </a>
+                            <div class="element clickable constant  constant_DEFINITION_LIST inherited" data-toggle="collapse" data-target=".constant_DEFINITION_LIST .collapse">
+                                <h2>Definition list AST node</h2>
+                                <pre>DEFINITION_LIST</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_LINE_BLOCK"> </a>
+                            <div class="element clickable constant  constant_LINE_BLOCK inherited" data-toggle="collapse" data-target=".constant_LINE_BLOCK .collapse">
+                                <h2>Line block AST node</h2>
+                                <pre>LINE_BLOCK</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_LINE_BLOCK_LINE"> </a>
+                            <div class="element clickable constant  constant_LINE_BLOCK_LINE inherited" data-toggle="collapse" data-target=".constant_LINE_BLOCK_LINE .collapse">
+                                <h2>Line block line AST node</h2>
+                                <pre>LINE_BLOCK_LINE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_DEFINITION_LIST_LIST"> </a>
+                            <div class="element clickable constant  constant_DEFINITION_LIST_LIST inherited" data-toggle="collapse" data-target=".constant_DEFINITION_LIST_LIST .collapse">
+                                <h2>Definition list item AST node</h2>
+                                <pre>DEFINITION_LIST_LIST</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_BULLET_LIST"> </a>
+                            <div class="element clickable constant  constant_BULLET_LIST inherited" data-toggle="collapse" data-target=".constant_BULLET_LIST .collapse">
+                                <h2>Bullet list item AST node</h2>
+                                <pre>BULLET_LIST</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ENUMERATED_LIST"> </a>
+                            <div class="element clickable constant  constant_ENUMERATED_LIST inherited" data-toggle="collapse" data-target=".constant_ENUMERATED_LIST .collapse">
+                                <h2>Enumerated list item AST node</h2>
+                                <pre>ENUMERATED_LIST</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_BULLET_LIST_LIST"> </a>
+                            <div class="element clickable constant  constant_BULLET_LIST_LIST inherited" data-toggle="collapse" data-target=".constant_BULLET_LIST_LIST .collapse">
+                                <h2>Bullet list AST node</h2>
+                                <pre>BULLET_LIST_LIST</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ENUMERATED_LIST_LIST"> </a>
+                            <div class="element clickable constant  constant_ENUMERATED_LIST_LIST inherited" data-toggle="collapse" data-target=".constant_ENUMERATED_LIST_LIST .collapse">
+                                <h2>Enumerated list AST node</h2>
+                                <pre>ENUMERATED_LIST_LIST</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_MARKUP_EMPHASIS"> </a>
+                            <div class="element clickable constant  constant_MARKUP_EMPHASIS inherited" data-toggle="collapse" data-target=".constant_MARKUP_EMPHASIS .collapse">
+                                <h2>Emphasis markup AST node</h2>
+                                <pre>MARKUP_EMPHASIS</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_MARKUP_STRONG"> </a>
+                            <div class="element clickable constant  constant_MARKUP_STRONG inherited" data-toggle="collapse" data-target=".constant_MARKUP_STRONG .collapse">
+                                <h2>Strong emphasis markup AST node</h2>
+                                <pre>MARKUP_STRONG</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_MARKUP_INTERPRETED"> </a>
+                            <div class="element clickable constant  constant_MARKUP_INTERPRETED inherited" data-toggle="collapse" data-target=".constant_MARKUP_INTERPRETED .collapse">
+                                <h2>Interpreted text markup AST node</h2>
+                                <pre>MARKUP_INTERPRETED</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_MARKUP_LITERAL"> </a>
+                            <div class="element clickable constant  constant_MARKUP_LITERAL inherited" data-toggle="collapse" data-target=".constant_MARKUP_LITERAL .collapse">
+                                <h2>Inline literal markup AST node</h2>
+                                <pre>MARKUP_LITERAL</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_MARKUP_SUBSTITUTION"> </a>
+                            <div class="element clickable constant  constant_MARKUP_SUBSTITUTION inherited" data-toggle="collapse" data-target=".constant_MARKUP_SUBSTITUTION .collapse">
+                                <h2>Substitution reference markup AST node</h2>
+                                <pre>MARKUP_SUBSTITUTION</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_LINK_ANONYMOUS"> </a>
+                            <div class="element clickable constant  constant_LINK_ANONYMOUS inherited" data-toggle="collapse" data-target=".constant_LINK_ANONYMOUS .collapse">
+                                <h2>Anonymous hyperlink AST node</h2>
+                                <pre>LINK_ANONYMOUS</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_LINK_REFERENCE"> </a>
+                            <div class="element clickable constant  constant_LINK_REFERENCE inherited" data-toggle="collapse" data-target=".constant_LINK_REFERENCE .collapse">
+                                <h2>External Reference AST node</h2>
+                                <pre>LINK_REFERENCE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_TARGET"> </a>
+                            <div class="element clickable constant  constant_TARGET inherited" data-toggle="collapse" data-target=".constant_TARGET .collapse">
+                                <h2>Internal Target AST node</h2>
+                                <pre>TARGET</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_REFERENCE"> </a>
+                            <div class="element clickable constant  constant_REFERENCE inherited" data-toggle="collapse" data-target=".constant_REFERENCE .collapse">
+                                <h2>Internal Reference AST node</h2>
+                                <pre>REFERENCE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_LITERAL"> </a>
+                            <div class="element clickable constant  constant_LITERAL inherited" data-toggle="collapse" data-target=".constant_LITERAL .collapse">
+                                <h2>Inline Literal AST node</h2>
+                                <pre>LITERAL</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_SUBSTITUTION"> </a>
+                            <div class="element clickable constant  constant_SUBSTITUTION inherited" data-toggle="collapse" data-target=".constant_SUBSTITUTION .collapse">
+                                <h2>Substitution target AST node</h2>
+                                <pre>SUBSTITUTION</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_DIRECTIVE"> </a>
+                            <div class="element clickable constant  constant_DIRECTIVE inherited" data-toggle="collapse" data-target=".constant_DIRECTIVE .collapse">
+                                <h2>Directive AST node</h2>
+                                <pre>DIRECTIVE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_NAMED_REFERENCE"> </a>
+                            <div class="element clickable constant  constant_NAMED_REFERENCE inherited" data-toggle="collapse" data-target=".constant_NAMED_REFERENCE .collapse">
+                                <h2>Named reference target AST node</h2>
+                                <pre>NAMED_REFERENCE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_FOOTNOTE"> </a>
+                            <div class="element clickable constant  constant_FOOTNOTE inherited" data-toggle="collapse" data-target=".constant_FOOTNOTE .collapse">
+                                <h2>Footnote target AST node</h2>
+                                <pre>FOOTNOTE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ANON_REFERENCE"> </a>
+                            <div class="element clickable constant  constant_ANON_REFERENCE inherited" data-toggle="collapse" data-target=".constant_ANON_REFERENCE .collapse">
+                                <h2>Anonymous reference target AST node</h2>
+                                <pre>ANON_REFERENCE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_TABLE"> </a>
+                            <div class="element clickable constant  constant_TABLE inherited" data-toggle="collapse" data-target=".constant_TABLE .collapse">
+                                <h2>Table node AST node</h2>
+                                <pre>TABLE</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_TABLE_HEAD"> </a>
+                            <div class="element clickable constant  constant_TABLE_HEAD inherited" data-toggle="collapse" data-target=".constant_TABLE_HEAD .collapse">
+                                <h2>Table head node AST node</h2>
+                                <pre>TABLE_HEAD</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_TABLE_BODY"> </a>
+                            <div class="element clickable constant  constant_TABLE_BODY inherited" data-toggle="collapse" data-target=".constant_TABLE_BODY .collapse">
+                                <h2>Table body node AST node</h2>
+                                <pre>TABLE_BODY</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_TABLE_ROW"> </a>
+                            <div class="element clickable constant  constant_TABLE_ROW inherited" data-toggle="collapse" data-target=".constant_TABLE_ROW .collapse">
+                                <h2>Table row node AST node</h2>
+                                <pre>TABLE_ROW</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_TABLE_CELL"> </a>
+                            <div class="element clickable constant  constant_TABLE_CELL inherited" data-toggle="collapse" data-target=".constant_TABLE_CELL .collapse">
+                                <h2>Table cell node AST node</h2>
+                                <pre>TABLE_CELL</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_line"> </a>
+                            <div class="element clickable property  public property_line inherited" data-toggle="collapse" data-target=".property_line .collapse">
+                                <h2>Line of node in source file.</h2>
+                                <pre>line : integer</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_position"> </a>
+                            <div class="element clickable property  public property_position inherited" data-toggle="collapse" data-target=".property_position .collapse">
+                                <h2>Character position of node in source file.</h2>
+                                <pre>position : integer</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_type"> </a>
+                            <div class="element clickable property  public property_type inherited" data-toggle="collapse" data-target=".property_type .collapse">
+                                <h2>Node type</h2>
+                                <pre>type : integer</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_nodes"> </a>
+                            <div class="element clickable property  public property_nodes inherited" data-toggle="collapse" data-target=".property_nodes .collapse">
+                                <h2>Child nodes</h2>
+                                <pre>nodes : mixed</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>mixed</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_token"> </a>
+                            <div class="element clickable property  public property_token inherited" data-toggle="collapse" data-target=".property_token .collapse">
+                                <h2>Optional reference to token, not available for all nodes.</h2>
+                                <pre>token : \ezcDocumentRstToken</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/ezcDocumentRstToken.html">\ezcDocumentRstToken</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_identifier"> </a>
+                            <div class="element clickable property  public property_identifier inherited" data-toggle="collapse" data-target=".property_identifier .collapse">
+                                <h2>Optional paragraph identifier, to reference the paragraph using internal
+links.</h2>
+                                <pre>identifier : string</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\ezcDocumentRstBlockquoteAnnotationNode"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/default.html">\</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/ezcDocumentRstBlockquoteAnnotationNode.html">ezcDocumentRstBlockquoteAnnotationNode</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:57 +0000.<br/>
+    </footer>
+    </body>
+</html>

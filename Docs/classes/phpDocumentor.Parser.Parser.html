@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \phpDocumentor\Parser\Parser
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: Initializes the parser.">
+            <span class="description">Initializes the parser.</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_doValidation" title="doValidation :: Returns whether we want to run PHPLint on every file.">
+            <span class="description">Returns whether we want to run PHPLint on every file.</span><pre>doValidation</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_getDefaultPackageName" title="getDefaultPackageName :: Returns the name of the default package.">
+            <span class="description">Returns the name of the default package.</span><pre>getDefaultPackageName</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getEncoding" title="getEncoding :: Returns the currently active encoding.">
+            <span class="description">Returns the currently active encoding.</span><pre>getEncoding</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_getIgnoredTags" title="getIgnoredTags :: Returns the list of ignored tags.">
+            <span class="description">Returns the list of ignored tags.</span><pre>getIgnoredTags</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getMarkers" title="getMarkers :: Returns the list of markers.">
+            <span class="description">Returns the list of markers.</span><pre>getMarkers</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getPath" title="getPath :: Returns the absolute base path for all files.">
+            <span class="description">Returns the absolute base path for all files.</span><pre>getPath</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_isForced" title="isForced :: Returns whether a full rebuild is required.">
+            <span class="description">Returns whether a full rebuild is required.</span><pre>isForced</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                <li class="method public">
+        <a href="#method_parse" title="parse :: Iterates through the given files feeds them to the builder.">
+            <span class="description">Iterates through the given files feeds them to the builder.</span><pre>parse</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_setDefaultPackageName" title="setDefaultPackageName :: Sets the name of the default package.">
+            <span class="description">Sets the name of the default package.</span><pre>setDefaultPackageName</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setEncoding" title="setEncoding :: Sets the encoding of the files.">
+            <span class="description">Sets the encoding of the files.</span><pre>setEncoding</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setForced" title="setForced :: Sets whether to force a full parse run of all files.">
+            <span class="description">Sets whether to force a full parse run of all files.</span><pre>setForced</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setIgnoredTags" title="setIgnoredTags :: Sets a list of tags to ignore.">
+            <span class="description">Sets a list of tags to ignore.</span><pre>setIgnoredTags</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setLogger" title="setLogger :: Sets a logger instance on the object">
+            <span class="description">Sets a logger instance on the object</span><pre>setLogger</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setMarkers" title="setMarkers :: Sets a list of markers to gather (i.e. TODO, FIXME).">
+            <span class="description">Sets a list of markers to gather (i.e. TODO, FIXME).</span><pre>setMarkers</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setPath" title="setPath :: Sets the base path of the files that will be parsed.">
+            <span class="description">Sets the base path of the files that will be parsed.</span><pre>setPath</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setStopwatch" title="setStopwatch :: Registers the component that profiles the execution of the parser.">
+            <span class="description">Registers the component that profiles the execution of the parser.</span><pre>setStopwatch</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setValidate" title="setValidate :: Sets whether to run PHPLint on every file.">
+            <span class="description">Sets whether to run PHPLint on every file.</span><pre>setValidate</pre>
+        </a>
+    </li>
+
+                                                                                                        </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                    <li class="method protected">
+                            <a href="#method_forceRebuildIfSettingsHaveModified" title="forceRebuildIfSettingsHaveModified :: Checks if the settings of the project have changed and forces a complete rebuild if they have.">
+                                <span class="description">Checks if the settings of the project have changed and forces a complete rebuild if they have.</span><pre>forceRebuildIfSettingsHaveModified</pre>
+                            </a>
+                        </li>
+                                                                                                                                                        <li class="method protected">
+                            <a href="#method_getFilenames" title="getFilenames :: Extract all filenames from the given collection and output the amount of files.">
+                                <span class="description">Extract all filenames from the given collection and output the amount of files.</span><pre>getFilenames</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                <li class="method protected">
+                            <a href="#method_log" title="log :: Dispatches a logging request.">
+                                <span class="description">Dispatches a logging request.</span><pre>log</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_logAfterParsingAFile" title="logAfterParsingAFile :: Collects the time and duration of processing a file, logs it and returns the new amount of memory in use.">
+                                <span class="description">Collects the time and duration of processing a file, logs it and returns the new amount of memory in use.</span><pre>logAfterParsingAFile</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_logAfterParsingAllFiles" title="logAfterParsingAllFiles :: Writes the complete parsing cycle to log.">
+                                <span class="description">Writes the complete parsing cycle to log.</span><pre>logAfterParsingAllFiles</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method protected">
+                            <a href="#method_parseFileIntoDescriptor" title="parseFileIntoDescriptor :: Parses a file and creates a Descriptor for it in the project.">
+                                <span class="description">Parses a file and creates a Descriptor for it in the project.</span><pre>parseFileIntoDescriptor</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="method protected">
+                            <a href="#method_startTimingTheParsePhase" title="startTimingTheParsePhase :: ">
+                                <span class="description"></span><pre>startTimingTheParsePhase</pre>
+                            </a>
+                        </li>
+                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>Parser</h1>
+                <small style="display: block; text-align: right">
+                                                                Implements <a href="../classes/Psr.Log.LoggerAwareInterface.html">\Psr\Log\LoggerAwareInterface</a>
+                                    </small>
+                <p class="short_description">Class responsible for parsing the given file or files to the intermediate
+structure file.</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>This class can be used to parse one or more files to the intermediate file
+format for further processing.</p>
+<p>Example of use:</p>
+<pre><code>$files = new \phpDocumentor\File\Collection();
+$ files-&gt;addDirectories(getcwd());
+$parser = new \phpDocumentor\Parser\Parser();
+$parser-&gt;setPath($files-&gt;getProjectRoot());
+echo $parser-&gt;parseFiles($files);</code></pre>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Initializes the parser.</h2>
+                            <pre>__construct() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This constructor checks the user's PHP ini settings to detect which encoding is used by default. This encoding
+is used as a default value for phpDocumentor to convert the source files that it receives.</p>
+<p>If no encoding is specified than 'utf-8' is assumed by default.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    codeCoverageIgnore
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>the ini_get call cannot be tested as setting it using ini_set has no effect.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_doValidation"></a>
+                        <div class="element clickable method public  method_doValidation" data-toggle="collapse" data-target=".method_doValidation .collapse">
+                            <h2>Returns whether we want to run PHPLint on every file.</h2>
+                            <pre>doValidation() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_forceRebuildIfSettingsHaveModified"></a>
+                        <div class="element clickable method protected  method_forceRebuildIfSettingsHaveModified" data-toggle="collapse" data-target=".method_forceRebuildIfSettingsHaveModified .collapse">
+                            <h2>Checks if the settings of the project have changed and forces a complete rebuild if they have.</h2>
+                            <pre>forceRebuildIfSettingsHaveModified(\phpDocumentor\Descriptor\ProjectDescriptorBuilder $builder) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$builder</h4>
+                                                <code><a href="../classes/phpDocumentor.Descriptor.ProjectDescriptorBuilder.html">\phpDocumentor\Descriptor\ProjectDescriptorBuilder</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getDefaultPackageName"></a>
+                        <div class="element clickable method public  method_getDefaultPackageName" data-toggle="collapse" data-target=".method_getDefaultPackageName .collapse">
+                            <h2>Returns the name of the default package.</h2>
+                            <pre>getDefaultPackageName() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getEncoding"></a>
+                        <div class="element clickable method public  method_getEncoding" data-toggle="collapse" data-target=".method_getEncoding .collapse">
+                            <h2>Returns the currently active encoding.</h2>
+                            <pre>getEncoding() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getFilenames"></a>
+                        <div class="element clickable method protected  method_getFilenames" data-toggle="collapse" data-target=".method_getFilenames .collapse">
+                            <h2>Extract all filenames from the given collection and output the amount of files.</h2>
+                            <pre>getFilenames(\phpDocumentor\Fileset\Collection $files) : array&lt;mixed,string&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\phpDocumentor\Parser\Exception\FilesNotFoundException</dt>
+                                                        <dd><p>if no files were found.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$files</h4>
+                                                <code><a href="../classes/phpDocumentor.Fileset.Collection.html">\phpDocumentor\Fileset\Collection</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,string&gt;</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getIgnoredTags"></a>
+                        <div class="element clickable method public  method_getIgnoredTags" data-toggle="collapse" data-target=".method_getIgnoredTags .collapse">
+                            <h2>Returns the list of ignored tags.</h2>
+                            <pre>getIgnoredTags() : array&lt;mixed,string&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,string&gt;</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getMarkers"></a>
+                        <div class="element clickable method public  method_getMarkers" data-toggle="collapse" data-target=".method_getMarkers .collapse">
+                            <h2>Returns the list of markers.</h2>
+                            <pre>getMarkers() : array&lt;mixed,string&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,string&gt;</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getPath"></a>
+                        <div class="element clickable method public  method_getPath" data-toggle="collapse" data-target=".method_getPath .collapse">
+                            <h2>Returns the absolute base path for all files.</h2>
+                            <pre>getPath() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_isForced"></a>
+                        <div class="element clickable method public  method_isForced" data-toggle="collapse" data-target=".method_isForced .collapse">
+                            <h2>Returns whether a full rebuild is required.</h2>
+                            <pre>isForced() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_log"></a>
+                        <div class="element clickable method protected  method_log" data-toggle="collapse" data-target=".method_log .collapse">
+                            <h2>Dispatches a logging request.</h2>
+                            <pre>log(string $message, string $priority = \Psr\Log\LogLevel::INFO, array&lt;mixed,string&gt; $parameters = array()) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code>string</code><p><p>The message to log.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$priority</h4>
+                                                <code>string</code><p><p>The logging priority as declared in the LogLevel PSR-3 class.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$parameters</h4>
+                                                <code>array&lt;mixed,string&gt;</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_logAfterParsingAFile"></a>
+                        <div class="element clickable method protected  method_logAfterParsingAFile" data-toggle="collapse" data-target=".method_logAfterParsingAFile .collapse">
+                            <h2>Collects the time and duration of processing a file, logs it and returns the new amount of memory in use.</h2>
+                            <pre>logAfterParsingAFile(integer $memory) : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$memory</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_logAfterParsingAllFiles"></a>
+                        <div class="element clickable method protected  method_logAfterParsingAllFiles" data-toggle="collapse" data-target=".method_logAfterParsingAllFiles .collapse">
+                            <h2>Writes the complete parsing cycle to log.</h2>
+                            <pre>logAfterParsingAllFiles() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_parse"></a>
+                        <div class="element clickable method public  method_parse" data-toggle="collapse" data-target=".method_parse .collapse">
+                            <h2>Iterates through the given files feeds them to the builder.</h2>
+                            <pre>parse(\phpDocumentor\Descriptor\ProjectDescriptorBuilder $builder, \phpDocumentor\Fileset\Collection $files) : boolean|string</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\phpDocumentor\Parser\Exception</dt>
+                                                        <dd><p>if no files were found.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$builder</h4>
+                                                <code><a href="../classes/phpDocumentor.Descriptor.ProjectDescriptorBuilder.html">\phpDocumentor\Descriptor\ProjectDescriptorBuilder</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$files</h4>
+                                                <code><a href="../classes/phpDocumentor.Fileset.Collection.html">\phpDocumentor\Fileset\Collection</a></code><p><p>A files container to parse.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean|string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_parseFileIntoDescriptor"></a>
+                        <div class="element clickable method protected  method_parseFileIntoDescriptor" data-toggle="collapse" data-target=".method_parseFileIntoDescriptor .collapse">
+                            <h2>Parses a file and creates a Descriptor for it in the project.</h2>
+                            <pre>parseFileIntoDescriptor(\phpDocumentor\Descriptor\ProjectDescriptorBuilder $builder, string $filename) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$builder</h4>
+                                                <code><a href="../classes/phpDocumentor.Descriptor.ProjectDescriptorBuilder.html">\phpDocumentor\Descriptor\ProjectDescriptorBuilder</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$filename</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setDefaultPackageName"></a>
+                        <div class="element clickable method public  method_setDefaultPackageName" data-toggle="collapse" data-target=".method_setDefaultPackageName .collapse">
+                            <h2>Sets the name of the default package.</h2>
+                            <pre>setDefaultPackageName(string $defaultPackageName) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$defaultPackageName</h4>
+                                                <code>string</code><p><p>Name used to categorize elements
+without an @package tag.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setEncoding"></a>
+                        <div class="element clickable method public  method_setEncoding" data-toggle="collapse" data-target=".method_setEncoding .collapse">
+                            <h2>Sets the encoding of the files.</h2>
+                            <pre>setEncoding(string $encoding) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>With this option it is possible to tell the parser to use a specific encoding to interpret the provided files.
+By default this is set to UTF-8, in which case no action is taken. Any other encoding will result in the output
+being converted to UTF-8 using <code>iconv</code>.</p>
+<p>Please note that it is recommended to provide files in UTF-8 format; this will ensure a faster performance since
+no transformation is required.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$encoding</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setForced"></a>
+                        <div class="element clickable method public  method_setForced" data-toggle="collapse" data-target=".method_setForced .collapse">
+                            <h2>Sets whether to force a full parse run of all files.</h2>
+                            <pre>setForced(boolean $forced) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$forced</h4>
+                                                <code>boolean</code><p><p>Forces a full parse.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setIgnoredTags"></a>
+                        <div class="element clickable method public  method_setIgnoredTags" data-toggle="collapse" data-target=".method_setIgnoredTags .collapse">
+                            <h2>Sets a list of tags to ignore.</h2>
+                            <pre>setIgnoredTags(array&lt;mixed,string&gt; $ignoredTags) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$ignoredTags</h4>
+                                                <code>array&lt;mixed,string&gt;</code><p><p>A list of tags to ignore.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setLogger"></a>
+                        <div class="element clickable method public  method_setLogger" data-toggle="collapse" data-target=".method_setLogger .collapse">
+                            <h2>Sets a logger instance on the object</h2>
+                            <pre>setLogger(\Psr\Log\LoggerInterface $logger) : null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$logger</h4>
+                                                <code><a href="../classes/Psr.Log.LoggerInterface.html">\Psr\Log\LoggerInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setMarkers"></a>
+                        <div class="element clickable method public  method_setMarkers" data-toggle="collapse" data-target=".method_setMarkers .collapse">
+                            <h2>Sets a list of markers to gather (i.e. TODO, FIXME).</h2>
+                            <pre>setMarkers(array&lt;mixed,string&gt; $markers) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$markers</h4>
+                                                <code>array&lt;mixed,string&gt;</code><p><p>A list or markers to gather.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setPath"></a>
+                        <div class="element clickable method public  method_setPath" data-toggle="collapse" data-target=".method_setPath .collapse">
+                            <h2>Sets the base path of the files that will be parsed.</h2>
+                            <pre>setPath(string $path) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p><p>Must be an absolute path.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setStopwatch"></a>
+                        <div class="element clickable method public  method_setStopwatch" data-toggle="collapse" data-target=".method_setStopwatch .collapse">
+                            <h2>Registers the component that profiles the execution of the parser.</h2>
+                            <pre>setStopwatch(\Symfony\Component\Stopwatch\Stopwatch $stopwatch) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$stopwatch</h4>
+                                                <code><a href="../classes/Symfony.Component.Stopwatch.Stopwatch.html">\Symfony\Component\Stopwatch\Stopwatch</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setValidate"></a>
+                        <div class="element clickable method public  method_setValidate" data-toggle="collapse" data-target=".method_setValidate .collapse">
+                            <h2>Sets whether to run PHPLint on every file.</h2>
+                            <pre>setValidate(boolean $validate) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>PHPLint has a huge performance impact on the execution of phpDocumentor and
+is thus disabled by default.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$validate</h4>
+                                                <code>boolean</code><p><p>when true this file will be checked.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_startTimingTheParsePhase"></a>
+                        <div class="element clickable method protected  method_startTimingTheParsePhase" data-toggle="collapse" data-target=".method_startTimingTheParsePhase .collapse">
+                            <h2>startTimingTheParsePhase</h2>
+                            <pre>startTimingTheParsePhase() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_defaultPackageName"> </a>
+                            <div class="element clickable property  protected property_defaultPackageName" data-toggle="collapse" data-target=".property_defaultPackageName .collapse">
+                                <h2>the name of the default package</h2>
+                                <pre>defaultPackageName : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>the name of the default package</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_force"> </a>
+                            <div class="element clickable property  protected property_force" data-toggle="collapse" data-target=".property_force .collapse">
+                                <h2>whether we force a full re-parse</h2>
+                                <pre>force : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>whether we force a full re-parse</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_validate"> </a>
+                            <div class="element clickable property  protected property_validate" data-toggle="collapse" data-target=".property_validate .collapse">
+                                <h2>whether to execute a PHPLint on every file</h2>
+                                <pre>validate : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>whether to execute a PHPLint on every file</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_markers"> </a>
+                            <div class="element clickable property  protected property_markers" data-toggle="collapse" data-target=".property_markers .collapse">
+                                <h2>which markers (i.e. TODO or FIXME) to collect</h2>
+                                <pre>markers : array&lt;mixed,string&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>which markers (i.e. TODO or FIXME) to collect</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,string&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_ignoredTags"> </a>
+                            <div class="element clickable property  protected property_ignoredTags" data-toggle="collapse" data-target=".property_ignoredTags .collapse">
+                                <h2>which tags to ignore</h2>
+                                <pre>ignoredTags : array&lt;mixed,string&gt;</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>which tags to ignore</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array&lt;mixed,string&gt;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_path"> </a>
+                            <div class="element clickable property  protected property_path" data-toggle="collapse" data-target=".property_path .collapse">
+                                <h2>target location&#039;s root path</h2>
+                                <pre>path : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>target location's root path</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_logger"> </a>
+                            <div class="element clickable property  protected property_logger" data-toggle="collapse" data-target=".property_logger .collapse">
+                                <h2>logger</h2>
+                                <pre>logger : \Psr\Log\LoggerInterface</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/Psr.Log.LoggerInterface.html">\Psr\Log\LoggerInterface</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_encoding"> </a>
+                            <div class="element clickable property  protected property_encoding" data-toggle="collapse" data-target=".property_encoding .collapse">
+                                <h2>The encoding in which the files are encoded</h2>
+                                <pre>encoding : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>The encoding in which the files are encoded</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_stopwatch"> </a>
+                            <div class="element clickable property  protected property_stopwatch" data-toggle="collapse" data-target=".property_stopwatch .collapse">
+                                <h2>The profiling component that measures time and memory usage over time</h2>
+                                <pre>stopwatch : \Symfony\Component\Stopwatch\Stopwatch</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>The profiling component that measures time and memory usage over time</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/Symfony.Component.Stopwatch.Stopwatch.html">\Symfony\Component\Stopwatch\Stopwatch</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\phpDocumentor\Parser\Parser"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/phpDocumentor.Parser.html">Parser</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/phpDocumentor.Parser.Parser.html">Parser</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:38 +0000.<br/>
+    </footer>
+    </body>
+</html>

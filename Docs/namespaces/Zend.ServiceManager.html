@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \Zend\ServiceManager
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/Zend.ServiceManager.html" title="ServiceManager">
+                    <i class="icon-th"></i> ServiceManager
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+        <li>
+        <a href="../namespaces/Zend.ServiceManager.Di.html" title="Di">
+            <i class="icon-th"></i> Di
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/Zend.ServiceManager.Exception.html" title="Exception">
+            <i class="icon-th"></i> Exception
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/Zend.ServiceManager.Factory.html" title="Factory">
+            <i class="icon-th"></i> Factory
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/Zend.ServiceManager.Proxy.html" title="Proxy">
+            <i class="icon-th"></i> Proxy
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../namespaces/Zend.ServiceManager.Test.html" title="Test">
+            <i class="icon-th"></i> Test
+        </a>
+        <ul class="nav nav-list nav-namespaces">
+                
+    
+        </ul>
+    </li>
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.html">Zend</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.html">ServiceManager</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                                        <div id="trait_MutableCreationOptionsTrait" class="element ajax clickable trait" data-toggle="collapse" data-target="#trait_MutableCreationOptionsTrait .collapse">
+        <h1>MutableCreationOptionsTrait<a href="../classes/Zend.ServiceManager.MutableCreationOptionsTrait.html">¶</a></h1>
+        <p class="short_description">Trait for MutableCreationOptions Factories</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.MutableCreationOptionsTrait.html" class="more">« More »</a>    </div>
+
+                                        <div id="trait_ServiceLocatorAwareTrait" class="element ajax clickable trait" data-toggle="collapse" data-target="#trait_ServiceLocatorAwareTrait .collapse">
+        <h1>ServiceLocatorAwareTrait<a href="../classes/Zend.ServiceManager.ServiceLocatorAwareTrait.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.ServiceLocatorAwareTrait.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="interface_AbstractFactoryInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_AbstractFactoryInterface .collapse">
+        <h1>AbstractFactoryInterface<a href="../classes/Zend.ServiceManager.AbstractFactoryInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.AbstractFactoryInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ConfigInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ConfigInterface .collapse">
+        <h1>ConfigInterface<a href="../classes/Zend.ServiceManager.ConfigInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.ConfigInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_DelegatorFactoryInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_DelegatorFactoryInterface .collapse">
+        <h1>DelegatorFactoryInterface<a href="../classes/Zend.ServiceManager.DelegatorFactoryInterface.html">¶</a></h1>
+        <p class="short_description">Interface for factories that can create delegates for services</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.DelegatorFactoryInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_FactoryInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_FactoryInterface .collapse">
+        <h1>FactoryInterface<a href="../classes/Zend.ServiceManager.FactoryInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.FactoryInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_InitializerInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_InitializerInterface .collapse">
+        <h1>InitializerInterface<a href="../classes/Zend.ServiceManager.InitializerInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.InitializerInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_MutableCreationOptionsInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_MutableCreationOptionsInterface .collapse">
+        <h1>MutableCreationOptionsInterface<a href="../classes/Zend.ServiceManager.MutableCreationOptionsInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.MutableCreationOptionsInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ServiceLocatorAwareInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ServiceLocatorAwareInterface .collapse">
+        <h1>ServiceLocatorAwareInterface<a href="../classes/Zend.ServiceManager.ServiceLocatorAwareInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.ServiceLocatorAwareInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ServiceLocatorInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ServiceLocatorInterface .collapse">
+        <h1>ServiceLocatorInterface<a href="../classes/Zend.ServiceManager.ServiceLocatorInterface.html">¶</a></h1>
+        <p class="short_description">Service locator interface</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.ServiceLocatorInterface.html" class="more">« More »</a>    </div>
+
+                                        <div id="interface_ServiceManagerAwareInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ServiceManagerAwareInterface .collapse">
+        <h1>ServiceManagerAwareInterface<a href="../classes/Zend.ServiceManager.ServiceManagerAwareInterface.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.ServiceManagerAwareInterface.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_AbstractPluginManager" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractPluginManager .collapse">
+        <h1>AbstractPluginManager<a href="../classes/Zend.ServiceManager.AbstractPluginManager.html">¶</a></h1>
+        <p class="short_description">ServiceManager implementation for managing plugins</p>
+        <div class="details collapse">
+                            <p>Automatically registers an initializer which should be used to verify that
+a plugin instance is of a valid type. Additionally, allows plugins to accept
+an array of options for the constructor, which can be used to configure
+the plugin when retrieved. Finally, enables the allowOverride property by
+default to allow registering factories, aliases, and invokables to take
+the place of those provided by the implementing class.</p>
+                    </div>
+        <a href="../classes/Zend.ServiceManager.AbstractPluginManager.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_Config" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Config .collapse">
+        <h1>Config<a href="../classes/Zend.ServiceManager.Config.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Config.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceManager" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceManager .collapse">
+        <h1>ServiceManager<a href="../classes/Zend.ServiceManager.ServiceManager.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.ServiceManager.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.html">Zend</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.html">ServiceManager</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.Exception.html">Exception</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="interface_ExceptionInterface" class="element ajax clickable interface" data-toggle="collapse" data-target="#interface_ExceptionInterface .collapse">
+        <h1>ExceptionInterface<a href="../classes/Zend.ServiceManager.Exception.ExceptionInterface.html">¶</a></h1>
+        <p class="short_description">Base interface representing a generic exception in a container.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.ExceptionInterface.html" class="more">« More »</a>    </div>
+
+                
+                                        <div id="class_CircularDependencyFoundException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CircularDependencyFoundException .collapse">
+        <h1>CircularDependencyFoundException<a href="../classes/Zend.ServiceManager.Exception.CircularDependencyFoundException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.CircularDependencyFoundException.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_CircularReferenceException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_CircularReferenceException .collapse">
+        <h1>CircularReferenceException<a href="../classes/Zend.ServiceManager.Exception.CircularReferenceException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.CircularReferenceException.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InvalidArgumentException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InvalidArgumentException .collapse">
+        <h1>InvalidArgumentException<a href="../classes/Zend.ServiceManager.Exception.InvalidArgumentException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.InvalidArgumentException.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InvalidServiceException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InvalidServiceException .collapse">
+        <h1>InvalidServiceException<a href="../classes/Zend.ServiceManager.Exception.InvalidServiceException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.InvalidServiceException.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_InvalidServiceNameException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InvalidServiceNameException .collapse">
+        <h1>InvalidServiceNameException<a href="../classes/Zend.ServiceManager.Exception.InvalidServiceNameException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.InvalidServiceNameException.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_RuntimeException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_RuntimeException .collapse">
+        <h1>RuntimeException<a href="../classes/Zend.ServiceManager.Exception.RuntimeException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.RuntimeException.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceLocatorUsageException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceLocatorUsageException .collapse">
+        <h1>ServiceLocatorUsageException<a href="../classes/Zend.ServiceManager.Exception.ServiceLocatorUsageException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.ServiceLocatorUsageException.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceNotCreatedException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceNotCreatedException .collapse">
+        <h1>ServiceNotCreatedException<a href="../classes/Zend.ServiceManager.Exception.ServiceNotCreatedException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.ServiceNotCreatedException.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_ServiceNotFoundException" class="element ajax clickable class" data-toggle="collapse" data-target="#class_ServiceNotFoundException .collapse">
+        <h1>ServiceNotFoundException<a href="../classes/Zend.ServiceManager.Exception.ServiceNotFoundException.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Exception.ServiceNotFoundException.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.html">Zend</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.html">ServiceManager</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.Di.html">Di</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_DiAbstractServiceFactory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DiAbstractServiceFactory .collapse">
+        <h1>DiAbstractServiceFactory<a href="../classes/Zend.ServiceManager.Di.DiAbstractServiceFactory.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Di.DiAbstractServiceFactory.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DiInstanceManagerProxy" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DiInstanceManagerProxy .collapse">
+        <h1>DiInstanceManagerProxy<a href="../classes/Zend.ServiceManager.Di.DiInstanceManagerProxy.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Di.DiInstanceManagerProxy.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DiServiceFactory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DiServiceFactory .collapse">
+        <h1>DiServiceFactory<a href="../classes/Zend.ServiceManager.Di.DiServiceFactory.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Di.DiServiceFactory.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_DiServiceInitializer" class="element ajax clickable class" data-toggle="collapse" data-target="#class_DiServiceInitializer .collapse">
+        <h1>DiServiceInitializer<a href="../classes/Zend.ServiceManager.Di.DiServiceInitializer.html">¶</a></h1>
+        <p class="short_description"></p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Di.DiServiceInitializer.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.html">Zend</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.html">ServiceManager</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.Proxy.html">Proxy</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_LazyServiceFactory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LazyServiceFactory .collapse">
+        <h1>LazyServiceFactory<a href="../classes/Zend.ServiceManager.Proxy.LazyServiceFactory.html">¶</a></h1>
+        <p class="short_description">Delegator factory responsible of instantiating lazy loading value holder proxies of
+given services at runtime</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Proxy.LazyServiceFactory.html" class="more">« More »</a>    </div>
+
+                                        <div id="class_LazyServiceFactoryFactory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_LazyServiceFactoryFactory .collapse">
+        <h1>LazyServiceFactoryFactory<a href="../classes/Zend.ServiceManager.Proxy.LazyServiceFactoryFactory.html">¶</a></h1>
+        <p class="short_description">Service factory responsible of instantiating {@see \Zend\ServiceManager\Proxy\LazyServiceFactory}
+and configuring it starting from application configuration</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Proxy.LazyServiceFactoryFactory.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.html">Zend</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.html">ServiceManager</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.Test.html">Test</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                                        <div id="trait_CommonPluginManagerTrait" class="element ajax clickable trait" data-toggle="collapse" data-target="#trait_CommonPluginManagerTrait .collapse">
+        <h1>CommonPluginManagerTrait<a href="../classes/Zend.ServiceManager.Test.CommonPluginManagerTrait.html">¶</a></h1>
+        <p class="short_description">Trait for testing plugin managers for v2-v3 compatibility</p>
+        <div class="details collapse">
+                            <p>To use this trait:</p>
+<ul>
+<li>implement the <code>getPluginManager()</code> method to return your plugin manager</li>
+<li>implement the <code>getV2InvalidPluginException()</code> method to return the class <code>validatePlugin()</code> throws under v2</li>
+</ul>
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Test.CommonPluginManagerTrait.html" class="more">« More »</a>    </div>
+
+                
+                
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.html">Zend</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.html">ServiceManager</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/Zend.ServiceManager.Factory.html">Factory</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="class_InvokableFactory" class="element ajax clickable class" data-toggle="collapse" data-target="#class_InvokableFactory .collapse">
+        <h1>InvokableFactory<a href="../classes/Zend.ServiceManager.Factory.InvokableFactory.html">¶</a></h1>
+        <p class="short_description">Factory for instantiating classes with no dependencies or which accept a single array.</p>
+        <div class="details collapse">
+                            <p>The InvokableFactory can be used for any class that:</p>
+<ul>
+<li>has no constructor arguments;</li>
+<li>accepts a single array of arguments via the constructor.</li>
+</ul>
+<p>It replaces the &quot;invokables&quot; and &quot;invokable class&quot; functionality of the v2
+service manager, and can also be used in v2 code for forwards compatibility
+with v3.</p>
+                    </div>
+        <a href="../classes/Zend.ServiceManager.Factory.InvokableFactory.html" class="more">« More »</a>    </div>
+
+                            </div>
+            
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:31 +0000.<br/>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,2525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \Symfony\Component\Finder\Finder
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: ">
+            <span class="description"></span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addAdapter" title="addAdapter :: Registers a finder engine implementation.">
+            <span class="description">Registers a finder engine implementation.</span><pre>addAdapter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addVCSPattern" title="addVCSPattern :: Adds VCS patterns.">
+            <span class="description">Adds VCS patterns.</span><pre>addVCSPattern</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_append" title="append :: Appends an existing set of files/directories to the finder.">
+            <span class="description">Appends an existing set of files/directories to the finder.</span><pre>append</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_contains" title="contains :: Adds tests that file contents must match.">
+            <span class="description">Adds tests that file contents must match.</span><pre>contains</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_count" title="count :: Counts all the results collected by the iterators.">
+            <span class="description">Counts all the results collected by the iterators.</span><pre>count</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_create" title="create :: Creates a new Finder.">
+            <span class="description">Creates a new Finder.</span><pre>create</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_date" title="date :: Adds tests for file dates (last modified).">
+            <span class="description">Adds tests for file dates (last modified).</span><pre>date</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_depth" title="depth :: Adds tests for the directory depth.">
+            <span class="description">Adds tests for the directory depth.</span><pre>depth</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_directories" title="directories :: Restricts the matching to directories only.">
+            <span class="description">Restricts the matching to directories only.</span><pre>directories</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_exclude" title="exclude :: Excludes directories.">
+            <span class="description">Excludes directories.</span><pre>exclude</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_files" title="files :: Restricts the matching to files only.">
+            <span class="description">Restricts the matching to files only.</span><pre>files</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_filter" title="filter :: Filters the iterator with an anonymous function.">
+            <span class="description">Filters the iterator with an anonymous function.</span><pre>filter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_followLinks" title="followLinks :: Forces the following of symlinks.">
+            <span class="description">Forces the following of symlinks.</span><pre>followLinks</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getAdapters" title="getAdapters :: Returns registered adapters ordered by priority without extra information.">
+            <span class="description">Returns registered adapters ordered by priority without extra information.</span><pre>getAdapters</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getIterator" title="getIterator :: Returns an Iterator for the current Finder configuration.">
+            <span class="description">Returns an Iterator for the current Finder configuration.</span><pre>getIterator</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_ignoreDotFiles" title="ignoreDotFiles :: Excludes &quot;hidden&quot; directories and files (starting with a dot).">
+            <span class="description">Excludes &quot;hidden&quot; directories and files (starting with a dot).</span><pre>ignoreDotFiles</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_ignoreUnreadableDirs" title="ignoreUnreadableDirs :: Tells finder to ignore unreadable directories.">
+            <span class="description">Tells finder to ignore unreadable directories.</span><pre>ignoreUnreadableDirs</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_ignoreVCS" title="ignoreVCS :: Forces the finder to ignore version control directories.">
+            <span class="description">Forces the finder to ignore version control directories.</span><pre>ignoreVCS</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_in" title="in :: Searches files and directories which match defined rules.">
+            <span class="description">Searches files and directories which match defined rules.</span><pre>in</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_name" title="name :: Adds rules that files must match.">
+            <span class="description">Adds rules that files must match.</span><pre>name</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_notContains" title="notContains :: Adds tests that file contents must not match.">
+            <span class="description">Adds tests that file contents must not match.</span><pre>notContains</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_notName" title="notName :: Adds rules that files must not match.">
+            <span class="description">Adds rules that files must not match.</span><pre>notName</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_notPath" title="notPath :: Adds rules that filenames must not match.">
+            <span class="description">Adds rules that filenames must not match.</span><pre>notPath</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_path" title="path :: Adds rules that filenames must match.">
+            <span class="description">Adds rules that filenames must match.</span><pre>path</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_removeAdapters" title="removeAdapters :: Removes all adapters registered in the finder.">
+            <span class="description">Removes all adapters registered in the finder.</span><pre>removeAdapters</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                        <li class="method public">
+        <a href="#method_setAdapter" title="setAdapter :: Selects the adapter to use.">
+            <span class="description">Selects the adapter to use.</span><pre>setAdapter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_size" title="size :: Adds tests for file sizes.">
+            <span class="description">Adds tests for file sizes.</span><pre>size</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_sort" title="sort :: Sorts files and directories by an anonymous function.">
+            <span class="description">Sorts files and directories by an anonymous function.</span><pre>sort</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public">
+        <a href="#method_sortByAccessedTime" title="sortByAccessedTime :: Sorts files and directories by the last accessed time.">
+            <span class="description">Sorts files and directories by the last accessed time.</span><pre>sortByAccessedTime</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_sortByChangedTime" title="sortByChangedTime :: Sorts files and directories by the last inode changed time.">
+            <span class="description">Sorts files and directories by the last inode changed time.</span><pre>sortByChangedTime</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_sortByModifiedTime" title="sortByModifiedTime :: Sorts files and directories by the last modified time.">
+            <span class="description">Sorts files and directories by the last modified time.</span><pre>sortByModifiedTime</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_sortByName" title="sortByName :: Sorts files and directories by name.">
+            <span class="description">Sorts files and directories by name.</span><pre>sortByName</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_sortByType" title="sortByType :: Sorts files and directories by type (directories before files), then by name.">
+            <span class="description">Sorts files and directories by type (directories before files), then by name.</span><pre>sortByType</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_useBestAdapter" title="useBestAdapter :: Sets the selected adapter to the best one according to the current platform the code is run on.">
+            <span class="description">Sets the selected adapter to the best one according to the current platform the code is run on.</span><pre>useBestAdapter</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                            <li class="method private">
+                            <a href="#method_buildAdapter" title="buildAdapter :: ">
+                                <span class="description"></span><pre>buildAdapter</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method private">
+                            <a href="#method_initDefaultAdapters" title="initDefaultAdapters :: ">
+                                <span class="description"></span><pre>initDefaultAdapters</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method private">
+                            <a href="#method_normalizeDir" title="normalizeDir :: Normalizes given directory names by removing trailing slashes.">
+                                <span class="description">Normalizes given directory names by removing trailing slashes.</span><pre>normalizeDir</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                    <li class="method private">
+                            <a href="#method_resetAdapterSelection" title="resetAdapterSelection :: Unselects all adapters.">
+                                <span class="description">Unselects all adapters.</span><pre>resetAdapterSelection</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_searchInDirectory" title="searchInDirectory :: ">
+                                <span class="description"></span><pre>searchInDirectory</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                            <li class="method private">
+                            <a href="#method_sortAdapters" title="sortAdapters :: ">
+                                <span class="description"></span><pre>sortAdapters</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                                <li class="constant ">
+                    <a href="#constant_IGNORE_DOT_FILES" title="IGNORE_DOT_FILES :: ">
+                        <span class="description"></span><pre>IGNORE_DOT_FILES</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_IGNORE_VCS_FILES" title="IGNORE_VCS_FILES :: ">
+                        <span class="description"></span><pre>IGNORE_VCS_FILES</pre>
+                    </a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>Finder</h1>
+                <small style="display: block; text-align: right">
+                                                                Implements \IteratorAggregate, \Countable
+                                    </small>
+                <p class="short_description">Finder allows to build rules to find files and directories.</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>It is a thin wrapper around several specialized iterator classes.</p>
+<p>All rules may be invoked several times.</p>
+<p>All methods return the current Finder object to allow easy chaining:</p>
+<pre><code>$finder = Finder::create()-&gt;files()-&gt;name('*.php')-&gt;in(__DIR__);</code></pre>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Fabien Potencier <a href="mailto:fabien@symfony.com">fabien@symfony.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>__construct</h2>
+                            <pre>__construct() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addAdapter"></a>
+                        <div class="element clickable method public deprecated method_addAdapter" data-toggle="collapse" data-target=".method_addAdapter .collapse">
+                            <h2>Registers a finder engine implementation.</h2>
+                            <pre>addAdapter(\Symfony\Component\Finder\Adapter\AdapterInterface $adapter, integer $priority) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>since 2.8, to be removed in 3.0.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$adapter</h4>
+                                                <code><a href="../classes/Symfony.Component.Finder.Adapter.AdapterInterface.html">\Symfony\Component\Finder\Adapter\AdapterInterface</a></code><p><p>An adapter instance</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$priority</h4>
+                                                <code>integer</code><p><p>Highest is selected first</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_addVCSPattern"></a>
+                        <div class="element clickable method public  method_addVCSPattern" data-toggle="collapse" data-target=".method_addVCSPattern .collapse">
+                            <h2>Adds VCS patterns.</h2>
+                            <pre>addVCSPattern(string|array&lt;mixed,string&gt; $pattern) </pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Finder.html#method_ignoreVCS">\Symfony\Component\Finder\Finder::ignoreVCS()</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$pattern</h4>
+                                                <code>string|array&lt;mixed,string&gt;</code><p><p>VCS patterns to ignore</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_append"></a>
+                        <div class="element clickable method public  method_append" data-toggle="collapse" data-target=".method_append .collapse">
+                            <h2>Appends an existing set of files/directories to the finder.</h2>
+                            <pre>append(\Symfony\Component\Finder\iterable $iterator) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The set can be another Finder, an Iterator, an IteratorAggregate, or even a plain array.</p></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\InvalidArgumentException</dt>
+                                                        <dd><p>when the given argument is not iterable</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$iterator</h4>
+                                                <code>\Symfony\Component\Finder\iterable</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_buildAdapter"></a>
+                        <div class="element clickable method private  method_buildAdapter" data-toggle="collapse" data-target=".method_buildAdapter .collapse">
+                            <h2>buildAdapter</h2>
+                            <pre>buildAdapter(\Symfony\Component\Finder\Adapter\AdapterInterface $adapter) : \Symfony\Component\Finder\Adapter\AdapterInterface</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$adapter</h4>
+                                                <code><a href="../classes/Symfony.Component.Finder.Adapter.AdapterInterface.html">\Symfony\Component\Finder\Adapter\AdapterInterface</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Finder.Adapter.AdapterInterface.html">\Symfony\Component\Finder\Adapter\AdapterInterface</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_contains"></a>
+                        <div class="element clickable method public  method_contains" data-toggle="collapse" data-target=".method_contains .collapse">
+                            <h2>Adds tests that file contents must match.</h2>
+                            <pre>contains(string $pattern) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Strings or PCRE patterns can be used:</p>
+<pre><code>$finder-&gt;contains('Lorem ipsum')
+$finder-&gt;contains('/Lorem ipsum/i')</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.FilecontentFilterIterator.html">\Symfony\Component\Finder\Iterator\FilecontentFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$pattern</h4>
+                                                <code>string</code><p><p>A pattern (string or regexp)</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_count"></a>
+                        <div class="element clickable method public  method_count" data-toggle="collapse" data-target=".method_count .collapse">
+                            <h2>Counts all the results collected by the iterators.</h2>
+                            <pre>count() : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_create"></a>
+                        <div class="element clickable method public  method_create" data-toggle="collapse" data-target=".method_create .collapse">
+                            <h2>Creates a new Finder.</h2>
+                            <pre>create() : static</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>static</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_date"></a>
+                        <div class="element clickable method public  method_date" data-toggle="collapse" data-target=".method_date .collapse">
+                            <h2>Adds tests for file dates (last modified).</h2>
+                            <pre>date(string $date) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The date must be something that strtotime() is able to parse:</p>
+<pre><code>$finder-&gt;date('since yesterday');
+$finder-&gt;date('until 2 days ago');
+$finder-&gt;date('&gt; now - 2 hours');
+$finder-&gt;date('&gt;= 2005-10-15');</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            \Symfony\Component\Finder\strtotime
+                                                                                                                
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.DateRangeFilterIterator.html">\Symfony\Component\Finder\Iterator\DateRangeFilterIterator</a>
+                                                                                                                
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Comparator.DateComparator.html">\Symfony\Component\Finder\Comparator\DateComparator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$date</h4>
+                                                <code>string</code><p><p>A date range string</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_depth"></a>
+                        <div class="element clickable method public  method_depth" data-toggle="collapse" data-target=".method_depth .collapse">
+                            <h2>Adds tests for the directory depth.</h2>
+                            <pre>depth(string|integer $level) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Usage:</p>
+<pre><code>$finder-&gt;depth('&gt; 1') // the Finder will start matching at level 1.
+$finder-&gt;depth('&lt; 3') // the Finder will descend at most 3 levels of directories below the starting point.</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.DepthRangeFilterIterator.html">\Symfony\Component\Finder\Iterator\DepthRangeFilterIterator</a>
+                                                                                                                
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Comparator.NumberComparator.html">\Symfony\Component\Finder\Comparator\NumberComparator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$level</h4>
+                                                <code>string|integer</code><p><p>The depth level expression</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_directories"></a>
+                        <div class="element clickable method public  method_directories" data-toggle="collapse" data-target=".method_directories .collapse">
+                            <h2>Restricts the matching to directories only.</h2>
+                            <pre>directories() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_exclude"></a>
+                        <div class="element clickable method public  method_exclude" data-toggle="collapse" data-target=".method_exclude .collapse">
+                            <h2>Excludes directories.</h2>
+                            <pre>exclude(string|array $dirs) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Directories passed as argument must be relative to the ones defined with the <code>in()</code> method. For example:</p>
+<pre><code>$finder-&gt;in(__DIR__)-&gt;exclude('ruby');</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.ExcludeDirectoryFilterIterator.html">\Symfony\Component\Finder\Iterator\ExcludeDirectoryFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dirs</h4>
+                                                <code>string|array</code><p><p>A directory path or an array of directories</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_files"></a>
+                        <div class="element clickable method public  method_files" data-toggle="collapse" data-target=".method_files .collapse">
+                            <h2>Restricts the matching to files only.</h2>
+                            <pre>files() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_filter"></a>
+                        <div class="element clickable method public  method_filter" data-toggle="collapse" data-target=".method_filter .collapse">
+                            <h2>Filters the iterator with an anonymous function.</h2>
+                            <pre>filter(\Closure $closure) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The anonymous function receives a \SplFileInfo and must return false
+to remove files.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.CustomFilterIterator.html">\Symfony\Component\Finder\Iterator\CustomFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$closure</h4>
+                                                <code>\Closure</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_followLinks"></a>
+                        <div class="element clickable method public  method_followLinks" data-toggle="collapse" data-target=".method_followLinks .collapse">
+                            <h2>Forces the following of symlinks.</h2>
+                            <pre>followLinks() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getAdapters"></a>
+                        <div class="element clickable method public deprecated method_getAdapters" data-toggle="collapse" data-target=".method_getAdapters .collapse">
+                            <h2>Returns registered adapters ordered by priority without extra information.</h2>
+                            <pre>getAdapters() : array&lt;mixed,\Symfony\Component\Finder\Adapter\AdapterInterface&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>since 2.8, to be removed in 3.0.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array&lt;mixed,<a href="../classes/Symfony.Component.Finder.Adapter.AdapterInterface.html">\Symfony\Component\Finder\Adapter\AdapterInterface</a>&gt;</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getIterator"></a>
+                        <div class="element clickable method public  method_getIterator" data-toggle="collapse" data-target=".method_getIterator .collapse">
+                            <h2>Returns an Iterator for the current Finder configuration.</h2>
+                            <pre>getIterator() : \Iterator|array&lt;mixed,\Symfony\Component\Finder\SplFileInfo&gt;</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This method implements the IteratorAggregate interface.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\LogicException</dt>
+                                                        <dd><p>if the in() method has not been called</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>\Iterator|array&lt;mixed,<a href="../classes/Symfony.Component.Finder.SplFileInfo.html">\Symfony\Component\Finder\SplFileInfo</a>&gt;</code><p><p>An iterator</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_ignoreDotFiles"></a>
+                        <div class="element clickable method public  method_ignoreDotFiles" data-toggle="collapse" data-target=".method_ignoreDotFiles .collapse">
+                            <h2>Excludes &quot;hidden&quot; directories and files (starting with a dot).</h2>
+                            <pre>ignoreDotFiles(boolean $ignoreDotFiles) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This option is enabled by default.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.ExcludeDirectoryFilterIterator.html">\Symfony\Component\Finder\Iterator\ExcludeDirectoryFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$ignoreDotFiles</h4>
+                                                <code>boolean</code><p><p>Whether to exclude &quot;hidden&quot; files or not</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_ignoreUnreadableDirs"></a>
+                        <div class="element clickable method public  method_ignoreUnreadableDirs" data-toggle="collapse" data-target=".method_ignoreUnreadableDirs .collapse">
+                            <h2>Tells finder to ignore unreadable directories.</h2>
+                            <pre>ignoreUnreadableDirs(boolean $ignore = true) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>By default, scanning unreadable directories content throws an AccessDeniedException.</p></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$ignore</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_ignoreVCS"></a>
+                        <div class="element clickable method public  method_ignoreVCS" data-toggle="collapse" data-target=".method_ignoreVCS .collapse">
+                            <h2>Forces the finder to ignore version control directories.</h2>
+                            <pre>ignoreVCS(boolean $ignoreVCS) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This option is enabled by default.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.ExcludeDirectoryFilterIterator.html">\Symfony\Component\Finder\Iterator\ExcludeDirectoryFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$ignoreVCS</h4>
+                                                <code>boolean</code><p><p>Whether to exclude VCS files or not</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_in"></a>
+                        <div class="element clickable method public  method_in" data-toggle="collapse" data-target=".method_in .collapse">
+                            <h2>Searches files and directories which match defined rules.</h2>
+                            <pre>in(string|array $dirs) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\InvalidArgumentException</dt>
+                                                        <dd><p>if one of the directories does not exist</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dirs</h4>
+                                                <code>string|array</code><p><p>A directory path or an array of directories</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_initDefaultAdapters"></a>
+                        <div class="element clickable method private  method_initDefaultAdapters" data-toggle="collapse" data-target=".method_initDefaultAdapters .collapse">
+                            <h2>initDefaultAdapters</h2>
+                            <pre>initDefaultAdapters() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_name"></a>
+                        <div class="element clickable method public  method_name" data-toggle="collapse" data-target=".method_name .collapse">
+                            <h2>Adds rules that files must match.</h2>
+                            <pre>name(string $pattern) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>You can use patterns (delimited with / sign), globs or simple strings.</p>
+<pre><code>$finder-&gt;name('*.php')
+$finder-&gt;name('/\.php$/') // same as above
+$finder-&gt;name('test.php')</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.FilenameFilterIterator.html">\Symfony\Component\Finder\Iterator\FilenameFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$pattern</h4>
+                                                <code>string</code><p><p>A pattern (a regexp, a glob, or a string)</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_normalizeDir"></a>
+                        <div class="element clickable method private  method_normalizeDir" data-toggle="collapse" data-target=".method_normalizeDir .collapse">
+                            <h2>Normalizes given directory names by removing trailing slashes.</h2>
+                            <pre>normalizeDir(string $dir) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dir</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_notContains"></a>
+                        <div class="element clickable method public  method_notContains" data-toggle="collapse" data-target=".method_notContains .collapse">
+                            <h2>Adds tests that file contents must not match.</h2>
+                            <pre>notContains(string $pattern) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Strings or PCRE patterns can be used:</p>
+<pre><code>$finder-&gt;notContains('Lorem ipsum')
+$finder-&gt;notContains('/Lorem ipsum/i')</code></pre></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.FilecontentFilterIterator.html">\Symfony\Component\Finder\Iterator\FilecontentFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$pattern</h4>
+                                                <code>string</code><p><p>A pattern (string or regexp)</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_notName"></a>
+                        <div class="element clickable method public  method_notName" data-toggle="collapse" data-target=".method_notName .collapse">
+                            <h2>Adds rules that files must not match.</h2>
+                            <pre>notName(string $pattern) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.FilenameFilterIterator.html">\Symfony\Component\Finder\Iterator\FilenameFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$pattern</h4>
+                                                <code>string</code><p><p>A pattern (a regexp, a glob, or a string)</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_notPath"></a>
+                        <div class="element clickable method public  method_notPath" data-toggle="collapse" data-target=".method_notPath .collapse">
+                            <h2>Adds rules that filenames must not match.</h2>
+                            <pre>notPath(string $pattern) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>You can use patterns (delimited with / sign) or simple strings.</p>
+<pre><code>$finder-&gt;notPath('some/special/dir')
+$finder-&gt;notPath('/some\/special\/dir/') // same as above</code></pre>
+<p>Use only / as dirname separator.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.FilenameFilterIterator.html">\Symfony\Component\Finder\Iterator\FilenameFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$pattern</h4>
+                                                <code>string</code><p><p>A pattern (a regexp or a string)</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_path"></a>
+                        <div class="element clickable method public  method_path" data-toggle="collapse" data-target=".method_path .collapse">
+                            <h2>Adds rules that filenames must match.</h2>
+                            <pre>path(string $pattern) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>You can use patterns (delimited with / sign) or simple strings.</p>
+<pre><code>$finder-&gt;path('some/special/dir')
+$finder-&gt;path('/some\/special\/dir/') // same as above</code></pre>
+<p>Use only / as dirname separator.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.FilenameFilterIterator.html">\Symfony\Component\Finder\Iterator\FilenameFilterIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$pattern</h4>
+                                                <code>string</code><p><p>A pattern (a regexp or a string)</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_removeAdapters"></a>
+                        <div class="element clickable method public deprecated method_removeAdapters" data-toggle="collapse" data-target=".method_removeAdapters .collapse">
+                            <h2>Removes all adapters registered in the finder.</h2>
+                            <pre>removeAdapters() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>since 2.8, to be removed in 3.0.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_resetAdapterSelection"></a>
+                        <div class="element clickable method private  method_resetAdapterSelection" data-toggle="collapse" data-target=".method_resetAdapterSelection .collapse">
+                            <h2>Unselects all adapters.</h2>
+                            <pre>resetAdapterSelection() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_searchInDirectory"></a>
+                        <div class="element clickable method private  method_searchInDirectory" data-toggle="collapse" data-target=".method_searchInDirectory .collapse">
+                            <h2>searchInDirectory</h2>
+                            <pre>searchInDirectory(string $dir) : \Iterator</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$dir</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Iterator</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setAdapter"></a>
+                        <div class="element clickable method public deprecated method_setAdapter" data-toggle="collapse" data-target=".method_setAdapter .collapse">
+                            <h2>Selects the adapter to use.</h2>
+                            <pre>setAdapter(string $name) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>since 2.8, to be removed in 3.0.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\InvalidArgumentException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_size"></a>
+                        <div class="element clickable method public  method_size" data-toggle="collapse" data-target=".method_size .collapse">
+                            <h2>Adds tests for file sizes.</h2>
+                            <pre>size(string|integer $size) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>$finder-&gt;size('&gt; 10K');
+$finder-&gt;size('&lt;= 1Ki');
+$finder-&gt;size(4);</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.SizeRangeFilterIterator.html">\Symfony\Component\Finder\Iterator\SizeRangeFilterIterator</a>
+                                                                                                                
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Comparator.NumberComparator.html">\Symfony\Component\Finder\Comparator\NumberComparator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$size</h4>
+                                                <code>string|integer</code><p><p>A size range string or an integer</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_sort"></a>
+                        <div class="element clickable method public  method_sort" data-toggle="collapse" data-target=".method_sort .collapse">
+                            <h2>Sorts files and directories by an anonymous function.</h2>
+                            <pre>sort(\Closure $closure) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>The anonymous function receives two \SplFileInfo instances to compare.</p>
+<p>This can be slow as all the matching files and directories must be retrieved for comparison.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.SortableIterator.html">\Symfony\Component\Finder\Iterator\SortableIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$closure</h4>
+                                                <code>\Closure</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_sortAdapters"></a>
+                        <div class="element clickable method private  method_sortAdapters" data-toggle="collapse" data-target=".method_sortAdapters .collapse">
+                            <h2>sortAdapters</h2>
+                            <pre>sortAdapters() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_sortByAccessedTime"></a>
+                        <div class="element clickable method public  method_sortByAccessedTime" data-toggle="collapse" data-target=".method_sortByAccessedTime .collapse">
+                            <h2>Sorts files and directories by the last accessed time.</h2>
+                            <pre>sortByAccessedTime() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This is the time that the file was last accessed, read or written to.</p>
+<p>This can be slow as all the matching files and directories must be retrieved for comparison.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.SortableIterator.html">\Symfony\Component\Finder\Iterator\SortableIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_sortByChangedTime"></a>
+                        <div class="element clickable method public  method_sortByChangedTime" data-toggle="collapse" data-target=".method_sortByChangedTime .collapse">
+                            <h2>Sorts files and directories by the last inode changed time.</h2>
+                            <pre>sortByChangedTime() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This is the time that the inode information was last modified (permissions, owner, group or other metadata).</p>
+<p>On Windows, since inode is not available, changed time is actually the file creation time.</p>
+<p>This can be slow as all the matching files and directories must be retrieved for comparison.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.SortableIterator.html">\Symfony\Component\Finder\Iterator\SortableIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_sortByModifiedTime"></a>
+                        <div class="element clickable method public  method_sortByModifiedTime" data-toggle="collapse" data-target=".method_sortByModifiedTime .collapse">
+                            <h2>Sorts files and directories by the last modified time.</h2>
+                            <pre>sortByModifiedTime() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This is the last time the actual contents of the file were last modified.</p>
+<p>This can be slow as all the matching files and directories must be retrieved for comparison.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.SortableIterator.html">\Symfony\Component\Finder\Iterator\SortableIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_sortByName"></a>
+                        <div class="element clickable method public  method_sortByName" data-toggle="collapse" data-target=".method_sortByName .collapse">
+                            <h2>Sorts files and directories by name.</h2>
+                            <pre>sortByName() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This can be slow as all the matching files and directories must be retrieved for comparison.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.SortableIterator.html">\Symfony\Component\Finder\Iterator\SortableIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_sortByType"></a>
+                        <div class="element clickable method public  method_sortByType" data-toggle="collapse" data-target=".method_sortByType .collapse">
+                            <h2>Sorts files and directories by type (directories before files), then by name.</h2>
+                            <pre>sortByType() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This can be slow as all the matching files and directories must be retrieved for comparison.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    see
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                            <a href="../classes/Symfony.Component.Finder.Iterator.SortableIterator.html">\Symfony\Component\Finder\Iterator\SortableIterator</a>
+                                                                                                                
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_useBestAdapter"></a>
+                        <div class="element clickable method public deprecated method_useBestAdapter" data-toggle="collapse" data-target=".method_useBestAdapter .collapse">
+                            <h2>Sets the selected adapter to the best one according to the current platform the code is run on.</h2>
+                            <pre>useBestAdapter() : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>since 2.8, to be removed in 3.0.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                                    <a id="constant_IGNORE_VCS_FILES"> </a>
+                            <div class="element clickable constant  constant_IGNORE_VCS_FILES" data-toggle="collapse" data-target=".constant_IGNORE_VCS_FILES .collapse">
+                                <h2>IGNORE_VCS_FILES</h2>
+                                <pre>IGNORE_VCS_FILES</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_IGNORE_DOT_FILES"> </a>
+                            <div class="element clickable constant  constant_IGNORE_DOT_FILES" data-toggle="collapse" data-target=".constant_IGNORE_DOT_FILES .collapse">
+                                <h2>IGNORE_DOT_FILES</h2>
+                                <pre>IGNORE_DOT_FILES</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_mode"> </a>
+                            <div class="element clickable property  private property_mode" data-toggle="collapse" data-target=".property_mode .collapse">
+                                <h2>mode</h2>
+                                <pre>mode : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_names"> </a>
+                            <div class="element clickable property  private property_names" data-toggle="collapse" data-target=".property_names .collapse">
+                                <h2>names</h2>
+                                <pre>names : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_notNames"> </a>
+                            <div class="element clickable property  private property_notNames" data-toggle="collapse" data-target=".property_notNames .collapse">
+                                <h2>notNames</h2>
+                                <pre>notNames : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_exclude"> </a>
+                            <div class="element clickable property  private property_exclude" data-toggle="collapse" data-target=".property_exclude .collapse">
+                                <h2>exclude</h2>
+                                <pre>exclude : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_filters"> </a>
+                            <div class="element clickable property  private property_filters" data-toggle="collapse" data-target=".property_filters .collapse">
+                                <h2>filters</h2>
+                                <pre>filters : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_depths"> </a>
+                            <div class="element clickable property  private property_depths" data-toggle="collapse" data-target=".property_depths .collapse">
+                                <h2>depths</h2>
+                                <pre>depths : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_sizes"> </a>
+                            <div class="element clickable property  private property_sizes" data-toggle="collapse" data-target=".property_sizes .collapse">
+                                <h2>sizes</h2>
+                                <pre>sizes : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_followLinks"> </a>
+                            <div class="element clickable property  private property_followLinks" data-toggle="collapse" data-target=".property_followLinks .collapse">
+                                <h2>followLinks</h2>
+                                <pre>followLinks : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_sort"> </a>
+                            <div class="element clickable property  private property_sort" data-toggle="collapse" data-target=".property_sort .collapse">
+                                <h2>sort</h2>
+                                <pre>sort : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_ignore"> </a>
+                            <div class="element clickable property  private property_ignore" data-toggle="collapse" data-target=".property_ignore .collapse">
+                                <h2>ignore</h2>
+                                <pre>ignore : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_dirs"> </a>
+                            <div class="element clickable property  private property_dirs" data-toggle="collapse" data-target=".property_dirs .collapse">
+                                <h2>dirs</h2>
+                                <pre>dirs : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_dates"> </a>
+                            <div class="element clickable property  private property_dates" data-toggle="collapse" data-target=".property_dates .collapse">
+                                <h2>dates</h2>
+                                <pre>dates : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_iterators"> </a>
+                            <div class="element clickable property  private property_iterators" data-toggle="collapse" data-target=".property_iterators .collapse">
+                                <h2>iterators</h2>
+                                <pre>iterators : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_contains"> </a>
+                            <div class="element clickable property  private property_contains" data-toggle="collapse" data-target=".property_contains .collapse">
+                                <h2>contains</h2>
+                                <pre>contains : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_notContains"> </a>
+                            <div class="element clickable property  private property_notContains" data-toggle="collapse" data-target=".property_notContains .collapse">
+                                <h2>notContains</h2>
+                                <pre>notContains : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_adapters"> </a>
+                            <div class="element clickable property  private property_adapters" data-toggle="collapse" data-target=".property_adapters .collapse">
+                                <h2>adapters</h2>
+                                <pre>adapters : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_paths"> </a>
+                            <div class="element clickable property  private property_paths" data-toggle="collapse" data-target=".property_paths .collapse">
+                                <h2>paths</h2>
+                                <pre>paths : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_notPaths"> </a>
+                            <div class="element clickable property  private property_notPaths" data-toggle="collapse" data-target=".property_notPaths .collapse">
+                                <h2>notPaths</h2>
+                                <pre>notPaths : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_ignoreUnreadableDirs"> </a>
+                            <div class="element clickable property  private property_ignoreUnreadableDirs" data-toggle="collapse" data-target=".property_ignoreUnreadableDirs .collapse">
+                                <h2>ignoreUnreadableDirs</h2>
+                                <pre>ignoreUnreadableDirs : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_vcsPatterns"> </a>
+                            <div class="element clickable property  private property_vcsPatterns" data-toggle="collapse" data-target=".property_vcsPatterns .collapse">
+                                <h2>vcsPatterns</h2>
+                                <pre>vcsPatterns : </pre>
+                                <div class="labels">
+                                                                        <span class="label">static</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\Symfony\Component\Finder\Finder"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/Symfony.Component.Finder.html">Finder</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/Symfony.Component.Finder.Finder.html">Finder</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:34 +0000.<br/>
+    </footer>
+    </body>
+</html>

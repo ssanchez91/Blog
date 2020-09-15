@@ -8,13 +8,26 @@
 
 namespace App\Model\Manager;
 
-
+/**
+ * Class AdminManager
+ * @package App\Model\Manager
+ */
 class AdminManager
 {
-
+    /**
+     * Variable Usermanager
+     * @var UserManager
+     */
     private $userManager;
+    /**
+     * Variable RoleManager
+     * @var RoleManager
+     */
     private $roleManager;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         $config = file_get_contents('Config/config.json');
@@ -24,6 +37,12 @@ class AdminManager
         $this->postManager = new PostManager($config);
     }
 
+    /**
+     * Method getStats
+     *
+     * @param object $user userClass Object
+     * @return \stdClass
+     */
     public function getStats($user)
     {
         $stats = new \stdClass();

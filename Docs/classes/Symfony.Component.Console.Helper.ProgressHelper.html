@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \Symfony\Component\Console\Helper\ProgressHelper
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Symfony.html">Symfony</a></li>
+                                                                        <li><a href="../namespaces/JMS.html">JMS</a></li>
+                                                                        <li><a href="../namespaces/Zend.html">Zend</a></li>
+                                                                        <li><a href="../namespaces/Twig.html">Twig</a></li>
+                                                                        <li><a href="../namespaces/PhpParser.html">PhpParser</a></li>
+                                                                        <li><a href="../namespaces/Metadata.html">Metadata</a></li>
+                                                                        <li><a href="../namespaces/phpDocumentor.html">phpDocumentor</a></li>
+                                                                        <li><a href="../namespaces/Monolog.html">Monolog</a></li>
+                                                                        <li><a href="../namespaces/App.html">App</a></li>
+                                                                        <li><a href="../namespaces/Cilex.html">Cilex</a></li>
+                                                                        <li><a href="../namespaces/PhpCollection.html">PhpCollection</a></li>
+                                                                        <li><a href="../namespaces/PhpOption.html">PhpOption</a></li>
+                                                                        <li><a href="../namespaces/Humbug.html">Humbug</a></li>
+                                                                        <li><a href="../namespaces/Interop.html">Interop</a></li>
+                                                                        <li><a href="../namespaces/Psr.html">Psr</a></li>
+                                                                        <li><a href="../namespaces/Pimple.html">Pimple</a></li>
+                                                                        <li><a href="../namespaces/Doctrine.html">Doctrine</a></li>
+                                                                        <li><a href="../namespaces/ZendBench.html">ZendBench</a></li>
+                                                                        <li><a href="../namespaces/Webmozart.html">Webmozart</a></li>
+                                                                        <li><a href="../namespaces/Composer.html">Composer</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: ">
+            <span class="description"></span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_advance" title="advance :: Advances the progress output X steps.">
+            <span class="description">Advances the progress output X steps.</span><pre>advance</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_clear" title="clear :: Removes the progress bar from the current line.">
+            <span class="description">Removes the progress bar from the current line.</span><pre>clear</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_display" title="display :: Outputs the current progress string.">
+            <span class="description">Outputs the current progress string.</span><pre>display</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_finish" title="finish :: Finishes the progress output.">
+            <span class="description">Finishes the progress output.</span><pre>finish</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_formatMemory" title="formatMemory :: ">
+            <span class="description"></span><pre>formatMemory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_formatTime" title="formatTime :: ">
+            <span class="description"></span><pre>formatTime</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_getHelperSet" title="getHelperSet :: Gets the helper set associated with this helper.">
+            <span class="description">Gets the helper set associated with this helper.</span><pre>getHelperSet</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getName" title="getName :: {@inheritdoc}">
+            <span class="description">{@inheritdoc}</span><pre>getName</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                                                                                <li class="method public inherited">
+        <a href="#method_removeDecoration" title="removeDecoration :: ">
+            <span class="description"></span><pre>removeDecoration</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setBarCharacter" title="setBarCharacter :: Sets the bar character.">
+            <span class="description">Sets the bar character.</span><pre>setBarCharacter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setBarWidth" title="setBarWidth :: Sets the progress bar width.">
+            <span class="description">Sets the progress bar width.</span><pre>setBarWidth</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setCurrent" title="setCurrent :: Sets the current progress.">
+            <span class="description">Sets the current progress.</span><pre>setCurrent</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setEmptyBarCharacter" title="setEmptyBarCharacter :: Sets the empty bar character.">
+            <span class="description">Sets the empty bar character.</span><pre>setEmptyBarCharacter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setFormat" title="setFormat :: Sets the progress bar format.">
+            <span class="description">Sets the progress bar format.</span><pre>setFormat</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_setHelperSet" title="setHelperSet :: Sets the helper set associated with this helper.">
+            <span class="description">Sets the helper set associated with this helper.</span><pre>setHelperSet</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setProgressCharacter" title="setProgressCharacter :: Sets the progress bar character.">
+            <span class="description">Sets the progress bar character.</span><pre>setProgressCharacter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setRedrawFrequency" title="setRedrawFrequency :: Sets the redraw frequency.">
+            <span class="description">Sets the redraw frequency.</span><pre>setRedrawFrequency</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_start" title="start :: Starts the progress output.">
+            <span class="description">Starts the progress output.</span><pre>start</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_strlen" title="strlen :: Returns the length of a string, using mb_strwidth if it is available.">
+            <span class="description">Returns the length of a string, using mb_strwidth if it is available.</span><pre>strlen</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_strlenWithoutDecoration" title="strlenWithoutDecoration :: ">
+            <span class="description"></span><pre>strlenWithoutDecoration</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                        <li class="method private">
+                            <a href="#method_generate" title="generate :: Generates the array map of format variables to values.">
+                                <span class="description">Generates the array map of format variables to values.</span><pre>generate</pre>
+                            </a>
+                        </li>
+                                                                                                                                                        <li class="method private">
+                            <a href="#method_humaneTime" title="humaneTime :: Converts seconds into human-readable format.">
+                                <span class="description">Converts seconds into human-readable format.</span><pre>humaneTime</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_initialize" title="initialize :: Initializes the progress helper.">
+                                <span class="description">Initializes the progress helper.</span><pre>initialize</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_overwrite" title="overwrite :: Overwrites a previous message to the output.">
+                                <span class="description">Overwrites a previous message to the output.</span><pre>overwrite</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                                <li class="constant ">
+                    <a href="#constant_FORMAT_NORMAL" title="FORMAT_NORMAL :: ">
+                        <span class="description"></span><pre>FORMAT_NORMAL</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_FORMAT_NORMAL_NOMAX" title="FORMAT_NORMAL_NOMAX :: ">
+                        <span class="description"></span><pre>FORMAT_NORMAL_NOMAX</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_FORMAT_QUIET" title="FORMAT_QUIET :: ">
+                        <span class="description"></span><pre>FORMAT_QUIET</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_FORMAT_QUIET_NOMAX" title="FORMAT_QUIET_NOMAX :: ">
+                        <span class="description"></span><pre>FORMAT_QUIET_NOMAX</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_FORMAT_VERBOSE" title="FORMAT_VERBOSE :: ">
+                        <span class="description"></span><pre>FORMAT_VERBOSE</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_FORMAT_VERBOSE_NOMAX" title="FORMAT_VERBOSE_NOMAX :: ">
+                        <span class="description"></span><pre>FORMAT_VERBOSE_NOMAX</pre>
+                    </a>
+                </li>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ProgressHelper</h1>
+                <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/Symfony.Component.Console.Helper.Helper.html">\Symfony\Component\Console\Helper\Helper</a>
+                                                        </small>
+                <p class="short_description">The Progress class provides helpers to display progress output.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Chris Jones <a href="mailto:leeked@gmail.com">leeked@gmail.com</a></p>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Fabien Potencier <a href="mailto:fabien@symfony.com">fabien@symfony.com</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        deprecated
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>since version 2.5, to be removed in 3.0
+Use {@link ProgressBar} instead.</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Default</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>__construct</h2>
+                            <pre>__construct( $triggerDeprecationError = true) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$triggerDeprecationError</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_advance"></a>
+                        <div class="element clickable method public  method_advance" data-toggle="collapse" data-target=".method_advance .collapse">
+                            <h2>Advances the progress output X steps.</h2>
+                            <pre>advance(integer $step = 1, boolean $redraw = false) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Symfony\Component\Console\Exception\LogicException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$step</h4>
+                                                <code>integer</code><p><p>Number of steps to advance</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$redraw</h4>
+                                                <code>boolean</code><p><p>Whether to redraw or not</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_clear"></a>
+                        <div class="element clickable method public  method_clear" data-toggle="collapse" data-target=".method_clear .collapse">
+                            <h2>Removes the progress bar from the current line.</h2>
+                            <pre>clear() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>This is useful if you wish to write some output
+while a progress bar is running.
+Call display() to show the progress bar again.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_display"></a>
+                        <div class="element clickable method public  method_display" data-toggle="collapse" data-target=".method_display .collapse">
+                            <h2>Outputs the current progress string.</h2>
+                            <pre>display(boolean $finish = false) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Symfony\Component\Console\Exception\LogicException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$finish</h4>
+                                                <code>boolean</code><p><p>Forces the end result</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_finish"></a>
+                        <div class="element clickable method public  method_finish" data-toggle="collapse" data-target=".method_finish .collapse">
+                            <h2>Finishes the progress output.</h2>
+                            <pre>finish() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_formatMemory"></a>
+                        <div class="element clickable method public  method_formatMemory inherited" data-toggle="collapse" data-target=".method_formatMemory .collapse">
+                            <h2>formatMemory</h2>
+                            <pre>formatMemory( $memory) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$memory</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_formatTime"></a>
+                        <div class="element clickable method public  method_formatTime inherited" data-toggle="collapse" data-target=".method_formatTime .collapse">
+                            <h2>formatTime</h2>
+                            <pre>formatTime( $secs) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$secs</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_generate"></a>
+                        <div class="element clickable method private  method_generate" data-toggle="collapse" data-target=".method_generate .collapse">
+                            <h2>Generates the array map of format variables to values.</h2>
+                            <pre>generate(boolean $finish = false) : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$finish</h4>
+                                                <code>boolean</code><p><p>Forces the end result</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p><p>Array of format vars and values</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getHelperSet"></a>
+                        <div class="element clickable method public  method_getHelperSet inherited" data-toggle="collapse" data-target=".method_getHelperSet .collapse">
+                            <h2>Gets the helper set associated with this helper.</h2>
+                            <pre>getHelperSet() : \Symfony\Component\Console\Helper\HelperSet</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Symfony.Component.Console.Helper.HelperSet.html">\Symfony\Component\Console\Helper\HelperSet</a></code><p><p>A HelperSet instance</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getName"></a>
+                        <div class="element clickable method public  method_getName" data-toggle="collapse" data-target=".method_getName .collapse">
+                            <h2>{@inheritdoc}</h2>
+                            <pre>getName() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_humaneTime"></a>
+                        <div class="element clickable method private  method_humaneTime" data-toggle="collapse" data-target=".method_humaneTime .collapse">
+                            <h2>Converts seconds into human-readable format.</h2>
+                            <pre>humaneTime(integer $secs) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$secs</h4>
+                                                <code>integer</code><p><p>Number of seconds</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Time in readable format</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_initialize"></a>
+                        <div class="element clickable method private  method_initialize" data-toggle="collapse" data-target=".method_initialize .collapse">
+                            <h2>Initializes the progress helper.</h2>
+                            <pre>initialize() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_overwrite"></a>
+                        <div class="element clickable method private  method_overwrite" data-toggle="collapse" data-target=".method_overwrite .collapse">
+                            <h2>Overwrites a previous message to the output.</h2>
+                            <pre>overwrite(\Symfony\Component\Console\Output\OutputInterface $output, string $message) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$output</h4>
+                                                <code><a href="../classes/Symfony.Component.Console.Output.OutputInterface.html">\Symfony\Component\Console\Output\OutputInterface</a></code><p><p>An Output instance</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code>string</code><p><p>The message</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_removeDecoration"></a>
+                        <div class="element clickable method public  method_removeDecoration inherited" data-toggle="collapse" data-target=".method_removeDecoration .collapse">
+                            <h2>removeDecoration</h2>
+                            <pre>removeDecoration(\Symfony\Component\Console\Formatter\OutputFormatterInterface $formatter,  $string) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$formatter</h4>
+                                                <code><a href="../classes/Symfony.Component.Console.Formatter.OutputFormatterInterface.html">\Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setBarCharacter"></a>
+                        <div class="element clickable method public  method_setBarCharacter" data-toggle="collapse" data-target=".method_setBarCharacter .collapse">
+                            <h2>Sets the bar character.</h2>
+                            <pre>setBarCharacter(string $char) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$char</h4>
+                                                <code>string</code><p><p>A character</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setBarWidth"></a>
+                        <div class="element clickable method public  method_setBarWidth" data-toggle="collapse" data-target=".method_setBarWidth .collapse">
+                            <h2>Sets the progress bar width.</h2>
+                            <pre>setBarWidth(integer $size) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$size</h4>
+                                                <code>integer</code><p><p>The progress bar size</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setCurrent"></a>
+                        <div class="element clickable method public  method_setCurrent" data-toggle="collapse" data-target=".method_setCurrent .collapse">
+                            <h2>Sets the current progress.</h2>
+                            <pre>setCurrent(integer $current, boolean $redraw = false) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Symfony\Component\Console\Exception\LogicException</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$current</h4>
+                                                <code>integer</code><p><p>The current progress</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$redraw</h4>
+                                                <code>boolean</code><p><p>Whether to redraw or not</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setEmptyBarCharacter"></a>
+                        <div class="element clickable method public  method_setEmptyBarCharacter" data-toggle="collapse" data-target=".method_setEmptyBarCharacter .collapse">
+                            <h2>Sets the empty bar character.</h2>
+                            <pre>setEmptyBarCharacter(string $char) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$char</h4>
+                                                <code>string</code><p><p>A character</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setFormat"></a>
+                        <div class="element clickable method public  method_setFormat" data-toggle="collapse" data-target=".method_setFormat .collapse">
+                            <h2>Sets the progress bar format.</h2>
+                            <pre>setFormat(string $format) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$format</h4>
+                                                <code>string</code><p><p>The format</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setHelperSet"></a>
+                        <div class="element clickable method public  method_setHelperSet inherited" data-toggle="collapse" data-target=".method_setHelperSet .collapse">
+                            <h2>Sets the helper set associated with this helper.</h2>
+                            <pre>setHelperSet(\Symfony\Component\Console\Helper\HelperSet $helperSet = null) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$helperSet</h4>
+                                                <code><a href="../classes/Symfony.Component.Console.Helper.HelperSet.html">\Symfony\Component\Console\Helper\HelperSet</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setProgressCharacter"></a>
+                        <div class="element clickable method public  method_setProgressCharacter" data-toggle="collapse" data-target=".method_setProgressCharacter .collapse">
+                            <h2>Sets the progress bar character.</h2>
+                            <pre>setProgressCharacter(string $char) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$char</h4>
+                                                <code>string</code><p><p>A character</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setRedrawFrequency"></a>
+                        <div class="element clickable method public  method_setRedrawFrequency" data-toggle="collapse" data-target=".method_setRedrawFrequency .collapse">
+                            <h2>Sets the redraw frequency.</h2>
+                            <pre>setRedrawFrequency(integer $freq) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$freq</h4>
+                                                <code>integer</code><p><p>The frequency in steps</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_start"></a>
+                        <div class="element clickable method public  method_start" data-toggle="collapse" data-target=".method_start .collapse">
+                            <h2>Starts the progress output.</h2>
+                            <pre>start(\Symfony\Component\Console\Output\OutputInterface $output, integer|null $max = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$output</h4>
+                                                <code><a href="../classes/Symfony.Component.Console.Output.OutputInterface.html">\Symfony\Component\Console\Output\OutputInterface</a></code><p><p>An Output instance</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$max</h4>
+                                                <code>integer|null</code><p><p>Maximum steps</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_strlen"></a>
+                        <div class="element clickable method public  method_strlen inherited" data-toggle="collapse" data-target=".method_strlen .collapse">
+                            <h2>Returns the length of a string, using mb_strwidth if it is available.</h2>
+                            <pre>strlen(string $string) : integer</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code>string</code><p><p>The string to check its length</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p><p>The length of the string</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_strlenWithoutDecoration"></a>
+                        <div class="element clickable method public  method_strlenWithoutDecoration inherited" data-toggle="collapse" data-target=".method_strlenWithoutDecoration .collapse">
+                            <h2>strlenWithoutDecoration</h2>
+                            <pre>strlenWithoutDecoration(\Symfony\Component\Console\Formatter\OutputFormatterInterface $formatter,  $string) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$formatter</h4>
+                                                <code><a href="../classes/Symfony.Component.Console.Formatter.OutputFormatterInterface.html">\Symfony\Component\Console\Formatter\OutputFormatterInterface</a></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$string</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                                    <a id="constant_FORMAT_QUIET"> </a>
+                            <div class="element clickable constant  constant_FORMAT_QUIET" data-toggle="collapse" data-target=".constant_FORMAT_QUIET .collapse">
+                                <h2>FORMAT_QUIET</h2>
+                                <pre>FORMAT_QUIET</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_FORMAT_NORMAL"> </a>
+                            <div class="element clickable constant  constant_FORMAT_NORMAL" data-toggle="collapse" data-target=".constant_FORMAT_NORMAL .collapse">
+                                <h2>FORMAT_NORMAL</h2>
+                                <pre>FORMAT_NORMAL</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_FORMAT_VERBOSE"> </a>
+                            <div class="element clickable constant  constant_FORMAT_VERBOSE" data-toggle="collapse" data-target=".constant_FORMAT_VERBOSE .collapse">
+                                <h2>FORMAT_VERBOSE</h2>
+                                <pre>FORMAT_VERBOSE</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_FORMAT_QUIET_NOMAX"> </a>
+                            <div class="element clickable constant  constant_FORMAT_QUIET_NOMAX" data-toggle="collapse" data-target=".constant_FORMAT_QUIET_NOMAX .collapse">
+                                <h2>FORMAT_QUIET_NOMAX</h2>
+                                <pre>FORMAT_QUIET_NOMAX</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_FORMAT_NORMAL_NOMAX"> </a>
+                            <div class="element clickable constant  constant_FORMAT_NORMAL_NOMAX" data-toggle="collapse" data-target=".constant_FORMAT_NORMAL_NOMAX .collapse">
+                                <h2>FORMAT_NORMAL_NOMAX</h2>
+                                <pre>FORMAT_NORMAL_NOMAX</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_FORMAT_VERBOSE_NOMAX"> </a>
+                            <div class="element clickable constant  constant_FORMAT_VERBOSE_NOMAX" data-toggle="collapse" data-target=".constant_FORMAT_VERBOSE_NOMAX .collapse">
+                                <h2>FORMAT_VERBOSE_NOMAX</h2>
+                                <pre>FORMAT_VERBOSE_NOMAX</pre>
+                                <div class="labels">
+                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                            
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_barWidth"> </a>
+                            <div class="element clickable property  private property_barWidth" data-toggle="collapse" data-target=".property_barWidth .collapse">
+                                <h2>barWidth</h2>
+                                <pre>barWidth : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_barChar"> </a>
+                            <div class="element clickable property  private property_barChar" data-toggle="collapse" data-target=".property_barChar .collapse">
+                                <h2>barChar</h2>
+                                <pre>barChar : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_emptyBarChar"> </a>
+                            <div class="element clickable property  private property_emptyBarChar" data-toggle="collapse" data-target=".property_emptyBarChar .collapse">
+                                <h2>emptyBarChar</h2>
+                                <pre>emptyBarChar : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_progressChar"> </a>
+                            <div class="element clickable property  private property_progressChar" data-toggle="collapse" data-target=".property_progressChar .collapse">
+                                <h2>progressChar</h2>
+                                <pre>progressChar : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_format"> </a>
+                            <div class="element clickable property  private property_format" data-toggle="collapse" data-target=".property_format .collapse">
+                                <h2>format</h2>
+                                <pre>format : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_redrawFreq"> </a>
+                            <div class="element clickable property  private property_redrawFreq" data-toggle="collapse" data-target=".property_redrawFreq .collapse">
+                                <h2>redrawFreq</h2>
+                                <pre>redrawFreq : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_lastMessagesLength"> </a>
+                            <div class="element clickable property  private property_lastMessagesLength" data-toggle="collapse" data-target=".property_lastMessagesLength .collapse">
+                                <h2>lastMessagesLength</h2>
+                                <pre>lastMessagesLength : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_barCharOriginal"> </a>
+                            <div class="element clickable property  private property_barCharOriginal" data-toggle="collapse" data-target=".property_barCharOriginal .collapse">
+                                <h2>barCharOriginal</h2>
+                                <pre>barCharOriginal : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_output"> </a>
+                            <div class="element clickable property  private property_output" data-toggle="collapse" data-target=".property_output .collapse">
+                                <h2>output</h2>
+                                <pre>output : \Symfony\Component\Console\Output\OutputInterface</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code><a href="../classes/Symfony.Component.Console.Output.OutputInterface.html">\Symfony\Component\Console\Output\OutputInterface</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_current"> </a>
+                            <div class="element clickable property  private property_current" data-toggle="collapse" data-target=".property_current .collapse">
+                                <h2>Current step.</h2>
+                                <pre>current : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_max"> </a>
+                            <div class="element clickable property  private property_max" data-toggle="collapse" data-target=".property_max .collapse">
+                                <h2>Maximum number of steps.</h2>
+                                <pre>max : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_startTime"> </a>
+                            <div class="element clickable property  private property_startTime" data-toggle="collapse" data-target=".property_startTime .collapse">
+                                <h2>Start time of the progress bar.</h2>
+                                <pre>startTime : integer</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>integer</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_defaultFormatVars"> </a>
+                            <div class="element clickable property  private property_defaultFormatVars" data-toggle="collapse" data-target=".property_defaultFormatVars .collapse">
+                                <h2>List of formatting variables.</h2>
+                                <pre>defaultFormatVars : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_formatVars"> </a>
+                            <div class="element clickable property  private property_formatVars" data-toggle="collapse" data-target=".property_formatVars .collapse">
+                                <h2>Available formatting variables.</h2>
+                                <pre>formatVars : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_widths"> </a>
+                            <div class="element clickable property  private property_widths" data-toggle="collapse" data-target=".property_widths .collapse">
+                                <h2>Stored format part widths (used for padding).</h2>
+                                <pre>widths : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_timeFormats"> </a>
+                            <div class="element clickable property  private property_timeFormats" data-toggle="collapse" data-target=".property_timeFormats .collapse">
+                                <h2>Various time formats.</h2>
+                                <pre>timeFormats : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_helperSet"> </a>
+                            <div class="element clickable property  protected property_helperSet inherited" data-toggle="collapse" data-target=".property_helperSet .collapse">
+                                <h2>helperSet</h2>
+                                <pre>helperSet : </pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\Symfony\Component\Console\Helper\ProgressHelper"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/Symfony.Component.Console.Helper.html">Helper</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/Symfony.Component.Console.Helper.ProgressHelper.html">ProgressHelper</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Tue, 15 Sep 2020 08:16:33 +0000.<br/>
+    </footer>
+    </body>
+</html>
