@@ -15,6 +15,7 @@
     "password": "test"
   },
   "routeFiles": [
+    "Config/Routes/routeAchievement",
     "Config/Routes/routeDefault",
     "Config/Routes/routeError",
     "Config/Routes/routeUser",

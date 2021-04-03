@@ -1,0 +1,41 @@
+[
+  {
+    "name": "addAchievement",
+    "controller": "Achievement",
+    "url": "\/addAchievement",
+    "method": "GET",
+    "action": "showFormAddAchievement",
+    "params": [],
+    "manager": [
+      "AchievementManager"
+    ],
+    "role": "admin"
+  },
+  {
+    "name": "addAchievement",
+    "controller": "Achievement",
+    "url": "\/addAchievement",
+    "method": "POST",
+    "action": "addAchievement",
+    "params": [
+      "title",
+      "hat",
+      "content"
+    ],
+    "manager": [
+      "PostManager"
+    ],
+    "role": "admin"
+  },
+  {
+    "name": "listAchievement",
+    "controller": "Achievement",
+    "url": "\/listAchievement",
+    "method": "GET",
+    "action": "listAchievement",
+    "params": [],
+    "manager": [
+      "AchievementManager"
+    ]
+  }
+]

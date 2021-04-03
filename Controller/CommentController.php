@@ -20,14 +20,7 @@ use App\Model\Entity\Comment;
  */
 class CommentController extends BaseController
 {
-    /**
-     * Method listComment
-     *
-     * @param string $description Content of comment.
-     * @param int $userId User Id
-     * @param int $postId Post Id
-     * @throws \Exception
-     */
+
     public function addCommentAction($description, $userId, $postId)
     {
         $datePostComment = new \DateTime();
@@ -41,9 +34,11 @@ class CommentController extends BaseController
         try {
             $addComment = $this->CommentManager->insert($comment, array('description', 'user_id', 'last_update', 'post_id', 'publish'));
             $this->alertManager->addAlert('Your comment has been posted with success! Waiting to webmaster\'s validation.', 'success');
-            $this->addParam('alert', $this->alertManager->showAlert());
             header('location: ' . $this->getConfig()->basePath . '/showPost/' . $postId . '/1');
-        } catch (\Exception $e) {
+        }
+        catch
+        (\Exception $e)
+        {
             throw $e;
         }
     }
